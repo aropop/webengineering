@@ -52,20 +52,35 @@ subject: goods or services
 
 \section{audience classes}
 We identified 4 different audiences classes. These have a hierarchy as described by figure \ref{fig:classhierarchy}. Below their functional and information requirements are listed. Note that a registered user can not actually exist in the application. It is an abstract user class, as in practice a registered user will either be a homeless person or an angel.
-Visitor
+%TODO navigational requirements
+
+\begin{itemize}
+\item Visitor
+
+\begin{itemize}
+\item Functional requirements
 \begin{itemize}
 	\item Make a donation
+\end{itemize}
+\item Information requirements
+\begin{itemize}
 	\item View all angels and homeless people
 	\item View offered goods and services
 \end{itemize}
+\item Navigational requirements
+\item Characteristics
+\end{itemize}
 
-Registered Users
+
+\item Registered Users
 \begin{itemize}
 	\item Register onto the site
 	\item Cancel his or hers account
 \end{itemize}
 
-Homeless people
+\item Homeless people
+\begin{itemize}
+\item Functional requirements
 \begin{itemize}
 	\item Search for goods or services
 	\item Request goods or services
@@ -73,18 +88,51 @@ Homeless people
 	\item Rate angels
 	\item Find general information about shelters, rights and tips
 \end{itemize}
-
-Angels
+\item Navigational requirements
 \begin{itemize}
-	\item Provide goods or services
-	\item Browse his or hers ratings
+	\item Easy navigation between an angel and his or hers offerings
+\end{itemize}
+\item Characteristics
+\begin{itemize}
+	\item Have no address
+	\item No home internet connection
+	\item Computer skills may vary
+\end{itemize}
 \end{itemize}
 
-Administrators
+\item Angels
+\begin{itemize}
+\item Functional requirements
+\begin{itemize}
+	\item Provide goods or services
+	\item Be able to communicate with homeless people requesting their offerings
+\end{itemize}
+\item Information requirements
+\begin{itemize}
+	\item Browse his or hers ratings
+\end{itemize}
+\item Navigational requirements
+\item Characteristics
+\begin{itemize}
+	\item Angels can be anyone, no specific characteristics can be defined for this group.
+\end{itemize}
+\end{itemize}
+
+\item Administrators
+\begin{itemize}
+\item Functional requirements
 \begin{itemize}
 	\item Disable a registered user
-	\item Remove offering
-	\item Browser ratings
+	\item Remove offerings
+\end{itemize}
+\item Information requirements
+\begin{itemize}
+	\item Browse ratings
+\end{itemize}
+\item Navigational requirements
+\item Characteristics
+\end{itemize}
+
 \end{itemize}
 
 \begin{figure}[htp]
@@ -99,7 +147,7 @@ Administrators
 \chapter{}
 
 
-\chapter{Overview of features}
+\chapter{}
 
 
 
