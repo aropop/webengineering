@@ -1,0 +1,106 @@
+\documentclass[a4paper]{report}
+
+\usepackage[english]{babel}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{vubtitlepage}
+\usepackage{todonotes}
+\usepackage{color}
+\usepackage{tabularx}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{a4wide}
+\usepackage[nounderscore]{syntax}
+
+\author{\textit{Group 3}\\ Bennet~Stankidis \& Arno~De~Witte}
+\faculty{Faculteit Wetenschappen en Bio-ingenieurswetenschappen}
+
+\title{{\Huge Web Engineering}\\Assignment 3}
+
+\lstset{
+language=php,
+numbers=left,
+frame=single,
+columns=flexible,
+showstringspaces=true,
+tabsize=3,
+keepspaces=true,
+basicstyle=\ttfamily,
+breaklines=true,
+  basicstyle=\small\ttfamily,
+  keywordstyle=\bf\ttfamily\color[rgb]{0,.3,.7},
+  commentstyle=\color[rgb]{0.133,0.545,0.133},
+  stringstyle={\color[rgb]{0.75,0.49,0.07}}
+}
+
+% Nodig voor nieuwe paragrafen "correct" te laten beginnen
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0ex}
+
+\begin{document}
+\maketitlepage
+\tableofcontents
+
+\chapter{}
+\section{Mission statement}
+Provide the possibility for homeless people to find \emph{angels} which provide goods or services.
+
+Purpose: homeless people to find angels
+audiences: homeless people and angels
+subject: goods or services
+
+\section{audience classes}
+We identified 4 different audiences classes. These have a hierarchy as described by figure \ref{fig:classhierarchy}. Below their functional and information requirements are listed. Note that a registered user can not actually exist in the application. It is an abstract user class, as in practice a registered user will either be a homeless person or an angel.
+Visitor
+\begin{itemize}
+	\item Make a donation
+	\item View all angels and homeless people
+	\item View offered goods and services
+\end{itemize}
+
+Registered Users
+\begin{itemize}
+	\item Register onto the site
+	\item Cancel his or hers account
+\end{itemize}
+
+Homeless people
+\begin{itemize}
+	\item Search for goods or services
+	\item Request goods or services
+	\item Contact angels which provide goods or services
+	\item Rate angels
+	\item Find general information about shelters, rights and tips
+\end{itemize}
+
+Angels
+\begin{itemize}
+	\item Provide goods or services
+	\item Browse his or hers ratings
+\end{itemize}
+
+Administrators
+\begin{itemize}
+	\item Disable a registered user
+	\item Remove offering
+	\item Browser ratings
+\end{itemize}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.8]{classhierarchy.png}
+\caption{Class hierarchy diagram}
+\label{fig:classhierarchy}
+\end{figure}
+
+
+
+\chapter{}
+
+
+\chapter{Overview of features}
+
+
+
+\end{document}
