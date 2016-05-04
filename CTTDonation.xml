@@ -1,0 +1,26 @@
+<?xmp version="1.0" encoding="UTF-8" standalone="yes"?>
+<TaskModel xmlns:coop="http://giove.isti.cnr.it/cttcoop" xmlns="http://giove.isti.cnr.it/ctt" NameTaskModelID="Make a Donation">
+    <Task Identifier="Make a Donation" Category="abstraction" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+        <Name>name</Name>
+        <SubTask>
+            <Task Identifier="Specify amount" Category="interaction" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                <Name>name</Name>
+                <TemporalOperator name="SequentialEnablingInfo"/>
+                <Parent name="Make a Donation"/>
+                <SiblingRight name="Make payment"/>
+            </Task>
+            <Task Identifier="Make payment" Category="interaction" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                <Name>name</Name>
+                <TemporalOperator name="SequentialEnablingInfo"/>
+                <Parent name="Make a Donation"/>
+                <SiblingLeft name="Specify amount"/>
+                <SiblingRight name="Process transaction"/>
+            </Task>
+            <Task Identifier="Process transaction" Category="application" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                <Name>name</Name>
+                <Parent name="Make a Donation"/>
+                <SiblingLeft name="Make payment"/>
+            </Task>
+        </SubTask>
+    </Task>
+</TaskModel>

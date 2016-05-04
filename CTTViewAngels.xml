@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TaskModel xmlns:coop="http://giove.isti.cnr.it/cttcoop" xmlns="http://giove.isti.cnr.it/ctt" NameTaskModelID="View all angels and homeless people">
+    <Task Identifier="View all angels and homeless people" Category="abstraction" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+        <Name>name</Name>
+        <SubTask>
+            <Task Identifier="Select view" Category="interaction" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                <Name>name</Name>
+                <TemporalOperator name="SequentialEnablingInfo"/>
+                <Parent name="View all angels and homeless people"/>
+                <SiblingRight name="Show all angels and homeless people"/>
+            </Task>
+            <Task Identifier="Show all angels and homeless people" Category="application" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                <Name>name</Name>
+                <TemporalOperator name="SequentialEnabling"/>
+                <Parent name="View all angels and homeless people"/>
+                <SiblingLeft name="Select view"/>
+                <SiblingRight name="[Search]*"/>
+            </Task>
+            <Task Identifier="[Search]*" Category="abstraction" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                <Name>name</Name>
+                <Parent name="View all angels and homeless people"/>
+                <SiblingLeft name="Show all angels and homeless people"/>
+                <SubTask>
+                    <Task Identifier="Enter search query" Category="interaction" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                        <Name>name</Name>
+                        <TemporalOperator name="SequentialEnablingInfo"/>
+                        <Parent name="[Search]*"/>
+                        <SiblingRight name="Show search results"/>
+                    </Task>
+                    <Task Identifier="Show search results" Category="application" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                        <Name>name</Name>
+                        <Parent name="[Search]*"/>
+                        <SiblingLeft name="Enter search query"/>
+                    </Task>
+                </SubTask>
+            </Task>
+        </SubTask>
+    </Task>
+</TaskModel>

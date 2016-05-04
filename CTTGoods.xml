@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TaskModel xmlns:coop="http://giove.isti.cnr.it/cttcoop" xmlns="http://giove.isti.cnr.it/ctt" NameTaskModelID="View offered goods and services">
+    <Task Identifier="View offered goods and services" Category="abstraction" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+        <Name>name</Name>
+        <SubTask>
+            <Task Identifier="Select Angel" Category="interaction" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                <Name>name</Name>
+                <TemporalOperator name="SequentialEnablingInfo"/>
+                <Parent name="View offered goods and services"/>
+                <SiblingRight name="Show offered goods, services and ratings"/>
+            </Task>
+            <Task Identifier="Show offered goods, services and ratings" Category="application" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                <Name>name</Name>
+                <Parent name="View offered goods and services"/>
+                <SiblingLeft name="Select Angel"/>
+            </Task>
+        </SubTask>
+    </Task>
+</TaskModel>

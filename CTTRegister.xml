@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TaskModel xmlns:coop="http://giove.isti.cnr.it/cttcoop" xmlns="http://giove.isti.cnr.it/ctt" NameTaskModelID="Register account">
+    <Task Identifier="Register account" Category="abstraction" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+        <Name>name</Name>
+        <SubTask>
+            <Task Identifier="Provide personal information" Category="interaction" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                <Name>name</Name>
+                <TemporalOperator name="SequentialEnablingInfo"/>
+                <Parent name="Register account"/>
+                <SiblingRight name="Create new account"/>
+            </Task>
+            <Task Identifier="Create new account" Category="application" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                <Name>name</Name>
+                <Parent name="Register account"/>
+                <SiblingLeft name="Provide personal information"/>
+            </Task>
+        </SubTask>
+    </Task>
+</TaskModel>
