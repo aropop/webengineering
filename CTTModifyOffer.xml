@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TaskModel xmlns:coop="http://giove.isti.cnr.it/cttcoop" xmlns="http://giove.isti.cnr.it/ctt" NameTaskModelID="Modify or delete offer">
+    <Task Identifier="Modify or delete offer" Category="abstraction" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+        <Name>name</Name>
+        <SubTask>
+            <Task Identifier="Modify offer" Category="abstraction" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                <Name>name</Name>
+                <TemporalOperator name="Disabling"/>
+                <Parent name="Modify or delete offer"/>
+                <SiblingRight name="Delete offer"/>
+                <SubTask>
+                    <Task Identifier="Modify offer properties" Category="interaction" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                        <Name>name</Name>
+                        <TemporalOperator name="SequentialEnablingInfo"/>
+                        <Parent name="Modify offer"/>
+                        <SiblingRight name="Save modified offer"/>
+                    </Task>
+                    <Task Identifier="Save modified offer" Category="application" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                        <Name>name</Name>
+                        <Parent name="Modify offer"/>
+                        <SiblingLeft name="Modify offer properties"/>
+                    </Task>
+                </SubTask>
+            </Task>
+            <Task Identifier="Delete offer" Category="abstraction" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                <Name>name</Name>
+                <Parent name="Modify or delete offer"/>
+                <SiblingLeft name="Modify offer"/>
+                <SubTask>
+                    <Task Identifier="Show confirmation" Category="application" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                        <Name>name</Name>
+                        <TemporalOperator name="SequentialEnabling"/>
+                        <Parent name="Delete offer"/>
+                        <SiblingRight name="Confirm delete"/>
+                    </Task>
+                    <Task Identifier="Confirm delete" Category="interaction" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                        <Name>name</Name>
+                        <TemporalOperator name="SequentialEnabling"/>
+                        <Parent name="Delete offer"/>
+                        <SiblingLeft name="Show confirmation"/>
+                        <SiblingRight name="Remove offer"/>
+                    </Task>
+                    <Task Identifier="Remove offer" Category="application" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                        <Name>name</Name>
+                        <Parent name="Delete offer"/>
+                        <SiblingLeft name="Confirm delete"/>
+                    </Task>
+                </SubTask>
+            </Task>
+        </SubTask>
+    </Task>
+</TaskModel>

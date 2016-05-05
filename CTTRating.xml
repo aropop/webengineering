@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TaskModel xmlns:coop="http://giove.isti.cnr.it/cttcoop" xmlns="http://giove.isti.cnr.it/ctt" NameTaskModelID="Rate angel">
+    <Task Identifier="Rate angel" Category="abstraction" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+        <Name>name</Name>
+        <SubTask>
+            <Task Identifier="Select transaction" Category="interaction" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                <Name>name</Name>
+                <TemporalOperator name="SequentialEnablingInfo"/>
+                <Parent name="Rate angel"/>
+                <SiblingRight name="Show transaction info"/>
+            </Task>
+            <Task Identifier="Show transaction info" Category="application" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                <Name>name</Name>
+                <TemporalOperator name="SequentialEnabling"/>
+                <Parent name="Rate angel"/>
+                <SiblingLeft name="Select transaction"/>
+                <SiblingRight name="Enter rating information"/>
+            </Task>
+            <Task Identifier="Enter rating information" Category="interaction" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                <Name>name</Name>
+                <TemporalOperator name="SequentialEnablingInfo"/>
+                <Parent name="Rate angel"/>
+                <SiblingLeft name="Show transaction info"/>
+                <SiblingRight name="Add Rating"/>
+            </Task>
+            <Task Identifier="Add Rating" Category="application" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                <Name>name</Name>
+                <Parent name="Rate angel"/>
+                <SiblingLeft name="Enter rating information"/>
+            </Task>
+        </SubTask>
+    </Task>
+</TaskModel>
