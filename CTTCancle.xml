@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TaskModel xmlns:coop="http://giove.isti.cnr.it/cttcoop" xmlns="http://giove.isti.cnr.it/ctt" NameTaskModelID="Cancle account">
+    <Task Identifier="Cancle account" Category="abstraction" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+        <Name>name</Name>
+        <SubTask>
+            <Task Identifier="Confirm cancle account" Category="interaction" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                <Name>name</Name>
+                <TemporalOperator name="SequentialEnabling"/>
+                <Parent name="Cancle account"/>
+                <SiblingRight name="Delete account"/>
+            </Task>
+            <Task Identifier="Delete account" Category="application" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                <Name>name</Name>
+                <Parent name="Cancle account"/>
+                <SiblingLeft name="Confirm cancle account"/>
+            </Task>
+        </SubTask>
+    </Task>
+</TaskModel>

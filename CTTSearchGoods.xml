@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TaskModel xmlns:coop="http://giove.isti.cnr.it/cttcoop" xmlns="http://giove.isti.cnr.it/ctt" NameTaskModelID="Search goods or services">
+    <Task Identifier="Search goods or services" Category="abstraction" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+        <Name>name</Name>
+        <SubTask>
+            <Task Identifier="Enter search query" Category="interaction" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                <Name>name</Name>
+                <TemporalOperator name="SequentialEnablingInfo"/>
+                <Parent name="Search goods or services"/>
+                <SiblingRight name="Show resulting goods and services"/>
+            </Task>
+            <Task Identifier="Show resulting goods and services" Category="application" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                <Name>name</Name>
+                <Parent name="Search goods or services"/>
+                <SiblingLeft name="Enter search query"/>
+            </Task>
+        </SubTask>
+    </Task>
+</TaskModel>

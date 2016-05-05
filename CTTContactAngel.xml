@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TaskModel xmlns:coop="http://giove.isti.cnr.it/cttcoop" xmlns="http://giove.isti.cnr.it/ctt" NameTaskModelID="Contact angel">
+    <Task Identifier="Contact angel" Category="abstraction" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+        <Name>name</Name>
+        <SubTask>
+            <Task Identifier="Show notification" Category="application" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                <Name>name</Name>
+                <TemporalOperator name="SequentialEnabling"/>
+                <Parent name="Contact angel"/>
+                <SiblingRight name="Pursue notification"/>
+            </Task>
+            <Task Identifier="Pursue notification" Category="interaction" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                <Name>name</Name>
+                <TemporalOperator name="SequentialEnabling"/>
+                <Parent name="Contact angel"/>
+                <SiblingLeft name="Show notification"/>
+                <SiblingRight name="[Have conversation]*"/>
+            </Task>
+            <Task Identifier="[Have conversation]*" Category="abstraction" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                <Name>name</Name>
+                <Parent name="Contact angel"/>
+                <SiblingLeft name="Pursue notification"/>
+                <SubTask>
+                    <Task Identifier="Write message" Category="interaction" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                        <Name>name</Name>
+                        <TemporalOperator name="SequentialEnablingInfo"/>
+                        <Parent name="[Have conversation]*"/>
+                        <SiblingRight name="Send message to angel"/>
+                    </Task>
+                    <Task Identifier="Send message to angel" Category="application" Iterative="false" Optional="false" PartOfCooperation="false" Frequency=" ">
+                        <Name>name</Name>
+                        <Parent name="[Have conversation]*"/>
+                        <SiblingLeft name="Write message"/>
+                    </Task>
+                </SubTask>
+            </Task>
+        </SubTask>
+    </Task>
+</TaskModel>
