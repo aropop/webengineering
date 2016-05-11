@@ -1,0 +1,48 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Site View 1" homePage="sv1#page1" landmarks="sv1#page2 sv1#page3">
+  <OperationUnits>
+    <CreateUnit gr:x="620" gr:y="195" id="sv1#cru1" name="Add New Company" entity="ent1">
+      <OKLink id="sv1#cru1#oln1" name="OKFlow1" to="sv1#page2" automaticCoupling="true"/>
+      <KOLink id="sv1#cru1#kln1" name="KOFlow1" to="sv1#page4" automaticCoupling="true"/>
+    </CreateUnit>
+    <CreateUnit gr:x="620" gr:y="740" id="sv1#cru2" name="Add New Product" entity="ent2">
+      <OKLink id="sv1#cru2#oln2" name="OKFlow2" to="sv1#page3" automaticCoupling="true"/>
+      <KOLink id="sv1#cru2#kln2" name="KOFlow2" to="sv1#page5" automaticCoupling="true"/>
+    </CreateUnit>
+    <ModifyUnit gr:x="630" gr:y="-65" id="sv1#mfu1" name="Update Company" entity="ent1">
+      <Selector id="sv1#mfu1#su2" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#mfu1#su2#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#mfu1#oln3" name="OKFlow3" to="sv1#page2" automaticCoupling="true"/>
+      <KOLink id="sv1#mfu1#kln3" name="KOFlow3" to="sv1#page4" automaticCoupling="true"/>
+    </ModifyUnit>
+    <IsNotNullUnit gr:x="655" gr:y="90" id="sv1#inn1" name="Exists?">
+      <OKLink id="sv1#inn1#oln4" name="OKFlow4" to="sv1#mfu1" automaticCoupling="true"/>
+      <KOLink id="sv1#inn1#kln4" name="KOFlow4" to="sv1#cru1" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <ModifyUnit gr:x="620" gr:y="485" id="sv1#mfu2" name="Update Product" entity="ent2">
+      <Selector id="sv1#mfu2#su4" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#mfu2#su4#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#mfu2#oln5" name="OKFlow5" to="sv1#page3" automaticCoupling="true"/>
+      <KOLink id="sv1#mfu2#kln5" name="KOFlow5" to="sv1#page5" automaticCoupling="true"/>
+    </ModifyUnit>
+    <IsNotNullUnit gr:x="645" gr:y="625" id="sv1#inn2" name="Exists?">
+      <OKLink id="sv1#inn2#oln6" name="OKFlow6" to="sv1#mfu2" automaticCoupling="true"/>
+      <KOLink id="sv1#inn2#kln6" name="KOFlow6" to="sv1#cru2" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <DeleteUnit gr:x="610" gr:y="315" id="sv1#dlu1" name="Delete a Company" entity="ent1">
+      <Selector id="sv1#dlu1#su5" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#dlu1#su5#kcond5" name="KeyCondition5" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#dlu1#oln7" name="OKFlow7" to="sv1#page2" automaticCoupling="true"/>
+      <KOLink id="sv1#dlu1#kln7" name="KOFlow7" to="sv1#page4#mssu2" automaticCoupling="true"/>
+    </DeleteUnit>
+    <DeleteUnit gr:x="620" gr:y="880" id="sv1#dlu2" name="Delete a Product" entity="ent2">
+      <Selector id="sv1#dlu2#su6" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#dlu2#su6#kcond6" name="KeyCondition6" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#dlu2#oln8" name="OKFlow8" to="sv1#page3" automaticCoupling="true"/>
+      <KOLink id="sv1#dlu2#kln8" name="KOFlow8" to="sv1#page5" automaticCoupling="true"/>
+    </DeleteUnit>
+  </OperationUnits>
+</SiteView>

@@ -1,0 +1,132 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="215" gr:y="450" id="sv1#page3" name="Manage Products" landmark="true">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#page3#pwu2" name="All Products" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att8 ent2#att9 ent2#att10 ent2#att11 ent2#att12 ent2#att14" linkOrder="sv1#page3#pwu2#ln10 sv1#page3#pwu2#ln17">
+      <Link id="sv1#page3#pwu2#ln10" name="Update" to="sv1#page3#seu3" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv1#page3#pwu2#ln17" name="Delete" to="sv1#dlu2" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="0,397,-404,-3"/>
+    </PowerIndexUnit>
+    <EntryUnit gr:x="125" gr:y="160" id="sv1#page3#enu2" name="Add Products" entity="ent2" linkOrder="sv1#page3#enu2#ln15">
+      <Field id="sv1#page3#enu2#fld6" name="Name" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv1#page3#enu2#fld7" name="Model" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv1#page3#enu2#fld8" name="Price" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv1#page3#enu2#fld9" name="picture" type="blob" modifiable="true" preloaded="true"/>
+      <Field id="sv1#page3#enu2#fld10" name="Date of Production" type="date" modifiable="true" preloaded="true"/>
+      <SelectionField id="sv1#page3#enu2#sfld1" name="Company" type="string" role="rel2#role4" attribute="ent2#att8"/>
+      <Link id="sv1#page3#enu2#ln3" name="Create" to="sv1#cru2" type="transport" validate="true">
+        <LinkParameter id="sv1#page3#enu2#ln3#par7" name="Date of Production_date of production" source="sv1#page3#enu2#fld10" target="sv1#cru2.ent2#att11"/>
+        <LinkParameter id="sv1#page3#enu2#ln3#par8" name="Model_model" source="sv1#page3#enu2#fld7" target="sv1#cru2.ent2#att9"/>
+        <LinkParameter id="sv1#page3#enu2#ln3#par9" name="Name_name" source="sv1#page3#enu2#fld6" target="sv1#cru2.ent2#att8"/>
+        <LinkParameter id="sv1#page3#enu2#ln3#par10" name="picture_picture" source="sv1#page3#enu2#fld9" target="sv1#cru2.ent2#att12"/>
+        <LinkParameter id="sv1#page3#enu2#ln3#par11" name="Price_price" source="sv1#page3#enu2#fld8" target="sv1#cru2.ent2#att10"/>
+        <LinkParameter id="sv1#page3#enu2#ln3#par12" name="Product Object_Product Object" source="entityBean" target="sv1#cru2.entityBeans"/>
+        <LinkParameter id="sv1#page3#enu2#ln3#par15" name="Company_Company.oid(ProductToCompany)" source="sv1#page3#enu2#sfld1" target="sv1#cru2.rel2#role4.ent1#att1"/>
+      </Link>
+      <Link id="sv1#page3#enu2#ln13" name="Update" to="sv1#mfu2" type="transport" validate="true">
+        <LinkParameter id="sv1#page3#enu2#ln13#par50" name="Date of Production_date of production" source="sv1#page3#enu2#fld10" target="sv1#mfu2.ent2#att11"/>
+        <LinkParameter id="sv1#page3#enu2#ln13#par51" name="Key [oid]_KeyCondition4 [oid]" source="key.ent2#att2" target="sv1#mfu2#su4#kcond4.ent2#att2"/>
+        <LinkParameter id="sv1#page3#enu2#ln13#par52" name="Model_model" source="sv1#page3#enu2#fld7" target="sv1#mfu2.ent2#att9"/>
+        <LinkParameter id="sv1#page3#enu2#ln13#par53" name="Name_name" source="sv1#page3#enu2#fld6" target="sv1#mfu2.ent2#att8"/>
+        <LinkParameter id="sv1#page3#enu2#ln13#par54" name="picture_picture" source="sv1#page3#enu2#fld9" target="sv1#mfu2.ent2#att12"/>
+        <LinkParameter id="sv1#page3#enu2#ln13#par55" name="Price_price" source="sv1#page3#enu2#fld8" target="sv1#mfu2.ent2#att10"/>
+        <LinkParameter id="sv1#page3#enu2#ln13#par56" name="Company_Company.oid(ProductToCompany)" source="sv1#page3#enu2#sfld1" target="sv1#mfu2.rel2#role4.ent1#att1"/>
+      </Link>
+      <Link id="sv1#page3#enu2#ln15" name="Save" to="sv1#inn2" automaticCoupling="true" type="normal" validate="true"/>
+    </EntryUnit>
+    <SelectorUnit gr:x="130" gr:y="300" id="sv1#page3#seu1" name="Companies" entity="ent1">
+      <Link id="sv1#page3#seu1#ln4" name="Flow4" to="sv1#page3#enu2" type="transport" validate="true">
+        <LinkParameter id="sv1#page3#seu1#ln4#par13" name="name_Company [label]" source="ent1#att3Array" target="sv1#page3#enu2#sfld1_label"/>
+        <LinkParameter id="sv1#page3#seu1#ln4#par14" name="oid_Company [output]" source="ent1#att1Array" target="sv1#page3#enu2#sfld1_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit gr:x="140" gr:y="5" id="sv1#page3#seu3" name="Products" entity="ent2">
+      <Selector id="sv1#page3#seu3#su3" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#page3#seu3#su3#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#page3#seu3#ln11" name="Flow11" to="sv1#page3#enu2" type="transport" validate="true">
+        <LinkParameter id="sv1#page3#seu3#ln11#par36" name="company_Company - Preselection" source="ent2#att14Array" target="sv1#page3#enu2#sfld1_presel"/>
+        <LinkParameter id="sv1#page3#seu3#ln11#par37" name="date of production_Date of Production" source="ent2#att11Array" target="sv1#page3#enu2#fld10_slot"/>
+        <LinkParameter id="sv1#page3#seu3#ln11#par38" name="oid_Key Condition [oid]" source="ent2#att2Array" target="sv1#page3#enu2.ent2#att2"/>
+        <LinkParameter id="sv1#page3#seu3#ln11#par39" name="model_Model" source="ent2#att9Array" target="sv1#page3#enu2#fld7_slot"/>
+        <LinkParameter id="sv1#page3#seu3#ln11#par40" name="name_Name" source="ent2#att8Array" target="sv1#page3#enu2#fld6_slot"/>
+        <LinkParameter id="sv1#page3#seu3#ln11#par41" name="picture_picture" source="ent2#att12Array" target="sv1#page3#enu2#fld9_slot"/>
+        <LinkParameter id="sv1#page3#seu3#ln11#par42" name="price_Price" source="ent2#att10Array" target="sv1#page3#enu2#fld8_slot"/>
+      </Link>
+      <Link id="sv1#page3#seu3#ln12" name="Flow12" to="sv1#mfu2" type="transport" validate="true">
+        <LinkParameter id="sv1#page3#seu3#ln12#par43" name="ProductToCompany.oid_Company.oid(ProductToCompany)" source="rel2#role4_ent1#att1Array" target="sv1#mfu2.rel2#role4.ent1#att1"/>
+        <LinkParameter id="sv1#page3#seu3#ln12#par44" name="date of production_date of production" source="ent2#att11Array" target="sv1#mfu2.ent2#att11"/>
+        <LinkParameter id="sv1#page3#seu3#ln12#par45" name="oid_KeyCondition4 [oid]" source="ent2#att2Array" target="sv1#mfu2#su4#kcond4.ent2#att2"/>
+        <LinkParameter id="sv1#page3#seu3#ln12#par46" name="model_model" source="ent2#att9Array" target="sv1#mfu2.ent2#att9"/>
+        <LinkParameter id="sv1#page3#seu3#ln12#par47" name="name_name" source="ent2#att8Array" target="sv1#mfu2.ent2#att8"/>
+        <LinkParameter id="sv1#page3#seu3#ln12#par48" name="picture_picture" source="ent2#att12Array" target="sv1#mfu2.ent2#att12"/>
+        <LinkParameter id="sv1#page3#seu3#ln12#par49" name="price_price" source="ent2#att10Array" target="sv1#mfu2.ent2#att10"/>
+      </Link>
+      <Link id="sv1#page3#seu3#ln14" name="Flow14" to="sv1#inn2" type="transport" validate="true">
+        <LinkParameter id="sv1#page3#seu3#ln14#par58" name="oid_Input" source="ent2#att2Array" target="sv1#inn2.isnotnull"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page3#pwu2">
+          <layout:Attribute attribute="ent2#att8"/>
+          <layout:Attribute attribute="ent2#att9"/>
+          <layout:Attribute attribute="ent2#att10"/>
+          <layout:Attribute attribute="ent2#att11"/>
+          <layout:Attribute attribute="ent2#att12"/>
+          <layout:Attribute attribute="ent2#att14"/>
+          <layout:Link link="sv1#page3#pwu2#ln10"/>
+          <layout:Link link="sv1#page3#pwu2#ln17"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page3#enu2">
+          <layout:Field field="sv1#page3#enu2#fld6"/>
+          <layout:Field field="sv1#page3#enu2#fld7"/>
+          <layout:Field field="sv1#page3#enu2#fld8"/>
+          <layout:Field field="sv1#page3#enu2#fld9"/>
+          <layout:Field field="sv1#page3#enu2#fld10"/>
+          <layout:Field field="sv1#page3#enu2#sfld1"/>
+          <layout:Link link="sv1#page3#enu2#ln15"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
