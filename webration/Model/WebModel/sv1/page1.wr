@@ -1,13 +1,13 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="860" gr:y="130" id="sv1#page4" name="error page">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="250" gr:y="155" id="sv1#page1" name="Home">
   <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page4#mssu2" name="error message">
-      <Message xml:space="preserve">There occured an error.</Message>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page1#mssu1" name="Welcome">
+      <Message xml:space="preserve">Welcome on HomelessAngel!</Message>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#page4#mssu2"/>
+        <layout:Unit unitId="sv1#page1#mssu1"/>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
