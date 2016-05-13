@@ -1,0 +1,22 @@
+\BOOKMARK [1][-]{section.0.1}{Introduction}{}% 1
+\BOOKMARK [0][-]{chapter.1}{Mission statement}{}% 2
+\BOOKMARK [1][-]{section.1.1}{Purpose of the website}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.2}{Target audience\(s\) of the website}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.3}{Subject of the website}{chapter.1}% 5
+\BOOKMARK [0][-]{chapter.2}{Audience Modeling}{}% 6
+\BOOKMARK [1][-]{section.2.1}{Audience Classification}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.2}{Audience Characterization}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.1}{Visitor}{section.2.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.2}{Registered User}{section.2.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.3}{Homeless person}{section.2.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.4}{Angel}{section.2.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.5}{Administrator}{section.2.2}% 13
+\BOOKMARK [0][-]{chapter.3}{Conceptual Design}{}% 14
+\BOOKMARK [1][-]{section.3.1}{Task Modeling}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.2}{Information Modeling}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.3}{Functional Modeling}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.4}{Navigational Modeling}{chapter.3}% 18
+\BOOKMARK [0][-]{chapter.4}{Implementation Design}{}% 19
+\BOOKMARK [1][-]{section.4.1}{Site Structure Design}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.2}{Presentation Design}{chapter.4}% 21
+\BOOKMARK [2][-]{subsection.4.2.1}{Style and Template Design}{section.4.2}% 22
