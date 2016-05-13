@@ -1,14 +1,61 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="325" gr:y="195" id="sv1#page1" name="Home">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="140" gr:y="240" id="sv1#page1" name="Home">
   <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page1#mssu1" name="Welcome">
-      <Message xml:space="preserve">blabla</Message>
+    <MultiMessageUnit gr:x="5" gr:y="0" id="sv1#page1#mssu1" name="Welcome">
+      <Message xml:space="preserve">Welcome on HomelessAngel!</Message>
     </MultiMessageUnit>
+    <EntryUnit gr:x="0" gr:y="115" id="sv1#page1#enu1" name="login" fieldOrder="sv1#page1#enu1#fld1 sv1#page1#enu1#fld2 sv1#page1#enu1#sfld1" linkOrder="sv1#page1#enu1#ln2" gr:showAllParts="true" entity="User">
+      <Field id="sv1#page1#enu1#fld2" name="password" type="password" modifiable="true"/>
+      <Field id="sv1#page1#enu1#fld1" name="username" type="string" modifiable="true"/>
+      <Link id="sv1#page1#enu1#ln2" name="Login" to="sv1#miu1" type="normal" validate="true">
+        <LinkParameter id="sv1#page1#enu1#ln2#par1" name="username_Username" source="sv1#page1#enu1#fld1" target="sv1#miu1.mov1#opm3#icu3#icp2"/>
+        <LinkParameter id="sv1#page1#enu1#ln2#par2" name="password_Password" source="sv1#page1#enu1#fld2" target="sv1#miu1.mov1#opm3#icu3#icp4"/>
+        <LinkParameter id="sv1#page1#enu1#ln2#par3" name="Remember_Remember Credentials (Persistent Cookie)" source="sv1#page1#enu1#sfld1" target="sv1#miu1.mov1#opm3#icu3#icp5"/>
+      </Link>
+      <SelectionField id="sv1#page1#enu1#sfld1" name="Remember" type="boolean" preselectValue="Yes">
+        <Slot id="sv1#page1#enu1#sfld1#slot1" name="True" label="true" output="true" value="true"/>
+      </SelectionField>
+    </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#page1#mssu1"/>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page1#enu1">
+          <layout:Link link="sv1#page1#enu1#ln2"/>
+          <layout:Field field="sv1#page1#enu1#fld1"/>
+          <layout:Field field="sv1#page1#enu1#fld2"/>
+          <layout:Field field="sv1#page1#enu1#sfld1"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

@@ -1,0 +1,20 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="175" gr:y="365" id="mov1#opm3" name="Login">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="0" gr:y="150" id="mov1#opm3#icu3" name="Input Port">
+      <InputCollectorParameter id="mov1#opm3#icu3#icp2" name="Username"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp4" name="Password"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp5" name="Remember Credentials (Persistent Cookie)"/>
+      <OKLink id="mov1#opm3#icu3#oln2" to="mov1#opm3#lgu1" validate="true" name="Login">
+        <LinkParameter id="mov1#opm3#icu3#oln2#par5" source="mov1#opm3#icu3#icp4" name="password_Password" target="mov1#opm3#lgu1.password"/>
+        <LinkParameter id="mov1#opm3#icu3#oln2#par6" source="mov1#opm3#icu3#icp5" name="Remember_Remember Credentials (Persistent Cookie)" target="mov1#opm3#lgu1.rememberCredentials"/>
+        <LinkParameter id="mov1#opm3#icu3#oln2#par4" source="mov1#opm3#icu3#icp2" name="username_Username" target="mov1#opm3#lgu1.username"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <KOCollectorUnit gr:x="700" gr:y="300" id="mov1#opm3#kocu2" name="KO Port2"/>
+    <OKCollectorUnit gr:x="700" gr:y="0" id="mov1#opm3#okcu2" name="OK Port2"/>
+    <LoginUnit id="mov1#opm3#lgu1" name="Login5" gr:x="485" gr:y="130">
+      <KOLink id="mov1#opm3#lgu1#kln3" to="mov1#opm3#kocu2" name="KOFlow3"/>
+      <OKLink id="mov1#opm3#lgu1#oln6" to="mov1#opm3#okcu2" name="OKFlow2"/>
+    </LoginUnit>
+  </OperationUnits>
+</OperationModule>
