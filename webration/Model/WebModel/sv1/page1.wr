@@ -11,7 +11,7 @@
         <LinkParameter id="sv1#page1#enu1#ln2#par2" name="password_Password" source="sv1#page1#enu1#fld2" target="sv1#miu1.mov1#opm3#icu3#icp4"/>
         <LinkParameter id="sv1#page1#enu1#ln2#par3" name="Remember_Remember Credentials (Persistent Cookie)" source="sv1#page1#enu1#sfld1" target="sv1#miu1.mov1#opm3#icu3#icp5"/>
       </Link>
-      <SelectionField id="sv1#page1#enu1#sfld1" name="Remember" type="boolean" preselectValue="Yes">
+      <SelectionField id="sv1#page1#enu1#sfld1" name="Remember" type="boolean" preselectValue="yes">
         <Slot id="sv1#page1#enu1#sfld1#slot1" name="True" label="true" output="true" value="true"/>
       </SelectionField>
     </EntryUnit>

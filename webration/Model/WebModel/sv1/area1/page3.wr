@@ -1,0 +1,51 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area1#page3" name="View Profile" landmark="true" protected="false" linkVisibilityPolicy="always">
+  <ContentUnits>
+    <DataUnit gr:x="0" gr:y="0" id="sv1#area1#page3#dau1" name="Profile" entity="User" displayAttributes="userName email User#att1 User#att2">
+      <Selector id="sv1#area1#page3#dau1#su1" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#page3#dau1#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <GetUnit gr:x="125" gr:y="45" id="sv1#area1#page3#gtu1" name="Get1" contextParameters="UserCtxParam">
+      <Link id="sv1#area1#page3#gtu1#ln1" name="Flow1" to="sv1#area1#page3#dau1" type="transport" validate="true">
+        <LinkParameter id="sv1#area1#page3#gtu1#ln1#par7" name="UserCtxParam.oid_KeyCondition1 [oid]" source="sv1#area1#page3#gtu1.UserCtxParam" target="sv1#area1#page3#dau1#su1#kcond1.userOID"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page3#dau1">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att1"/>
+          <layout:Attribute attribute="User#att2"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
