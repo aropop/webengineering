@@ -5,7 +5,7 @@
     <Attribute name="password" id="password" type="password" db:column="password"/>
     <Attribute name="email" id="email" type="string" db:column="email"/>
     <Attribute id="User#att1" name="location" type="string" db:column="location"/>
-    <Attribute id="User#att2" name="birthdate" type="date"/>
+    <Attribute id="User#att2" name="birthdate" type="date" db:column="birthdate"/>
   </Entity>
   <Entity id="Group" name="Group" duration="persistent" gr:x="-60" gr:y="295" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db1" db:table="group">
     <Attribute name="oid" id="groupOID" type="integer" key="true" db:column="oid"/>
@@ -263,6 +263,5 @@
       <db:JoinColumn attribute="ent19#att64" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="Database1" type="MySQL" url="jdbc:mysql://127.0.0.1:3306/webratio_project" username="root" cryptedPassword="true" password="cm9vdA==">
-  </db:Database>
+  <db:Database id="db1" name="Database1" type="MySQL" url="jdbc:mysql://127.0.0.1:3306/webratio_project" username="root" cryptedPassword="true" password="cm9vdA=="/>
 </DataModel>

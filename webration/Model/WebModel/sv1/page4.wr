@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="955" gr:y="340" id="sv1#page4" name="Error">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="660" gr:y="185" id="sv1#page4" name="Error">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page4#mssu3" name="Message3">
       <Message xml:space="preserve">Oops something went wrong</Message>
