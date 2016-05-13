@@ -1,7 +1,7 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="250" gr:y="155" id="sv1#page1" name="Home">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="325" gr:y="195" id="sv1#page1" name="Home">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page1#mssu1" name="Welcome">
-      <Message xml:space="preserve">Welcome on HomelessAngel!</Message>
+      <Message xml:space="preserve">blabla</Message>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
