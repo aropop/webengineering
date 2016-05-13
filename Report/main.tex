@@ -1,0 +1,262 @@
+\documentclass[a4paper]{report}
+
+\usepackage[english]{babel}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{vubtitlepage}
+\usepackage{todonotes}
+\usepackage{color}
+\usepackage{tabularx}
+\usepackage{listings}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{a4wide}
+\usepackage[nounderscore]{syntax}
+
+\author{\textit{Group 3}\\ Bennet~Stankidis \& Arno~De~Witte}
+\faculty{Faculteit Wetenschappen en Bio-ingenieurswetenschappen}
+
+\title{{\Huge Web Engineering}\\Assignment 3}
+
+\lstset{
+language=php,
+numbers=left,
+frame=single,
+columns=flexible,
+showstringspaces=true,
+tabsize=3,
+keepspaces=true,
+basicstyle=\ttfamily,
+breaklines=true,
+  basicstyle=\small\ttfamily,
+  keywordstyle=\bf\ttfamily\color[rgb]{0,.3,.7},
+  commentstyle=\color[rgb]{0.133,0.545,0.133},
+  stringstyle={\color[rgb]{0.75,0.49,0.07}}
+}
+
+% Nodig voor nieuwe paragrafen "correct" te laten beginnen
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0ex}
+
+\begin{document}
+\maketitlepage
+\tableofcontents
+\clearpage
+
+
+
+
+
+
+
+
+
+
+\section{Introduction}
+This report is the result of assignment three of the course Web Engineering. It consists of four major deliverables. The mission statement specification, audience modeling (audience classification and audience characterization), conceptual design (task modeling, information modeling, functional modeling and navigational modeling) and implementation design (site structure Design and presentation design).
+
+The online version of HomelessAngel can be found on the url: \url{www.homelessAngel.be}. To use the website as a homeless person the username and password are both \textbf{homeless}. To experience the website as an Angel the username and password are both \textbf{angel}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+\chapter{Mission statement}
+\section{Purpose of the website}
+The general purpose of this assignment is to create a website where Belgian homeless people and angels, people who want to help, can find each other. The website is a central place that makes it possible for both parties to get to know each other and help one an other. 
+
+The website also wants to help homeless people without the need of angels. It provides general information, information about other organisations, tips, etc. This could benefit homeless people who possibly are not aware of the existence of many useful information.
+
+An other purpose is to bring more attention to the homeless people in Belgium. By creating this website more and more people could become aware of the hassle of being homeless and they could later help the homeless if they want to do that.
+
+\section{Target audience(s) of the website}
+There are two target audiences of the HomelessAngel website. The first and most important audience is the homeless people living in Belgium. The second audience is the angels, in other words the people who are willing to help the homeless. 
+
+\section{Subject of the website}
+There are three subjects of the website, namely providing information, goods, services and donations. 
+
+The first is giving information to the homeless that could help them with living on the streets, finding a job, improving their life, etc. 
+
+The second one is providing an interface where goods and services are listed that could help a homeless person. These goods and services are given by the angels. An angels can place goods and services online and a homeless person can browse through the offers and request them. 
+
+The third subject is to make it possible to donate money to the website, without even needing to register to the website. 
+\\
+The website will on their turn use the donated money to help the homeless. The money will make it possible to organise an event where all the homeless people registered on the website may come collect a lunch package. The website will let its users know where and when the event takes place.
+
+
+
+
+
+
+
+
+
+
+
+\chapter{Audience Modeling}
+\section{Audience Classification}
+We identified four different audience classes. There is a visitor, angel, homeless person and administrator. These have a hierarchy as described by figure \ref{fig:classhierarchy}. 
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.8]{classhierarchy.png}
+\caption{Audience class hierarchy diagram}
+\label{fig:classhierarchy}
+\end{figure}
+
+\section{Audience Characterization}
+Below the functional, information and navigational requirements of the audience classes are listed (if applicable). Note that a registered user can not actually exist in the application. It is an abstract user class, as in practice a registered user will either be a homeless person or an angel.
+
+\subsection{Visitor}
+\begin{itemize}
+	\item Functional requirements
+	\begin{itemize}
+		\item Makes a donation
+	\end{itemize}
+	\item Information requirements
+	\begin{itemize}
+		\item Views all angels and homeless people
+		\item Views offered goods and services
+	\end{itemize}
+	\item Navigational requirements
+	\item Characteristics
+	\begin{itemize}
+		\item Web experience may vary
+		\item Language is English
+	\end{itemize}
+\end{itemize}
+
+\subsection{Registered User}
+\begin{itemize}
+	\item Functional requirements
+	\begin{itemize}
+		\item Registers onto the site
+		\item Cancels his or hers account
+	\end{itemize}
+\end{itemize}
+
+\subsection{Homeless person}
+\begin{itemize}
+	\item Functional requirements
+	\begin{itemize}
+		\item Searches for goods or services
+		\item Requests goods or services
+		\item Contacts angels which provide goods or services
+		\item Rates angels
+		\item Finds general information about shelters, rights and tips
+	\end{itemize}
+	\item Navigational requirements
+	\begin{itemize}
+		\item Easy navigation between an angel and his or hers offerings
+	\end{itemize}
+	\item Characteristics
+	\begin{itemize}
+		\item Haves no address
+		\item No home internet connection
+		\item Computer skills may vary
+	\end{itemize}
+\end{itemize}
+
+\subsection{Angel}
+\begin{itemize}
+	\item Functional requirements
+	\begin{itemize}
+		\item Provides goods or services
+		\item Modifies offers
+		\item Is able to communicate with homeless people requesting their offerings
+	\end{itemize}
+	\item Information requirements
+	\begin{itemize}
+		\item Browses his or hers ratings
+	\end{itemize}
+	\item Navigational requirements
+	\item Characteristics
+	\begin{itemize}
+		\item Angels can be anyone, no specific characteristics can be defined for this group.
+	\end{itemize}
+\end{itemize}
+
+\subsection{Administrator}
+\begin{itemize}
+	\item Functional requirements
+	\begin{itemize}
+		\item Disables a registered user
+		\item Removes offerings
+	\end{itemize}
+	\item Information requirements
+	\begin{itemize}
+		\item Browses ratings
+	\end{itemize}
+	\item Navigational requirements
+	\item Characteristics
+	\begin{itemize}
+		\item Is accustomed to the system
+	\end{itemize}
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\chapter{Conceptual Design}
+\section{Task Modeling}
+CTT
+
+\section{Information Modeling}
+UML
+
+\section{Functional Modeling}
+IFML
+
+\section{Navigational Modeling}
+IFML
+
+
+
+
+
+
+
+
+
+
+
+
+\chapter{Implementation Design}
+\section{Site Structure Design}
+\section{Presentation Design}
+\subsection{Style and Template Design}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
