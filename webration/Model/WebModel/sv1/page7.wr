@@ -1,16 +1,18 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="310" gr:y="45" id="sv1#page7" name="Register" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="115" gr:y="35" id="sv1#page7" name="Register" landmark="true">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv1#page7#enu5" name="Registerform" entity="User" linkOrder="sv1#page7#enu5#ln7">
       <Field id="sv1#page7#enu5#fld14" name="Username" type="string" modifiable="true" attribute="userName"/>
       <Field id="sv1#page7#enu5#fld15" name="Password" type="password" modifiable="true" attribute="password"/>
       <Field id="sv1#page7#enu5#fld16" name="Email" type="string" modifiable="true" attribute="email"/>
-      <Link id="sv1#page7#enu5#ln7" name="Register" to="sv1#cru2" type="normal" validate="true">
-        <LinkParameter id="sv1#page7#enu5#ln7#par46" name="email_email" source="sv1#page7#enu5#fld16" target="sv1#cru2.email"/>
-        <LinkParameter id="sv1#page7#enu5#ln7#par47" name="password_password" source="sv1#page7#enu5#fld15" target="sv1#cru2.password"/>
-        <LinkParameter id="sv1#page7#enu5#ln7#par48" name="userName_userName" source="sv1#page7#enu5#fld14" target="sv1#cru2.userName"/>
-        <LinkParameter id="sv1#page7#enu5#ln7#par8" name="Birthdate_birthdate" source="sv1#page7#enu5#fld4" target="sv1#cru2.User#att2"/>
-        <LinkParameter id="sv1#page7#enu5#ln7#par9" name="Location_location" source="sv1#page7#enu5#fld5" target="sv1#cru2.User#att1"/>
-        <LinkParameter id="sv1#page7#enu5#ln7#par10" name="Angel or Homeless_Group.oid(defaultGroup)" source="sv1#page7#enu5#sfld2" target="sv1#cru2.User2DefaultGroup.groupOID"/>
+      <Link id="sv1#page7#enu5#ln7" name="Register" to="sv1#switch4" type="normal" validate="true">
+        <LinkParameter id="sv1#page7#enu5#ln7#par77" name="Angel or Homeless_PASSING" source="sv1#page7#enu5#sfld2" passing="true"/>
+        <LinkParameter id="sv1#page7#enu5#ln7#par79" name="Angel or Homeless_Switch" source="sv1#page7#enu5#sfld2" target="sv1#switch4.switch"/>
+        <LinkParameter id="sv1#page7#enu5#ln7#par80" name="Birthdate_PASSING" source="sv1#page7#enu5#fld4" passing="true"/>
+        <LinkParameter id="sv1#page7#enu5#ln7#par81" name="Email_PASSING" source="sv1#page7#enu5#fld16" passing="true"/>
+        <LinkParameter id="sv1#page7#enu5#ln7#par82" name="Key [oid]_PASSING" source="key.userOID" passing="true"/>
+        <LinkParameter id="sv1#page7#enu5#ln7#par83" name="Location_PASSING" source="sv1#page7#enu5#fld5" passing="true"/>
+        <LinkParameter id="sv1#page7#enu5#ln7#par84" name="Password_PASSING" source="sv1#page7#enu5#fld15" passing="true"/>
+        <LinkParameter id="sv1#page7#enu5#ln7#par85" name="Username_PASSING" source="sv1#page7#enu5#fld14" passing="true"/>
       </Link>
       <Field id="sv1#page7#enu5#fld4" name="Birthdate" type="date" modifiable="true"/>
       <Field id="sv1#page7#enu5#fld5" name="Location" type="string" modifiable="true"/>

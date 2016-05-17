@@ -1,3 +1,9 @@
-<SiteView id="sv3" name="Angels Page" protected="true" homePage="sv3#page6">
-  <OperationUnits/>
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="Angels Page" protected="true" landmarks="sv3#page17 sv3#page15 sv3#page13 sv3#lou2" homePage="sv3#page17">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="630" gr:y="375" id="sv3#miu2" action="true" moduleId="mov1#opm5">
+      <KOLink id="sv3#miu2#kln11" name="KOFlow11" to="sv3#page16" automaticCoupling="true"/>
+      <OKLink id="sv3#miu2#oln21" name="OKFlow21" to="sv3#page15" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+    <LogoutUnit gr:x="65" gr:y="270" id="sv3#lou2" name="Logout" siteView="sv1" landmark="true"/>
+  </OperationUnits>
 </SiteView>

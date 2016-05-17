@@ -1,0 +1,28 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="240" gr:y="175" id="mov1#opm4" name="Create Request">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm4#icu4" gr:x="30" gr:y="60" linkOrder="mov1#opm4#icu4#ln16">
+      <InputCollectorParameter id="mov1#opm4#icu4#icp1" name="OfferId"/>
+      <Link id="mov1#opm4#icu4#ln16" name="Flow16" to="mov1#opm4#cru4" type="transport" validate="true">
+        <LinkParameter id="mov1#opm4#icu4#ln16#par21" name="OfferId_PASSING" source="mov1#opm4#icu4#icp1" passing="true"/>
+      </Link>
+    </InputCollectorUnit>
+    <CreateUnit gr:x="450" gr:y="180" id="mov1#opm4#cru3" name="CreateRequest" entity="ent17">
+      <KOLink id="mov1#opm4#cru3#kln5" name="KOFlow5" to="mov1#opm4#kocu1" automaticCoupling="true"/>
+      <OKLink id="mov1#opm4#cru3#oln8" name="OKFlow8" to="mov1#opm4#okcu1" automaticCoupling="true"/>
+    </CreateUnit>
+    <GetUnit gr:x="235" gr:y="230" id="mov1#opm4#gtu5" name="Get user" contextParameters="UserCtxParam" linkOrder="mov1#opm4#gtu5#ln17">
+      <Link id="mov1#opm4#gtu5#ln17" name="Flow17" to="mov1#opm4#cru3" type="transport" validate="true">
+        <LinkParameter id="mov1#opm4#gtu5#ln17#par20" name="UserCtxParam.oid_Homeless.oid(RequestsToHomeless)" source="mov1#opm4#gtu5.UserCtxParam" target="mov1#opm4#cru3.rel11#role22.userOID"/>
+      </Link>
+    </GetUnit>
+    <CreateUnit gr:x="305" gr:y="60" id="mov1#opm4#cru4" name="Create Notification" entity="ent18">
+      <OKLink id="mov1#opm4#cru4#oln7" name="OKFlow7" to="mov1#opm4#cru3">
+        <LinkParameter id="mov1#opm4#cru4#oln7#par22" name="oid_Notification.oid(RequestsToNotification)" source="ent18#att57Array" target="mov1#opm4#cru3.rel14#role28.ent18#att57"/>
+        <LinkParameter id="mov1#opm4#cru4#oln7#par23" name="OfferId_PASSING_Offer.oid(RequestsToOffer)" sourceLinkParameter="mov1#opm4#icu4#ln16#par21" target="mov1#opm4#cru3.rel12#role23.ent8#att27"/>
+      </OKLink>
+      <KOLink id="mov1#opm4#cru4#kln2" name="KOFlow2" to="mov1#opm4#kocu1" automaticCoupling="true" gr:bendpoints="65,207,-280,-28"/>
+    </CreateUnit>
+    <KOCollectorUnit gr:x="615" gr:y="290" id="mov1#opm4#kocu1" name="KO Port1"/>
+    <OKCollectorUnit gr:x="615" gr:y="120" id="mov1#opm4#okcu1" name="OK Port1"/>
+  </OperationUnits>
+</OperationModule>

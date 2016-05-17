@@ -1,0 +1,40 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="595" gr:y="180" id="sv1#page10" name="Homeless Information">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv1#page10#enu6" name="Homeless Information" linkOrder="sv1#page10#enu6#ln14" entity="ent3">
+      <Link id="sv1#page10#enu6#ln14" name="Submit" to="sv1#cru9" type="normal" validate="true">
+        <LinkParameter id="sv1#page10#enu6#ln14#par108" name="Birthdate_PASSING_birthdate" sourceLinkParameter="sv1#switch4#oln24#par103" target="sv1#cru9.User#att2"/>
+        <LinkParameter id="sv1#page10#enu6#ln14#par109" name="Email_PASSING_email" sourceLinkParameter="sv1#switch4#oln24#par104" target="sv1#cru9.email"/>
+        <LinkParameter id="sv1#page10#enu6#ln14#par110" name="Angel or Homeless_PASSING_Group.oid(defaultGroup)" sourceLinkParameter="sv1#switch4#oln24#par102" target="sv1#cru9.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="sv1#page10#enu6#ln14#par111" name="Location_PASSING_location" sourceLinkParameter="sv1#switch4#oln24#par105" target="sv1#cru9.User#att1"/>
+        <LinkParameter id="sv1#page10#enu6#ln14#par112" name="nickname_nickname" source="sv1#page10#enu6#fld21" target="sv1#cru9.ent3#att12"/>
+        <LinkParameter id="sv1#page10#enu6#ln14#par113" name="Password_PASSING_password" sourceLinkParameter="sv1#switch4#oln24#par106" target="sv1#cru9.password"/>
+        <LinkParameter id="sv1#page10#enu6#ln14#par114" name="Username_PASSING_userName" sourceLinkParameter="sv1#switch4#oln24#par107" target="sv1#cru9.userName"/>
+        <LinkParameter id="sv1#page10#enu6#ln14#par115" name="yearsOnStreet_yearsOnStreet" source="sv1#page10#enu6#fld22" target="sv1#cru9.ent3#att16"/>
+      </Link>
+      <Field id="sv1#page10#enu6#fld21" name="nickname" type="string" modifiable="true" attribute="ent3#att12"/>
+      <Field id="sv1#page10#enu6#fld22" name="yearsOnStreet" type="integer" modifiable="true" attribute="ent3#att16"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page10#enu6">
+          <layout:Link link="sv1#page10#enu6#ln14"/>
+          <layout:Field field="sv1#page10#enu6#fld21"/>
+          <layout:Field field="sv1#page10#enu6#fld22"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

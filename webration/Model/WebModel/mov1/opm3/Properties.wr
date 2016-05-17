@@ -12,9 +12,9 @@
     </InputCollectorUnit>
     <KOCollectorUnit gr:x="700" gr:y="300" id="mov1#opm3#kocu2" name="KO Port2"/>
     <OKCollectorUnit gr:x="700" gr:y="0" id="mov1#opm3#okcu2" name="OK Port2"/>
-    <LoginUnit id="mov1#opm3#lgu1" name="Login5" gr:x="485" gr:y="130">
+    <LoginUnit id="mov1#opm3#lgu1" name="Login" gr:x="485" gr:y="130" gr:showAllParts="false">
       <KOLink id="mov1#opm3#lgu1#kln3" to="mov1#opm3#kocu2" name="KOFlow3"/>
-      <OKLink id="mov1#opm3#lgu1#oln6" to="mov1#opm3#okcu2" name="OKFlow2"/>
+      <OKLink id="mov1#opm3#lgu1#oln22" name="OKFlow22" to="mov1#opm3#okcu2" automaticCoupling="true"/>
     </LoginUnit>
   </OperationUnits>
 </OperationModule>

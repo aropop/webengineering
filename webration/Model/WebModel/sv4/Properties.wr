@@ -1,3 +1,17 @@
-<SiteView id="sv4" name="Homeless Page" protected="true">
-  <OperationUnits/>
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv4" name="Homeless Page" protected="true" homePage="sv4#page2" landmarks="sv4#page2 sv4#page5 sv4#page12 sv4#lou1">
+  <OperationUnits>
+    <SwitchUnit gr:x="910" gr:y="250" id="sv4#switch1" name="ConfirmCheck">
+      <Case value="true"/>
+      <Case value="false"/>
+      <OKLink id="sv4#switch1#oln5" name="OKFlow5" to="sv4#page8" automaticCoupling="true" code="false"/>
+      <OKLink id="sv4#switch1#oln9" name="OKFlow9" to="sv4#miu5" code="true">
+        <LinkParameter id="sv4#switch1#oln9#par24" name="id_PASSING_OfferId" sourceLinkParameter="sv4#page14#enu3#ln13#par17" target="sv4#miu5.mov1#opm4#icu4#icp1"/>
+      </OKLink>
+    </SwitchUnit>
+    <ModuleInstanceUnit gr:x="880" gr:y="415" id="sv4#miu5" action="true" moduleId="mov1#opm4">
+      <OKLink id="sv4#miu5#oln10" name="OKFlow10" to="sv4#page8" automaticCoupling="true"/>
+      <KOLink id="sv4#miu5#kln6" name="KOFlow6" to="sv4#page8" automaticCoupling="true" gr:bendpoints="-192,-83,63,222"/>
+    </ModuleInstanceUnit>
+    <LogoutUnit gr:x="165" gr:y="280" id="sv4#lou1" name="Logout" siteView="sv1" landmark="true"/>
+  </OperationUnits>
 </SiteView>

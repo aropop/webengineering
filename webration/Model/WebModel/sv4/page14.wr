@@ -1,0 +1,33 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="910" gr:y="100" id="sv4#page14" name="Request Offer">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv4#page14#enu3" name="Confirm" linkOrder="sv4#page14#enu3#ln13">
+      <Field id="sv4#page14#enu3#fld3" name="sure" type="boolean" modifiable="true"/>
+      <Link id="sv4#page14#enu3#ln13" name="Flow13" to="sv4#switch1" type="normal" validate="true">
+        <LinkParameter id="sv4#page14#enu3#ln13#par15" name="sure_Switch" source="sv4#page14#enu3#fld3" target="sv4#switch1.switch"/>
+        <LinkParameter id="sv4#page14#enu3#ln13#par17" name="id_PASSING" source="sv4#page14#enu3#fld6" passing="true"/>
+      </Link>
+      <Field id="sv4#page14#enu3#fld6" name="id" type="integer" modifiable="false" preloaded="true" hidden="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page14#enu3">
+          <layout:Link link="sv4#page14#enu3#ln13"/>
+          <layout:Field field="sv4#page14#enu3#fld3"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
