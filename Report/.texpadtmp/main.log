@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.10)  13 MAY 2016 22:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.10)  15 MAY 2016 10:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -648,7 +648,7 @@ Package: syntax 1996/05/17 1.07 Syntax typesetting (MDW)
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2014/09/06 1.5e listings language file
-) (/Users/bennetstankidis/Documents/web_engineering/Design document/.texpadtmp/main.aux)
+) (/Users/bennetstankidis/Documents/web_engineering/Report/.texpadtmp/main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
@@ -677,7 +677,7 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 42.
 LaTeX Info: Redefining \pageref on input line 42.
 LaTeX Info: Redefining \nameref on input line 42.
- (/Users/bennetstankidis/Documents/web_engineering/Design document/.texpadtmp/main.out) (/Users/bennetstankidis/Documents/web_engineering/Design document/.texpadtmp/main.out)
+ (/Users/bennetstankidis/Documents/web_engineering/Report/.texpadtmp/main.out) (/Users/bennetstankidis/Documents/web_engineering/Report/.texpadtmp/main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
@@ -706,7 +706,7 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) ABD: EveryShipout initializing macros
 \c@lstlisting=\count140
- <VUB_logo.pdf, id=95, 758.835pt x 153.57375pt>
+ <VUB_logo.pdf, id=151, 758.835pt x 153.57375pt>
 File: VUB_logo.pdf Graphic file (type pdf)
  <use VUB_logo.pdf>
 Package pdftex.def Info: VUB_logo.pdf used on input line 43.
@@ -720,7 +720,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--43
 []\OT1/cmr/m/n/10 Faculteit Weten-schap-pen en Bio-
  []
 
-<VUB_schild.pdf, id=96, 260.975pt x 259.97125pt>
+<VUB_schild.pdf, id=152, 260.975pt x 259.97125pt>
 File: VUB_schild.pdf Graphic file (type pdf)
  <use VUB_schild.pdf>
 Package pdftex.def Info: VUB_schild.pdf used on input line 43.
@@ -737,30 +737,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--43
 
 [1
 
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./VUB_logo.pdf> <./VUB_schild.pdf>] (/Users/bennetstankidis/Documents/web_engineering/Design document/.texpadtmp/main.toc)
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./VUB_logo.pdf> <./VUB_schild.pdf>] (/Users/bennetstankidis/Documents/web_engineering/Report/.texpadtmp/main.tocpdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.33 ....4}Navigational Modeling}{12}{section.3.4}
+                                                   [1
+
+])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.45 \clearpage
-                [1
-
-] [2
+ [2] [3
 
 ]
 Chapter 1.
-[3
+[4
 
 ]
 Chapter 2.
-<classhierarchy.png, id=149, 295.1025pt x 433.62pt>
+<classhierarchy.png, id=224, 295.1025pt x 433.62pt>
 File: classhierarchy.png Graphic file (type png)
  <use classhierarchy.png>
 Package pdftex.def Info: classhierarchy.png used on input line 111.
 (pdftex.def)             Requested size: 236.0823pt x 346.89647pt.
- [4
+ [5
 
  <./classhierarchy.png>]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 121.
@@ -769,37 +769,162 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 121.
- [5] [6]
+ [6] [7]
 Chapter 3.
-[7
+<CTT/CTTpng/CTTAddGood.png, id=243, 364.36125pt x 177.66376pt>
+File: CTT/CTTpng/CTTAddGood.png Graphic file (type png)
+ <use CTT/CTTpng/CTTAddGood.png>
+Package pdftex.def Info: CTT/CTTpng/CTTAddGood.png used on input line 228.
+(pdftex.def)             Requested size: 339.67029pt x 165.6295pt.
+ <CTT/CTTpng/CTTCancle.png, id=245, 513.92pt x 209.78375pt>
+File: CTT/CTTpng/CTTCancle.png Graphic file (type png)
+ <use CTT/CTTpng/CTTCancle.png>
+Package pdftex.def Info: CTT/CTTpng/CTTCancle.png used on input line 237.
+(pdftex.def)             Requested size: 339.67029pt x 138.65614pt.
 
-]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<CTT/CTTpng/CTTContactAngel.png, id=247, 686.565pt x 266.9975pt>
+File: CTT/CTTpng/CTTContactAngel.png Graphic file (type png)
+ <use CTT/CTTpng/CTTContactAngel.png>
+Package pdftex.def Info: CTT/CTTpng/CTTContactAngel.png used on input line 250.
+(pdftex.def)             Requested size: 339.67029pt x 132.09286pt.
+ [8
+
+ <./CTT/CTTpng/CTTAddGood.png>] <CTT/CTTpng/CTTContactHomeless.png, id=257, 617.30624pt x 256.96pt>
+File: CTT/CTTpng/CTTContactHomeless.png Graphic file (type png)
+ <use CTT/CTTpng/CTTContactHomeless.png>
+Package pdftex.def Info: CTT/CTTpng/CTTContactHomeless.png used on input line 259.
+(pdftex.def)             Requested size: 339.67029pt x 141.39508pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<CTT/CTTpng/CTTDeleteOffer.png, id=259, 294.09875pt x 181.67876pt>
+File: CTT/CTTpng/CTTDeleteOffer.png Graphic file (type png)
+ <use CTT/CTTpng/CTTDeleteOffer.png>
+Package pdftex.def Info: CTT/CTTpng/CTTDeleteOffer.png used on input line 268.
+(pdftex.def)             Requested size: 339.67029pt x 209.83266pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<CTT/CTTpng/CTTDisable.png, id=261, 335.2525pt x 175.65625pt>
+File: CTT/CTTpng/CTTDisable.png Graphic file (type png)
+ <use CTT/CTTpng/CTTDisable.png>
+Package pdftex.def Info: CTT/CTTpng/CTTDisable.png used on input line 277.
+(pdftex.def)             Requested size: 339.67029pt x 177.97157pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<CTT/CTTpng/CTTDonation.png, id=264, 858.20625pt x 264.99pt>
+File: CTT/CTTpng/CTTDonation.png Graphic file (type png)
+ <use CTT/CTTpng/CTTDonation.png>
+Package pdftex.def Info: CTT/CTTpng/CTTDonation.png used on input line 286.
+(pdftex.def)             Requested size: 339.67029pt x 104.88217pt.
+ [9 <./CTT/CTTpng/CTTCancle.png> <./CTT/CTTpng/CTTContactAngel.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<CTT/CTTpng/CTTGoods.png, id=276, 543.02875pt x 218.8175pt>
+File: CTT/CTTpng/CTTGoods.png Graphic file (type png)
+ <use CTT/CTTpng/CTTGoods.png>
+Package pdftex.def Info: CTT/CTTpng/CTTGoods.png used on input line 298.
+(pdftex.def)             Requested size: 339.67029pt x 136.87746pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<CTT/CTTpng/CTTModifyOffer.png, id=278, 787.94376pt x 285.065pt>
+File: CTT/CTTpng/CTTModifyOffer.png Graphic file (type png)
+ <use CTT/CTTpng/CTTModifyOffer.png>
+Package pdftex.def Info: CTT/CTTpng/CTTModifyOffer.png used on input line 313.
+(pdftex.def)             Requested size: 339.67029pt x 122.88438pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<CTT/CTTpng/CTTRating.png, id=280, 680.5425pt x 183.68625pt>
+File: CTT/CTTpng/CTTRating.png Graphic file (type png)
+ <use CTT/CTTpng/CTTRating.png>
+Package pdftex.def Info: CTT/CTTpng/CTTRating.png used on input line 322.
+(pdftex.def)             Requested size: 339.67029pt x 91.68031pt.
+ [10 <./CTT/CTTpng/CTTContactHomeless.png> <./CTT/CTTpng/CTTDeleteOffer.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<CTT/CTTpng/CTTRegister.png, id=291, 500.87125pt x 190.7125pt>
+File: CTT/CTTpng/CTTRegister.png Graphic file (type png)
+ <use CTT/CTTpng/CTTRegister.png>
+Package pdftex.def Info: CTT/CTTpng/CTTRegister.png used on input line 334.
+(pdftex.def)             Requested size: 339.67029pt x 129.33939pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<CTT/CTTpng/CTTRequestGoods.png, id=293, 420.57124pt x 196.735pt>
+File: CTT/CTTpng/CTTRequestGoods.png Graphic file (type png)
+ <use CTT/CTTpng/CTTRequestGoods.png>
+Package pdftex.def Info: CTT/CTTpng/CTTRequestGoods.png used on input line 343.
+(pdftex.def)             Requested size: 339.67029pt x 158.89215pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<CTT/CTTpng/CTTSearchGoods.png, id=295, 464.73625pt x 181.67876pt>
+File: CTT/CTTpng/CTTSearchGoods.png Graphic file (type png)
+ <use CTT/CTTpng/CTTSearchGoods.png>
+Package pdftex.def Info: CTT/CTTpng/CTTSearchGoods.png used on input line 352.
+(pdftex.def)             Requested size: 339.67029pt x 132.79071pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `fig:awesome_image' on page 11 undefined on input line 358.
+
+<CTT/CTTpng/CTTViewAngels.png, id=296, 1279.78125pt x 331.2375pt>
+File: CTT/CTTpng/CTTViewAngels.png Graphic file (type png)
+ <use CTT/CTTpng/CTTViewAngels.png>
+Package pdftex.def Info: CTT/CTTpng/CTTViewAngels.png used on input line 361.
+(pdftex.def)             Requested size: 339.67029pt x 87.91397pt.
+ [11 <./CTT/CTTpng/CTTDisable.png> <./CTT/CTTpng/CTTDonation.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12 <./CTT/CTTpng/CTTGoods.png> <./CTT/CTTpng/CTTModifyOffer.png>] [13 <./CTT/CTTpng/CTTRating.png> <./CTT/CTTpng/CTTRegister.png> <./CTT/CTTpng/CTTRequestGoods.png> <./CTT/CTTpng/CTTSearchGoods.png>] [14 <./CTT/CTTpng/CTTViewAngels.png>]
 Chapter 4.
-[8
+[15
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 262.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 262.
- (/Users/bennetstankidis/Documents/web_engineering/Design document/.texpadtmp/main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 262.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 262.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 405.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 405.
+ (/Users/bennetstankidis/Documents/web_engineering/Report/.texpadtmp/main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 405.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 405.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 262.
+
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 405.
  ) 
 Here is how much of TeX's memory you used:
- 17726 strings out of 493089
- 327637 string characters out of 6134842
- 711508 words of memory out of 5000000
- 20865 multiletter control sequences out of 15000+600000
+ 17861 strings out of 493089
+ 330499 string characters out of 6134842
+ 712508 words of memory out of 5000000
+ 20950 multiletter control sequences out of 15000+600000
  7782 words of font info for 28 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,16n,72p,432b,454s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,16n,72p,432b,457s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on "/Users/bennetstankidis/Documents/web_engineering/Design document/.texpadtmp/main.pdf" (9 pages, 134215 bytes).
+Output written on /Users/bennetstankidis/Documents/web_engineering/Report/.texpadtmp/main.pdf (16 pages, 204435 bytes).
 PDF statistics:
- 212 PDF objects out of 1000 (max. 8388607)
- 187 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
- 204 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 378 PDF objects out of 1000 (max. 8388607)
+ 316 compressed objects within 4 object streams
+ 68 named destinations out of 1000 (max. 500000)
+ 386 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -140,7 +140,7 @@ Below the functional, information and navigational requirements of the audience 
 	\item Functional requirements
 	\begin{itemize}
 		\item Registers onto the site
-		\item Cancels his or hers account
+		\item Cancels his or her account
 	\end{itemize}
 \end{itemize}
 
@@ -156,7 +156,7 @@ Below the functional, information and navigational requirements of the audience 
 	\end{itemize}
 	\item Navigational requirements
 	\begin{itemize}
-		\item Easy navigation between an angel and his or hers offerings
+		\item Easy navigation between an angel and his or her offerings
 	\end{itemize}
 	\item Characteristics
 	\begin{itemize}
@@ -176,7 +176,7 @@ Below the functional, information and navigational requirements of the audience 
 	\end{itemize}
 	\item Information requirements
 	\begin{itemize}
-		\item Browses his or hers ratings
+		\item Browses his or her ratings
 	\end{itemize}
 	\item Navigational requirements
 	\item Characteristics
@@ -219,7 +219,150 @@ Below the functional, information and navigational requirements of the audience 
 
 \chapter{Conceptual Design}
 \section{Task Modeling}
-CTT
+ConcurTaskTrees are found in the following alinea's. They are used to describe the tasks that the web system needs to support. Every CTT consists of a small textual explanation combined with the graphical representation of the CTT itself.
+
+\subsection{Provide good or service}
+In figure \ref{fig:CTTAddGood} is shown that an angel can enter a good or service. The system will add the offer to the listing.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{CTT/CTTpng/CTTAddGood.png}
+    \caption{Offer a good or service.}
+    \label{fig:CTTAddGood}
+\end{figure}
+
+\subsection{Cancel account}
+Figure \ref{fig:CTTCancle} depicts how any user, angel or homeless person, can cancel his/her account. 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{CTT/CTTpng/CTTCancle.png}
+    \caption{Account cancellation.}
+    \label{fig:CTTCancle}
+\end{figure}
+
+% TODO
+% is deze uitleg correct?
+% ik vind de naam "Contact Angel" niet zo duidelijk
+% want de angel is al gecontacteerd, ik verwachtte dat de CTT toonde hoe ge een angel kon contacteren
+\subsection{Contact angel}
+Figure \ref{fig:CTTContactAngel} explains how an angel views his/her notification, later pursues it and can have a conversation with the homeless person that sent the message.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{CTT/CTTpng/CTTContactAngel.png}
+    \caption{Angel is contacted and has a conversation.}
+    \label{fig:CTTContactAngel}
+\end{figure}
+
+\subsection{Contact homeless person}
+In figure \ref{fig:CTTContactHomeless} is the same method used as in figure \ref{fig:CTTContactAngel}. In this case the homeless person has a leading role.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{CTT/CTTpng/CTTContactHomeless.png}
+    \caption{Homeless person is contacted and has a conversation.}
+    \label{fig:CTTContactHomeless}
+\end{figure}
+
+\subsection{Remove offering}
+In figure \ref{fig:CTTDeleteOffer} is shown how an angel can delete an offer. An angel can of course only delete offers made by him/her.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{CTT/CTTpng/CTTDeleteOffer.png}
+    \caption{Angel can delete an offer.}
+    \label{fig:CTTDeleteOffer}
+\end{figure}
+
+\subsection{Disable user}
+Figure \ref{fig:CTTDisable} illustrates how an administrator can select a user that will be disabled by the system.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{CTT/CTTpng/CTTDisable.png}
+    \caption{Admin disables a user.}
+    \label{fig:CTTDisable}
+\end{figure}
+
+\subsection{Make a donation}
+Figure \ref{fig:CTTDonation} depicts how a visitor of the website can make a donation. The user first needs to specify an amount, then make the payment and after that will the system process the transaction. Important to notify here is that every visitor of the website is able to make a donation. So the visitor, seen in figure \ref{fig:classhierarchy}, is able to help the homeless.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{CTT/CTTpng/CTTDonation.png}
+    \caption{Make a donation to help the homeless.}
+    \label{fig:CTTDonation}
+\end{figure}
+
+% TOOD
+% het moet zeker mogelijk zijn om alle offers tegelijk te zien
+% is dit een extra mogelijkheid om ze per angel te zien?
+\subsection{View offered goods and services}
+How a user can view all the offered goods and services of a selected angel is shown in figure \ref{fig:CTTGoods}.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{CTT/CTTpng/CTTGoods.png}
+    \caption{View the offers of an angel.}
+    \label{fig:CTTGoods}
+\end{figure}
+
+% TODO
+% hierin zit delete offer
+% wat is het verschil met de CTT "Remove offer"?
+% TODO
+% waarom is [> de relatie tussen modify en delete?
+% moet dat niet >> zijn? Want modifying enabled toch niet dat ge kunt deleten?
+\subsection{Modify or delete offer}
+Figure \ref{fig:CTTModifyOffer} shows how an angel can modify his/her offers. 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{CTT/CTTpng/CTTModifyOffer.png}
+    \caption{Angel can modify or deletes his/her offers.}
+    \label{fig:CTTModifyOffer}
+\end{figure}
+
+\subsection{Rate Angel}
+In figure \ref{fig:CTTRating} is shown how a homeless person can give a rating to an angel. After completing a transaction the homeless person can fill in a rating.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{CTT/CTTpng/CTTRating.png}
+    \caption{Rate an angel after a transaction.}
+    \label{fig:CTTRating}
+\end{figure}
+
+% TODO 
+% in de CTT moet eerst de keuze tussen homeless en angel zitten
+% adhv die keuze is de personal info anders (wat die info is, moeten we niet tonen)
+\subsection{Register account}
+Figure \ref{fig:CTTRegister} illustrates how a user can register an account. The user has to fill in personal information to create an account. De personal information depends on the fact dat the new user is an angel or homeless person.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{CTT/CTTpng/CTTRegister.png}
+    \caption{Register an account.}
+    \label{fig:CTTRegister}
+\end{figure}
+
+\subsection{Request goods or services}
+Figure \ref{fig:CTTRequestGoods} depicts how a homeless person can select a good of services of interest and then the system creates a new request.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{CTT/CTTpng/CTTRequestGoods.png}
+    \caption{Request a good or service of an angel.}
+    \label{fig:CTTRequestGoods}
+\end{figure}
+
+\subsection{Search goods or services}
+Figure \ref{fig:CTTSearchGoods} explains that a homeless person can search on certain keywords to look through the list of offers.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{CTT/CTTpng/CTTSearchGoods.png}
+    \caption{Search for certain goods or services.}
+    \label{fig:CTTSearchGoods}
+\end{figure}
+
+\subsection{View all angels and homeless people}
+In figure \ref{fig:awesome_image} is illustrated how a user can view all the registered angels and homeless people. The user is also able to search in the list of all registered users.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{CTT/CTTpng/CTTViewAngels.png}
+    \caption{View all the users and search certain users.}
+    \label{fig:CTTViewAngels}
+\end{figure}
+
 
 \section{Information Modeling}
 UML

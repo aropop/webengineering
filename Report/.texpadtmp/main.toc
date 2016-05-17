@@ -1,23 +1,37 @@
 \select@language {english}
-\contentsline {section}{\numberline {0.1}Introduction}{2}{section.0.1}
-\contentsline {chapter}{\numberline {1}Mission statement}{3}{chapter.1}
-\contentsline {section}{\numberline {1.1}Purpose of the website}{3}{section.1.1}
-\contentsline {section}{\numberline {1.2}Target audience(s) of the website}{3}{section.1.2}
-\contentsline {section}{\numberline {1.3}Subject of the website}{3}{section.1.3}
-\contentsline {chapter}{\numberline {2}Audience Modeling}{4}{chapter.2}
-\contentsline {section}{\numberline {2.1}Audience Classification}{4}{section.2.1}
-\contentsline {section}{\numberline {2.2}Audience Characterization}{5}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Visitor}{5}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Registered User}{5}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Homeless person}{5}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}Angel}{6}{subsection.2.2.4}
-\contentsline {subsection}{\numberline {2.2.5}Administrator}{6}{subsection.2.2.5}
-\contentsline {chapter}{\numberline {3}Conceptual Design}{7}{chapter.3}
-\contentsline {section}{\numberline {3.1}Task Modeling}{7}{section.3.1}
-\contentsline {section}{\numberline {3.2}Information Modeling}{7}{section.3.2}
-\contentsline {section}{\numberline {3.3}Functional Modeling}{7}{section.3.3}
-\contentsline {section}{\numberline {3.4}Navigational Modeling}{7}{section.3.4}
-\contentsline {chapter}{\numberline {4}Implementation Design}{8}{chapter.4}
-\contentsline {section}{\numberline {4.1}Site Structure Design}{8}{section.4.1}
-\contentsline {section}{\numberline {4.2}Presentation Design}{8}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Style and Template Design}{8}{subsection.4.2.1}
+\contentsline {section}{\numberline {0.1}Introduction}{3}{section.0.1}
+\contentsline {chapter}{\numberline {1}Mission statement}{4}{chapter.1}
+\contentsline {section}{\numberline {1.1}Purpose of the website}{4}{section.1.1}
+\contentsline {section}{\numberline {1.2}Target audience(s) of the website}{4}{section.1.2}
+\contentsline {section}{\numberline {1.3}Subject of the website}{4}{section.1.3}
+\contentsline {chapter}{\numberline {2}Audience Modeling}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Audience Classification}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}Audience Characterization}{6}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Visitor}{6}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Registered User}{6}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Homeless person}{6}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Angel}{7}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}Administrator}{7}{subsection.2.2.5}
+\contentsline {chapter}{\numberline {3}Conceptual Design}{8}{chapter.3}
+\contentsline {section}{\numberline {3.1}Task Modeling}{8}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Provide good or service}{8}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Cancel account}{8}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Contact angel}{9}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Contact homeless person}{9}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.5}Remove offering}{9}{subsection.3.1.5}
+\contentsline {subsection}{\numberline {3.1.6}Disable user}{9}{subsection.3.1.6}
+\contentsline {subsection}{\numberline {3.1.7}Make a donation}{10}{subsection.3.1.7}
+\contentsline {subsection}{\numberline {3.1.8}View offered goods and services}{10}{subsection.3.1.8}
+\contentsline {subsection}{\numberline {3.1.9}Modify or delete offer}{10}{subsection.3.1.9}
+\contentsline {subsection}{\numberline {3.1.10}Rate Angel}{11}{subsection.3.1.10}
+\contentsline {subsection}{\numberline {3.1.11}Register account}{11}{subsection.3.1.11}
+\contentsline {subsection}{\numberline {3.1.12}Request goods or services}{11}{subsection.3.1.12}
+\contentsline {subsection}{\numberline {3.1.13}Search goods or services}{11}{subsection.3.1.13}
+\contentsline {subsection}{\numberline {3.1.14}View all angels and homeless people}{12}{subsection.3.1.14}
+\contentsline {section}{\numberline {3.2}Information Modeling}{12}{section.3.2}
+\contentsline {section}{\numberline {3.3}Functional Modeling}{12}{section.3.3}
+\contentsline {section}{\numberline {3.4}Navigational Modeling}{12}{section.3.4}
+\contentsline {chapter}{\numberline {4}Implementation Design}{15}{chapter.4}
+\contentsline {section}{\numberline {4.1}Site Structure Design}{15}{section.4.1}
+\contentsline {section}{\numberline {4.2}Presentation Design}{15}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Style and Template Design}{15}{subsection.4.2.1}
