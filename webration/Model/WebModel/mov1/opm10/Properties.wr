@@ -6,27 +6,27 @@
         <LinkParameter id="mov1#opm10#icu11#oln32#par122" name="angelid_KeyCondition10 [oid]" source="mov1#opm10#icu11#icp21" target="mov1#opm10#seu3#su18#kcond10.userOID"/>
       </OKLink>
     </InputCollectorUnit>
-    <OKCollectorUnit gr:x="625" gr:y="110" id="mov1#opm10#okcu8" name="OK Port8">
+    <OKCollectorUnit gr:x="625" gr:y="90" id="mov1#opm10#okcu8" name="OK Port8">
       <OutputCollectorParameter id="mov1#opm10#okcu8#ocp2" name="AngelUsedName"/>
     </OKCollectorUnit>
-    <SelectorUnit gr:x="330" gr:y="75" id="mov1#opm10#seu3" name="Selector3" entity="ent1" linkOrder="mov1#opm10#seu3#ln37">
+    <SelectorUnit gr:x="330" gr:y="75" id="mov1#opm10#seu3" name="Selector3" entity="ent1">
       <Selector id="mov1#opm10#seu3#su18" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov1#opm10#seu3#su18#kcond10" name="KeyCondition10" predicate="in" implied="false"/>
       </Selector>
-      <Link id="mov1#opm10#seu3#ln37" name="Flow37" to="mov1#opm10#switch6" type="transport" validate="true">
-        <LinkParameter id="mov1#opm10#seu3#ln37#par126" name="annonymous_Switch" source="ent1#att8Array" target="mov1#opm10#switch6.switch"/>
-        <LinkParameter id="mov1#opm10#seu3#ln37#par127" name="userName_PASSING" source="userNameArray" passing="true"/>
-      </Link>
+      <OKLink id="mov1#opm10#seu3#oln44" name="OKFlow44" to="mov1#opm10#switch6" gr:bendpoints="75,9,-65,19">
+        <LinkParameter id="mov1#opm10#seu3#oln44#par165" name="annonymous_Switch" source="ent1#att21Array" target="mov1#opm10#switch6.switch"/>
+        <LinkParameter id="mov1#opm10#seu3#oln44#par167" name="userName_PASSING" source="userNameArray" passing="true"/>
+      </OKLink>
     </SelectorUnit>
     <SwitchUnit gr:x="480" gr:y="80" id="mov1#opm10#switch6" name="isAnon">
-      <Case value="true"/>
-      <Case value="false"/>
       <OKLink id="mov1#opm10#switch6#oln34" name="OKFlow34" to="mov1#opm10#okcu8" gr:bendpoints="84,-26,-146,-56" code="true">
         <LinkParameter id="mov1#opm10#switch6#oln34#par129" name="Anonymous_AngelUsedName" sourceValue="Anonymous" target="mov1#opm10#okcu8#ocp2"/>
       </OKLink>
       <OKLink id="mov1#opm10#switch6#oln35" name="OKFlow35" to="mov1#opm10#okcu8" gr:bendpoints="77,63,-153,33" code="false">
-        <LinkParameter id="mov1#opm10#switch6#oln35#par128" name="userName_PASSING_AngelUsedName" sourceLinkParameter="mov1#opm10#seu3#ln37#par127" target="mov1#opm10#okcu8#ocp2"/>
+        <LinkParameter id="mov1#opm10#switch6#oln35#par168" name="userName_PASSING_AngelUsedName" sourceLinkParameter="mov1#opm10#seu3#oln44#par167" target="mov1#opm10#okcu8#ocp2"/>
       </OKLink>
+      <Case value="true"/>
+      <Case value="false"/>
     </SwitchUnit>
   </OperationUnits>
 </OperationModule>

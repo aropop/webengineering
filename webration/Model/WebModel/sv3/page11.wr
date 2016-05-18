@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-45" gr:y="575" id="sv3#page11" name="Messages" landmark="true" linkOrder="sv3#page11#ln26">
   <ContentUnits>
-    <PowerIndexUnit gr:x="175" gr:y="0" id="sv3#page11#pwu5" name="Inbox" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att4 ent4#att6 ent4#att20" linkOrder="sv3#page11#pwu5#ln20">
+    <PowerIndexUnit gr:x="175" gr:y="0" id="sv3#page11#pwu5" name="Inbox" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att4 ent4#att20" linkOrder="sv3#page11#pwu5#ln20">
       <Link id="sv3#page11#pwu5#ln20" name="View Message" to="sv3#page18#dau4" type="normal" validate="true">
         <LinkParameter id="sv3#page11#pwu5#ln20#par9" name="oid_KeyCondition4 [oid]" source="data[].ent4#att3" target="sv3#page18#dau4#su8#kcond4.ent4#att3"/>
       </Link>
@@ -12,7 +12,7 @@
       <Link id="sv3#page11#gtu8#ln41" name="Flow41" to="sv3#page11#pwu5" automaticCoupling="true" type="transport" validate="true"/>
       <Link id="sv3#page11#gtu8#ln42" name="Flow42" to="sv3#page11#pwu8" automaticCoupling="true" type="transport" validate="true"/>
     </GetUnit>
-    <PowerIndexUnit gr:x="165" gr:y="115" id="sv3#page11#pwu8" name="Outbox" sortable="true" checkable="false" useCountQuery="false" entity="ent4">
+    <PowerIndexUnit gr:x="165" gr:y="115" id="sv3#page11#pwu8" name="Outbox" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att4 ent4#att6 ent4#att20">
       <Selector id="sv3#page11#pwu8#su20" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv3#page11#pwu8#su20#rcond5" name="RoleCondition5" predicate="in" implied="false" role="rel6#role11"/>
       </Selector>
@@ -22,10 +22,9 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page11#pwu5">
-          <layout:Attribute attribute="ent4#att4"/>
-          <layout:Attribute attribute="ent4#att6"/>
-          <layout:Attribute attribute="ent4#att20"/>
           <layout:Link link="sv3#page11#pwu5#ln20"/>
+          <layout:Attribute attribute="ent4#att4"/>
+          <layout:Attribute attribute="ent4#att20"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -42,7 +41,11 @@
     </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv3#page11#pwu8"/>
+        <layout:Unit unitId="sv3#page11#pwu8">
+          <layout:Attribute attribute="ent4#att4"/>
+          <layout:Attribute attribute="ent4#att6"/>
+          <layout:Attribute attribute="ent4#att20"/>
+        </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>

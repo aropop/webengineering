@@ -1,0 +1,68 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1125" gr:y="-425" id="sv4#page24" name="Enter Rating">
+  <ContentUnits>
+    <EntryUnit gr:x="20" gr:y="180" id="sv4#page24#enu11" name="Rate Transaction" entity="ent20" linkOrder="sv4#page24#enu11#ln6">
+      <Field id="sv4#page24#enu11#fld33" name="stars" type="integer" modifiable="true" attribute="ent20#att67"/>
+      <Field id="sv4#page24#enu11#fld34" name="comment" type="string" modifiable="true" attribute="ent20#att68"/>
+      <Link id="sv4#page24#enu11#ln6" name="Submit" to="sv4#miu16" type="normal" validate="true">
+        <LinkParameter id="sv4#page24#enu11#ln6#par21" name="comment_comment" source="sv4#page24#enu11#fld34" target="sv4#miu16.mov1#opm12#icu15#icp29"/>
+        <LinkParameter id="sv4#page24#enu11#ln6#par23" name="stars_stars" source="sv4#page24#enu11#fld33" target="sv4#miu16.mov1#opm12#icu15#icp28"/>
+        <LinkParameter id="sv4#page24#enu11#ln6#par27" name="TransactionId_PASSING_transactionid" target="sv4#miu16.mov1#opm12#icu15#icp30" source="sv4#page24#enu11#fld27"/>
+        <LinkParameter id="sv4#page24#enu11#ln6#par124" name="angelid_PASSING_angelid" target="sv4#miu16.mov1#opm12#icu15#icp31" source="sv4#page24#enu11#fld17"/>
+        <LinkParameter id="sv4#page24#enu11#ln6#par125" name="RequestsToHomeless.oid_PASSING_homelessid" target="sv4#miu16.mov1#opm12#icu15#icp32" source="sv4#page24#enu11#fld26"/>
+        <LinkParameter id="sv4#page24#enu11#ln6#par178" name="oid_PASSING_requestid" target="sv4#miu16.mov1#opm12#icu15#icp33" source="sv4#page24#enu11#fld18"/>
+      </Link>
+      <Field id="sv4#page24#enu11#fld17" name="angelid" type="integer" modifiable="false" hidden="true" preloaded="true"/>
+      <Field id="sv4#page24#enu11#fld18" name="requestid" type="integer" modifiable="false" preloaded="true" hidden="true"/>
+      <Field id="sv4#page24#enu11#fld26" name="homelessid" type="integer" modifiable="false" preloaded="true" hidden="true"/>
+      <Field id="sv4#page24#enu11#fld27" name="transactionid" type="integer" modifiable="false" preloaded="true" hidden="true"/>
+    </EntryUnit>
+    <SelectorUnit gr:x="0" gr:y="0" id="sv4#page24#seu2" name="getTransaction" entity="ent19">
+      <Selector id="sv4#page24#seu2#su21" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv4#page24#seu2#su21#rcond14" name="homlesscondition" predicate="in" implied="false" role="rel16#role32"/>
+        <RelationshipRoleCondition id="sv4#page24#seu2#su21#rcond15" name="offercondition" predicate="in" implied="false" role="rel10#role20"/>
+      </Selector>
+      <Link id="sv4#page24#seu2#ln19" name="Flow19" to="sv4#page24#enu11" type="transport" validate="true">
+        <LinkParameter id="sv4#page24#seu2#ln19#par215" name="TransactionToAngel.oid_angelid" source="rel15#role29_userOIDArray" target="sv4#page24#enu11#fld17_slot"/>
+        <LinkParameter id="sv4#page24#seu2#ln19#par216" name="TransactionToHomeless.oid_homelessid" source="rel16#role31_userOIDArray" target="sv4#page24#enu11#fld26_slot"/>
+        <LinkParameter id="sv4#page24#seu2#ln19#par217" name="oid_transactionid" source="ent19#att64Array" target="sv4#page24#enu11#fld27_slot"/>
+        <LinkParameter id="sv4#page24#seu2#ln19#par219" name="oid_PASSING_requestid" sourceLinkParameter="sv4#page28#pwu13#ln16#par218" target="sv4#page24#enu11#fld18_slot"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page24#enu11">
+          <layout:Link link="sv4#page24#enu11#ln6"/>
+          <layout:Field field="sv4#page24#enu11#fld33" layout:fieldLayout="StoreTemplates/Rating"/>
+          <layout:Field field="sv4#page24#enu11#fld34"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

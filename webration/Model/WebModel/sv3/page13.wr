@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page13" name="Profile" landmark="true" gr:x="1440" gr:y="560" linkOrder="sv3#page13#ln68">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page13" name="Profile" landmark="true" gr:x="1745" gr:y="260" linkOrder="sv3#page13#ln68">
   <ContentUnits>
-    <DataUnit id="sv3#page13#dau6" name="Profile" gr:x="140" gr:y="0" entity="ent1" displayAttributes="userName email User#att1 User#att2 ent1#att5 ent1#att7 ent1#att8">
+    <DataUnit id="sv3#page13#dau6" name="Profile" gr:x="140" gr:y="0" entity="ent1" displayAttributes="userName email User#att1 User#att2 ent1#att5 ent1#att7 ent1#att21">
       <Selector id="sv3#page13#dau6#su7" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#page13#dau6#su7#kcond6" name="KeyCondition6" predicate="in" implied="false"/>
       </Selector>
@@ -25,7 +25,7 @@
           <layout:Attribute attribute="User#att2"/>
           <layout:Attribute attribute="ent1#att5"/>
           <layout:Attribute attribute="ent1#att7"/>
-          <layout:Attribute attribute="ent1#att8"/>
+          <layout:Attribute attribute="ent1#att21"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

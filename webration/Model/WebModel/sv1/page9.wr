@@ -7,14 +7,14 @@
         <LinkParameter id="sv1#page9#enu2#ln11#par95" name="Location_PASSING_location" sourceLinkParameter="sv1#switch4#oln23#par89" target="sv1#cru8.User#att1"/>
         <LinkParameter id="sv1#page9#enu2#ln11#par96" name="Password_PASSING_password" sourceLinkParameter="sv1#switch4#oln23#par90" target="sv1#cru8.password"/>
         <LinkParameter id="sv1#page9#enu2#ln11#par97" name="Username_PASSING_userName" sourceLinkParameter="sv1#switch4#oln23#par92" target="sv1#cru8.userName"/>
-        <LinkParameter id="sv1#page9#enu2#ln11#par98" name="annonymous_annonymous" source="sv1#page9#enu2#fld25" target="sv1#cru8.ent1#att8"/>
         <LinkParameter id="sv1#page9#enu2#ln11#par99" name="Angel or Homeless_PASSING_Group.oid(defaultGroup)" sourceLinkParameter="sv1#switch4#oln23#par86" target="sv1#cru8.User2DefaultGroup.groupOID"/>
         <LinkParameter id="sv1#page9#enu2#ln11#par100" name="picture_picture" source="sv1#page9#enu2#fld24" target="sv1#cru8.ent1#att7"/>
         <LinkParameter id="sv1#page9#enu2#ln11#par101" name="profession_profession" source="sv1#page9#enu2#fld23" target="sv1#cru8.ent1#att5"/>
+        <LinkParameter id="sv1#page9#enu2#ln11#par166" name="annonymous_annonymous" source="sv1#page9#enu2#fld25" target="sv1#cru8.ent1#att21"/>
       </Link>
       <Field id="sv1#page9#enu2#fld23" name="profession" type="string" modifiable="true" attribute="ent1#att5"/>
       <Field id="sv1#page9#enu2#fld24" name="picture" type="blob" modifiable="true" contentType="image" attribute="ent1#att7"/>
-      <Field id="sv1#page9#enu2#fld25" name="annonymous" type="boolean" modifiable="true" attribute="ent1#att8"/>
+      <Field id="sv1#page9#enu2#fld25" name="annonymous" type="boolean" modifiable="true"/>
     </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">

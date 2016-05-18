@@ -1,0 +1,74 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page22" name="Offer" gr:x="1425" gr:y="455">
+  <ContentUnits>
+    <DataUnit id="sv3#page22#dau7" name="Offer detail" gr:x="0" gr:y="0" entity="ent8" displayAttributes="ent8#att58 ent8#att36 ent8#att39 ent8#att40">
+      <Selector id="sv3#page22#dau7#su23" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page22#dau7#su23#kcond17" name="KeyCondition2" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#page22#dau7#ln44" name="Flow38" to="sv3#page22#miu9" type="transport" validate="true" gr:bendpoints="151,63,46,-137">
+        <LinkParameter id="sv3#page22#dau7#ln44#par135" name="OfferToAngel.oid_angelid" source="data.rel4#role8_userOID" target="sv3#page22#miu9.mov1#opm10#icu11#icp21"/>
+      </Link>
+    </DataUnit>
+    <MultiMessageUnit id="sv3#page22#mssu6" name="Offered by" gr:x="0" gr:y="125">
+      <Placeholder id="sv3#page22#mssu6#ph4" name="angel"/>
+      <Message xml:space="preserve">Offered by $$angel$$</Message>
+    </MultiMessageUnit>
+    <ModuleInstanceUnit id="sv3#page22#miu9" gr:x="25" gr:y="220" action="true" moduleId="mov1#opm10">
+      <Link id="sv3#page22#miu9#ln45" name="Flow39" to="sv3#page22#mssu6" type="transport" validate="true">
+        <LinkParameter id="sv3#page22#miu9#ln45#par136" name="AngelUsedName_angel" source="mov1#opm10#okcu8#ocp2" target="sv3#page22#mssu6.sv3#page22#mssu6#ph4"/>
+      </Link>
+    </ModuleInstanceUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page22#dau7">
+          <layout:Attribute attribute="ent8#att58"/>
+          <layout:Attribute attribute="ent8#att36"/>
+          <layout:Attribute attribute="ent8#att39"/>
+          <layout:Attribute attribute="ent8#att40"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page22#mssu6"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

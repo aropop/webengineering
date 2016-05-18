@@ -1,0 +1,36 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="635" gr:y="295" id="mov1#opm12" name="Add Rating">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm12#icu15" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm12#icu15#icp30" name="transactionid"/>
+      <InputCollectorParameter id="mov1#opm12#icu15#icp29" name="comment"/>
+      <InputCollectorParameter id="mov1#opm12#icu15#icp28" name="stars"/>
+      <InputCollectorParameter id="mov1#opm12#icu15#icp32" name="homelessid"/>
+      <InputCollectorParameter id="mov1#opm12#icu15#icp31" name="angelid"/>
+      <OKLink id="mov1#opm12#icu15#oln55" name="OKFlow55" to="mov1#opm12#cru12">
+        <LinkParameter id="mov1#opm12#icu15#oln55#par205" name="angelid_Angel.oid(RatesToAngel)" source="mov1#opm12#icu15#icp31" target="mov1#opm12#cru12.rel18#role35.userOID"/>
+        <LinkParameter id="mov1#opm12#icu15#oln55#par206" name="comment_comment" source="mov1#opm12#icu15#icp29" target="mov1#opm12#cru12.ent20#att68"/>
+        <LinkParameter id="mov1#opm12#icu15#oln55#par207" name="homelessid_Homeless.oid(RatesToHomeless)" source="mov1#opm12#icu15#icp32" target="mov1#opm12#cru12.rel17#role33.userOID"/>
+        <LinkParameter id="mov1#opm12#icu15#oln55#par208" name="stars_stars" source="mov1#opm12#icu15#icp28" target="mov1#opm12#cru12.ent20#att67"/>
+        <LinkParameter id="mov1#opm12#icu15#oln55#par209" name="transactionid_Transaction.oid(RatesToTransaction)" source="mov1#opm12#icu15#icp30" target="mov1#opm12#cru12.rel3#role5.ent19#att64"/>
+        <LinkParameter id="mov1#opm12#icu15#oln55#par156" name="requestid_PASSING" source="mov1#opm12#icu15#icp33" passing="true"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm12#icu15#icp33" name="requestid"/>
+    </InputCollectorUnit>
+    <KOCollectorUnit gr:x="685" gr:y="235" id="mov1#opm12#kocu9" name="KO Port9"/>
+    <OKCollectorUnit gr:x="685" gr:y="105" id="mov1#opm12#okcu11" name="OK Port11"/>
+    <CreateUnit gr:x="315" gr:y="120" id="mov1#opm12#cru12" name="Create Rating" entity="ent20">
+      <OKLink id="mov1#opm12#cru12#oln56" name="OKFlow56" to="mov1#opm12#mfu5">
+        <LinkParameter id="mov1#opm12#cru12#oln56#par171" name="requestid_PASSING_KeyCondition8 [oid]" sourceLinkParameter="mov1#opm12#icu15#oln55#par156" target="mov1#opm12#mfu5#su11#kcond8.ent17#att56"/>
+        <LinkParameter id="mov1#opm12#cru12#oln56#par176" name="Done and rated_status" sourceValue="Done and rated" target="mov1#opm12#mfu5.ent17#att11"/>
+      </OKLink>
+      <KOLink id="mov1#opm12#cru12#kln27" name="KOFlow27" to="mov1#opm12#kocu9" automaticCoupling="true"/>
+    </CreateUnit>
+    <ModifyUnit gr:x="485" gr:y="50" id="mov1#opm12#mfu5" name="SetStatusRated" entity="ent17">
+      <Selector id="mov1#opm12#mfu5#su11" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm12#mfu5#su11#kcond8" name="KeyCondition8" predicate="in" implied="false"/>
+      </Selector>
+      <KOLink id="mov1#opm12#mfu5#kln29" name="KOFlow29" to="mov1#opm12#kocu9" automaticCoupling="true"/>
+      <OKLink id="mov1#opm12#mfu5#oln57" name="OKFlow57" to="mov1#opm12#okcu11" automaticCoupling="true"/>
+    </ModifyUnit>
+  </OperationUnits>
+</OperationModule>

@@ -1,0 +1,39 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="440" gr:y="-490" id="sv4#page6" name="View Rating">
+  <ContentUnits>
+    <DataUnit gr:x="0" gr:y="0" id="sv4#page6#dau3" name="Rating" entity="ent20" displayAttributes="ent20#att67 ent20#att68">
+      <Selector id="sv4#page6#dau3#su22" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#page6#dau3#su22#kcond11" name="KeyCondition11" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <SelectorUnit id="sv4#page6#seu5" name="getTransaction" gr:x="175" gr:y="0" entity="ent19">
+      <Selector id="sv4#page6#seu5#su28" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv4#page6#seu5#su28#rcond16" name="homlesscondition" predicate="in" implied="false" role="rel16#role32"/>
+        <RelationshipRoleCondition id="sv4#page6#seu5#su28#rcond17" name="offercondition" predicate="in" implied="false" role="rel10#role20"/>
+      </Selector>
+      <Link id="sv4#page6#seu5#ln34" name="Flow19" to="sv4#page6#dau3" type="transport" validate="true">
+        <LinkParameter id="sv4#page6#seu5#ln34#par227" name="TransactionToRates.oid_KeyCondition11 [oid]" source="rel3#role6_ent20#att66Array" target="sv4#page6#dau3#su22#kcond11.ent20#att66"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page6#dau3">
+          <layout:Attribute attribute="ent20#att67" layout:attributeLayout="StoreTemplates/Rating"/>
+          <layout:Attribute attribute="ent20#att68"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

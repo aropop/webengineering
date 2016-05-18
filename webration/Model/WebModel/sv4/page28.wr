@@ -1,11 +1,31 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="490" gr:y="-265" id="sv4#page28" name="Your Requests" landmark="true">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv4#page28#pwu13" name="Requests" sortable="true" checkable="false" useCountQuery="false" entity="ent17" displayAttributes="ent17#att60 ent17#att11" linkOrder="sv4#page28#pwu13#ln60">
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv4#page28#pwu13" name="Requests" sortable="true" checkable="false" useCountQuery="false" entity="ent17" displayAttributes="ent17#att60 ent17#att11" linkOrder="sv4#page28#pwu13#ln60 sv4#page28#pwu13#ln71 sv4#page28#pwu13#ln82 sv4#page28#pwu13#ln16 sv4#page28#pwu13#ln35">
       <Selector id="sv4#page28#pwu13#su29" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv4#page28#pwu13#su29#rcond10" name="RoleCondition10" predicate="in" implied="false" role="rel11#role21"/>
       </Selector>
-      <Link id="sv4#page28#pwu13#ln60" name="Flow60" to="sv4#page8#dau2" type="normal" validate="true">
+      <Link id="sv4#page28#pwu13#ln60" name="View Offer" to="sv4#page8#dau2" type="normal" validate="true">
         <LinkParameter id="sv4#page28#pwu13#ln60#par145" name="RequestsToOffer.oid_KeyCondition2 [oid]" source="data[].rel12#role23_ent8#att27" target="sv4#page8#dau2#su3#kcond2.ent8#att27"/>
+      </Link>
+      <Link id="sv4#page28#pwu13#ln71" name="Send message" to="sv4#miu14" type="normal" validate="true" gr:bendpoints="125,237,-355,-533;119,463,-361,-307;143,598,-337,-172">
+        <LinkParameter id="sv4#page28#pwu13#ln71#par196" name="angelid_userid [oid]" source="data[].ent17#att24" target="sv4#miu14.mov1#hym3#icu13#icp26"/>
+      </Link>
+      <Link id="sv4#page28#pwu13#ln82" name="Mark done" to="sv4#miu15" type="normal" validate="true">
+        <LinkParameter id="sv4#page28#pwu13#ln82#par35" name="oid_requestid" source="data[].ent17#att56" target="sv4#miu15.mov1#opm11#icu14#icp27"/>
+        <LinkParameter id="sv4#page28#pwu13#ln82#par126" name="angelid_PASSING" source="data[].ent17#att24" passing="true"/>
+        <LinkParameter id="sv4#page28#pwu13#ln82#par127" name="oid_PASSING" source="data[].ent17#att56" passing="true"/>
+        <LinkParameter id="sv4#page28#pwu13#ln82#par128" name="RequestsToHomeless.oid_PASSING" source="data[].rel11#role22_userOID" passing="true"/>
+        <LinkParameter id="sv4#page28#pwu13#ln82#par133" name="RequestsToOffer.oid_PASSING" source="data[].rel12#role23_ent8#att27" passing="true"/>
+      </Link>
+      <Link id="sv4#page28#pwu13#ln16" name="Rate Angel" to="sv4#page24#seu2" type="normal" validate="true" gr:bendpoints="311,-71,-334,-81">
+        <LinkParameter id="sv4#page28#pwu13#ln16#par213" name="RequestsToHomeless.oid_homlesscondition [oid]" source="data[].rel11#role22_userOID" target="sv4#page24#seu2#su21#rcond14.userOID"/>
+        <LinkParameter id="sv4#page28#pwu13#ln16#par214" name="RequestsToOffer.oid_offercondition [oid]" source="data[].rel12#role23_ent8#att27" target="sv4#page24#seu2#su21#rcond15.ent8#att27"/>
+        <LinkParameter id="sv4#page28#pwu13#ln16#par218" name="oid_PASSING" source="data[].ent17#att56" passing="true"/>
+      </Link>
+      <Link id="sv4#page28#pwu13#ln35" name="View Rating" to="sv4#page6#seu5" type="normal" validate="true" gr:bendpoints="311,-71,-334,-81">
+        <LinkParameter id="sv4#page28#pwu13#ln35#par224" name="RequestsToHomeless.oid_homlesscondition [oid]" source="data[].rel11#role22_userOID" target="sv4#page6#seu5#su28#rcond16.userOID"/>
+        <LinkParameter id="sv4#page28#pwu13#ln35#par225" name="RequestsToOffer.oid_offercondition [oid]" source="data[].rel12#role23_ent8#att27" target="sv4#page6#seu5#su28#rcond17.ent8#att27"/>
+        <LinkParameter id="sv4#page28#pwu13#ln35#par226" name="oid_PASSING" source="data[].ent17#att56" passing="true"/>
       </Link>
     </PowerIndexUnit>
     <GetUnit gr:x="0" gr:y="140" id="sv4#page28#gtu13" name="Get13" contextParameters="UserCtxParam">
@@ -21,6 +41,10 @@
           <layout:Attribute attribute="ent17#att60"/>
           <layout:Attribute attribute="ent17#att11"/>
           <layout:Link link="sv4#page28#pwu13#ln60"/>
+          <layout:Link link="sv4#page28#pwu13#ln71" layout:linkVisibilityCondition="sv4#page28#cexpr2"/>
+          <layout:Link link="sv4#page28#pwu13#ln82"/>
+          <layout:Link link="sv4#page28#pwu13#ln16" label="Rate Angel" layout:linkVisibilityCondition="sv4#page28#cexpr1"/>
+          <layout:Link label="Rate Angel" link="sv4#page28#pwu13#ln35" layout:linkVisibilityCondition="sv4#page28#cexpr1"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -50,4 +74,14 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
+  <Variable id="sv4#page28#var2" name="status" type="string" unitId="sv4#page28#pwu13" parameter="data[].ent17#att11"/>
+  <ConditionExpression id="sv4#page28#cexpr2" name="ActivationExpression 2">
+    <TextValue xml:space="preserve">return (status == "Accept")</TextValue>
+  </ConditionExpression>
+  <ConditionExpression id="sv4#page28#cexpr1" name="statusisdone">
+    <TextValue xml:space="preserve">return status == "Done"</TextValue>
+  </ConditionExpression>
+  <ConditionExpression id="sv4#page28#cexpr5" name="statusisdoneandrated">
+    <TextValue xml:space="preserve">return status == "Done and rated"</TextValue>
+  </ConditionExpression>
 </Page>

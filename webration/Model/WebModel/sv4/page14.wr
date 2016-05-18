@@ -1,10 +1,11 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1175" gr:y="65" id="sv4#page14" name="Request Offer">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1215" gr:y="65" id="sv4#page14" name="Request Offer">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv4#page14#enu3" name="Confirm" linkOrder="sv4#page14#enu3#ln13">
       <Field id="sv4#page14#enu3#fld3" name="sure" type="boolean" modifiable="true"/>
-      <Link id="sv4#page14#enu3#ln13" name="Flow13" to="sv4#switch1" type="normal" validate="true">
+      <Link id="sv4#page14#enu3#ln13" name="Confirm" to="sv4#switch1" type="normal" validate="true">
         <LinkParameter id="sv4#page14#enu3#ln13#par15" name="sure_Switch" source="sv4#page14#enu3#fld3" target="sv4#switch1.switch"/>
         <LinkParameter id="sv4#page14#enu3#ln13#par17" name="id_PASSING" source="sv4#page14#enu3#fld6" passing="true"/>
+        <LinkParameter id="sv4#page14#enu3#ln13#par174" name="OfferToAngel.oid_PASSING" sourceLinkParameter="sv4#page8#dau2#ln12#par173" passing="true"/>
       </Link>
       <Field id="sv4#page14#enu3#fld6" name="id" type="integer" modifiable="false" preloaded="true" hidden="true"/>
     </EntryUnit>

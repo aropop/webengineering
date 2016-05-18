@@ -1,7 +1,7 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1010" gr:y="105" id="sv3#page20" name="Requests" landmark="true">
   <ContentUnits>
-    <HierarchicalIndexUnit gr:x="80" gr:y="0" id="sv3#page20#hinu1" name="Pending" sortable="false" entity="ent8" linkOrder="sv3#page20#hinu1#ln24 sv3#page20#hinu1#ln28">
-      <HierarchicalIndexLevel id="sv3#page20#hinu1#hiulvl1" name="Requests" entity="ent17" role="rel12#role24">
+    <HierarchicalIndexUnit gr:x="80" gr:y="0" id="sv3#page20#hinu1" name="Pending" sortable="false" entity="ent8" linkOrder="sv3#page20#hinu1#ln24 sv3#page20#hinu1#ln28" displayAttributes="ent8#att58 ent8#att39 ent8#att40">
+      <HierarchicalIndexLevel id="sv3#page20#hinu1#hiulvl1" name="Requests" entity="ent17" role="rel12#role24" displayAttributes="ent17#att17">
         <Selector id="sv3#page20#hinu1#hiulvl1#su14" defaultPolicy="fill" booleanOperator="and">
           <AttributesCondition id="sv3#page20#hinu1#hiulvl1#su14#acond7" name="statuspneding" predicate="eq" booleanOperator="or" implied="false" attributes="ent17#att11" value="pending" ignoreCase="true"/>
         </Selector>
@@ -13,11 +13,13 @@
         <LinkParameter id="sv3#page20#hinu1#ln24#par40" name="RequestsToHomeless.oid(Requests)_homelessid" source="data[].sv3#page20#hinu1#hiulvl1data[].rel11#role22_userOID" target="sv3#miu7.mov1#opm8#icu8#icp20"/>
         <LinkParameter id="sv3#page20#hinu1#ln24#par41" name="oid(Requests)_requestid" source="data[].sv3#page20#hinu1#hiulvl1data[].ent17#att56" target="sv3#miu7.mov1#opm8#icu8#icp19"/>
         <LinkParameter id="sv3#page20#hinu1#ln24#par42" name="Accept_status" sourceValue="Accept" target="sv3#miu7.mov1#opm8#icu8#icp3"/>
+        <LinkParameter id="sv3#page20#hinu1#ln24#par163" name="RequestsToOffer.oid(Requests)_offerid" source="data[].sv3#page20#hinu1#hiulvl1data[].rel12#role23_ent8#att27" target="sv3#miu7.mov1#opm8#icu8#icp24"/>
       </Link>
       <Link id="sv3#page20#hinu1#ln28" name="Decline" to="sv3#miu7" type="normal" validate="true" gr:bendpoints="87,76,-158,-4">
         <LinkParameter id="sv3#page20#hinu1#ln28#par46" name="RequestsToHomeless.oid(Requests)_homelessid" source="data[].sv3#page20#hinu1#hiulvl1data[].rel11#role22_userOID" target="sv3#miu7.mov1#opm8#icu8#icp20"/>
         <LinkParameter id="sv3#page20#hinu1#ln28#par47" name="oid(Requests)_requestid" source="data[].sv3#page20#hinu1#hiulvl1data[].ent17#att56" target="sv3#miu7.mov1#opm8#icu8#icp19"/>
         <LinkParameter id="sv3#page20#hinu1#ln28#par48" name="Decline_status" sourceValue="Decline" target="sv3#miu7.mov1#opm8#icu8#icp3"/>
+        <LinkParameter id="sv3#page20#hinu1#ln28#par164" name="RequestsToOffer.oid(Requests)_offerid" source="data[].sv3#page20#hinu1#hiulvl1data[].rel12#role23_ent8#att27" target="sv3#miu7.mov1#opm8#icu8#icp24"/>
       </Link>
     </HierarchicalIndexUnit>
     <GetUnit gr:x="0" gr:y="180" id="sv3#page20#gtu2" name="getUser" contextParameters="UserCtxParam">
@@ -28,8 +30,8 @@
         <LinkParameter id="sv3#page20#gtu2#ln31#par74" name="UserCtxParam.oid_RoleCondition2 [oid] [Handled]" source="sv3#page20#gtu2.UserCtxParam" target="sv3#page20#hinu2#su15#rcond2.userOID"/>
       </Link>
     </GetUnit>
-    <HierarchicalIndexUnit gr:x="150" gr:y="125" id="sv3#page20#hinu2" name="Handled" sortable="false" entity="ent8">
-      <HierarchicalIndexLevel id="sv3#page20#hinu2#hiulvl2" name="Level2" entity="ent17" role="rel12#role24">
+    <HierarchicalIndexUnit gr:x="150" gr:y="125" id="sv3#page20#hinu2" name="Handled" sortable="false" entity="ent8" displayAttributes="ent8#att58 ent8#att39 ent8#att40 ent8#att55">
+      <HierarchicalIndexLevel id="sv3#page20#hinu2#hiulvl2" name="Level2" entity="ent17" role="rel12#role24" displayAttributes="ent17#att11 ent17#att17">
         <Selector id="sv3#page20#hinu2#hiulvl2#su16" defaultPolicy="fill" booleanOperator="and">
           <AttributesCondition id="sv3#page20#hinu2#hiulvl2#su16#acond8" name="AttCondition8" predicate="neq" booleanOperator="or" implied="false" attributes="ent17#att11" value="pending" ignoreCase="true"/>
         </Selector>
@@ -45,6 +47,10 @@
         <layout:Unit unitId="sv3#page20#hinu1">
           <layout:Link link="sv3#page20#hinu1#ln24"/>
           <layout:Link link="sv3#page20#hinu1#ln28"/>
+          <layout:Attribute attribute="ent8#att58" label="Name"/>
+          <layout:Attribute attribute="ent8#att39" label="Amount Left"/>
+          <layout:Attribute attribute="ent8#att40" label="ExipryDate"/>
+          <layout:Attribute attribute="ent17#att17" label="Nickname"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -61,7 +67,14 @@
     </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv3#page20#hinu2"/>
+        <layout:Unit unitId="sv3#page20#hinu2">
+          <layout:Attribute attribute="ent8#att58"/>
+          <layout:Attribute attribute="ent8#att39"/>
+          <layout:Attribute attribute="ent8#att40"/>
+          <layout:Attribute attribute="ent8#att55"/>
+          <layout:Attribute attribute="ent17#att11"/>
+          <layout:Attribute attribute="ent17#att17"/>
+        </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>

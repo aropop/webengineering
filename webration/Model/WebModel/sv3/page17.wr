@@ -1,32 +1,40 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="40" gr:y="105" id="sv3#page17" name="Angels Start" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-85" gr:y="105" id="sv3#page17" name="Angels Start" landmark="true">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv3#page17#pwu1" name="New Messages" sortable="true" checkable="false" useCountQuery="false" entity="ent6" linkOrder="sv3#page17#pwu1#ln23">
+    <PowerIndexUnit gr:x="125" gr:y="0" id="sv3#page17#pwu1" name="New Messages" sortable="true" checkable="false" useCountQuery="false" entity="ent6" linkOrder="sv3#page17#pwu1#ln23" displayAttributes="ent6#att18 ent6#att22">
       <Selector id="sv3#page17#pwu1#su1" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="sv3#page17#pwu1#su1#acond1" name="AttCondition1" predicate="notNull" booleanOperator="and" implied="false" attributes="ent18#att9"/>
+        <AttributesCondition id="sv3#page17#pwu1#su1#acond1" name="AttCondition1" predicate="null" booleanOperator="and" implied="false" attributes="ent18#att9"/>
+        <RelationshipRoleCondition id="sv3#page17#pwu1#su1#rcond6" name="RoleCondition6" predicate="in" implied="false" role="rel2#role4"/>
       </Selector>
       <Link id="sv3#page17#pwu1#ln23" name="See Message" to="sv3#miu3" type="normal" validate="true">
         <LinkParameter id="sv3#page17#pwu1#ln23#par18" name="oid_NotificationId" source="data[].ent18#att57" target="sv3#miu3.mov1#opm7#icu7#icp9"/>
         <LinkParameter id="sv3#page17#pwu1#ln23#par19" name="MessageNotificationToMessage.oid_PASSING" source="data[].rel20#role40_ent4#att3" passing="true"/>
       </Link>
     </PowerIndexUnit>
-    <PowerIndexUnit gr:x="5" gr:y="130" id="sv3#page17#pwu4" name="New Requests" sortable="true" checkable="false" useCountQuery="false" entity="ent5" linkOrder="sv3#page17#pwu4#ln1 sv3#page17#pwu4#ln25">
+    <PowerIndexUnit gr:x="130" gr:y="150" id="sv3#page17#pwu4" name="New Requests" sortable="true" checkable="false" useCountQuery="false" entity="ent5" linkOrder="sv3#page17#pwu4#ln1 sv3#page17#pwu4#ln25" displayAttributes="ent5#att15 ent5#att23">
       <Selector id="sv3#page17#pwu4#su4" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="sv3#page17#pwu4#su4#acond3" name="AttCondition3" predicate="notNull" booleanOperator="or" implied="false" attributes="ent18#att9"/>
+        <AttributesCondition id="sv3#page17#pwu4#su4#acond3" name="AttCondition3" predicate="null" booleanOperator="or" implied="false" attributes="ent18#att9"/>
+        <RelationshipRoleCondition id="sv3#page17#pwu4#su4#rcond7" name="RoleCondition7" predicate="in" implied="false" role="rel2#role4"/>
       </Selector>
-      <Link id="sv3#page17#pwu4#ln1" name="See Profile" to="sv3#page3#dau1" type="normal" validate="true">
+      <Link id="sv3#page17#pwu4#ln1" name="Profile" to="sv3#page3#dau1" type="normal" validate="true">
         <LinkParameter id="sv3#page17#pwu4#ln1#par7" name="homelessid_KeyCondition1 [oid]" source="data[].ent5#att19" target="sv3#page3#dau1#su5#kcond1.userOID"/>
       </Link>
-      <Link id="sv3#page17#pwu4#ln25" name="See" to="sv3#miu4" type="normal" validate="true">
+      <Link id="sv3#page17#pwu4#ln25" name="See Request" to="sv3#miu4" type="normal" validate="true">
         <LinkParameter id="sv3#page17#pwu4#ln25#par26" name="oid_NotificationId" source="data[].ent18#att57" target="sv3#miu4.mov1#opm7#icu7#icp9"/>
         <LinkParameter id="sv3#page17#pwu4#ln25#par31" name="homelessid_PASSING" source="data[].ent5#att19" passing="true"/>
       </Link>
     </PowerIndexUnit>
+    <GetUnit gr:x="0" gr:y="80" id="sv3#page17#gtu9" name="Get9" contextParameters="UserCtxParam">
+      <Link id="sv3#page17#gtu9#ln61" name="Flow61" to="sv3#page17#pwu1" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv3#page17#gtu9#ln65" name="Flow65" to="sv3#page17#pwu4" automaticCoupling="true" type="transport" validate="true"/>
+    </GetUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv3#page17#pwu1">
+        <layout:Unit unitId="sv3#page17#pwu1" layout:unitLayout="WRDefault/Normal">
           <layout:Link link="sv3#page17#pwu1#ln23"/>
+          <layout:Attribute attribute="ent6#att18"/>
+          <layout:Attribute attribute="ent6#att22"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -46,8 +54,24 @@
         <layout:Unit unitId="sv3#page17#pwu4">
           <layout:Link link="sv3#page17#pwu4#ln1"/>
           <layout:Link link="sv3#page17#pwu4#ln25"/>
+          <layout:Attribute attribute="ent5#att15"/>
+          <layout:Attribute attribute="ent5#att23"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

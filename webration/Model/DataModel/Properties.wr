@@ -48,13 +48,13 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="595" gr:y="65" id="ent1" name="Angel" duration="persistent" attributeOrder="ent1#att5 ent1#att7 ent1#att8" db:database="db1" db:table="angel">
+  <Entity gr:x="595" gr:y="65" id="ent1" name="Angel" duration="persistent" attributeOrder="ent1#att5 ent1#att7 ent1#att21" db:database="db1" db:table="angel">
     <Attribute id="ent1#att5" name="profession" type="string" db:column="profession"/>
     <Attribute id="ent1#att7" name="picture" type="blob" contentType="image" db:column="picture"/>
-    <Attribute id="ent1#att8" name="annonymous" type="boolean" db:column="annonymous"/>
     <Generalization superEntity="User">
       <db:JoinColumn attribute="userOID" name="user_oid"/>
     </Generalization>
+    <Attribute id="ent1#att21" name="annonymous" type="boolean" db:column="annonymous"/>
   </Entity>
   <Entity gr:x="325" gr:y="625" id="ent3" name="Homeless" duration="persistent" attributeOrder="ent3#att12 ent3#att16" db:database="db1" db:table="homeless">
     <Attribute id="ent3#att12" name="nickname" type="string" key="false" db:column="nickname"/>
@@ -63,14 +63,13 @@
       <db:JoinColumn attribute="userOID" name="user_oid"/>
     </Generalization>
   </Entity>
-  <Entity gr:x="1040" gr:y="335" id="ent8" name="Offer" duration="persistent" attributeOrder="ent8#att27 ent8#att58 ent8#att36 ent8#att39 ent8#att40 ent8#att55 ent8#att14" db:database="db1" db:table="offer">
+  <Entity gr:x="1040" gr:y="335" id="ent8" name="Offer" duration="persistent" attributeOrder="ent8#att27 ent8#att58 ent8#att36 ent8#att39 ent8#att40 ent8#att55" db:database="db1" db:table="offer">
     <Attribute id="ent8#att27" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent8#att36" name="description" type="string" db:column="description"/>
     <Attribute id="ent8#att39" name="amount" type="integer" db:column="amount"/>
     <Attribute id="ent8#att40" name="expiryDate" type="date" db:column="expirydate"/>
     <Attribute id="ent8#att55" name="deliveryMethod" type="string" derivationQuery="simpleImported::Self.rel9#role17.ent13#att54"/>
     <Attribute id="ent8#att58" name="name" type="string" db:column="name"/>
-    <Attribute id="ent8#att14" name="OfferedBy" type="string"/>
   </Entity>
   <Entity gr:x="1330" gr:y="215" id="ent9" name="Tag" duration="persistent" attributeOrder="ent9#att31 ent9#att32" db:database="db1" db:table="tag">
     <Attribute id="ent9#att31" key="true" name="oid" type="integer" db:column="oid"/>
@@ -119,10 +118,12 @@
       <db:JoinColumn attribute="ent13#att41" name="deliverymethod_oid"/>
     </Generalization>
   </Entity>
-  <Entity gr:x="990" gr:y="655" id="ent17" name="Requests" duration="persistent" attributeOrder="ent17#att56 ent17#att60 ent17#att11" db:database="db1" db:table="requests">
+  <Entity gr:x="990" gr:y="655" id="ent17" name="Requests" duration="persistent" attributeOrder="ent17#att56 ent17#att60 ent17#att11 ent17#att17 ent17#att24" db:database="db1" db:table="requests">
     <Attribute id="ent17#att56" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent17#att60" name="name" type="string" derivationQuery="simpleImported::Self.rel12#role23.ent8#att58"/>
     <Attribute id="ent17#att11" name="status" type="string" db:column="status"/>
+    <Attribute id="ent17#att17" name="nickname" type="string" derivationQuery="simpleImported::Self.rel11#role22.ent3#att12"/>
+    <Attribute id="ent17#att24" name="angelid" type="integer" derivationQuery="simpleImported::Self.rel12#role23.rel4#role8.userOID"/>
   </Entity>
   <Relationship id="rel11" name="Homeless_Requests" sourceEntity="ent3" targetEntity="ent17" db:database="db1" db:table="requests">
     <RelationshipRole1 id="rel11#role21" name="HomelessToRequests" maxCard="N">
@@ -140,20 +141,10 @@
       <db:JoinColumn attribute="ent8#att27" name="offer_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="500" gr:y="325" id="ent18" name="Notification" duration="persistent" attributeOrder="ent18#att57 ent18#att61 ent18#att62 ent18#att9" db:database="db1" db:table="notification">
+  <Entity gr:x="500" gr:y="325" id="ent18" name="Notification" duration="persistent" attributeOrder="ent18#att57 ent18#att9" db:database="db1" db:table="notification">
     <Attribute id="ent18#att57" key="true" name="oid" type="integer" db:column="oid"/>
-    <Attribute id="ent18#att61" name="from" type="string" derivationQuery="simpleImported::Self.rel13#role25.userName"/>
-    <Attribute id="ent18#att62" name="to" type="string" derivationQuery="simpleImported::Self.rel13#role25.userName"/>
     <Attribute id="ent18#att9" name="dateSeen" type="date" db:column="dateseen"/>
   </Entity>
-  <Relationship id="rel13" name="Notification_Angel" sourceEntity="ent18" targetEntity="User" db:database="db1" db:table="notification" gr:bendpoints="-62,-115,378,-55;-102,-109,338,-49;-173,-100,267,-40">
-    <RelationshipRole1 id="rel13#role25" name="NotificationToAngel" maxCard="1">
-      <db:JoinColumn attribute="ent18#att57" name="oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel13#role26" name="AngelToNotification" maxCard="N">
-      <db:JoinColumn attribute="userOID" name="angel_oid"/>
-    </RelationshipRole2>
-  </Relationship>
   <Relationship id="rel14" name="Notification_Requests" sourceEntity="ent5" targetEntity="ent17" db:database="db1" db:table="requests">
     <RelationshipRole1 id="rel14#role27" name="NotificationToRequests" maxCard="1">
       <db:JoinColumn attribute="ent18#att57" name="notification_oid"/>
@@ -240,8 +231,7 @@
       <db:JoinColumn attribute="ent19#att64" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="Database1" type="MySQL" url="jdbc:mysql://127.0.0.1:3306/webratio_project" username="root" cryptedPassword="true" password="cm9vdA==">
-  </db:Database>
+  <db:Database id="db1" name="Database1" type="MySQL" url="jdbc:mysql://127.0.0.1:3306/webratio_project" username="root" cryptedPassword="true" password="cm9vdA=="/>
   <Relationship id="rel4" name="Angel_Offer1" sourceEntity="ent1" targetEntity="ent8" gr:bendpoints="378,-2,-2,-162" db:database="db1" db:table="offer">
     <RelationshipRole1 id="rel4#role7" name="AngelToOffer1" maxCard="N">
       <db:JoinColumn attribute="userOID" name="angel_oid"/>
@@ -280,18 +270,20 @@
       <db:JoinColumn attribute="userOID" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="690" gr:y="570" id="ent5" name="RequestNotification" duration="persistent" attributeOrder="ent5#att15 ent5#att19" db:database="db1" db:table="requestnotification">
+  <Entity gr:x="690" gr:y="570" id="ent5" name="RequestNotification" duration="persistent" attributeOrder="ent5#att15 ent5#att19 ent5#att23" db:database="db1" db:table="requestnotification">
     <Generalization superEntity="ent18">
       <db:JoinColumn attribute="ent18#att57" name="notification_oid"/>
     </Generalization>
     <Attribute id="ent5#att15" name="offer" type="string" derivationQuery="simpleImported::Self.rel14#role27.ent17#att60"/>
     <Attribute id="ent5#att19" name="homelessid" type="integer" derivationQuery="simpleImported::Self.rel14#role27.rel11#role22.userOID"/>
+    <Attribute id="ent5#att23" name="homelessnickname" type="string" derivationQuery="simpleImported::Self.rel14#role27.rel11#role22.ent3#att12"/>
   </Entity>
-  <Entity gr:x="375" gr:y="530" id="ent6" name="MessageNotification" duration="persistent" attributeOrder="ent6#att18" db:database="db1" db:table="messagenotification">
+  <Entity gr:x="375" gr:y="530" id="ent6" name="MessageNotification" duration="persistent" attributeOrder="ent6#att18 ent6#att22" db:database="db1" db:table="messagenotification">
     <Generalization superEntity="ent18">
       <db:JoinColumn attribute="ent18#att57" name="notification_oid"/>
     </Generalization>
     <Attribute id="ent6#att18" name="title" type="string" derivationQuery="simpleImported::Self.rel20#role40.ent4#att4"/>
+    <Attribute id="ent6#att22" name="from" type="string" derivationQuery="simpleImported::Self.rel20#role40.rel6#role12.userName"/>
   </Entity>
   <Relationship id="rel20" name="Message_MessageNotification" sourceEntity="ent4" targetEntity="ent6" db:database="db1" db:table="messagenotification">
     <RelationshipRole1 id="rel20#role39" name="MessageToMessageNotification" maxCard="1">
@@ -299,6 +291,14 @@
     </RelationshipRole1>
     <RelationshipRole2 id="rel20#role40" name="MessageNotificationToMessage" maxCard="1">
       <db:JoinColumn attribute="ent18#att57" name="notification_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel2" name="Notification_User" sourceEntity="ent18" targetEntity="User" gr:bendpoints="-200,-66,245,-61" db:database="db1" db:table="notification">
+    <RelationshipRole1 id="rel2#role3" name="NotificationToUser" maxCard="1">
+      <db:JoinColumn attribute="ent18#att57" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel2#role4" name="UserToNotification" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
     </RelationshipRole2>
   </Relationship>
 </DataModel>

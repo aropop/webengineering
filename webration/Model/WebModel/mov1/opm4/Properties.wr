@@ -1,29 +1,32 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="240" gr:y="175" id="mov1#opm4" name="Create Request">
   <OperationUnits>
-    <InputCollectorUnit id="mov1#opm4#icu4" gr:x="30" gr:y="60" linkOrder="mov1#opm4#icu4#ln16">
+    <InputCollectorUnit id="mov1#opm4#icu4" gr:x="30" gr:y="60">
       <InputCollectorParameter id="mov1#opm4#icu4#icp1" name="OfferId"/>
-      <Link id="mov1#opm4#icu4#ln16" name="Flow16" to="mov1#opm4#cru4" type="transport" validate="true">
-        <LinkParameter id="mov1#opm4#icu4#ln16#par21" name="OfferId_PASSING" source="mov1#opm4#icu4#icp1" passing="true"/>
-      </Link>
+      <OKLink id="mov1#opm4#icu4#oln33" name="OKFlow33" to="mov1#opm4#cru4" gr:bendpoints="137,11,-103,16">
+        <LinkParameter id="mov1#opm4#icu4#oln33#par157" name="OfferId_Requests.oid(NotificationToRequests)" source="mov1#opm4#icu4#icp1" target="mov1#opm4#cru4.rel14#role27.ent17#att56"/>
+        <LinkParameter id="mov1#opm4#icu4#oln33#par169" name="OfferId_PASSING" source="mov1#opm4#icu4#icp1" passing="true"/>
+        <LinkParameter id="mov1#opm4#icu4#oln33#par172" name="angelid_User.oid(NotificationToUser)" source="mov1#opm4#icu4#icp25" target="mov1#opm4#cru4.rel2#role3.userOID"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp25" name="angelid"/>
     </InputCollectorUnit>
-    <CreateUnit gr:x="450" gr:y="180" id="mov1#opm4#cru3" name="CreateRequest" entity="ent17" skipBlankRecords="false">
+    <CreateUnit gr:x="475" gr:y="280" id="mov1#opm4#cru3" name="CreateRequest" entity="ent17" skipBlankRecords="false">
       <KOLink id="mov1#opm4#cru3#kln5" name="KOFlow5" to="mov1#opm4#kocu1" automaticCoupling="true"/>
       <OKLink id="mov1#opm4#cru3#oln8" name="OKFlow8" to="mov1#opm4#okcu1" automaticCoupling="true"/>
     </CreateUnit>
-    <GetUnit gr:x="235" gr:y="230" id="mov1#opm4#gtu5" name="Get user" contextParameters="UserCtxParam" linkOrder="mov1#opm4#gtu5#ln17">
+    <GetUnit gr:x="235" gr:y="290" id="mov1#opm4#gtu5" name="Get user" contextParameters="UserCtxParam" linkOrder="mov1#opm4#gtu5#ln17">
       <Link id="mov1#opm4#gtu5#ln17" name="Flow17" to="mov1#opm4#cru3" type="transport" validate="true">
         <LinkParameter id="mov1#opm4#gtu5#ln17#par20" name="UserCtxParam.oid_Homeless.oid(RequestsToHomeless)" source="mov1#opm4#gtu5.UserCtxParam" target="mov1#opm4#cru3.rel11#role22.userOID"/>
       </Link>
     </GetUnit>
-    <CreateUnit gr:x="305" gr:y="60" id="mov1#opm4#cru4" name="Create Notification" entity="ent18">
+    <CreateUnit gr:x="360" gr:y="170" id="mov1#opm4#cru4" name="Create Notification" entity="ent5">
       <OKLink id="mov1#opm4#cru4#oln7" name="OKFlow7" to="mov1#opm4#cru3">
         <LinkParameter id="mov1#opm4#cru4#oln7#par22" name="oid_Notification.oid(RequestsToNotification)" source="ent18#att57Array" target="mov1#opm4#cru3.rel14#role28.ent18#att57"/>
-        <LinkParameter id="mov1#opm4#cru4#oln7#par23" name="OfferId_PASSING_Offer.oid(RequestsToOffer)" sourceLinkParameter="mov1#opm4#icu4#ln16#par21" target="mov1#opm4#cru3.rel12#role23.ent8#att27"/>
         <LinkParameter id="mov1#opm4#cru4#oln7#par8" name="qsfd_status" sourceValue="pending" target="mov1#opm4#cru3.ent17#att11"/>
+        <LinkParameter id="mov1#opm4#cru4#oln7#par170" name="OfferId_PASSING_Offer.oid(RequestsToOffer)" sourceLinkParameter="mov1#opm4#icu4#oln33#par169" target="mov1#opm4#cru3.rel12#role23.ent8#att27"/>
       </OKLink>
-      <KOLink id="mov1#opm4#cru4#kln2" name="KOFlow2" to="mov1#opm4#kocu1" automaticCoupling="true" gr:bendpoints="65,207,-280,-28"/>
+      <KOLink id="mov1#opm4#cru4#kln2" name="KOFlow2" to="mov1#opm4#kocu1" automaticCoupling="true" gr:bendpoints="180,28,-170,-97"/>
     </CreateUnit>
-    <KOCollectorUnit gr:x="615" gr:y="290" id="mov1#opm4#kocu1" name="KO Port1"/>
-    <OKCollectorUnit gr:x="615" gr:y="120" id="mov1#opm4#okcu1" name="OK Port1"/>
+    <KOCollectorUnit gr:x="675" gr:y="290" id="mov1#opm4#kocu1" name="KO Port1"/>
+    <OKCollectorUnit gr:x="675" gr:y="135" id="mov1#opm4#okcu1" name="OK Port1"/>
   </OperationUnits>
 </OperationModule>

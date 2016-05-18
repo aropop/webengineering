@@ -1,0 +1,44 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="490" gr:y="45" id="mov1#opm11" name="SetTransaction">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm11#icu14" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm11#icu14#icp27" name="requestid"/>
+      <OKLink id="mov1#opm11#icu14#oln51" name="OKFlow51" to="mov1#opm11#mfu3">
+        <LinkParameter id="mov1#opm11#icu14#oln51#par143" name="requestid_KeyCondition3 [oid]" source="mov1#opm11#icu14#icp27" target="mov1#opm11#mfu3#su2#kcond3.ent17#att56"/>
+        <LinkParameter id="mov1#opm11#icu14#oln51#par155" name="Done_status" sourceValue="Done" target="mov1#opm11#mfu3.ent17#att11"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="725" gr:y="65" id="mov1#opm11#okcu10" name="OK Port10">
+      <OutputCollectorParameter id="mov1#opm11#okcu10#ocp3" name="TransactionId"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit gr:x="725" gr:y="155" id="mov1#opm11#kocu8" name="KO Port8"/>
+    <CreateUnit gr:x="475" gr:y="80" id="mov1#opm11#cru11" name="createTransaction" entity="ent19">
+      <OKLink id="mov1#opm11#cru11#oln53" name="OKFlow53" to="mov1#opm11#okcu10">
+        <LinkParameter id="mov1#opm11#cru11#oln53#par203" name="oid_TransactionId" source="ent19#att64Array" target="mov1#opm11#okcu10#ocp3"/>
+      </OKLink>
+      <KOLink id="mov1#opm11#cru11#kln25" name="KOFlow25" to="mov1#opm11#kocu8" automaticCoupling="true"/>
+    </CreateUnit>
+    <SelectorUnit gr:x="330" gr:y="60" id="mov1#opm11#seu10" name="GetRequest" entity="ent17">
+      <Selector id="mov1#opm11#seu10#su36" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm11#seu10#su36#kcond23" name="KeyCondition23" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm11#seu10#oln52" name="OKFlow52" to="mov1#opm11#cru11">
+        <LinkParameter id="mov1#opm11#seu10#oln52#par199" name="angelid_Angel.oid(TransactionToAngel)" source="ent17#att24Array" target="mov1#opm11#cru11.rel15#role29.userOID"/>
+        <LinkParameter id="mov1#opm11#seu10#oln52#par200" name="RequestsToHomeless.oid_Homeless.oid(TransactionToHomeless)" source="rel11#role22_userOIDArray" target="mov1#opm11#cru11.rel16#role31.userOID"/>
+        <LinkParameter id="mov1#opm11#seu10#oln52#par201" name="RequestsToOffer.oid_Offer.oid(TransactionToOffer)" source="rel12#role23_ent8#att27Array" target="mov1#opm11#cru11.rel10#role19.ent8#att27"/>
+      </OKLink>
+      <KOLink id="mov1#opm11#seu10#kln24" name="KOFlow24" to="mov1#opm11#kocu8" automaticCoupling="true" gr:bendpoints="3,185,-452,90;218,185,-237,90"/>
+    </SelectorUnit>
+    <TimeUnit gr:x="425" gr:y="215" id="mov1#opm11#tmu4" name="Time4" linkOrder="mov1#opm11#tmu4#ln83">
+      <Link id="mov1#opm11#tmu4#ln83" name="Flow83" to="mov1#opm11#cru11" type="transport" validate="true">
+        <LinkParameter id="mov1#opm11#tmu4#ln83#par202" name="Current/Input Date_ondate" source="currentDate" target="mov1#opm11#cru11.ent19#att13"/>
+      </Link>
+    </TimeUnit>
+    <ModifyUnit gr:x="235" gr:y="195" id="mov1#opm11#mfu3" name="SetStatusdone" entity="ent17">
+      <Selector id="mov1#opm11#mfu3#su2" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm11#mfu3#su2#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm11#mfu3#oln42" name="OKFlow42" to="mov1#opm11#seu10" automaticCoupling="true"/>
+      <KOLink id="mov1#opm11#mfu3#kln28" name="KOFlow28" to="mov1#opm11#kocu8" automaticCoupling="true" gr:bendpoints="143,51,-397,91;302,25,-238,65"/>
+    </ModifyUnit>
+  </OperationUnits>
+</OperationModule>

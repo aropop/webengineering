@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1405" gr:y="50" id="sv4#page12" name="Profile" landmark="true" linkOrder="sv4#page12#ln69">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1475" gr:y="50" id="sv4#page12" name="Profile" landmark="true" linkOrder="sv4#page12#ln69">
   <ContentUnits>
     <DataUnit gr:x="180" gr:y="0" id="sv4#page12#dau5" name="Profile" entity="ent3" displayAttributes="userName email User#att1 User#att2 ent3#att12 ent3#att16">
       <Selector id="sv4#page12#dau5#su6" defaultPolicy="fill" booleanOperator="and">
@@ -19,12 +19,12 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv4#page12#dau5">
-          <layout:Attribute attribute="userName"/>
-          <layout:Attribute attribute="email"/>
-          <layout:Attribute attribute="User#att1"/>
-          <layout:Attribute attribute="User#att2"/>
-          <layout:Attribute attribute="ent3#att12"/>
-          <layout:Attribute attribute="ent3#att16"/>
+          <layout:Attribute attribute="userName" label="Username"/>
+          <layout:Attribute attribute="email" label="Email"/>
+          <layout:Attribute attribute="User#att1" label="Location"/>
+          <layout:Attribute attribute="User#att2" label="Birthdate"/>
+          <layout:Attribute attribute="ent3#att12" label="Nickname"/>
+          <layout:Attribute attribute="ent3#att16" label="Years on the streets"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -54,5 +54,5 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
-  <Link id="sv4#page12#ln69" name="Flow69" to="sv4#miu12" automaticCoupling="true" type="normal" validate="true"/>
+  <Link id="sv4#page12#ln69" name="Delete Account" to="sv4#miu12" automaticCoupling="true" type="normal" validate="true"/>
 </Page>
