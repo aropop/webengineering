@@ -1,0 +1,61 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page26" name="Messages" linkOrder="sv4#page26#ln55" landmark="true" gr:x="205" gr:y="540">
+  <ContentUnits>
+    <PowerIndexUnit id="sv4#page26#pwu11" name="Inbox" linkOrder="sv4#page26#pwu11#ln52" gr:x="175" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att4 ent4#att6 ent4#att20">
+      <Link id="sv4#page26#pwu11#ln52" name="View Message" to="sv4#page25#dau8" type="normal" validate="true">
+        <LinkParameter id="sv4#page26#pwu11#ln52#par140" name="oid_KeyCondition4 [oid]" source="data[].ent4#att3" target="sv4#page25#dau8#su25#kcond13.ent4#att3"/>
+      </Link>
+      <Selector id="sv4#page26#pwu11#su26" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv4#page26#pwu11#su26#rcond8" name="RoleCondition4" predicate="in" implied="false" role="rel19#role38"/>
+      </Selector>
+    </PowerIndexUnit>
+    <GetUnit id="sv4#page26#gtu11" name="Get8" gr:x="0" gr:y="30" contextParameters="UserCtxParam">
+      <Link id="sv4#page26#gtu11#ln53" name="Flow41" to="sv4#page26#pwu11" type="transport" automaticCoupling="true" validate="true"/>
+      <Link id="sv4#page26#gtu11#ln54" name="Flow42" to="sv4#page26#pwu12" type="transport" automaticCoupling="true" validate="true"/>
+    </GetUnit>
+    <PowerIndexUnit id="sv4#page26#pwu12" name="Outbox" gr:x="165" gr:y="115" sortable="true" checkable="false" useCountQuery="false" entity="ent4">
+      <Selector id="sv4#page26#pwu12#su27" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv4#page26#pwu12#su27#rcond9" name="RoleCondition5" predicate="in" implied="false" role="rel6#role11"/>
+      </Selector>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page26#pwu11">
+          <layout:Attribute attribute="ent4#att4"/>
+          <layout:Attribute attribute="ent4#att6"/>
+          <layout:Attribute attribute="ent4#att20"/>
+          <layout:Link link="sv4#page26#pwu11#ln52"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page26#pwu12"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv4#page26#ln55" name="New Message" to="sv4#miu10" type="normal" automaticCoupling="true" validate="true"/>
+</Page>

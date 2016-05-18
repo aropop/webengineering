@@ -1,0 +1,10 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="575" gr:y="95" id="mov1#opm9" name="Send Message">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm9#icu10" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm9#icu10#icp18" name="Body"/>
+      <InputCollectorParameter id="mov1#opm9#icu10#icp17" name="Title"/>
+      <InputCollectorParameter id="mov1#opm9#icu10#icp13" name="To"/>
+      <InputCollectorParameter id="mov1#opm9#icu10#icp12" name="From"/>
+    </InputCollectorUnit>
+  </OperationUnits>
+</OperationModule>

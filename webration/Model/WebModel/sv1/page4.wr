@@ -1,7 +1,8 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="665" gr:y="380" id="sv1#page4" name="Error">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="650" gr:y="420" id="sv1#page4" name="Error">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page4#mssu3" name="Message3">
-      <Message xml:space="preserve">Oops something went wrong</Message>
+      <Message xml:space="preserve">Oops something went wrong: $$message$$</Message>
+      <Placeholder id="sv1#page4#mssu3#ph2" name="message"/>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">

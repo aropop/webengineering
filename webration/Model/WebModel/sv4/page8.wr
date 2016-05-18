@@ -1,21 +1,67 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="665" gr:y="75" id="sv4#page8" name="Offer">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="740" gr:y="50" id="sv4#page8" name="Offer">
   <ContentUnits>
-    <DataUnit gr:x="0" gr:y="0" id="sv4#page8#dau2" name="Offer detail" entity="ent8" linkOrder="sv4#page8#dau2#ln12">
+    <DataUnit gr:x="0" gr:y="0" id="sv4#page8#dau2" name="Offer detail" entity="ent8" linkOrder="sv4#page8#dau2#ln12" displayAttributes="ent8#att58 ent8#att36 ent8#att39 ent8#att40">
       <Selector id="sv4#page8#dau2#su3" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv4#page8#dau2#su3#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>
       <Link id="sv4#page8#dau2#ln12" name="Flow11" to="sv4#page14#enu3" type="normal" validate="true">
         <LinkParameter id="sv4#page8#dau2#ln12#par16" name="oid_id" source="data.ent8#att27" target="sv4#page14#enu3#fld6_slot"/>
       </Link>
+      <Link id="sv4#page8#dau2#ln38" name="Flow38" to="sv4#page8#miu8" type="transport" validate="true" gr:bendpoints="151,63,46,-137">
+        <LinkParameter id="sv4#page8#dau2#ln38#par130" name="OfferToAngel.oid_angelid" source="data.rel4#role8_userOID" target="sv4#page8#miu8.mov1#opm10#icu11#icp21"/>
+      </Link>
     </DataUnit>
+    <MultiMessageUnit gr:x="0" gr:y="125" id="sv4#page8#mssu5" name="Offered by">
+      <Placeholder id="sv4#page8#mssu5#ph3" name="angel"/>
+      <Message xml:space="preserve">Offered by $$angel$$</Message>
+    </MultiMessageUnit>
+    <ModuleInstanceUnit gr:x="25" gr:y="220" id="sv4#page8#miu8" action="true" moduleId="mov1#opm10">
+      <Link id="sv4#page8#miu8#ln39" name="Flow39" to="sv4#page8#mssu5" type="transport" validate="true">
+        <LinkParameter id="sv4#page8#miu8#ln39#par131" name="AngelUsedName_angel" source="mov1#opm10#okcu8#ocp2" target="sv4#page8#mssu5.sv4#page8#mssu5#ph3"/>
+      </Link>
+    </ModuleInstanceUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv4#page8#dau2">
           <layout:Link link="sv4#page8#dau2#ln12"/>
+          <layout:Attribute attribute="ent8#att58"/>
+          <layout:Attribute attribute="ent8#att36"/>
+          <layout:Attribute attribute="ent8#att39"/>
+          <layout:Attribute attribute="ent8#att40"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page8#mssu5"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

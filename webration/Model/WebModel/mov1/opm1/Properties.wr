@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="220" gr:y="270" id="mov1#opm1" name="Notifications">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="245" gr:y="230" id="mov1#opm1" name="Notifications">
   <OperationUnits>
     <InputCollectorUnit id="mov1#opm1#icu1" name="Input Collector" gr:x="30" gr:y="60"/>
   </OperationUnits>

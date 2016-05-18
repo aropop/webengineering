@@ -1,0 +1,31 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="555" gr:y="150" id="mov1#opm8" name="ChangeRequestStatus">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm8#icu8" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm8#icu8#icp3" name="status"/>
+      <OKLink id="mov1#opm8#icu8#oln27" name="OKFlow27" to="mov1#opm8#mfu2">
+        <LinkParameter id="mov1#opm8#icu8#oln27#par30" name="requestid_KeyCondition9 [oid]" source="mov1#opm8#icu8#icp19" target="mov1#opm8#mfu2#su13#kcond9.ent17#att56"/>
+        <LinkParameter id="mov1#opm8#icu8#oln27#par32" name="status_status" source="mov1#opm8#icu8#icp3" target="mov1#opm8#mfu2.ent17#att11"/>
+        <LinkParameter id="mov1#opm8#icu8#oln27#par38" name="status_PASSING" source="mov1#opm8#icu8#icp3" passing="true"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm8#icu8#icp19" name="requestid"/>
+      <InputCollectorParameter id="mov1#opm8#icu8#icp20" name="homelessid"/>
+    </InputCollectorUnit>
+    <ModifyUnit gr:x="290" gr:y="160" id="mov1#opm8#mfu2" name="Update2" entity="ent17">
+      <Selector id="mov1#opm8#mfu2#su13" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm8#mfu2#su13#kcond9" name="KeyCondition9" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm8#mfu2#oln28" name="OKFlow28" to="mov1#opm8#switch2">
+        <LinkParameter id="mov1#opm8#mfu2#oln28#par39" name="status_PASSING_Switch" sourceLinkParameter="mov1#opm8#icu8#oln27#par38" target="mov1#opm8#switch2.switch"/>
+      </OKLink>
+      <KOLink id="mov1#opm8#mfu2#kln15" name="KOFlow15" to="mov1#opm8#kocu6" automaticCoupling="true"/>
+    </ModifyUnit>
+    <OKCollectorUnit gr:x="755" gr:y="90" id="mov1#opm8#okcu5" name="OK Port5"/>
+    <KOCollectorUnit gr:x="755" gr:y="175" id="mov1#opm8#kocu6" name="KO Port6"/>
+    <SwitchUnit gr:x="355" gr:y="-35" id="mov1#opm8#switch2" name="notifyswitch">
+      <Case value="Accept"/>
+      <Case value="Decline"/>
+      <OKLink id="mov1#opm8#switch2#oln29" name="OKFlow29" to="mov1#opm8#okcu5" automaticCoupling="true" code="Accept"/>
+      <OKLink id="mov1#opm8#switch2#oln30" name="OKFlow30" to="mov1#opm8#okcu5" automaticCoupling="true" code="Decline" gr:bendpoints="34,88,-376,43"/>
+    </SwitchUnit>
+  </OperationUnits>
+</OperationModule>

@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="910" gr:y="100" id="sv4#page14" name="Request Offer">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1175" gr:y="65" id="sv4#page14" name="Request Offer">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv4#page14#enu3" name="Confirm" linkOrder="sv4#page14#enu3#ln13">
       <Field id="sv4#page14#enu3#fld3" name="sure" type="boolean" modifiable="true"/>

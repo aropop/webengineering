@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="500" gr:y="265" id="sv4#page12" name="Profile" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1405" gr:y="50" id="sv4#page12" name="Profile" landmark="true" linkOrder="sv4#page12#ln69">
   <ContentUnits>
     <DataUnit gr:x="180" gr:y="0" id="sv4#page12#dau5" name="Profile" entity="ent3" displayAttributes="userName email User#att1 User#att2 ent3#att12 ent3#att16">
       <Selector id="sv4#page12#dau5#su6" defaultPolicy="fill" booleanOperator="and">
@@ -8,6 +8,10 @@
     <GetUnit gr:x="0" gr:y="65" id="sv4#page12#gtu3" name="Get3" contextParameters="UserCtxParam">
       <Link id="sv4#page12#gtu3#ln9" name="Flow9" to="sv4#page12#dau5" type="transport" validate="true">
         <LinkParameter id="sv4#page12#gtu3#ln9#par13" name="UserCtxParam.oid_KeyCondition5 [oid]" source="sv4#page12#gtu3.UserCtxParam" target="sv4#page12#dau5#su6#kcond5.userOID"/>
+      </Link>
+      <Link id="sv4#page12#gtu3#ln70" name="Flow70" to="sv4#miu12" type="transport" validate="true">
+        <LinkParameter id="sv4#page12#gtu3#ln70#par152" name="UserCtxParam.oid_userid" source="sv4#page12#gtu3.UserCtxParam" target="sv4#miu12.mov1#hym2#icu12#icp22"/>
+        <LinkParameter id="sv4#page12#gtu3#ln70#par153" name="Homeless_usertype" sourceValue="Homeless" target="sv4#miu12.mov1#hym2#icu12#icp23"/>
       </Link>
     </GetUnit>
   </ContentUnits>
@@ -50,4 +54,5 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
+  <Link id="sv4#page12#ln69" name="Flow69" to="sv4#miu12" automaticCoupling="true" type="normal" validate="true"/>
 </Page>

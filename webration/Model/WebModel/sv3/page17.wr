@@ -1,8 +1,53 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="55" gr:y="110" id="sv3#page17" name="Angels Start" landmark="true">
-  <ContentUnits/>
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="40" gr:y="105" id="sv3#page17" name="Angels Start" landmark="true">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv3#page17#pwu1" name="New Messages" sortable="true" checkable="false" useCountQuery="false" entity="ent6" linkOrder="sv3#page17#pwu1#ln23">
+      <Selector id="sv3#page17#pwu1#su1" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#page17#pwu1#su1#acond1" name="AttCondition1" predicate="notNull" booleanOperator="and" implied="false" attributes="ent18#att9"/>
+      </Selector>
+      <Link id="sv3#page17#pwu1#ln23" name="See Message" to="sv3#miu3" type="normal" validate="true">
+        <LinkParameter id="sv3#page17#pwu1#ln23#par18" name="oid_NotificationId" source="data[].ent18#att57" target="sv3#miu3.mov1#opm7#icu7#icp9"/>
+        <LinkParameter id="sv3#page17#pwu1#ln23#par19" name="MessageNotificationToMessage.oid_PASSING" source="data[].rel20#role40_ent4#att3" passing="true"/>
+      </Link>
+    </PowerIndexUnit>
+    <PowerIndexUnit gr:x="5" gr:y="130" id="sv3#page17#pwu4" name="New Requests" sortable="true" checkable="false" useCountQuery="false" entity="ent5" linkOrder="sv3#page17#pwu4#ln1 sv3#page17#pwu4#ln25">
+      <Selector id="sv3#page17#pwu4#su4" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#page17#pwu4#su4#acond3" name="AttCondition3" predicate="notNull" booleanOperator="or" implied="false" attributes="ent18#att9"/>
+      </Selector>
+      <Link id="sv3#page17#pwu4#ln1" name="See Profile" to="sv3#page3#dau1" type="normal" validate="true">
+        <LinkParameter id="sv3#page17#pwu4#ln1#par7" name="homelessid_KeyCondition1 [oid]" source="data[].ent5#att19" target="sv3#page3#dau1#su5#kcond1.userOID"/>
+      </Link>
+      <Link id="sv3#page17#pwu4#ln25" name="See" to="sv3#miu4" type="normal" validate="true">
+        <LinkParameter id="sv3#page17#pwu4#ln25#par26" name="oid_NotificationId" source="data[].ent18#att57" target="sv3#miu4.mov1#opm7#icu7#icp9"/>
+        <LinkParameter id="sv3#page17#pwu4#ln25#par31" name="homelessid_PASSING" source="data[].ent5#att19" passing="true"/>
+      </Link>
+    </PowerIndexUnit>
+  </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page17#pwu1">
+          <layout:Link link="sv3#page17#pwu1#ln23"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page17#pwu4">
+          <layout:Link link="sv3#page17#pwu4#ln1"/>
+          <layout:Link link="sv3#page17#pwu4#ln25"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="140" gr:y="240" id="sv1#page1" name="Home">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="140" gr:y="240" id="sv1#page1" name="Home" landmark="true">
   <ContentUnits>
     <MultiMessageUnit gr:x="5" gr:y="0" id="sv1#page1#mssu1" name="Welcome">
       <Message xml:space="preserve">Welcome on HomelessAngel!</Message>

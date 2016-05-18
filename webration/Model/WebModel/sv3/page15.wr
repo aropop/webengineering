@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page15" name="Offers" landmark="true" gr:x="305" gr:y="80" linkOrder="sv3#page15#ln18">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page15" name="Offers" landmark="true" gr:x="1065" gr:y="595" linkOrder="sv3#page15#ln18">
   <ContentUnits>
     <PowerIndexUnit id="sv3#page15#pwu3" name="Offers" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent8" displayAttributes="ent8#att58 ent8#att39 ent8#att40 ent8#att55" linkOrder="sv3#page15#pwu3#ln6">
       <SortAttribute attribute="ent8#att58" order="ascending"/>

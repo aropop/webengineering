@@ -1,11 +1,26 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="420" gr:y="75" id="sv4#page5" name="Offers" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="385" gr:y="40" id="sv4#page5" name="Offers" landmark="true">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv4#page5#pwu2" name="Offers" sortable="true" checkable="false" useCountQuery="false" entity="ent8" displayAttributes="ent8#att58 ent8#att39 ent8#att40 ent8#att55" linkOrder="sv4#page5#pwu2#ln5">
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv4#page5#pwu2" name="Available Offers" sortable="true" checkable="false" useCountQuery="false" entity="ent8" displayAttributes="ent8#att58 ent8#att39 ent8#att40 ent8#att55" linkOrder="sv4#page5#pwu2#ln5">
       <SortAttribute attribute="ent8#att58" order="ascending"/>
-      <Link id="sv4#page5#pwu2#ln5" name="Flow5" to="sv4#page8#dau2" type="normal" validate="true">
+      <Link id="sv4#page5#pwu2#ln5" name="Request" to="sv4#page8#dau2" type="normal" validate="true">
         <LinkParameter id="sv4#page5#pwu2#ln5#par11" name="oid_KeyCondition2 [oid]" source="data[].ent8#att27" target="sv4#page8#dau2#su3#kcond2.ent8#att27"/>
       </Link>
+      <Selector id="sv4#page5#pwu2#su17" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv4#page5#pwu2#su17#acond9" name="enough" predicate="gt" booleanOperator="or" implied="false" attributes="ent8#att39" value="0"/>
+        <AttributesCondition id="sv4#page5#pwu2#su17#acond10" name="AttCondition10" predicate="gt" booleanOperator="or" implied="false" attributes="ent8#att40"/>
+        <RelationshipRoleCondition id="sv4#page5#pwu2#su17#rcond3" name="hasNotRequested" predicate="notIn" implied="false" role="rel11#role21.rel12#role23"/>
+      </Selector>
     </PowerIndexUnit>
+    <TimeUnit gr:x="30" gr:y="160" id="sv4#page5#tmu2" name="Time2">
+      <Link id="sv4#page5#tmu2#ln33" name="Flow33" to="sv4#page5#pwu2" type="transport" validate="true">
+        <LinkParameter id="sv4#page5#tmu2#ln33#par75" name="Current/Input Date_AttCondition10" source="currentDate" target="sv4#page5#pwu2#su17#acond10"/>
+      </Link>
+    </TimeUnit>
+    <GetUnit gr:x="140" gr:y="160" id="sv4#page5#gtu6" name="Getuser" contextParameters="UserCtxParam">
+      <Link id="sv4#page5#gtu6#ln40" name="Flow40" to="sv4#page5#pwu2" type="transport" validate="true">
+        <LinkParameter id="sv4#page5#gtu6#ln40#par132" name="UserCtxParam.oid_hasNotRequested [oid]" source="sv4#page5#gtu6.UserCtxParam" target="sv4#page5#pwu2#su17#rcond3.userOID"/>
+      </Link>
+    </GetUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -19,6 +34,20 @@
           <layout:Link link="sv4#page5#pwu2ent8#att58"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
