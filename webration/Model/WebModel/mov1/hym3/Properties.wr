@@ -1,4 +1,4 @@
-<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="240" gr:y="784" id="mov1#hym3" name="Create Message">
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="90" gr:y="500" id="mov1#hym3" name="Create Message">
   <OperationUnits>
     <InputCollectorUnit gr:x="0" gr:y="150" id="mov1#hym3#icu13">
       <InputCollectorParameter id="mov1#hym3#icu13#icp26" name="userid [oid]"/>

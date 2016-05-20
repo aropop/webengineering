@@ -1,70 +1,21 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="590" gr:y="545" id="sv3#page19" name="Create New Message">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1820" gr:y="435" id="sv3#page19" name="Add Picture">
   <ContentUnits>
-    <EntryUnit gr:x="140" gr:y="125" id="sv3#page19#enu8" name="New Message" entity="ent4">
-      <Field id="sv3#page19#enu8#fld17" name="title" type="string" modifiable="true" attribute="ent4#att4"/>
-      <Field id="sv3#page19#enu8#fld18" name="body" type="string" modifiable="true" attribute="ent4#att6"/>
-      <Field id="sv3#page19#enu8#fld26" name="receiver" type="integer" modifiable="false" preloaded="true" hidden="true"/>
-      <Field id="sv3#page19#enu8#fld27" name="sender" type="string" modifiable="false" preloaded="true" hidden="true"/>
+    <EntryUnit gr:x="0" gr:y="0" id="sv3#page19#enu8" name="Upload Image" entity="ent12" linkOrder="sv3#page19#enu8#ln27">
+      <Field id="sv3#page19#enu8#fld36" name="picture" type="blob" modifiable="true" contentType="image" attribute="ent12#att38"/>
+      <Link id="sv3#page19#enu8#ln27" name="Submit" to="sv3#sim1" type="normal" validate="true">
+        <LinkParameter id="sv3#page19#enu8#ln27#par138" name="oid_PASSING" sourceLinkParameter="sv3#page22#dau7#ln8#par37" passing="true"/>
+        <LinkParameter id="sv3#page19#enu8#ln27#par141" name="picture_Image" source="sv3#page19#enu8#fld36" target="sv3#sim1.image"/>
+      </Link>
     </EntryUnit>
-    <GetUnit gr:x="0" gr:y="120" id="sv3#page19#gtu1" name="GetSender" contextParameters="UserCtxParam">
-      <Link id="sv3#page19#gtu1#ln27" name="Flow27" to="sv3#page19#enu8" type="transport" validate="true">
-        <LinkParameter id="sv3#page19#gtu1#ln27#par27" name="UserCtxParam.oid_sender" source="sv3#page19#gtu1.UserCtxParam" target="sv3#page19#enu8#fld27_slot"/>
-      </Link>
-    </GetUnit>
-    <MultiMessageUnit gr:x="20" gr:y="15" id="sv3#page19#mssu4" name="Send to">
-      <Placeholder id="sv3#page19#mssu4#ph1" name="username"/>
-      <Message xml:space="preserve">Send a message to $$username$$</Message>
-    </MultiMessageUnit>
-    <SelectorUnit gr:x="150" gr:y="0" id="sv3#page19#seu1" name="getusername" entity="User" distinctAttributes="userOID userName">
-      <Selector id="sv3#page19#seu1#su11" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv3#page19#seu1#su11#kcond8" name="id" predicate="in" implied="false"/>
-      </Selector>
-      <Link id="sv3#page19#seu1#ln34" name="Flow34" to="sv3#page19#mssu4" type="transport" validate="true">
-        <LinkParameter id="sv3#page19#seu1#ln34#par36" name="userName_username" source="userNameArray" target="sv3#page19#mssu4.sv3#page19#mssu4#ph1"/>
-      </Link>
-      <Link id="sv3#page19#seu1#ln35" name="Flow35" to="sv3#page19#enu8" type="transport" validate="true">
-        <LinkParameter id="sv3#page19#seu1#ln35#par37" name="oid_receiver" source="userOIDArray" target="sv3#page19#enu8#fld26_slot"/>
-      </Link>
-    </SelectorUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page19#enu8">
-          <layout:Field field="sv3#page19#enu8#fld17"/>
-          <layout:Field field="sv3#page19#enu8#fld18"/>
+          <layout:Field field="sv3#page19#enu8#fld36"/>
+          <layout:Link link="sv3#page19#enu8#ln27"/>
         </layout:Unit>
       </layout:Cell>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv3#page19#mssu4"/>
-      </layout:Cell>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

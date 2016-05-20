@@ -1,0 +1,54 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1745" gr:y="130" id="sv3#page41" name="Update Profile">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv3#page41#enu13" name="Update profile" entity="ent1" linkOrder="sv3#page41#enu13#ln101" fieldOrder="sv3#page41#enu13#fld40 sv3#page41#enu13#fld41 sv3#page41#enu13#fld45 sv3#page41#enu13#fld38 sv3#page41#enu13#fld42 sv3#page41#enu13#fld43 sv3#page41#enu13#fld44 sv3#page41#enu13#fld39">
+      <Field id="sv3#page41#enu13#fld38" name="profession" type="string" modifiable="true" attribute="ent1#att5"/>
+      <Field id="sv3#page41#enu13#fld39" name="picture" type="blob" modifiable="true" contentType="image" attribute="ent1#att7"/>
+      <Field id="sv3#page41#enu13#fld40" name="userName" type="string" modifiable="true" attribute="userName"/>
+      <Field id="sv3#page41#enu13#fld41" name="password" type="password" modifiable="true" attribute="password"/>
+      <Field id="sv3#page41#enu13#fld42" name="email" type="string" modifiable="true" attribute="email"/>
+      <Field id="sv3#page41#enu13#fld43" name="location" type="string" modifiable="true" attribute="User#att1"/>
+      <Field id="sv3#page41#enu13#fld44" name="birthdate" type="date" modifiable="true" attribute="User#att2"/>
+      <Link id="sv3#page41#enu13#ln101" name="Update" to="sv3#miu24" type="normal" validate="true">
+        <LinkParameter id="sv3#page41#enu13#ln101#par312" name="birthdate_birthdate" source="sv3#page41#enu13#fld44" target="sv3#miu24.mov1#opm15#icu19#icp49"/>
+        <LinkParameter id="sv3#page41#enu13#ln101#par313" name="email_email" source="sv3#page41#enu13#fld42" target="sv3#miu24.mov1#opm15#icu19#icp51"/>
+        <LinkParameter id="sv3#page41#enu13#ln101#par314" name="location_location" source="sv3#page41#enu13#fld43" target="sv3#miu24.mov1#opm15#icu19#icp53"/>
+        <LinkParameter id="sv3#page41#enu13#ln101#par315" name="password_password" source="sv3#page41#enu13#fld41" target="sv3#miu24.mov1#opm15#icu19#icp47"/>
+        <LinkParameter id="sv3#page41#enu13#ln101#par316" name="picture_picture" source="sv3#page41#enu13#fld39" target="sv3#miu24.mov1#opm15#icu19#icp48"/>
+        <LinkParameter id="sv3#page41#enu13#ln101#par317" name="profession_profession" source="sv3#page41#enu13#fld38" target="sv3#miu24.mov1#opm15#icu19#icp50"/>
+        <LinkParameter id="sv3#page41#enu13#ln101#par318" name="Key [oid]_userid" source="key.userOID" target="sv3#miu24.mov1#opm15#icu19#icp55"/>
+        <LinkParameter id="sv3#page41#enu13#ln101#par319" name="userName_username" source="sv3#page41#enu13#fld40" target="sv3#miu24.mov1#opm15#icu19#icp46"/>
+        <LinkParameter id="sv3#page41#enu13#ln101#par322" name="defaultGroup.oid_PASSING_groupid" sourceLinkParameter="sv3#page13#dau6#ln98#par321" target="sv3#miu24.mov1#opm15#icu19#icp54"/>
+        <LinkParameter id="sv3#page41#enu13#ln101#par335" name="Annonymous_annonymous" source="sv3#page41#enu13#fld45" target="sv3#miu24.mov1#opm15#icu19#icp52"/>
+      </Link>
+      <Field id="sv3#page41#enu13#fld45" name="Annonymous" type="boolean" modifiable="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page41#enu13">
+          <layout:Link link="sv3#page41#enu13#ln101"/>
+          <layout:Field field="sv3#page41#enu13#fld40" label="Username"/>
+          <layout:Field field="sv3#page41#enu13#fld41" label="Password"/>
+          <layout:Field field="sv3#page41#enu13#fld45"/>
+          <layout:Field field="sv3#page41#enu13#fld38" label="Profession"/>
+          <layout:Field field="sv3#page41#enu13#fld42" label="Email"/>
+          <layout:Field field="sv3#page41#enu13#fld43" label="Location"/>
+          <layout:Field field="sv3#page41#enu13#fld44" label="Birthdate"/>
+          <layout:Field field="sv3#page41#enu13#fld39" label="Avatar"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

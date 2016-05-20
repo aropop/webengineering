@@ -1,0 +1,21 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="330" gr:y="365" id="mov1#opm16" name="Disable user">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm16#icu22" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm16#icu22#icp56" name="userid"/>
+      <InputCollectorParameter id="mov1#opm16#icu22#icp57" name="disablestate"/>
+      <OKLink id="mov1#opm16#icu22#oln86" name="OKFlow86" to="mov1#opm16#mfu9">
+        <LinkParameter id="mov1#opm16#icu22#oln86#par244" name="disablestate_isDisabled" source="mov1#opm16#icu22#icp57" target="mov1#opm16#mfu9.User#att25"/>
+        <LinkParameter id="mov1#opm16#icu22#oln86#par245" name="userid_KeyCondition29 [oid]" source="mov1#opm16#icu22#icp56" target="mov1#opm16#mfu9#su55#kcond29.userOID"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="635" gr:y="45" id="mov1#opm16#okcu13" name="OK Port13"/>
+    <KOCollectorUnit gr:x="635" gr:y="210" id="mov1#opm16#kocu14" name="KO Port14"/>
+    <ModifyUnit gr:x="385" gr:y="80" id="mov1#opm16#mfu9" name="Set Disabled" entity="User">
+      <Selector id="mov1#opm16#mfu9#su55" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm16#mfu9#su55#kcond29" name="KeyCondition29" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm16#mfu9#oln87" name="OKFlow87" to="mov1#opm16#okcu13" automaticCoupling="true"/>
+      <KOLink id="mov1#opm16#mfu9#kln34" name="KOFlow34" to="mov1#opm16#kocu14" automaticCoupling="true"/>
+    </ModifyUnit>
+  </OperationUnits>
+</OperationModule>

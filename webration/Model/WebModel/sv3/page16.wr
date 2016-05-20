@@ -2,7 +2,7 @@
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv3#page16#enu4" name="Create Offer" entity="ent8" fieldOrder="sv3#page16#enu4#fld7 sv3#page16#enu4#fld8 sv3#page16#enu4#fld9 sv3#page16#enu4#fld10 sv3#page16#enu4#fld19 sv3#page16#enu4#fld20 sv3#page16#enu4#sfld3" gr:showAllParts="true" linkOrder="sv3#page16#enu4#ln4">
       <Field id="sv3#page16#enu4#fld7" name="Name" type="string" modifiable="true" attribute="ent8#att58"/>
-      <Field id="sv3#page16#enu4#fld8" name="Description" type="string" modifiable="true" attribute="ent8#att36"/>
+      <Field id="sv3#page16#enu4#fld8" name="Description" type="text" modifiable="true" attribute="ent8#att36"/>
       <Field id="sv3#page16#enu4#fld9" name="Amount" type="integer" modifiable="true" attribute="ent8#att39"/>
       <Field id="sv3#page16#enu4#fld10" name="Expiry Date" type="date" modifiable="true" attribute="ent8#att40" preloaded="false"/>
       <Field id="sv3#page16#enu4#fld19" name="Address" type="string" modifiable="true"/>
@@ -20,7 +20,7 @@
         <Slot id="sv3#page16#enu4#sfld3#slot5" name="Slot5" label="true" output="true" value="Delivery|Pick Up|Choice"/>
       </SelectionField>
     </EntryUnit>
-    <GetUnit gr:x="20" gr:y="195" id="sv3#page16#gtu7" name="getUser" contextParameters="UserCtxParam">
+    <GetUnit gr:x="20" gr:y="220" id="sv3#page16#gtu7" name="getUser" contextParameters="UserCtxParam">
       <Link id="sv3#page16#gtu7#ln15" name="Flow15" to="sv3#miu2" type="transport" validate="true">
         <LinkParameter id="sv3#page16#gtu7#ln15#par121" name="UserCtxParam.oid_User id" source="sv3#page16#gtu7.UserCtxParam" target="sv3#miu2.mov1#opm5#icu5#icp16"/>
       </Link>

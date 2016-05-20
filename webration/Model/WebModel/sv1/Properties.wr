@@ -1,7 +1,9 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Site View 1" homePage="sv1#page1" linkVisibilityPolicy="always" landmarks="sv1#page1 sv1#page7 sv1#page29">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Site View 1" homePage="sv1#page1" linkVisibilityPolicy="always" landmarks="sv1#page1 sv1#page7 sv1#page29 sv1#miu20 sv1#page44 sv1#area2">
   <OperationUnits>
     <ModuleInstanceUnit gr:x="370" gr:y="435" id="sv1#miu1" moduleId="mov1#opm3">
-      <KOLink id="sv1#miu1#kln1" to="sv1#page4#mssu3" name="KOFlow3"/>
+      <KOLink id="sv1#miu1#kln1" to="sv1#page4#mssu3" name="KOFlow3">
+        <LinkParameter id="sv1#miu1#kln1#par231" name="ErrorMessage_message" source="mov1#opm3#kocu2#ocp6" target="sv1#page4#mssu3.sv1#page4#mssu3#ph2"/>
+      </KOLink>
     </ModuleInstanceUnit>
     <SwitchUnit gr:x="325" gr:y="100" id="sv1#switch4" name="Switch Angel Homeless">
       <Case value="1"/>
@@ -24,19 +26,33 @@
         <LinkParameter id="sv1#switch4#oln24#par107" name="Username_PASSING" sourceLinkParameter="sv1#page7#enu5#ln7#par85" passing="true"/>
       </OKLink>
     </SwitchUnit>
-    <CreateUnit gr:x="870" gr:y="45" id="sv1#cru8" name="Create Angel" entity="ent1">
-      <OKLink id="sv1#cru8#oln26" name="OKFlow26" to="sv1#miu1" gr:bendpoints="158,61,643,-324;141,179,626,-206;11,273,496,-112;-336,275,149,-110">
-        <LinkParameter id="sv1#cru8#oln26#par118" name="password_Password" source="passwordArray" target="sv1#miu1.mov1#opm3#icu3#icp4"/>
-        <LinkParameter id="sv1#cru8#oln26#par119" name="userName_Username" source="userNameArray" target="sv1#miu1.mov1#opm3#icu3#icp2"/>
-      </OKLink>
-      <KOLink id="sv1#cru8#kln13" name="KOFlow13" to="sv1#page4" automaticCoupling="true"/>
-    </CreateUnit>
     <CreateUnit gr:x="870" gr:y="190" id="sv1#cru9" name="Create Homeless" entity="ent3">
       <OKLink id="sv1#cru9#oln25" name="OKFlow25" to="sv1#miu1" gr:bendpoints="-64,97,436,-143;-390,130,110,-110">
         <LinkParameter id="sv1#cru9#oln25#par116" name="password_Password" source="passwordArray" target="sv1#miu1.mov1#opm3#icu3#icp4"/>
         <LinkParameter id="sv1#cru9#oln25#par117" name="userName_Username" source="userNameArray" target="sv1#miu1.mov1#opm3#icu3#icp2"/>
       </OKLink>
-      <KOLink id="sv1#cru9#kln12" name="KOFlow12" to="sv1#page4#mssu3"/>
+      <KOLink id="sv1#cru9#kln12" name="KOFlow12" to="sv1#page4#mssu3">
+        <LinkParameter id="sv1#cru9#kln12#par233" name="Creating your account failed_message" sourceValue="Creating your account failed" target="sv1#page4#mssu3.sv1#page4#mssu3#ph2"/>
+      </KOLink>
     </CreateUnit>
+    <ModuleInstanceUnit gr:x="840" gr:y="60" id="sv1#miu19" action="true" moduleId="mov1#opm14">
+      <OKLink id="sv1#miu19#oln72" name="OKFlow72" to="sv1#miu1" gr:bendpoints="154,164,649,-336;123,306,618,-194">
+        <LinkParameter id="sv1#miu19#oln72#par284" name="Password_PASSING_Password" sourceLinkParameter="sv1#page9#enu2#ln91#par282" target="sv1#miu1.mov1#opm3#icu3#icp4"/>
+        <LinkParameter id="sv1#miu19#oln72#par285" name="Username_PASSING_Username" sourceLinkParameter="sv1#page9#enu2#ln91#par283" target="sv1#miu1.mov1#opm3#icu3#icp2"/>
+      </OKLink>
+      <KOLink id="sv1#miu19#kln33" name="KOFlow33" to="sv1#page4#mssu3" gr:bendpoints="178,111,403,-269;130,243,355,-137">
+        <LinkParameter id="sv1#miu19#kln33#par232" name="Creating your account failed_message" sourceValue="Creating your account failed" target="sv1#page4#mssu3.sv1#page4#mssu3#ph2"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="585" gr:y="-130" id="sv1#miu20" moduleId="mov1#hym4" landmark="true"/>
+    <CreateUnit gr:x="355" gr:y="-370" id="sv1#cru8" name="Create Donation" entity="ent21">
+      <OKLink id="sv1#cru8#oln62" name="OKFlow62" to="sv1#page29" automaticCoupling="true"/>
+      <KOLink id="sv1#cru8#kln13" name="KOFlow13" to="sv1#page29" automaticCoupling="true" gr:bendpoints="-100,34,160,-16"/>
+    </CreateUnit>
+    <DeleteUnit gr:x="605" gr:y="-285" id="sv1#dlu4" name="Delete4">
+      <Selector id="sv1#dlu4#su52" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#dlu4#su52#kcond14" name="KeyCondition14" predicate="in" implied="false"/>
+      </Selector>
+    </DeleteUnit>
   </OperationUnits>
 </SiteView>

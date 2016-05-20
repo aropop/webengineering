@@ -3,7 +3,7 @@
     <MultiMessageUnit gr:x="5" gr:y="0" id="sv1#page1#mssu1" name="Welcome">
       <Message xml:space="preserve">Welcome on HomelessAngel!</Message>
     </MultiMessageUnit>
-    <EntryUnit gr:x="0" gr:y="115" id="sv1#page1#enu1" name="login" fieldOrder="sv1#page1#enu1#fld1 sv1#page1#enu1#fld2 sv1#page1#enu1#sfld1" linkOrder="sv1#page1#enu1#ln2" gr:showAllParts="true" entity="User">
+    <EntryUnit gr:x="0" gr:y="115" id="sv1#page1#enu1" name="Login" fieldOrder="sv1#page1#enu1#fld1 sv1#page1#enu1#fld2 sv1#page1#enu1#sfld1" linkOrder="sv1#page1#enu1#ln2" gr:showAllParts="true" entity="User">
       <Field id="sv1#page1#enu1#fld2" name="password" type="password" modifiable="true"/>
       <Field id="sv1#page1#enu1#fld1" name="username" type="string" modifiable="true"/>
       <Link id="sv1#page1#enu1#ln2" name="Login" to="sv1#miu1" type="normal" validate="true">
@@ -37,8 +37,8 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#page1#enu1">
           <layout:Link link="sv1#page1#enu1#ln2"/>
-          <layout:Field field="sv1#page1#enu1#fld1"/>
-          <layout:Field field="sv1#page1#enu1#fld2"/>
+          <layout:Field field="sv1#page1#enu1#fld1" label="Username"/>
+          <layout:Field field="sv1#page1#enu1#fld2" label="Password"/>
           <layout:Field field="sv1#page1#enu1#sfld1"/>
         </layout:Unit>
       </layout:Cell>

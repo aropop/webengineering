@@ -1,11 +1,74 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="895" gr:y="425" id="sv1#page29" name="Dontate" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="30" gr:y="-435" id="sv1#page29" name="Dontate" landmark="true">
   <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page29#mssu8" name="Donate Message"/>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page29#mssu8" name="Donate Message">
+      <Message xml:space="preserve">You're able to make a donation that will be used to help homeless people on the streets.
+
+To make a donation you have to fill out the form below.</Message>
+    </MultiMessageUnit>
+    <EntryUnit gr:x="15" gr:y="65" id="sv1#page29#enu17" name="Donate" entity="ent21" linkOrder="sv1#page29#enu17#ln94">
+      <Field id="sv1#page29#enu17#fld61" name="amount" type="integer" modifiable="true" attribute="ent21#att70"/>
+      <Field id="sv1#page29#enu17#fld62" name="comment" type="string" modifiable="true" attribute="ent21#att71"/>
+      <Field id="sv1#page29#enu17#fld63" name="date" type="date" modifiable="false" attribute="ent21#att10" preloaded="true" hidden="true"/>
+      <Link id="sv1#page29#enu17#ln94" name="Donate" to="sv1#cru8" type="normal" validate="true">
+        <LinkParameter id="sv1#page29#enu17#ln94#par135" name="amount_amount" source="sv1#page29#enu17#fld61" target="sv1#cru8.ent21#att70"/>
+        <LinkParameter id="sv1#page29#enu17#ln94#par136" name="comment_comment" source="sv1#page29#enu17#fld62" target="sv1#cru8.ent21#att71"/>
+        <LinkParameter id="sv1#page29#enu17#ln94#par139" name="date_date" source="sv1#page29#enu17#fld63" target="sv1#cru8.ent21#att10"/>
+      </Link>
+    </EntryUnit>
+    <TimeUnit gr:x="140" gr:y="110" id="sv1#page29#tmu5" name="Time5">
+      <Link id="sv1#page29#tmu5#ln92" name="Flow92" to="sv1#page29#enu17" type="transport" validate="true">
+        <LinkParameter id="sv1#page29#tmu5#ln92#par134" name="Current/Input Date_date" source="currentDate" target="sv1#page29#enu17#fld63_slot"/>
+      </Link>
+    </TimeUnit>
+    <PowerIndexUnit gr:x="5" gr:y="160" id="sv1#page29#pwu14" name="Donations" sortable="true" checkable="false" useCountQuery="false" entity="ent21" displayAttributes="ent21#att10 ent21#att70 ent21#att71">
+      <SortAttribute attribute="ent21#att10" order="descending"/>
+    </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#page29#mssu8"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page29#enu17">
+          <layout:Field field="sv1#page29#enu17#fld61" label="Amount"/>
+          <layout:Field field="sv1#page29#enu17#fld62" label="Comment"/>
+          <layout:Link link="sv1#page29#enu17#ln94"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page29#pwu14">
+          <layout:Link link="sv1#page29#pwu14ent21#att10"/>
+          <layout:Attribute attribute="ent21#att10" label="Date"/>
+          <layout:Attribute attribute="ent21#att70" label="Amount"/>
+          <layout:Attribute attribute="ent21#att71" label="Comment"/>
+        </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>

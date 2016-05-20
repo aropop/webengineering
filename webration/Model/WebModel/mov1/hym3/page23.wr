@@ -2,10 +2,10 @@
   <ContentUnits>
     <EntryUnit id="mov1#hym3#page23#enu10" name="New Message" gr:x="140" gr:y="125" entity="ent4" linkOrder="mov1#hym3#page23#enu10#ln79">
       <Field id="mov1#hym3#page23#enu10#fld29" name="title" type="string" modifiable="true" attribute="ent4#att4"/>
-      <Field id="mov1#hym3#page23#enu10#fld30" name="body" type="string" modifiable="true" attribute="ent4#att6"/>
+      <Field id="mov1#hym3#page23#enu10#fld30" name="body" type="text" modifiable="true" attribute="ent4#att6"/>
       <Field id="mov1#hym3#page23#enu10#fld31" name="receiver" type="integer" modifiable="false" preloaded="true" hidden="true"/>
       <Field id="mov1#hym3#page23#enu10#fld32" name="sender" type="string" modifiable="false" preloaded="true" hidden="true"/>
-      <Link id="mov1#hym3#page23#enu10#ln79" name="Send Messag" to="mov1#hym3#cru2" type="normal" validate="true">
+      <Link id="mov1#hym3#page23#enu10#ln79" name="Send Message" to="mov1#hym3#cru2" type="normal" validate="true">
         <LinkParameter id="mov1#hym3#page23#enu10#ln79#par187" name="body_body" source="mov1#hym3#page23#enu10#fld30" target="mov1#hym3#cru2.ent4#att6"/>
         <LinkParameter id="mov1#hym3#page23#enu10#ln79#par188" name="title_title" source="mov1#hym3#page23#enu10#fld29" target="mov1#hym3#cru2.ent4#att4"/>
         <LinkParameter id="mov1#hym3#page23#enu10#ln79#par189" name="receiver_User.oid(ReceiversMessage)" source="mov1#hym3#page23#enu10#fld31" target="mov1#hym3#cru2.rel19#role37.userOID"/>

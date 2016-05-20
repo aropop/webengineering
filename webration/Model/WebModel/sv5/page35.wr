@@ -1,0 +1,74 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="260" gr:y="165" id="sv5#page35" name="Offers">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv5#page35#pwu15" name="Users" sortable="true" checkable="false" useCountQuery="false" entity="User" linkOrder="sv5#page35#pwu15#ln96 sv5#page35#pwu15#ln97" displayAttributes="userName email User#att1 User#att2 User#att25">
+      <Link id="sv5#page35#pwu15#ln96" name="Enable" to="sv5#miu33" type="normal" validate="true">
+        <LinkParameter id="sv5#page35#pwu15#ln96#par250" name="1_disablestate" sourceValue="1" target="sv5#miu33.mov1#opm16#icu22#icp57"/>
+        <LinkParameter id="sv5#page35#pwu15#ln96#par253" name="oid_userid" source="data[].userOID" target="sv5#miu33.mov1#opm16#icu22#icp56"/>
+      </Link>
+      <Link id="sv5#page35#pwu15#ln97" name="Disable" to="sv5#miu33" type="normal" validate="true" gr:bendpoints="36,123,-144,-82">
+        <LinkParameter id="sv5#page35#pwu15#ln97#par247" name="0_disablestate" sourceValue="0" target="sv5#miu33.mov1#opm16#icu22#icp57"/>
+        <LinkParameter id="sv5#page35#pwu15#ln97#par248" name="oid_userid" source="data[].userOID" target="sv5#miu33.mov1#opm16#icu22#icp56"/>
+      </Link>
+    </PowerIndexUnit>
+    <HierarchicalIndexUnit gr:x="100" gr:y="0" id="sv5#page35#hinu4" name="Offer" sortable="false" entity="ent8" displayAttributes="ent8#att58 ent8#att28" linkOrder="sv5#page35#hinu4#ln95 sv5#page35#hinu4#ln108">
+      <Link id="sv5#page35#hinu4#ln95" name="Flow95" to="sv5#page36#dau10" automaticCoupling="true" type="normal" validate="true"/>
+      <HierarchicalIndexLevel id="sv5#page35#hinu4#hiulvl4" name="Level4" entity="ent19" role="rel10#role20">
+        <HierarchicalIndexLevel id="sv5#page35#hinu4#hiulvl4#hiulvl5" name="Level5" entity="ent20" role="rel3#role6" displayAttributes="ent20#att67 ent20#att68 ent20#att29"/>
+      </HierarchicalIndexLevel>
+      <Link id="sv5#page35#hinu4#ln108" name="Disable Offer Owner" to="sv5#miu33" type="normal" validate="true">
+        <LinkParameter id="sv5#page35#hinu4#ln108#par254" name="1_disablestate" sourceValue="1" target="sv5#miu33.mov1#opm16#icu22#icp57"/>
+        <LinkParameter id="sv5#page35#hinu4#ln108#par255" name="OfferToAngel.oid(Offer)_userid" source="data[].rel4#role8_userOID" target="sv5#miu33.mov1#opm16#icu22#icp56"/>
+      </Link>
+    </HierarchicalIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv5#page35#pwu15">
+          <layout:Link link="sv5#page35#pwu15#ln96"/>
+          <layout:Link link="sv5#page35#pwu15#ln97"/>
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att1"/>
+          <layout:Attribute attribute="User#att2"/>
+          <layout:Attribute attribute="User#att25"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv5#page35#hinu4">
+          <layout:Attribute attribute="ent8#att58"/>
+          <layout:Attribute attribute="ent8#att28"/>
+          <layout:Attribute attribute="ent20#att67"/>
+          <layout:Attribute attribute="ent20#att68"/>
+          <layout:Attribute attribute="ent20#att29"/>
+          <layout:Link link="sv5#page35#hinu4#ln95"/>
+          <layout:Link link="sv5#page35#hinu4#ln108"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

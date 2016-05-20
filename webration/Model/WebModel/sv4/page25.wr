@@ -1,18 +1,13 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page25" name="Message" gr:x="625" gr:y="525">
   <ContentUnits>
-    <DataUnit id="sv4#page25#dau8" name="Message Details" gr:x="0" gr:y="0" entity="ent4" displayAttributes="ent4#att4 ent4#att6 ent4#att20">
+    <DataUnit id="sv4#page25#dau8" name="Message Details" gr:x="0" gr:y="0" entity="ent4" displayAttributes="ent4#att4 ent4#att6 ent4#att20" linkOrder="sv4#page25#dau8#ln51">
       <Selector id="sv4#page25#dau8#su25" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv4#page25#dau8#su25#kcond13" name="KeyCondition4" predicate="in" implied="false"/>
       </Selector>
-      <Link id="sv4#page25#dau8#ln51" name="Flow21" to="sv4#page25#enu12" type="transport" validate="true">
-        <LinkParameter id="sv4#page25#dau8#ln51#par139" name="oid_originalMessageId" source="data.ent4#att3" target="sv4#page25#enu12#fld36_slot"/>
+      <Link id="sv4#page25#dau8#ln51" name="Reply" to="sv4#miu14" type="normal" validate="true">
+        <LinkParameter id="sv4#page25#dau8#ln51#par36" name="SendsMessage_Inverse.oid_userid [oid]" source="data.rel6#role12_userOID" target="sv4#miu14.mov1#hym3#icu13#icp26"/>
       </Link>
     </DataUnit>
-    <EntryUnit id="sv4#page25#enu12" name="Reply" gr:x="20" gr:y="135" fieldOrder="sv4#page25#enu12#fld38 sv4#page25#enu12#fld37">
-      <Field id="sv4#page25#enu12#fld36" name="originalMessageId" type="integer" preloaded="true" hidden="true"/>
-      <Field id="sv4#page25#enu12#fld37" name="Body" type="string" modifiable="true"/>
-      <Field id="sv4#page25#enu12#fld38" name="Title" type="string" modifiable="true"/>
-    </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -21,6 +16,7 @@
           <layout:Attribute attribute="ent4#att4"/>
           <layout:Attribute attribute="ent4#att6"/>
           <layout:Attribute attribute="ent4#att20"/>
+          <layout:Link link="sv4#page25#dau8#ln51"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -36,12 +32,7 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv4#page25#enu12">
-          <layout:Field field="sv4#page25#enu12#fld38"/>
-          <layout:Field field="sv4#page25#enu12#fld37"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

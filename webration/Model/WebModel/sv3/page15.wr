@@ -9,10 +9,10 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page15#pwu3">
-          <layout:Attribute attribute="ent8#att58"/>
-          <layout:Attribute attribute="ent8#att39"/>
-          <layout:Attribute attribute="ent8#att40"/>
-          <layout:Attribute attribute="ent8#att55"/>
+          <layout:Attribute attribute="ent8#att58" label="Name"/>
+          <layout:Attribute attribute="ent8#att39" label="Amount available"/>
+          <layout:Attribute attribute="ent8#att40" label="Expiry Date"/>
+          <layout:Attribute attribute="ent8#att55" label="Delivery Method"/>
           <layout:Link link="sv3#page15#pwu3#ln46"/>
           <layout:Link link="sv3#page15#pwu3ent8#att58"/>
         </layout:Unit>

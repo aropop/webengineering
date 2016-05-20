@@ -1,18 +1,13 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="375" gr:y="560" id="sv3#page18" name="Message">
   <ContentUnits>
-    <DataUnit gr:x="0" gr:y="0" id="sv3#page18#dau4" name="Message Details" entity="ent4" displayAttributes="ent4#att4 ent4#att6 ent4#att20">
+    <DataUnit gr:x="0" gr:y="0" id="sv3#page18#dau4" name="Message Details" entity="ent4" displayAttributes="ent4#att4 ent4#att6 ent4#att20" linkOrder="sv3#page18#dau4#ln21">
       <Selector id="sv3#page18#dau4#su8" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#page18#dau4#su8#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
       </Selector>
-      <Link id="sv3#page18#dau4#ln21" name="Flow21" to="sv3#page18#enu7" type="transport" validate="true">
-        <LinkParameter id="sv3#page18#dau4#ln21#par10" name="oid_originalMessageId" source="data.ent4#att3" target="sv3#page18#enu7#fld13_slot"/>
+      <Link id="sv3#page18#dau4#ln21" name="Reply" to="sv3#miu13" type="normal" validate="true">
+        <LinkParameter id="sv3#page18#dau4#ln21#par238" name="SendsMessage_Inverse.oid_userid [oid]" source="data.rel6#role12_userOID" target="sv3#miu13.mov1#hym3#icu13#icp26"/>
       </Link>
     </DataUnit>
-    <EntryUnit gr:x="20" gr:y="135" id="sv3#page18#enu7" name="Reply" fieldOrder="sv3#page18#enu7#fld11 sv3#page18#enu7#fld12">
-      <Field id="sv3#page18#enu7#fld13" name="originalMessageId" type="integer" preloaded="true" hidden="true"/>
-      <Field id="sv3#page18#enu7#fld12" name="Body" type="string" modifiable="true"/>
-      <Field id="sv3#page18#enu7#fld11" name="Title" type="string" modifiable="true"/>
-    </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -21,6 +16,7 @@
           <layout:Attribute attribute="ent4#att4"/>
           <layout:Attribute attribute="ent4#att6"/>
           <layout:Attribute attribute="ent4#att20"/>
+          <layout:Link link="sv3#page18#dau4#ln21"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -36,12 +32,7 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv3#page18#enu7">
-          <layout:Field field="sv3#page18#enu7#fld11"/>
-          <layout:Field field="sv3#page18#enu7#fld12"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

@@ -1,0 +1,28 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="115" gr:y="-100" id="sv1#page44" name="Offers" landmark="true">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#page44#pwu17" name="Offers" sortable="true" checkable="false" useCountQuery="false" entity="ent8" displayAttributes="ent8#att58 ent8#att39 ent8#att40 ent8#att55"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page44#pwu17">
+          <layout:Attribute attribute="ent8#att58" label="Name"/>
+          <layout:Attribute attribute="ent8#att39" label="Amount"/>
+          <layout:Attribute attribute="ent8#att40" label="Expiry Date"/>
+          <layout:Attribute attribute="ent8#att55" label="Delivery Method"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

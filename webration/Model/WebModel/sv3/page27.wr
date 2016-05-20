@@ -1,0 +1,34 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1795" gr:y="680" id="sv3#page27" name="Add Tag">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv3#page27#enu12" name="Add Tag" entity="ent9" linkOrder="sv3#page27#enu12#ln56">
+      <Field id="sv3#page27#enu12#fld35" name="name" type="string" modifiable="true" attribute="ent9#att32"/>
+      <Field id="sv3#page27#enu12#fld37" name="Offerid" type="integer" modifiable="false" preloaded="true" hidden="true"/>
+      <Link id="sv3#page27#enu12#ln56" name="Submit" to="sv3#cru14" type="normal" validate="true">
+        <LinkParameter id="sv3#page27#enu12#ln56#par240" name="name_name" source="sv3#page27#enu12#fld35" target="sv3#cru14.ent9#att32"/>
+        <LinkParameter id="sv3#page27#enu12#ln56#par241" name="Offerid_Offer.oid(TypeToOffer)" source="sv3#page27#enu12#fld37" target="sv3#cru14.rel5#role10.ent8#att27"/>
+        <LinkParameter id="sv3#page27#enu12#ln56#par242" name="Offerid_PASSING" source="sv3#page27#enu12#fld37" passing="true"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page27#enu12">
+          <layout:Field field="sv3#page27#enu12#fld35"/>
+          <layout:Link link="sv3#page27#enu12#ln56"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

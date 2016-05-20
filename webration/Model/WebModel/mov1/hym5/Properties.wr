@@ -1,0 +1,7 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="90" gr:y="600" id="mov1#hym5" name="Angels" landmarks="mov1#hym5#page32">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="155" gr:y="150" id="mov1#hym5#icu20">
+      <OKLink id="mov1#hym5#icu20#oln26" name="OKFlow26" to="mov1#hym5#page32" automaticCoupling="true"/>
+    </InputCollectorUnit>
+  </OperationUnits>
+</HybridModule>

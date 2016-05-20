@@ -1,0 +1,18 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="520" gr:y="355" id="mov1#opm2" name="Add Picture">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm2#icu2" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm2#icu2#icp34" name="Picture"/>
+      <InputCollectorParameter id="mov1#opm2#icu2#icp35" name="OfferId"/>
+      <OKLink id="mov1#opm2#icu2#oln58" name="OKFlow58" to="mov1#opm2#cru13">
+        <LinkParameter id="mov1#opm2#icu2#oln58#par78" name="OfferId_Offer.oid(PictureToOffer)" source="mov1#opm2#icu2#icp35" target="mov1#opm2#cru13.rel7#role14.ent8#att27"/>
+        <LinkParameter id="mov1#opm2#icu2#oln58#par98" name="Picture_picture" source="mov1#opm2#icu2#icp34" target="mov1#opm2#cru13.ent12#att38"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="680" gr:y="20" id="mov1#opm2#okcu12" name="OK Port12"/>
+    <KOCollectorUnit gr:x="680" gr:y="95" id="mov1#opm2#kocu10" name="KO Port10"/>
+    <CreateUnit gr:x="360" gr:y="55" id="mov1#opm2#cru13" name="AddPicture" entity="ent12">
+      <OKLink id="mov1#opm2#cru13#oln59" name="OKFlow59" to="mov1#opm2#okcu12" automaticCoupling="true"/>
+      <KOLink id="mov1#opm2#cru13#kln30" name="KOFlow30" to="mov1#opm2#kocu10" automaticCoupling="true"/>
+    </CreateUnit>
+  </OperationUnits>
+</OperationModule>

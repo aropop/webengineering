@@ -2,7 +2,7 @@
   <ContentUnits>
     <EntryUnit gr:x="20" gr:y="180" id="sv4#page24#enu11" name="Rate Transaction" entity="ent20" linkOrder="sv4#page24#enu11#ln6">
       <Field id="sv4#page24#enu11#fld33" name="stars" type="integer" modifiable="true" attribute="ent20#att67"/>
-      <Field id="sv4#page24#enu11#fld34" name="comment" type="string" modifiable="true" attribute="ent20#att68"/>
+      <Field id="sv4#page24#enu11#fld34" name="comment" type="text" modifiable="true" attribute="ent20#att68" contentType="text/plain"/>
       <Link id="sv4#page24#enu11#ln6" name="Submit" to="sv4#miu16" type="normal" validate="true">
         <LinkParameter id="sv4#page24#enu11#ln6#par21" name="comment_comment" source="sv4#page24#enu11#fld34" target="sv4#miu16.mov1#opm12#icu15#icp29"/>
         <LinkParameter id="sv4#page24#enu11#ln6#par23" name="stars_stars" source="sv4#page24#enu11#fld33" target="sv4#miu16.mov1#opm12#icu15#icp28"/>
@@ -34,8 +34,8 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv4#page24#enu11">
           <layout:Link link="sv4#page24#enu11#ln6"/>
-          <layout:Field field="sv4#page24#enu11#fld33" layout:fieldLayout="StoreTemplates/Rating"/>
-          <layout:Field field="sv4#page24#enu11#fld34"/>
+          <layout:Field field="sv4#page24#enu11#fld33" layout:fieldLayout="StoreTemplates/Rating" label="Rating"/>
+          <layout:Field field="sv4#page24#enu11#fld34" label="Comment"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

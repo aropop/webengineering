@@ -1,11 +1,16 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page13" name="Profile" landmark="true" gr:x="1745" gr:y="260" linkOrder="sv3#page13#ln68">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page13" name="Profile" landmark="true" gr:x="1995" gr:y="160">
   <ContentUnits>
-    <DataUnit id="sv3#page13#dau6" name="Profile" gr:x="140" gr:y="0" entity="ent1" displayAttributes="userName email User#att1 User#att2 ent1#att5 ent1#att7 ent1#att21">
+    <DataUnit id="sv3#page13#dau6" name="Profile" gr:x="160" gr:y="0" entity="ent1" displayAttributes="userName email User#att1 User#att2 ent1#att5 ent1#att7 ent1#att21" linkOrder="sv3#page13#dau6#ln98 sv3#page13#dau6#ln84">
       <Selector id="sv3#page13#dau6#su7" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#page13#dau6#su7#kcond6" name="KeyCondition6" predicate="in" implied="false"/>
       </Selector>
+      <Link id="sv3#page13#dau6#ln98" name="Update profile" to="sv3#page41#enu13" type="normal" validate="true" gr:bendpoints="-84,-35,306,0">
+        <LinkParameter id="sv3#page13#dau6#ln98#par320" name="oid_Key Condition [oid]" source="data.userOID" target="sv3#page41#enu13.userOID"/>
+        <LinkParameter id="sv3#page13#dau6#ln98#par321" name="defaultGroup.oid_PASSING" source="data.User2DefaultGroup_groupOID" passing="true"/>
+      </Link>
+      <Link id="sv3#page13#dau6#ln84" name="Delete your account" to="sv3#miu11" type="normal" automaticCoupling="true" validate="true"/>
     </DataUnit>
-    <GetUnit id="sv3#page13#gtu4" name="Get User" gr:x="0" gr:y="25" contextParameters="UserCtxParam">
+    <GetUnit id="sv3#page13#gtu4" name="Get User" gr:x="20" gr:y="25" contextParameters="UserCtxParam">
       <Link id="sv3#page13#gtu4#ln10" name="Flow9" to="sv3#page13#dau6" type="transport" validate="true">
         <LinkParameter id="sv3#page13#gtu4#ln10#par76" name="UserCtxParam.oid_KeyCondition6 [oid]" source="sv3#page13#gtu4.UserCtxParam" target="sv3#page13#dau6#su7#kcond6.userOID"/>
       </Link>
@@ -13,19 +18,38 @@
         <LinkParameter id="sv3#page13#gtu4#ln67#par150" name="UserCtxParam.oid_userid" source="sv3#page13#gtu4.UserCtxParam" target="sv3#miu11.mov1#hym2#icu12#icp22"/>
         <LinkParameter id="sv3#page13#gtu4#ln67#par151" name="Angel_usertype" sourceValue="Angel" target="sv3#miu11.mov1#hym2#icu12#icp23"/>
       </Link>
+      <Link id="sv3#page13#gtu4#ln86" name="Flow86" to="sv3#page13#qu2" type="transport" validate="true">
+        <LinkParameter id="sv3#page13#gtu4#ln86#par251" name="UserCtxParam.oid_angelid" source="sv3#page13#gtu4.UserCtxParam" target="sv3#page13#qu2.sv3#page13#qu2#qi2"/>
+      </Link>
     </GetUnit>
+    <MultiMessageUnit gr:x="280" gr:y="95" id="sv3#page13#mssu2" name="Has Rating">
+      <Placeholder id="sv3#page13#mssu2#ph1" name="rating">
+        <Value xml:space="preserve">No ratings yet</Value>
+      </Placeholder>
+      <Message xml:space="preserve">Has average rating: $$rating$$.</Message>
+    </MultiMessageUnit>
+    <QueryUnit id="sv3#page13#qu2" name="CalculateAverage" gr:x="0" gr:y="165" mode="select" language="SQL" db="db1">
+      <QueryText xml:space="preserve">SELECT AVG(stars) AS average FROM rates WHERE angel_oid=:angelid;</QueryText>
+      <QueryInput id="sv3#page13#qu2#qi2" name="angelid" required="true" type="integer"/>
+      <QueryOutput id="sv3#page13#qu2#qo2" name="average" type="float"/>
+      <Link id="sv3#page13#qu2#ln87" name="Flow87" to="sv3#page13#mssu2" type="transport" validate="true">
+        <LinkParameter id="sv3#page13#qu2#ln87#par252" name="average_rating" source="sv3#page13#qu2#qo2" target="sv3#page13#mssu2.sv3#page13#mssu2#ph1"/>
+      </Link>
+    </QueryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page13#dau6">
-          <layout:Attribute attribute="userName"/>
-          <layout:Attribute attribute="email"/>
-          <layout:Attribute attribute="User#att1"/>
-          <layout:Attribute attribute="User#att2"/>
-          <layout:Attribute attribute="ent1#att5"/>
-          <layout:Attribute attribute="ent1#att7"/>
-          <layout:Attribute attribute="ent1#att21"/>
+          <layout:Attribute attribute="userName" label="Username"/>
+          <layout:Attribute attribute="email" label="Email"/>
+          <layout:Attribute attribute="User#att1" label="Location"/>
+          <layout:Attribute attribute="User#att2" label="Birthday"/>
+          <layout:Attribute attribute="ent1#att5" label="Profession"/>
+          <layout:Attribute attribute="ent1#att7" label="Picture"/>
+          <layout:Attribute attribute="ent1#att21" label="Transactions completed"/>
+          <layout:Link link="sv3#page13#dau6#ln98"/>
+          <layout:Link link="sv3#page13#dau6#ln84"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -41,7 +65,9 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page13#mssu2"/>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -55,5 +81,4 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
-  <Link id="sv3#page13#ln68" name="Delete your account" to="sv3#miu11" automaticCoupling="true" type="normal" validate="true"/>
 </Page>

@@ -10,6 +10,7 @@
         <LinkParameter id="sv1#page10#enu6#ln14#par113" name="Password_PASSING_password" sourceLinkParameter="sv1#switch4#oln24#par106" target="sv1#cru9.password"/>
         <LinkParameter id="sv1#page10#enu6#ln14#par114" name="Username_PASSING_userName" sourceLinkParameter="sv1#switch4#oln24#par107" target="sv1#cru9.userName"/>
         <LinkParameter id="sv1#page10#enu6#ln14#par115" name="yearsOnStreet_yearsOnStreet" source="sv1#page10#enu6#fld22" target="sv1#cru9.ent3#att16"/>
+        <LinkParameter id="sv1#page10#enu6#ln14#par234" name="0_isDisabled" sourceValue="0" target="sv1#cru9.User#att25"/>
       </Link>
       <Field id="sv1#page10#enu6#fld21" name="nickname" type="string" modifiable="true" attribute="ent3#att12"/>
       <Field id="sv1#page10#enu6#fld22" name="yearsOnStreet" type="integer" modifiable="true" attribute="ent3#att16"/>
@@ -20,8 +21,8 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#page10#enu6">
           <layout:Link link="sv1#page10#enu6#ln14"/>
-          <layout:Field field="sv1#page10#enu6#fld21"/>
-          <layout:Field field="sv1#page10#enu6#fld22"/>
+          <layout:Field field="sv1#page10#enu6#fld21" label="Nickname"/>
+          <layout:Field field="sv1#page10#enu6#fld22" label="Years on the streets"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

@@ -1,10 +1,11 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="360" gr:y="155" id="mov1#hym1#page21" name="Search User" linkOrder="mov1#hym1#page21#ln30">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="0" id="mov1#hym1#page21#enu9" name="User" ajaxEnableExpandedLinks="false" linkOrder="mov1#hym1#page21#enu9#ln32">
+    <EntryUnit gr:x="0" gr:y="0" id="mov1#hym1#page21#enu9" name="User" ajaxEnableExpandedLinks="false" linkOrder="mov1#hym1#page21#enu9#ln32 mov1#hym1#page21#enu9#ln74">
       <Field id="mov1#hym1#page21#enu9#fld28" name="Username" type="string" modifiable="true" ajaxEventEnabled="true" ajaxEventLink="mov1#hym1#page21#enu9#ln32" ajaxEventIndicator="true"/>
       <Link id="mov1#hym1#page21#enu9#ln32" name="Flow32" to="mov1#hym1#page21#pwu6" type="normal" validate="true" ajaxOpenWaitingDialog="true" ajaxWaitingDialogMessage="Loading">
         <LinkParameter id="mov1#hym1#page21#enu9#ln32#par33" name="Username_AttCondit" source="mov1#hym1#page21#enu9#fld28" target="mov1#hym1#page21#pwu6#su10#acond4"/>
       </Link>
+      <Link id="mov1#hym1#page21#enu9#ln74" name="Search" to="mov1#hym1#page21" automaticCoupling="true" type="normal" validate="true"/>
     </EntryUnit>
     <PowerIndexUnit gr:x="5" gr:y="135" id="mov1#hym1#page21#pwu6" name="Users" sortable="true" checkable="false" useCountQuery="false" entity="User" linkOrder="mov1#hym1#page21#pwu6#ln29" ajaxEnableExpandedLinks="true" displayAttributes="userName">
       <Selector id="mov1#hym1#page21#pwu6#su10" defaultPolicy="fill" booleanOperator="and">
@@ -21,6 +22,7 @@
         <layout:Unit unitId="mov1#hym1#page21#enu9">
           <layout:Field field="mov1#hym1#page21#enu9#fld28"/>
           <layout:Link link="mov1#hym1#page21#enu9#ln32"/>
+          <layout:Link link="mov1#hym1#page21#enu9#ln74"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

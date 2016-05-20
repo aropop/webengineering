@@ -1,3 +1,8 @@
-<SiteView id="sv5" name="Administrator Page" protected="true">
-  <OperationUnits/>
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv5" name="Administrator Page" protected="true" homePage="sv5#page35">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="395" gr:y="415" id="sv5#miu33" action="true" moduleId="mov1#opm16">
+      <OKLink id="sv5#miu33#oln88" name="OKFlow88" to="sv5#page35" automaticCoupling="true" gr:bendpoints="27,-75,147,125"/>
+      <KOLink id="sv5#miu33#kln35" name="KOFlow35" to="sv5#page35" automaticCoupling="true" gr:bendpoints="76,-80,196,120"/>
+    </ModuleInstanceUnit>
+  </OperationUnits>
 </SiteView>

@@ -1,0 +1,63 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm15" name="Update angel" gr:x="810" gr:y="425">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm15#icu19" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm15#icu19#icp46" name="username"/>
+      <InputCollectorParameter id="mov1#opm15#icu19#icp47" name="password"/>
+      <InputCollectorParameter id="mov1#opm15#icu19#icp48" name="picture"/>
+      <InputCollectorParameter id="mov1#opm15#icu19#icp49" name="birthdate"/>
+      <InputCollectorParameter id="mov1#opm15#icu19#icp50" name="profession"/>
+      <InputCollectorParameter id="mov1#opm15#icu19#icp51" name="email"/>
+      <InputCollectorParameter id="mov1#opm15#icu19#icp52" name="annonymous"/>
+      <OKLink id="mov1#opm15#icu19#oln75" name="OKFlow67" to="mov1#opm15#sim4">
+        <LinkParameter id="mov1#opm15#icu19#oln75#par295" name="username_PASSING" source="mov1#opm15#icu19#icp46" passing="true"/>
+        <LinkParameter id="mov1#opm15#icu19#oln75#par296" name="picture_Image" source="mov1#opm15#icu19#icp48" target="mov1#opm15#sim4.image"/>
+        <LinkParameter id="mov1#opm15#icu19#oln75#par297" name="annonymous_PASSING" source="mov1#opm15#icu19#icp52" passing="true"/>
+      </OKLink>
+      <Link id="mov1#opm15#icu19#ln99" name="Flow88" to="mov1#opm15#mfu6" type="transport" validate="true" gr:bendpoints="277,91,-93,121">
+        <LinkParameter id="mov1#opm15#icu19#ln99#par298" name="birthdate_birthdate" source="mov1#opm15#icu19#icp49" target="mov1#opm15#mfu6.User#att2"/>
+        <LinkParameter id="mov1#opm15#icu19#ln99#par299" name="email_email" source="mov1#opm15#icu19#icp51" target="mov1#opm15#mfu6.email"/>
+        <LinkParameter id="mov1#opm15#icu19#ln99#par300" name="password_password" source="mov1#opm15#icu19#icp47" target="mov1#opm15#mfu6.password"/>
+        <LinkParameter id="mov1#opm15#icu19#ln99#par301" name="profession_profession" source="mov1#opm15#icu19#icp50" target="mov1#opm15#mfu6.ent1#att5"/>
+        <LinkParameter id="mov1#opm15#icu19#ln99#par302" name="username_userName" source="mov1#opm15#icu19#icp46" target="mov1#opm15#mfu6.userName"/>
+        <LinkParameter id="mov1#opm15#icu19#ln99#par303" name="location_location" source="mov1#opm15#icu19#icp53" target="mov1#opm15#mfu6.User#att1"/>
+        <LinkParameter id="mov1#opm15#icu19#ln99#par304" name="2_Group.oid(defaultGroup)" source="mov1#opm15#icu19#icp54" target="mov1#opm15#mfu6.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="mov1#opm15#icu19#ln99#par310" name="userid_KeyCondition24 [oid]" source="mov1#opm15#icu19#icp55" target="mov1#opm15#mfu6#su45#kcond24.userOID"/>
+      </Link>
+      <InputCollectorParameter id="mov1#opm15#icu19#icp53" name="location"/>
+      <InputCollectorParameter id="mov1#opm15#icu19#icp54" name="groupid"/>
+      <InputCollectorParameter id="mov1#opm15#icu19#icp55" name="userid"/>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov1#opm15#okcu16" name="OK Port15" gr:x="635" gr:y="85">
+      <OutputCollectorParameter id="mov1#opm15#okcu16#ocp5" name="userid"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit id="mov1#opm15#kocu13" name="KO Port12" gr:x="635" gr:y="230"/>
+    <SwitchUnit id="mov1#opm15#switch8" name="isanon" gr:x="320" gr:y="110">
+      <Case value="true"/>
+      <Case value="false"/>
+      <OKLink id="mov1#opm15#switch8#oln76" name="OKFlow68" to="mov1#opm15#mfu6" code="true" gr:bendpoints="75,-39,-95,-44">
+        <LinkParameter id="mov1#opm15#switch8#oln76#par305" name="Annonymous_usedName" target="mov1#opm15#mfu6.ent1#att14" sourceValue="Annonymous"/>
+      </OKLink>
+      <OKLink id="mov1#opm15#switch8#oln77" name="OKFlow70" to="mov1#opm15#mfu6" code="false" gr:bendpoints="68,22,-87,27">
+        <LinkParameter id="mov1#opm15#switch8#oln77#par306" name="username_PASSING_usedName" sourceLinkParameter="mov1#opm15#sim4#oln79#par308" target="mov1#opm15#mfu6.ent1#att14"/>
+      </OKLink>
+    </SwitchUnit>
+    <ScaleImageUnit id="mov1#opm15#sim4" name="Scale" gr:x="275" gr:y="255" width="70" height="70" format="png">
+      <OKLink id="mov1#opm15#sim4#oln79" name="OKFlow69" to="mov1#opm15#switch8">
+        <LinkParameter id="mov1#opm15#sim4#oln79#par307" name="annonymous_PASSING_Switch" sourceLinkParameter="mov1#opm15#icu19#oln75#par297" target="mov1#opm15#switch8.switch"/>
+        <LinkParameter id="mov1#opm15#sim4#oln79#par308" name="username_PASSING" sourceLinkParameter="mov1#opm15#icu19#oln75#par295" passing="true"/>
+      </OKLink>
+      <Link id="mov1#opm15#sim4#ln100" name="Flow89" to="mov1#opm15#mfu6" type="transport" validate="true">
+        <LinkParameter id="mov1#opm15#sim4#ln100#par309" name="Scaled Image_picture" source="scaledImage" target="mov1#opm15#mfu6.ent1#att7"/>
+      </Link>
+    </ScaleImageUnit>
+    <ModifyUnit id="mov1#opm15#mfu6" entity="ent1" name="Updateangel" gr:x="455" gr:y="95">
+      <KOLink id="mov1#opm15#mfu6#kln36" name="KOFlow32" to="mov1#opm15#kocu13" automaticCoupling="true"/>
+      <OKLink id="mov1#opm15#mfu6#oln80" name="OKFlow71" to="mov1#opm15#okcu16">
+        <LinkParameter id="mov1#opm15#mfu6#oln80#par311" name="oid_userid" source="userOIDArray" target="mov1#opm15#okcu16#ocp5"/>
+      </OKLink>
+      <Selector id="mov1#opm15#mfu6#su45" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm15#mfu6#su45#kcond24" name="KeyCondition24" predicate="in" implied="false"/>
+      </Selector>
+    </ModifyUnit>
+  </OperationUnits>
+</OperationModule>

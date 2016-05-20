@@ -1,0 +1,81 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym5#page32" name="Angels" landmark="true" gr:x="410" gr:y="85">
+  <ContentUnits>
+    <PowerIndexUnit id="mov1#hym5#page32#pwu9" name="Angels" linkOrder="mov1#hym5#page32#pwu9#ln11" gr:x="0" gr:y="140" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att14 ent1#att5 User#att1 ent1#att21">
+      <Link id="mov1#hym5#page32#pwu9#ln11" name="View Profile" to="mov1#hym5#page33#dau9" type="normal" automaticCoupling="true" validate="true"/>
+      <Selector id="mov1#hym5#page32#pwu9#su50" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1#hym5#page32#pwu9#su50#acond6" name="searchname" predicate="contains" booleanOperator="or" implied="true" attributes="ent1#att14" ignoreCase="true"/>
+        <AttributesCondition id="mov1#hym5#page32#pwu9#su50#acond11" name="profession" predicate="contains" booleanOperator="or" implied="true" attributes="ent1#att5" ignoreCase="true"/>
+        <AttributesCondition id="mov1#hym5#page32#pwu9#su50#acond12" name="location" predicate="contains" booleanOperator="or" implied="true" attributes="User#att1" ignoreCase="true"/>
+      </Selector>
+    </PowerIndexUnit>
+    <EntryUnit gr:x="15" gr:y="0" id="mov1#hym5#page32#enu7" name="search" entity="ent1" linkOrder="mov1#hym5#page32#enu7#ln57" fieldOrder="mov1#hym5#page32#enu7#fld12 mov1#hym5#page32#enu7#fld11 mov1#hym5#page32#enu7#fld13">
+      <Field id="mov1#hym5#page32#enu7#fld11" name="profession" type="string" modifiable="true" attribute="ent1#att5"/>
+      <Field id="mov1#hym5#page32#enu7#fld12" name="usedName" type="string" modifiable="true" attribute="ent1#att14"/>
+      <Field id="mov1#hym5#page32#enu7#fld13" name="location" type="string" modifiable="true" attribute="User#att1"/>
+      <Link id="mov1#hym5#page32#enu7#ln57" name="Search" to="mov1#hym5#page32#pwu9" type="normal" validate="true">
+        <LinkParameter id="mov1#hym5#page32#enu7#ln57#par94" name="location_location" source="mov1#hym5#page32#enu7#fld13" target="mov1#hym5#page32#pwu9#su50#acond12"/>
+        <LinkParameter id="mov1#hym5#page32#enu7#ln57#par95" name="profession_profession" source="mov1#hym5#page32#enu7#fld11" target="mov1#hym5#page32#pwu9#su50#acond11"/>
+        <LinkParameter id="mov1#hym5#page32#enu7#ln57#par96" name="usedName_searchname" source="mov1#hym5#page32#enu7#fld12" target="mov1#hym5#page32#pwu9#su50#acond6"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#hym5#page32#enu7">
+          <layout:Link link="mov1#hym5#page32#enu7#ln57"/>
+          <layout:Field field="mov1#hym5#page32#enu7#fld12" label="Name"/>
+          <layout:Field field="mov1#hym5#page32#enu7#fld11" label="Profession"/>
+          <layout:Field field="mov1#hym5#page32#enu7#fld13" label="Location"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#hym5#page32#pwu9">
+          <layout:Link link="mov1#hym5#page32#pwu9#ln11"/>
+          <layout:Attribute label="Name" attribute="ent1#att14"/>
+          <layout:Attribute label="Profession" attribute="ent1#att5"/>
+          <layout:Attribute label="Location" attribute="User#att1"/>
+          <layout:Attribute label="Transactions completed" attribute="ent1#att21"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

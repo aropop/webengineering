@@ -42,9 +42,9 @@
           <layout:Attribute attribute="ent17#att11"/>
           <layout:Link link="sv4#page28#pwu13#ln60"/>
           <layout:Link link="sv4#page28#pwu13#ln71" layout:linkVisibilityCondition="sv4#page28#cexpr2"/>
-          <layout:Link link="sv4#page28#pwu13#ln82"/>
+          <layout:Link link="sv4#page28#pwu13#ln82" layout:linkVisibilityCondition="sv4#page28#cexpr2"/>
           <layout:Link link="sv4#page28#pwu13#ln16" label="Rate Angel" layout:linkVisibilityCondition="sv4#page28#cexpr1"/>
-          <layout:Link label="Rate Angel" link="sv4#page28#pwu13#ln35" layout:linkVisibilityCondition="sv4#page28#cexpr1"/>
+          <layout:Link link="sv4#page28#pwu13#ln35" layout:linkVisibilityCondition="sv4#page28#cexpr5"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -75,7 +75,7 @@
     </layout:Row>
   </layout:Grid>
   <Variable id="sv4#page28#var2" name="status" type="string" unitId="sv4#page28#pwu13" parameter="data[].ent17#att11"/>
-  <ConditionExpression id="sv4#page28#cexpr2" name="ActivationExpression 2">
+  <ConditionExpression id="sv4#page28#cexpr2" name="statusisaccept">
     <TextValue xml:space="preserve">return (status == "Accept")</TextValue>
   </ConditionExpression>
   <ConditionExpression id="sv4#page28#cexpr1" name="statusisdone">

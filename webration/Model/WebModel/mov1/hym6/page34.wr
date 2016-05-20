@@ -1,0 +1,74 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym6#page34" name="Homeless" landmark="true" gr:x="565" gr:y="55">
+  <ContentUnits>
+    <PowerIndexUnit id="mov1#hym6#page34#pwu10" name="Homeless People" gr:x="0" gr:y="140" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att12 User#att1">
+      <Selector id="mov1#hym6#page34#pwu10#su51" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1#hym6#page34#pwu10#su51#acond13" name="searchname" predicate="contains" booleanOperator="or" implied="true" ignoreCase="true" attributes="ent3#att12"/>
+        <AttributesCondition id="mov1#hym6#page34#pwu10#su51#acond15" name="location" predicate="contains" booleanOperator="or" implied="true" attributes="User#att1" ignoreCase="true"/>
+      </Selector>
+    </PowerIndexUnit>
+    <EntryUnit id="mov1#hym6#page34#enu16" name="search" linkOrder="mov1#hym6#page34#enu16#ln78" gr:x="15" gr:y="0" entity="ent3" fieldOrder="mov1#hym6#page34#enu16#fld58 mov1#hym6#page34#enu16#fld59">
+      <Field id="mov1#hym6#page34#enu16#fld58" name="usedName" type="string" modifiable="true"/>
+      <Field id="mov1#hym6#page34#enu16#fld59" name="location" type="string" modifiable="true" attribute="User#att1"/>
+      <Link id="mov1#hym6#page34#enu16#ln78" name="Search" to="mov1#hym6#page34#pwu10" type="normal" validate="true">
+        <LinkParameter id="mov1#hym6#page34#enu16#ln78#par97" name="location_location" source="mov1#hym6#page34#enu16#fld59" target="mov1#hym6#page34#pwu10#su51#acond15"/>
+        <LinkParameter id="mov1#hym6#page34#enu16#ln78#par99" name="profession_profession" source="mov1#hym6#page34#enu16#fld61" target="mov1#hym6#page34#pwu10#su51#acond14"/>
+        <LinkParameter id="mov1#hym6#page34#enu16#ln78#par100" name="usedName_searchname" source="mov1#hym6#page34#enu16#fld58" target="mov1#hym6#page34#pwu10#su51#acond13"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#hym6#page34#enu16">
+          <layout:Link link="mov1#hym6#page34#enu16#ln78"/>
+          <layout:Field label="Name" field="mov1#hym6#page34#enu16#fld58"/>
+          <layout:Field label="Location" field="mov1#hym6#page34#enu16#fld59"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#hym6#page34#pwu10">
+          <layout:Attribute attribute="ent3#att12" label="Nickname"/>
+          <layout:Attribute label="Location" attribute="User#att1"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

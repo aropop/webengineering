@@ -1,13 +1,21 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="365" gr:y="170" id="mov1#hym2#page31" name="Sure" linkOrder="mov1#hym2#page31#ln62 mov1#hym2#page31#ln63">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="365" gr:y="170" id="mov1#hym2#page31" name="Sure">
   <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="0" id="mov1#hym2#page31#mssu9" name="Confirm">
+    <MultiMessageUnit gr:x="0" gr:y="0" id="mov1#hym2#page31#mssu9" name="Confirm" linkOrder="mov1#hym2#page31#mssu9#ln85 mov1#hym2#page31#mssu9#ln90">
       <Message xml:space="preserve">Are you sure you want to delete your account</Message>
+      <Link id="mov1#hym2#page31#mssu9#ln85" name="Yes" to="mov1#hym2#switch7" type="normal" validate="true">
+        <LinkParameter id="mov1#hym2#page31#mssu9#ln85#par119" name="usertype_PASSING_Switch" sourceLinkParameter="mov1#hym2#icu12#oln37#par118" target="mov1#hym2#switch7.switch"/>
+        <LinkParameter id="mov1#hym2#page31#mssu9#ln85#par123" name="userid_PASSING" sourceLinkParameter="mov1#hym2#icu12#oln37#par101" passing="true"/>
+      </Link>
+      <Link id="mov1#hym2#page31#mssu9#ln90" name="No" to="mov1#hym2#okcu9" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="199,-128,-486,-53;543,-115,-142,-40"/>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="mov1#hym2#page31#mssu9"/>
+        <layout:Unit unitId="mov1#hym2#page31#mssu9">
+          <layout:Link link="mov1#hym2#page31#mssu9#ln85"/>
+          <layout:Link link="mov1#hym2#page31#mssu9#ln90"/>
+        </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
@@ -22,6 +30,4 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
-  <Link id="mov1#hym2#page31#ln62" name="No" to="mov1#hym2#okcu9" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="199,-128,-486,-53;543,-115,-142,-40"/>
-  <Link id="mov1#hym2#page31#ln63" name="Yes" to="mov1#hym2#switch7" automaticCoupling="true" type="normal" validate="true"/>
 </Page>

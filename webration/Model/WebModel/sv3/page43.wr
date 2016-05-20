@@ -1,0 +1,42 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1650" gr:y="960" id="sv3#page43" name="Update offer">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv3#page43#enu15" name="Update Offer" entity="ent8" linkOrder="sv3#page43#enu15#ln106" fieldOrder="sv3#page43#enu15#fld53 sv3#page43#enu15#fld54 sv3#page43#enu15#fld55 sv3#page43#enu15#fld56">
+      <Field id="sv3#page43#enu15#fld53" name="name" type="string" modifiable="true" attribute="ent8#att58"/>
+      <Field id="sv3#page43#enu15#fld54" name="description" type="text" modifiable="true" attribute="ent8#att36"/>
+      <Field id="sv3#page43#enu15#fld55" name="amount" type="integer" modifiable="true" attribute="ent8#att39"/>
+      <Field id="sv3#page43#enu15#fld56" name="expiryDate" type="date" modifiable="true" attribute="ent8#att40"/>
+      <Link id="sv3#page43#enu15#ln106" name="Submit" to="sv3#mfu8" type="normal" validate="true">
+        <LinkParameter id="sv3#page43#enu15#ln106#par337" name="amount_amount" source="sv3#page43#enu15#fld55" target="sv3#mfu8.ent8#att39"/>
+        <LinkParameter id="sv3#page43#enu15#ln106#par338" name="description_description" source="sv3#page43#enu15#fld54" target="sv3#mfu8.ent8#att36"/>
+        <LinkParameter id="sv3#page43#enu15#ln106#par339" name="expiryDate_expiryDate" source="sv3#page43#enu15#fld56" target="sv3#mfu8.ent8#att40"/>
+        <LinkParameter id="sv3#page43#enu15#ln106#par340" name="Key [oid]_KeyCondition27 [oid]" source="key.ent8#att27" target="sv3#mfu8#su48#kcond27.ent8#att27"/>
+        <LinkParameter id="sv3#page43#enu15#ln106#par341" name="name_name" source="sv3#page43#enu15#fld53" target="sv3#mfu8.ent8#att58"/>
+        <LinkParameter id="sv3#page43#enu15#ln106#par342" name="Offer Object_Offer Object" source="entityBean" target="sv3#mfu8.entityBeans"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page43#enu15">
+          <layout:Link link="sv3#page43#enu15#ln106"/>
+          <layout:Field field="sv3#page43#enu15#fld53" label="Name"/>
+          <layout:Field field="sv3#page43#enu15#fld54" label="Description"/>
+          <layout:Field field="sv3#page43#enu15#fld55" label="Amount"/>
+          <layout:Field field="sv3#page43#enu15#fld56" label="Expiry Date"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="650" gr:y="420" id="sv1#page4" name="Error">
   <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page4#mssu3" name="Message3">
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page4#mssu3" name="Error Message">
       <Message xml:space="preserve">Oops something went wrong: $$message$$</Message>
       <Placeholder id="sv1#page4#mssu3#ph2" name="message"/>
     </MultiMessageUnit>

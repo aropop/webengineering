@@ -1,31 +1,26 @@
-<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="450" gr:y="440" id="mov1#hym2" name="Delete Account">
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="90" gr:y="400" id="mov1#hym2" name="Delete Account">
   <OperationUnits>
     <InputCollectorUnit gr:x="90" gr:y="175" id="mov1#hym2#icu12">
       <InputCollectorParameter id="mov1#hym2#icu12#icp22" name="userid"/>
       <InputCollectorParameter id="mov1#hym2#icu12#icp23" name="usertype"/>
-      <OKLink id="mov1#hym2#icu12#oln37" name="OKFlow37" to="mov1#hym2#page31" automaticCoupling="true"/>
-      <Link id="mov1#hym2#icu12#ln64" name="Flow64" to="mov1#hym2#switch7" type="transport" validate="true" gr:bendpoints="162,73,-218,73;287,68,-93,68">
-        <LinkParameter id="mov1#hym2#icu12#ln64#par146" name="usertype_Switch" source="mov1#hym2#icu12#icp23" target="mov1#hym2#switch7.switch"/>
-        <LinkParameter id="mov1#hym2#icu12#ln64#par147" name="userid_PASSING" source="mov1#hym2#icu12#icp22" passing="true"/>
-      </Link>
+      <OKLink id="mov1#hym2#icu12#oln37" name="OKFlow37" to="mov1#hym2#page31#mssu9">
+        <LinkParameter id="mov1#hym2#icu12#oln37#par101" name="userid_PASSING" source="mov1#hym2#icu12#icp22" passing="true"/>
+        <LinkParameter id="mov1#hym2#icu12#oln37#par118" name="usertype_PASSING" source="mov1#hym2#icu12#icp23" passing="true"/>
+      </OKLink>
     </InputCollectorUnit>
     <OKCollectorUnit gr:x="995" gr:y="105" id="mov1#hym2#okcu9" name="OK Port9"/>
     <SwitchUnit gr:x="540" gr:y="190" id="mov1#hym2#switch7" name="Switch7">
       <Case value="Angel"/>
       <Case value="Homeless"/>
-      <OKLink id="mov1#hym2#switch7#oln38" name="OKFlow38" to="mov1#hym2#dlu1" code="Angel">
-        <LinkParameter id="mov1#hym2#switch7#oln38#par148" name="userid_PASSING_KeyCondition15 [oid]" sourceLinkParameter="mov1#hym2#icu12#ln64#par147" target="mov1#hym2#dlu1#su30#kcond15.userOID"/>
-      </OKLink>
-      <OKLink id="mov1#hym2#switch7#oln40" name="OKFlow40" to="mov1#hym2#dlu2" code="Homeless">
-        <LinkParameter id="mov1#hym2#switch7#oln40#par149" name="userid_PASSING_KeyCondition16 [oid]" sourceLinkParameter="mov1#hym2#icu12#ln64#par147" target="mov1#hym2#dlu2#su31#kcond16.userOID"/>
-      </OKLink>
+      <OKLink id="mov1#hym2#switch7#oln38" name="OKFlow38" to="mov1#hym2#dlu1" code="Angel"/>
+      <OKLink id="mov1#hym2#switch7#oln40" name="OKFlow40" to="mov1#hym2#dlu2" code="Homeless"/>
     </SwitchUnit>
     <DeleteUnit gr:x="715" gr:y="130" id="mov1#hym2#dlu1" name="DeleteAngel" entity="ent1">
       <Selector id="mov1#hym2#dlu1#su30" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov1#hym2#dlu1#su30#kcond15" name="KeyCondition15" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="mov1#hym2#dlu1#oln39" name="OKFlow39" to="mov1#hym2#lou3" automaticCoupling="true"/>
-      <KOLink id="mov1#hym2#dlu1#kln19" name="KOFlow19" to="mov1#hym2#okcu9" automaticCoupling="true"/>
+      <KOLink id="mov1#hym2#dlu1#kln19" name="KOFlow19" to="mov1#hym2#kocu11" automaticCoupling="true" gr:bendpoints="132,125,-223,-65"/>
     </DeleteUnit>
     <LogoutUnit gr:x="895" gr:y="170" id="mov1#hym2#lou3" name="Logout3" siteView="sv1"/>
     <DeleteUnit gr:x="710" gr:y="260" id="mov1#hym2#dlu2" name="DeleteHomeless" entity="ent3">
@@ -33,7 +28,8 @@
         <KeyCondition id="mov1#hym2#dlu2#su31#kcond16" name="KeyCondition16" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="mov1#hym2#dlu2#oln41" name="OKFlow41" to="mov1#hym2#lou3" automaticCoupling="true"/>
-      <KOLink id="mov1#hym2#dlu2#kln20" name="KOFlow20" to="mov1#hym2#okcu9" automaticCoupling="true" gr:bendpoints="212,-19,-118,136"/>
+      <KOLink id="mov1#hym2#dlu2#kln20" name="KOFlow20" to="mov1#hym2#kocu11" automaticCoupling="true" gr:bendpoints="212,-19,-118,136"/>
     </DeleteUnit>
+    <KOCollectorUnit gr:x="1015" gr:y="320" id="mov1#hym2#kocu11" name="KO Port11"/>
   </OperationUnits>
 </HybridModule>

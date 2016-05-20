@@ -1,0 +1,52 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1930" gr:y="-35" id="sv4#page42" name="Update Profile">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv4#page42#enu14" name="Update Profile" entity="ent3" linkOrder="sv4#page42#enu14#ln103">
+      <Field id="sv4#page42#enu14#fld46" name="nickname" type="string" modifiable="true" attribute="ent3#att12"/>
+      <Field id="sv4#page42#enu14#fld47" name="yearsOnStreet" type="integer" modifiable="true" attribute="ent3#att16"/>
+      <Field id="sv4#page42#enu14#fld48" name="userName" type="string" modifiable="true" attribute="userName"/>
+      <Field id="sv4#page42#enu14#fld49" name="password" type="password" modifiable="true" attribute="password"/>
+      <Field id="sv4#page42#enu14#fld50" name="email" type="string" modifiable="true" attribute="email"/>
+      <Field id="sv4#page42#enu14#fld51" name="location" type="string" modifiable="true" attribute="User#att1"/>
+      <Field id="sv4#page42#enu14#fld52" name="birthdate" type="date" modifiable="true" attribute="User#att2"/>
+      <Link id="sv4#page42#enu14#ln103" name="Submit" to="sv4#mfu7" type="normal" validate="true">
+        <LinkParameter id="sv4#page42#enu14#ln103#par323" name="birthdate_birthdate" source="sv4#page42#enu14#fld52" target="sv4#mfu7.User#att2"/>
+        <LinkParameter id="sv4#page42#enu14#ln103#par324" name="email_email" source="sv4#page42#enu14#fld50" target="sv4#mfu7.email"/>
+        <LinkParameter id="sv4#page42#enu14#ln103#par325" name="Homeless Object_Homeless Object" source="entityBean" target="sv4#mfu7.entityBeans"/>
+        <LinkParameter id="sv4#page42#enu14#ln103#par326" name="Key [oid]_KeyCondition25 [oid]" source="key.userOID" target="sv4#mfu7#su46#kcond25.userOID"/>
+        <LinkParameter id="sv4#page42#enu14#ln103#par327" name="location_location" source="sv4#page42#enu14#fld51" target="sv4#mfu7.User#att1"/>
+        <LinkParameter id="sv4#page42#enu14#ln103#par328" name="nickname_nickname" source="sv4#page42#enu14#fld46" target="sv4#mfu7.ent3#att12"/>
+        <LinkParameter id="sv4#page42#enu14#ln103#par329" name="password_password" source="sv4#page42#enu14#fld49" target="sv4#mfu7.password"/>
+        <LinkParameter id="sv4#page42#enu14#ln103#par330" name="userName_userName" source="sv4#page42#enu14#fld48" target="sv4#mfu7.userName"/>
+        <LinkParameter id="sv4#page42#enu14#ln103#par331" name="yearsOnStreet_yearsOnStreet" source="sv4#page42#enu14#fld47" target="sv4#mfu7.ent3#att16"/>
+        <LinkParameter id="sv4#page42#enu14#ln103#par334" name="defaultGroup.oid_PASSING_Group.oid(defaultGroup)" sourceLinkParameter="sv4#page12#dau5#ln102#par333" target="sv4#mfu7.User2DefaultGroup.groupOID"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page42#enu14">
+          <layout:Field field="sv4#page42#enu14#fld46"/>
+          <layout:Field field="sv4#page42#enu14#fld47"/>
+          <layout:Field field="sv4#page42#enu14#fld48"/>
+          <layout:Field field="sv4#page42#enu14#fld49"/>
+          <layout:Field field="sv4#page42#enu14#fld50"/>
+          <layout:Field field="sv4#page42#enu14#fld51"/>
+          <layout:Field field="sv4#page42#enu14#fld52"/>
+          <layout:Link link="sv4#page42#enu14#ln103"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
