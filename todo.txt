@@ -1,12 +1,12 @@
 TODO:
-- admin page
+- DONE admin page
 - form validation
 - zoekfunctie
 - startpagina van homeless en angel (iets klein tonen, anders kan het zijn dat de pagina leeg is)
 - error messages
 - ook bij de angel de optie geven om de message te sturen bij een request
-- calculated rating mogelijk via webratio zelf, maar heel moelijk en onduidelijk dus een module gemaakt met een eigen query die zelf de rating berekent
-- rating placeholder with value 0
+- DONE calculated rating mogelijk via webratio zelf, maar heel moelijk en onduidelijk dus een module gemaakt met een eigen query die zelf de rating berekent
+- DONE rating placeholder with value 0
 - bugs:
   • datetime empty in send request of homeless
   • forms without labels
