@@ -6,8 +6,10 @@
         <LinkParameter id="mov1#opm4#icu4#oln33#par157" name="OfferId_Requests.oid(NotificationToRequests)" source="mov1#opm4#icu4#icp1" target="mov1#opm4#cru4.rel14#role27.ent17#att56"/>
         <LinkParameter id="mov1#opm4#icu4#oln33#par169" name="OfferId_PASSING" source="mov1#opm4#icu4#icp1" passing="true"/>
         <LinkParameter id="mov1#opm4#icu4#oln33#par172" name="angelid_User.oid(NotificationToUser)" source="mov1#opm4#icu4#icp25" target="mov1#opm4#cru4.rel2#role3.userOID"/>
+        <LinkParameter id="mov1#opm4#icu4#oln33#par417" name="deliveryaddress_PASSING" source="mov1#opm4#icu4#icp67" passing="true"/>
       </OKLink>
       <InputCollectorParameter id="mov1#opm4#icu4#icp25" name="angelid"/>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp67" name="deliveryaddress"/>
     </InputCollectorUnit>
     <CreateUnit gr:x="475" gr:y="280" id="mov1#opm4#cru3" name="CreateRequest" entity="ent17" skipBlankRecords="false">
       <KOLink id="mov1#opm4#cru3#kln5" name="KOFlow5" to="mov1#opm4#kocu1" automaticCoupling="true"/>
@@ -23,6 +25,7 @@
         <LinkParameter id="mov1#opm4#cru4#oln7#par22" name="oid_Notification.oid(RequestsToNotification)" source="ent18#att57Array" target="mov1#opm4#cru3.rel14#role28.ent18#att57"/>
         <LinkParameter id="mov1#opm4#cru4#oln7#par8" name="qsfd_status" sourceValue="pending" target="mov1#opm4#cru3.ent17#att11"/>
         <LinkParameter id="mov1#opm4#cru4#oln7#par170" name="OfferId_PASSING_Offer.oid(RequestsToOffer)" sourceLinkParameter="mov1#opm4#icu4#oln33#par169" target="mov1#opm4#cru3.rel12#role23.ent8#att27"/>
+        <LinkParameter id="mov1#opm4#cru4#oln7#par418" name="deliveryaddress_PASSING_deliveryaddress" sourceLinkParameter="mov1#opm4#icu4#oln33#par417" target="mov1#opm4#cru3.ent17#att7"/>
       </OKLink>
       <KOLink id="mov1#opm4#cru4#kln2" name="KOFlow2" to="mov1#opm4#kocu1" automaticCoupling="true" gr:bendpoints="180,28,-170,-97"/>
     </CreateUnit>

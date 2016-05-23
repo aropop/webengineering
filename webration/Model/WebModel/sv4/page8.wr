@@ -1,12 +1,13 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="745" gr:y="-10" id="sv4#page8" name="Offer">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="745" gr:y="-20" id="sv4#page8" name="Offer">
   <ContentUnits>
-    <DataUnit gr:x="0" gr:y="85" id="sv4#page8#dau2" name="Offer detail" entity="ent8" linkOrder="sv4#page8#dau2#ln12 sv4#page8#dau2#ln81" displayAttributes="ent8#att58 ent8#att36 ent8#att39 ent8#att40 ent8#att55 ent8#att26">
+    <DataUnit gr:x="0" gr:y="85" id="sv4#page8#dau2" name="Offer detail" entity="ent8" linkOrder="sv4#page8#dau2#ln12 sv4#page8#dau2#ln81" displayAttributes="ent8#att58 ent8#att36 ent8#att39 ent8#att40 ent8#att55 ent8#att26 ent8#att42 ent8#att43">
       <Selector id="sv4#page8#dau2#su3" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv4#page8#dau2#su3#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>
       <Link id="sv4#page8#dau2#ln12" name="Request" to="sv4#page14#enu3" type="normal" validate="true">
         <LinkParameter id="sv4#page8#dau2#ln12#par16" name="oid_id" source="data.ent8#att27" target="sv4#page14#enu3#fld6_slot"/>
         <LinkParameter id="sv4#page8#dau2#ln12#par173" name="OfferToAngel.oid_PASSING" source="data.rel4#role8_userOID" passing="true"/>
+        <LinkParameter id="sv4#page8#dau2#ln12#par411" name="deliveryMethod_deliverymethod" source="data.ent8#att55" target="sv4#page14#enu3#fld24_slot"/>
       </Link>
       <Link id="sv4#page8#dau2#ln73" name="Flow73" to="sv4#page8#seu8" type="transport" validate="true" gr:bendpoints="5,-80,-135,-5">
         <LinkParameter id="sv4#page8#dau2#ln73#par179" name="oid_RoleCondition13 [oid]" source="data.ent8#att27" target="sv4#page8#seu8#su34#rcond13.ent8#att27"/>
@@ -14,6 +15,11 @@
       <Link id="sv4#page8#dau2#ln81" name="Send Message" to="sv4#miu14" type="normal" validate="true" gr:bendpoints="-92,43,-322,-382;-95,187,-325,-238;-87,242,-317,-183">
         <LinkParameter id="sv4#page8#dau2#ln81#par197" name="OfferToAngel.oid_userid [oid]" source="data.rel4#role8_userOID" target="sv4#miu14.mov1#hym3#icu13#icp26"/>
       </Link>
+      <Link id="sv4#page8#dau2#ln18" name="Flow18" to="sv4#page8#dau11" type="transport" validate="true">
+        <LinkParameter id="sv4#page8#dau2#ln18#par420" name="oid_KeyCondition26 [oid]" source="data.rel4#role8_userOID" target="sv4#page8#dau11#su56#kcond20.userOID"/>
+      </Link>
+      <Link id="sv4#page8#dau2#ln22" name="Flow22" to="sv4#page8#mdu4" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv4#page8#dau2#ln26" name="Flow26" to="sv4#page8#mdu3" automaticCoupling="true" type="transport" validate="true"/>
     </DataUnit>
     <SelectorUnit gr:x="115" gr:y="0" id="sv4#page8#seu8" name="userRequestCheck" entity="ent17">
       <Selector id="sv4#page8#seu8#su34" defaultPolicy="fill" booleanOperator="and">
@@ -26,6 +32,21 @@
         <LinkParameter id="sv4#page8#gtu14#ln72#par177" name="UserCtxParam.oid_RoleCondition12 [oid]" source="sv4#page8#gtu14.UserCtxParam" target="sv4#page8#seu8#su34#rcond12.userOID"/>
       </Link>
     </GetUnit>
+    <MultiDataUnit id="sv4#page8#mdu3" name="Pictures" gr:x="290" gr:y="265" entity="ent12" displayAttributes="ent12#att38">
+      <Selector id="sv4#page8#mdu3#su44" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv4#page8#mdu3#su44#rcond20" name="RoleCondition19" role="rel7#role13" predicate="in" implied="false"/>
+      </Selector>
+    </MultiDataUnit>
+    <DataUnit id="sv4#page8#dau11" name="Offered By" gr:x="30" gr:y="255" entity="ent1" displayAttributes="ent1#att14 User#att1">
+      <Selector id="sv4#page8#dau11#su56" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#page8#dau11#su56#kcond20" name="KeyCondition26" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <MultiDataUnit id="sv4#page8#mdu4" name="Tags" gr:x="160" gr:y="260" entity="ent9" displayAttributes="ent9#att32">
+      <Selector id="sv4#page8#mdu4#su57" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv4#page8#mdu4#su57#rcond22" name="FromOffer" role="rel5#role9" predicate="in" implied="false"/>
+      </Selector>
+    </MultiDataUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -39,6 +60,8 @@
           <layout:Attribute attribute="ent8#att40" label="Expiry Date"/>
           <layout:Attribute attribute="ent8#att55" label="Delivery Method"/>
           <layout:Attribute attribute="ent8#att26" label="Offered by"/>
+          <layout:Attribute attribute="ent8#att42" label="Pick Up Address" layout:attributeVisibilityCondition="sv4#page8#cexpr9"/>
+          <layout:Attribute attribute="ent8#att43" label="Delivery Service" layout:attributeVisibilityCondition="sv4#page8#cexpr10"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -54,7 +77,24 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Grid containerType="cell">
+          <layout:Row>
+            <layout:Cell>
+              <layout:Unit unitId="sv4#page8#mdu3">
+                <layout:Attribute attribute="ent12#att38"/>
+              </layout:Unit>
+              <layout:Unit unitId="sv4#page8#dau11">
+                <layout:Attribute label="Name" attribute="ent1#att14"/>
+                <layout:Attribute label="Location" attribute="User#att1"/>
+              </layout:Unit>
+              <layout:Unit unitId="sv4#page8#mdu4">
+                <layout:Attribute attribute="ent9#att32"/>
+              </layout:Unit>
+            </layout:Cell>
+          </layout:Row>
+        </layout:Grid>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -88,5 +128,12 @@
   </ConditionExpression>
   <ConditionExpression id="sv4#page8#cexpr4" name="hasNotRequestedThisCheck">
     <TextValue xml:space="preserve">return hasRequestedThis == 1</TextValue>
+  </ConditionExpression>
+  <Variable id="sv4#page8#var6" name="deliveryMethod" unitId="sv4#page8#dau2" parameter="data.ent8#att55" type="string"/>
+  <ConditionExpression id="sv4#page8#cexpr9" name="isNotDelivery">
+    <TextValue xml:space="preserve">return (deliveryMethod == "Pick Up") || (deliveryMethod == "Choice")</TextValue>
+  </ConditionExpression>
+  <ConditionExpression id="sv4#page8#cexpr10" name="isDelivery">
+    <TextValue xml:space="preserve">return (deliveryMethod == "Delivery") || (deliveryMethod == "Choice")</TextValue>
   </ConditionExpression>
 </Page>

@@ -82,9 +82,7 @@
         <LinkParameter id="mov1#opm17#miu23#oln109#par406" name="Username_PASSING_userName" sourceLinkParameter="mov1#opm17#miu22#oln108#par369" target="mov1#opm17#cru16.userName"/>
         <LinkParameter id="mov1#opm17#miu23#oln109#par407" name="yearsOnStreet_PASSING_yearsOnStreet" sourceLinkParameter="mov1#opm17#miu22#oln108#par370" target="mov1#opm17#cru16.ent3#att16"/>
       </OKLink>
-      <KOLink id="mov1#opm17#miu23#kln44" name="KOFlow44" to="mov1#opm17#kocu15">
-        <LinkParameter id="mov1#opm17#miu23#kln44#par410" name="User Already Exists_Creating your account failed_message" sourceValue="User Already Exists" target="mov1#opm17#kocu15#ocp7"/>
-      </KOLink>
+      <KOLink id="mov1#opm17#miu23#kln44" name="KOFlow44" to="mov1#opm17#kocu15" automaticCoupling="true"/>
     </ModuleInstanceUnit>
   </OperationUnits>
 </OperationModule>

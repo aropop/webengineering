@@ -4,7 +4,6 @@ TODO:
 - bugs:
   • datetime empty in send request of homeless
 - report: agile method used, because we implemented, tested and changed requirements if necessary
-- They also need to specify delivery method: pick-up (an address needs to be given) or delivery (it will be delivered, on a specific day/time, to an address specified by the homeless person). --> adres erbij zetten
 - anonymous angel: als ge een message krijgt of wilt sturen, dan moogt ge zijn naam niet zien
 - offers zoeken op tags (PARTIAL)
 - delete user --> moet alles verwijderen van die user (in alle tabellen)

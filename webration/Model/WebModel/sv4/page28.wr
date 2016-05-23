@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="490" gr:y="-265" id="sv4#page28" name="Your Requests" landmark="true">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv4#page28#pwu13" name="Requests" sortable="true" checkable="false" useCountQuery="false" entity="ent17" displayAttributes="ent17#att60 ent17#att11" linkOrder="sv4#page28#pwu13#ln60 sv4#page28#pwu13#ln71 sv4#page28#pwu13#ln82 sv4#page28#pwu13#ln16 sv4#page28#pwu13#ln35">
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv4#page28#pwu13" name="Requests" sortable="true" checkable="false" useCountQuery="false" entity="ent17" displayAttributes="ent17#att60 ent17#att11 ent17#att7" linkOrder="sv4#page28#pwu13#ln60 sv4#page28#pwu13#ln71 sv4#page28#pwu13#ln82 sv4#page28#pwu13#ln16 sv4#page28#pwu13#ln35">
       <Selector id="sv4#page28#pwu13#su29" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv4#page28#pwu13#su29#rcond10" name="RoleCondition10" predicate="in" implied="false" role="rel11#role21"/>
       </Selector>
@@ -38,13 +38,14 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv4#page28#pwu13">
-          <layout:Attribute attribute="ent17#att60" label="Name"/>
-          <layout:Attribute attribute="ent17#att11" label="Status"/>
           <layout:Link link="sv4#page28#pwu13#ln60" layout:linkVisibilityCondition="sv4#page28#cexpr7"/>
           <layout:Link link="sv4#page28#pwu13#ln71" layout:linkVisibilityCondition="sv4#page28#cexpr2"/>
           <layout:Link link="sv4#page28#pwu13#ln82" layout:linkVisibilityCondition="sv4#page28#cexpr2"/>
           <layout:Link link="sv4#page28#pwu13#ln16" label="Rate Angel" layout:linkVisibilityCondition="sv4#page28#cexpr1"/>
           <layout:Link link="sv4#page28#pwu13#ln35" layout:linkVisibilityCondition="sv4#page28#cexpr5"/>
+          <layout:Attribute attribute="ent17#att60" label="Name"/>
+          <layout:Attribute attribute="ent17#att11" label="Status"/>
+          <layout:Attribute attribute="ent17#att7" layout:attributeVisibilityCondition="sv4#page28#cexpr11" label="Delivery Address"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -86,5 +87,9 @@
   </ConditionExpression>
   <ConditionExpression id="sv4#page28#cexpr7" name="statusCanView">
     <TextValue xml:space="preserve">return (status == "Accept") || (status == "Decline") || (status == "pending")</TextValue>
+  </ConditionExpression>
+  <Variable id="sv4#page28#var7" name="requestaddress" type="string" unitId="sv4#page28#pwu13" parameter="data[].ent17#att7"/>
+  <ConditionExpression id="sv4#page28#cexpr11" name="isaddressnotempty">
+    <TextValue xml:space="preserve">return requestaddress != ""</TextValue>
   </ConditionExpression>
 </Page>

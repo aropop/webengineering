@@ -18,12 +18,18 @@
           <CompareValidationRule id="sv3#page16#enu4#fld10#cmp3" name="Compare3" predicate="gteq" value="today()"/>
         </VRules>
       </Field>
-      <Field id="sv3#page16#enu4#fld19" name="Address" type="string" modifiable="true">
+      <Field id="sv3#page16#enu4#fld19" name="Pick up Address (empty if unnecessary)" type="string" modifiable="true">
         <VRules>
-          <MandatoryValidationRule id="sv3#page16#enu4#fld19#mnd5" name="Mandatory5"/>
+          <MandatoryValidationRule id="sv3#page16#enu4#fld19#mnd5" name="Mandatory5" companionField="sv3#page16#enu4#sfld3" predicate="eq" value="Pick Up" errorMessage="Your address is required when choosing Pick Up delivery method"/>
+          <MandatoryValidationRule id="sv3#page16#enu4#fld19#mnd17" name="Mandatory17" companionField="sv3#page16#enu4#sfld3" predicate="eq" value="Choice" errorMessage="Your address is required when choosing Choice delivery method"/>
         </VRules>
       </Field>
-      <Field id="sv3#page16#enu4#fld20" name="Delivery Method Name" type="string" modifiable="true"/>
+      <Field id="sv3#page16#enu4#fld20" name="Delivery Method Name" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page16#enu4#fld20#mnd19" name="Mandatory19" companionField="sv3#page16#enu4#sfld3" value="Delivery" predicate="eq"/>
+          <MandatoryValidationRule id="sv3#page16#enu4#fld20#mnd20" name="Mandatory20" companionField="sv3#page16#enu4#sfld3" predicate="eq" value="Choice"/>
+        </VRules>
+      </Field>
       <Link id="sv3#page16#enu4#ln4" name="Submit" to="sv3#miu2" type="normal" validate="true">
         <LinkParameter id="sv3#page16#enu4#ln4#par67" name="Address_Address" source="sv3#page16#enu4#fld19" target="sv3#miu2.mov1#opm5#icu5#icp8"/>
         <LinkParameter id="sv3#page16#enu4#ln4#par68" name="amount_Amount" source="sv3#page16#enu4#fld9" target="sv3#miu2.mov1#opm5#icu5#icp10"/>
