@@ -1,0 +1,17 @@
+insert into `generalInformation` values
+(1, 'Belgian Homeless Cup', 'http://www.belgianhomelesscup.be/home-en/', 'Fun'),
+(2, 'FEANTSA', 'http://www.feantsa.org', 'Organizations'),
+(3, 'European Observatory on Homelessness', 'http://www.feantsaresearch.org', 'Organizations'),
+(4, 'Map and shelters', 'https://www.brussels.be/artdet.cfm/5212', 'Shelter'),
+(5, 'List of shelters', 'http://aidevaluator.com/countries/belgium/topics/homeless.html', 'Shelter'),
+(6, 'The best homeless living and survival hacks', 'https://www.quora.com/What-are-the-best-homeless-living-and-survival-hacks', 'Tips & tricks'),
+(7, 'Homeless Survival', 'http://www.thesurvivalistblog.net/how-to-survive-being-homeless-2/', 'Tips & tricks'),
+(8, 'Survival Recipes', 'https://survivalrecipes.wordpress.com', 'Tips & tricks'),
+(9, 'How to be stealth homeless', 'http://disinfo.com/2012/10/how-to-be-stealth-homeless/', 'Tips & tricks'),
+(10, 'How survive being homeless', 'http://disinfo.com/2012/10/how-to-be-stealth-homeless/', 'Tips & tricks'),
+(11, 'Tips for Winter Survival', 'http://www.grassrootsdc.org/2014/01/tips-winter-survival/', 'Tips & tricks'),
+(12, 'How to Live on the Street', 'http://www.wikihow.com/Live-on-the-Street', 'Tips & tricks'),
+(13, 'OCMW', 'http://www.belgium.be/nl/familie/sociale_steun/ocmw', 'Organizations (dutch)'),
+(14, 'Sociale huisvesting: dakloos', 'http://www.belgium.be/nl/huisvesting/sociale_huisvesting/dakloos', 'Organizations (dutch)'),
+(15, 'Anders wonen: dakloos', 'http://www.woonbeleidmiddenlimburg.be/anders-wonen/dakloos', 'Organizations (dutch)'),
+(16, 'Rechten als dakloze', 'http://www.rechtenverkenner.be/Pages/RechtDetail.aspx?rechtKey=588&pc=2800', 'Organizations (dutch)');

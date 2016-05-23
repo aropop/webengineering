@@ -1,25 +1,48 @@
-soccer cup:
-http://www.belgianhomelesscup.be/home-en/
+Fun:
+http://www.belgianhomelesscup.be/home-en/ Belgian Homeless Cup
 
-organization:
-http://www.feantsa.org
+Organizations:
+http://www.feantsa.org FEANTSA
+http://www.feantsaresearch.org European Observatory on Homelessness
 
-contains different useful links (shelter, sleep, food):
-https://www.brussels.be/artdet.cfm/5212
-http://aidevaluator.com/countries/belgium/topics/homeless.html
+Shelter:
+https://www.brussels.be/artdet.cfm/5212 Map and shelters
+http://aidevaluator.com/countries/belgium/topics/homeless.html List of shelters
 
-tips:
-https://www.quora.com/What-are-the-best-homeless-living-and-survival-hacks
-http://www.thesurvivalistblog.net/how-to-survive-being-homeless-2/
-https://survivalrecipes.wordpress.com
-http://disinfo.com/2012/10/how-to-be-stealth-homeless/
-http://mentalfloss.com/article/20743/how-survive-being-homeless
-http://www.grassrootsdc.org/2014/01/tips-winter-survival/
-http://www.wikihow.com/Live-on-the-Street
+Tips & tricks:
+https://www.quora.com/What-are-the-best-homeless-living-and-survival-hacks The best homeless living and survival hacks
+http://www.thesurvivalistblog.net/how-to-survive-being-homeless-2/ Homeless Survival
+https://survivalrecipes.wordpress.com Survival Recipes
+http://disinfo.com/2012/10/how-to-be-stealth-homeless/ How to be stealth homeless
+http://mentalfloss.com/article/20743/how-survive-being-homeless How survive being homeless
+http://www.grassrootsdc.org/2014/01/tips-winter-survival/ Tips for Winter Survival
+http://www.wikihow.com/Live-on-the-Street How to Live on the Street
 
-OCMW (Nederlands):
-http://www.belgium.be/nl/huisvesting/sociale_huisvesting/dakloos
-http://www.woonbeleidmiddenlimburg.be/anders-wonen/dakloos
+Organizations (dutch):
+http://www.belgium.be/nl/familie/sociale_steun/ocmw OCMW
+http://www.belgium.be/nl/huisvesting/sociale_huisvesting/dakloos Sociale huisvesting: dakloos
+http://www.woonbeleidmiddenlimburg.be/anders-wonen/dakloos Anders wonen: dakloos
 
-rechten:
-http://www.rechtenverkenner.be/Pages/RechtDetail.aspx?rechtKey=588&pc=2800
+Law (dutch):
+http://www.rechtenverkenner.be/Pages/RechtDetail.aspx?rechtKey=588&pc=2800 Rechten als dakloze
+
+SQL [generalInformation(subject, link, category)]
+-------------------------------------------------
+
+insert into `generalInformation` values
+('Belgian Homeless Cup', 'http://www.belgianhomelesscup.be/home-en/', 'Fun'),
+('FEANTSA', 'http://www.feantsa.org', 'Organizations'),
+('European Observatory on Homelessness', 'http://www.feantsaresearch.org', 'Organizations'),
+('Map and shelters', 'https://www.brussels.be/artdet.cfm/5212', 'Shelter'),
+('List of shelters', 'http://aidevaluator.com/countries/belgium/topics/homeless.html', 'Shelter'),
+('The best homeless living and survival hacks', 'https://www.quora.com/What-are-the-best-homeless-living-and-survival-hacks', 'Tips & tricks'),
+('Homeless Survival', 'http://www.thesurvivalistblog.net/how-to-survive-being-homeless-2/', 'Tips & tricks'),
+('Survival Recipes', 'https://survivalrecipes.wordpress.com', 'Tips & tricks'),
+('How to be stealth homeless', 'http://disinfo.com/2012/10/how-to-be-stealth-homeless/', 'Tips & tricks'),
+('How survive being homeless', 'http://disinfo.com/2012/10/how-to-be-stealth-homeless/', 'Tips & tricks'),
+('Tips for Winter Survival', 'http://www.grassrootsdc.org/2014/01/tips-winter-survival/', 'Tips & tricks'),
+('How to Live on the Street', 'http://www.wikihow.com/Live-on-the-Street', 'Tips & tricks'),
+('OCMW', 'http://www.belgium.be/nl/familie/sociale_steun/ocmw', 'Organizations (dutch)'),
+('Sociale huisvesting: dakloos', 'http://www.belgium.be/nl/huisvesting/sociale_huisvesting/dakloos', 'Organizations (dutch)'),
+('Anders wonen: dakloos', 'http://www.woonbeleidmiddenlimburg.be/anders-wonen/dakloos', 'Organizations (dutch)'),
+('Rechten als dakloze', 'http://www.rechtenverkenner.be/Pages/RechtDetail.aspx?rechtKey=588&pc=2800', 'Organizations (dutch)');
