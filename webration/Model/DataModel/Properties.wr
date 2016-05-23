@@ -210,7 +210,7 @@
   <Entity gr:x="-20" gr:y="705" id="ent22" name="GeneralInformation" duration="persistent" attributeOrder="ent22#att72 ent22#att73 ent22#att30 ent22#att33" db:database="db1" db:table="generalinformation">
     <Attribute id="ent22#att72" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent22#att73" name="subject" type="string" db:column="subject"/>
-    <Attribute id="ent22#att30" name="link" type="string" db:column="link"/>
+    <Attribute id="ent22#att30" name="link" type="url" db:column="link"/>
     <Attribute id="ent22#att33" name="category" type="string" db:column="category"/>
   </Entity>
   <Entity gr:x="65" gr:y="645" id="ent23" name="Administrator" duration="persistent" db:database="db1" db:table="administrator">
@@ -239,8 +239,7 @@
       <db:JoinColumn attribute="ent19#att64" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="Database1" type="MySQL" url="jdbc:mysql://127.0.0.1:3306/webratio_project" username="root" cryptedPassword="true" password="cm9vdA==">
-  </db:Database>
+  <db:Database id="db1" name="Database1" type="MySQL" url="jdbc:mysql://127.0.0.1:3306/webratio_project" username="root" cryptedPassword="true" password="cm9vdA=="/>
   <Relationship id="rel4" name="Angel_Offer1" sourceEntity="ent1" targetEntity="ent8" gr:bendpoints="378,-2,-2,-162" db:database="db1" db:table="offer">
     <RelationshipRole1 id="rel4#role7" name="AngelToOffer1" maxCard="N">
       <db:JoinColumn attribute="userOID" name="angel_oid"/>

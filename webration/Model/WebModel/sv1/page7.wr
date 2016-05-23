@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="120" gr:y="60" id="sv1#page7" name="Register" landmark="true">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="0" id="sv1#page7#enu5" name="Registerform" entity="User" linkOrder="sv1#page7#enu5#ln7">
+    <EntryUnit gr:x="0" gr:y="0" id="sv1#page7#enu5" name="Registerform" entity="User" linkOrder="sv1#page7#enu5#ln7" fieldOrder="sv1#page7#enu5#fld14 sv1#page7#enu5#fld15 sv1#page7#enu5#fld16 sv1#page7#enu5#fld4 sv1#page7#enu5#fld5 sv1#page7#enu5#fld57 sv1#page7#enu5#sfld2">
       <Field id="sv1#page7#enu5#fld14" name="Username" type="string" modifiable="true" attribute="userName">
         <VRules>
           <ValueLengthValidationRule id="sv1#page7#enu5#fld14#vl1" name="Value Length1" predicate="min" value="6"/>
@@ -13,8 +13,8 @@
       </Field>
       <Field id="sv1#page7#enu5#fld16" name="Email" type="string" modifiable="true" attribute="email">
         <VRules>
-          <isEmail id="sv1#page7#enu5#fld16#vr1" name="isEmail" errorMessage="This Field should be a valid email"/>
           <EMailValidationRule id="sv1#page7#enu5#fld16#email1" name="EMail1" errorMessage="This Field should be a valid email"/>
+          <MandatoryValidationRule id="sv1#page7#enu5#fld16#mnd18" name="Mandatory18"/>
         </VRules>
       </Field>
       <Link id="sv1#page7#enu5#ln7" name="Register" to="sv1#switch4" type="normal" validate="true">

@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="635" gr:y="75" id="mov1#opm2" name="Add Picture">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="555" gr:y="400" id="mov1#opm2" name="Add Picture">
   <OperationUnits>
     <InputCollectorUnit id="mov1#opm2#icu2" gr:x="30" gr:y="60">
       <InputCollectorParameter id="mov1#opm2#icu2#icp34" name="Picture"/>

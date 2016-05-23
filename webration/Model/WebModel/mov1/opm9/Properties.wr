@@ -1,10 +1,27 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="575" gr:y="95" id="mov1#opm9" name="Send Message">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="225" gr:y="125" id="mov1#opm9" name="DoesUserExist">
   <OperationUnits>
     <InputCollectorUnit id="mov1#opm9#icu10" gr:x="30" gr:y="60">
-      <InputCollectorParameter id="mov1#opm9#icu10#icp18" name="Body"/>
-      <InputCollectorParameter id="mov1#opm9#icu10#icp17" name="Title"/>
-      <InputCollectorParameter id="mov1#opm9#icu10#icp13" name="To"/>
-      <InputCollectorParameter id="mov1#opm9#icu10#icp12" name="From"/>
+      <InputCollectorParameter id="mov1#opm9#icu10#icp12" name="username"/>
+      <OKLink id="mov1#opm9#icu10#oln25" name="OKFlow25" to="mov1#opm9#seu11">
+        <LinkParameter id="mov1#opm9#icu10#oln25#par110" name="username_AttCondition17" source="mov1#opm9#icu10#icp12" target="mov1#opm9#seu11#su41#acond17"/>
+      </OKLink>
     </InputCollectorUnit>
+    <OKCollectorUnit gr:x="550" gr:y="-5" id="mov1#opm9#okcu19" name="OK Port19"/>
+    <KOCollectorUnit gr:x="550" gr:y="135" id="mov1#opm9#kocu17" name="KO Port17"/>
+    <SelectorUnit gr:x="285" gr:y="110" id="mov1#opm9#seu11" name="getuser" entity="User" distinct="true">
+      <Selector id="mov1#opm9#seu11#su41" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1#opm9#seu11#su41#acond17" name="AttCondition17" predicate="eq" booleanOperator="or" implied="false" attributes="userName" ignoreCase="true"/>
+      </Selector>
+      <KOLink id="mov1#opm9#seu11#kln39" name="KOFlow39" to="mov1#opm9#kocu17" automaticCoupling="true"/>
+      <OKLink id="mov1#opm9#seu11#oln63" name="OKFlow63" to="mov1#opm9#switch10">
+        <LinkParameter id="mov1#opm9#seu11#oln63#par111" name="Data Size_Switch" source="dataSize" target="mov1#opm9#switch10.switch"/>
+      </OKLink>
+    </SelectorUnit>
+    <SwitchUnit gr:x="360" gr:y="-5" id="mov1#opm9#switch10" name="iszeor">
+      <Case value="0"/>
+      <Case value="1"/>
+      <OKLink id="mov1#opm9#switch10#oln94" name="OKFlow94" to="mov1#opm9#okcu19" automaticCoupling="true" code="0"/>
+      <OKLink id="mov1#opm9#switch10#oln100" name="OKFlow100" to="mov1#opm9#kocu17" automaticCoupling="true" code="1"/>
+    </SwitchUnit>
   </OperationUnits>
 </OperationModule>

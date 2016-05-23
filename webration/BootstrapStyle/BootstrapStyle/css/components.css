@@ -549,3 +549,8 @@
 
 /* Scroller jump bundles */
 .ScrollerUnit .jump {}
+
+
+.PowerIndexUnit table .smallcol :empty {
+	display:none;
+}

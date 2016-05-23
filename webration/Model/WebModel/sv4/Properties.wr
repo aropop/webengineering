@@ -16,9 +16,9 @@
       </OKLink>
       <KOLink id="sv4#miu5#kln6" name="KOFlow6" to="sv4#page28" automaticCoupling="true" gr:bendpoints="91,-50,776,460;93,-370,778,140"/>
     </ModuleInstanceUnit>
-    <LogoutUnit gr:x="165" gr:y="280" id="sv4#lou1" name="Logout" siteView="sv1" landmark="true"/>
-    <ModuleInstanceUnit id="sv4#miu10" gr:x="550" gr:y="435" moduleId="mov1#hym1" action="false">
-      <OKLink id="sv4#miu10#oln36" name="OKFlow12" to="sv4#miu14" gr:bendpoints="184,6,-86,-119">
+    <LogoutUnit gr:x="80" gr:y="270" id="sv4#lou1" name="Logout" siteView="sv1" landmark="true"/>
+    <ModuleInstanceUnit id="sv4#miu10" gr:x="680" gr:y="715" moduleId="mov1#hym1" action="false">
+      <OKLink id="sv4#miu10#oln36" name="OKFlow12" to="sv4#miu14" gr:bendpoints="197,-37,-73,133">
         <LinkParameter id="sv4#miu10#oln36#par195" name="userid_userid [oid]" source="mov1#hym1#okcu6#ocp1" target="sv4#miu14.mov1#hym3#icu13#icp26"/>
       </OKLink>
       <KOLink id="sv4#miu10#kln18" name="KOFlow14" to="sv4#page26" automaticCoupling="true"/>

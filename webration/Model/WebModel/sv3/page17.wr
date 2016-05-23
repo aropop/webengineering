@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-85" gr:y="105" id="sv3#page17" name="Angels Start" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-85" gr:y="105" id="sv3#page17" name="Angels Start" landmark="true" layout:pageLayout="BootstrapStyle/Bootstrap">
   <ContentUnits>
     <PowerIndexUnit gr:x="125" gr:y="0" id="sv3#page17#pwu1" name="New Messages" sortable="true" checkable="false" useCountQuery="false" entity="ent6" linkOrder="sv3#page17#pwu1#ln23" displayAttributes="ent6#att18 ent6#att22">
       <Selector id="sv3#page17#pwu1#su1" defaultPolicy="fill" booleanOperator="and">
@@ -35,11 +35,7 @@ When you click "Requests" you can see requests from homeless people for your off
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv3#page17#pwu1" layout:unitLayout="WRDefault/Normal">
-          <layout:Link link="sv3#page17#pwu1#ln23"/>
-          <layout:Attribute attribute="ent6#att18" label="Title"/>
-          <layout:Attribute attribute="ent6#att22" label="From"/>
-        </layout:Unit>
+        <layout:Unit unitId="sv3#page17#mssu6"/>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
@@ -76,8 +72,26 @@ When you click "Requests" you can see requests from homeless people for your off
     </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv3#page17#mssu6"/>
+        <layout:Unit unitId="sv3#page17#pwu1" layout:unitLayout="BootstrapStyle/Default" layout:linkLayout="WRDefault/Default">
+          <layout:Link link="sv3#page17#pwu1#ln23"/>
+          <layout:Attribute attribute="ent6#att18" label="Title"/>
+          <layout:Attribute attribute="ent6#att22" label="From"/>
+        </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

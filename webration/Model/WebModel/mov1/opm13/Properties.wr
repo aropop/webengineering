@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="225" gr:y="280" id="mov1#opm13" name="GetAverageRating">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="225" gr:y="275" id="mov1#opm13" name="GetAverageRating">
   <OperationUnits>
     <InputCollectorUnit id="mov1#opm13#icu16" gr:x="30" gr:y="60">
       <InputCollectorParameter id="mov1#opm13#icu16#icp36" name="angelid"/>
@@ -11,11 +11,12 @@
       <QueryInput id="mov1#opm13#qu1#qi1" name="angelid" required="true" type="integer"/>
       <QueryOutput id="mov1#opm13#qu1#qo1" name="average"/>
       <OKLink id="mov1#opm13#qu1#oln66" name="OKFlow66" to="mov1#opm13#okcu14">
-        <LinkParameter id="mov1#opm13#qu1#oln66#par249" name="average_average" source="data[].average" target="mov1#opm13#okcu14#ocp4"/>
+        <LinkParameter id="mov1#opm13#qu1#oln66#par249" name="average_average" source="mov1#opm13#qu1#qo1" target="mov1#opm13#okcu14#ocp4"/>
       </OKLink>
     </QueryUnit>
     <OKCollectorUnit gr:x="710" gr:y="85" id="mov1#opm13#okcu14" name="OK Port14">
       <OutputCollectorParameter id="mov1#opm13#okcu14#ocp4" name="average"/>
     </OKCollectorUnit>
+    <IsNotNullUnit gr:x="545" gr:y="65" id="mov1#opm13#inn1" name="Is Not Null"/>
   </OperationUnits>
 </OperationModule>

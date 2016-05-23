@@ -1,16 +1,15 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1795" gr:y="680" id="sv3#page27" name="Add Tag">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="0" id="sv3#page27#enu12" name="Add Tag" entity="ent9" linkOrder="sv3#page27#enu12#ln56">
+    <EntryUnit gr:x="0" gr:y="0" id="sv3#page27#enu12" name="Add Tag" entity="ent9" linkOrder="sv3#page27#enu12#ln69">
       <Field id="sv3#page27#enu12#fld35" name="name" type="string" modifiable="true" attribute="ent9#att32">
         <VRules>
           <MandatoryValidationRule id="sv3#page27#enu12#fld35#mnd6" name="Mandatory6"/>
         </VRules>
       </Field>
-      <Field id="sv3#page27#enu12#fld37" name="Offerid" type="integer" modifiable="false" preloaded="true" hidden="true"/>
-      <Link id="sv3#page27#enu12#ln56" name="Submit" to="sv3#cru14" type="normal" validate="true">
-        <LinkParameter id="sv3#page27#enu12#ln56#par240" name="name_name" source="sv3#page27#enu12#fld35" target="sv3#cru14.ent9#att32"/>
-        <LinkParameter id="sv3#page27#enu12#ln56#par241" name="Offerid_Offer.oid(TypeToOffer)" source="sv3#page27#enu12#fld37" target="sv3#cru14.rel5#role10.ent8#att27"/>
-        <LinkParameter id="sv3#page27#enu12#ln56#par242" name="Offerid_PASSING" source="sv3#page27#enu12#fld37" passing="true"/>
+      <Link id="sv3#page27#enu12#ln69" name="Submit" to="sv3#miu9" type="normal" validate="true">
+        <LinkParameter id="sv3#page27#enu12#ln69#par109" name="name_name" source="sv3#page27#enu12#fld35" target="sv3#miu9.mov1#opm1#icu1#icp17"/>
+        <LinkParameter id="sv3#page27#enu12#ln69#par240" name="oid_PASSING_Offer.oid(TypeToOffer)" sourceLinkParameter="sv3#page22#dau7#ln93#par239" target="sv3#miu9.mov1#opm1#icu1#icp12"/>
+        <LinkParameter id="sv3#page27#enu12#ln69#par326" name="oid_PASSING" sourceLinkParameter="sv3#page22#dau7#ln93#par239" passing="true"/>
       </Link>
     </EntryUnit>
   </ContentUnits>
@@ -19,7 +18,7 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page27#enu12">
           <layout:Field field="sv3#page27#enu12#fld35" label="Tag"/>
-          <layout:Link link="sv3#page27#enu12#ln56"/>
+          <layout:Link link="sv3#page27#enu12#ln69"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

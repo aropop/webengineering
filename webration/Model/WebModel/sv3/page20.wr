@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1010" gr:y="105" id="sv3#page20" name="Requests" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1010" gr:y="105" id="sv3#page20" name="Requests" landmark="true" layout:pageLayout="BootstrapStyle/Bootstrap">
   <ContentUnits>
     <HierarchicalIndexUnit gr:x="80" gr:y="0" id="sv3#page20#hinu1" name="Pending" sortable="false" entity="ent8" linkOrder="sv3#page20#hinu1#ln24 sv3#page20#hinu1#ln28" displayAttributes="ent8#att58 ent8#att39 ent8#att40">
       <HierarchicalIndexLevel id="sv3#page20#hinu1#hiulvl1" name="Requests" entity="ent17" role="rel12#role24" displayAttributes="ent17#att17">

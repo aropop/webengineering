@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="55" gr:y="5" id="sv4#page2" name="Homeless Start" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-55" gr:y="0" id="sv4#page2" name="Homeless Start" landmark="true">
   <ContentUnits>
     <PowerIndexUnit id="sv4#page2#pwu7" name="New Messages" gr:x="125" gr:y="65" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att18 ent6#att22">
       <Selector id="sv4#page2#pwu7#su33" defaultPolicy="fill" booleanOperator="and">

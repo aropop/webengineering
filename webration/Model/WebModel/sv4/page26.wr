@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page26" name="Messages" linkOrder="sv4#page26#ln55" landmark="true" gr:x="140" gr:y="535">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page26" name="Messages" landmark="true" gr:x="140" gr:y="535">
   <ContentUnits>
     <PowerIndexUnit id="sv4#page26#pwu11" name="Inbox" linkOrder="sv4#page26#pwu11#ln52" gr:x="175" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att4 ent4#att6 ent4#att20">
       <Link id="sv4#page26#pwu11#ln52" name="View Message" to="sv4#page25#dau8" type="normal" validate="true">
@@ -17,6 +17,10 @@
         <RelationshipRoleCondition id="sv4#page26#pwu12#su27#rcond9" name="RoleCondition5" predicate="in" implied="false" role="rel6#role11"/>
       </Selector>
     </PowerIndexUnit>
+    <MultiMessageUnit id="sv4#page26#mssu12" name="Messages" gr:x="30" gr:y="155" linkOrder="sv4#page26#mssu12#ln68">
+      <Message xml:space="preserve">All Messages</Message>
+      <Link id="sv4#page26#mssu12#ln68" name="New Message" to="sv4#miu10" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="110,56,-430,60;245,56,-295,60"/>
+    </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -60,6 +64,23 @@
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page26#mssu12">
+          <layout:Link link="sv4#page26#mssu12#ln68"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
   </layout:Grid>
-  <Link id="sv4#page26#ln55" name="New Message" to="sv4#miu10" type="normal" automaticCoupling="true" validate="true"/>
 </Page>

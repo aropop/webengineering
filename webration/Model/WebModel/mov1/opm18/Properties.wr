@@ -1,0 +1,27 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm18" name="DoesNicknameExist" gr:x="395" gr:y="125">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm18#icu24" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm18#icu24#icp13" name="nickname"/>
+      <OKLink id="mov1#opm18#icu24#oln104" name="OKFlow25" to="mov1#opm18#seu12">
+        <LinkParameter id="mov1#opm18#icu24#oln104#par348" name="username_AttCondition17" source="mov1#opm18#icu24#icp13" target="mov1#opm18#seu12#su43#acond19"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov1#opm18#okcu20" name="OK Port19" gr:x="550" gr:y="-5"/>
+    <KOCollectorUnit id="mov1#opm18#kocu18" name="KO Port17" gr:x="550" gr:y="135"/>
+    <SelectorUnit id="mov1#opm18#seu12" name="getuser" gr:x="285" gr:y="110" entity="ent3" distinct="true">
+      <Selector id="mov1#opm18#seu12#su43" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1#opm18#seu12#su43#acond19" name="AttCondition17" predicate="eq" booleanOperator="or" implied="false" attributes="ent3#att12" ignoreCase="true"/>
+      </Selector>
+      <KOLink id="mov1#opm18#seu12#kln43" name="KOFlow39" to="mov1#opm18#kocu18" automaticCoupling="true"/>
+      <OKLink id="mov1#opm18#seu12#oln105" name="OKFlow63" to="mov1#opm18#switch11">
+        <LinkParameter id="mov1#opm18#seu12#oln105#par349" name="Data Size_Switch" source="dataSize" target="mov1#opm18#switch11.switch"/>
+      </OKLink>
+    </SelectorUnit>
+    <SwitchUnit id="mov1#opm18#switch11" name="iszeor" gr:x="360" gr:y="-5">
+      <Case value="0"/>
+      <Case value="1"/>
+      <OKLink id="mov1#opm18#switch11#oln106" name="OKFlow94" to="mov1#opm18#okcu20" code="0" automaticCoupling="true"/>
+      <OKLink id="mov1#opm18#switch11#oln107" name="OKFlow100" to="mov1#opm18#kocu18" code="1" automaticCoupling="true"/>
+    </SwitchUnit>
+  </OperationUnits>
+</OperationModule>

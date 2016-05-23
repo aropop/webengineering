@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="245" gr:y="120" id="mov1#opm5" name="Create Offering">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="555" gr:y="450" id="mov1#opm5" name="Create Offering">
   <OperationUnits>
     <InputCollectorUnit id="mov1#opm5#icu5" gr:x="30" gr:y="60">
       <InputCollectorParameter id="mov1#opm5#icu5#icp8" name="Address"/>

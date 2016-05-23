@@ -1,19 +1,36 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym4#page37" name="General Information" landmark="true" gr:x="300" gr:y="225">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym4#page37" name="General Information" landmark="true" gr:x="300" gr:y="110">
   <ContentUnits>
-    <PowerIndexUnit id="mov1#hym4#page37#pwu16" name="General Information" linkOrder="mov1#hym4#page37#pwu16#ln93" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent22" displayAttributes="ent22#att73">
-      <Link id="mov1#hym4#page37#pwu16#ln93" name="View Details" to="mov1#hym4#page38#dau11" type="normal" validate="true">
-        <LinkParameter id="mov1#hym4#page37#pwu16#ln93#par291" name="oid_KeyCondition12 [oid]" source="data[].ent22#att72" target="mov1#hym4#page38#dau11#su41#kcond20.ent22#att72"/>
-      </Link>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="mov1#hym4#page37#pwu18" name="General Information" sortable="true" checkable="false" useCountQuery="false" entity="ent22" displayAttributes="ent22#att33 ent22#att73 ent22#att30">
+      <SortAttribute attribute="ent22#att33" order="ascending"/>
+      <SortAttribute attribute="ent22#att73" order="ascending"/>
+      <DefaultSortAttribute attribute="ent22#att33" order="ascending"/>
     </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="mov1#hym4#page37#pwu16">
-          <layout:Attribute attribute="ent22#att73"/>
-          <layout:Link link="mov1#hym4#page37#pwu16#ln93"/>
+        <layout:Unit unitId="mov1#hym4#page37#pwu18">
+          <layout:Link link="mov1#hym4#page37#pwu18ent22#att33"/>
+          <layout:Link link="mov1#hym4#page37#pwu18ent22#att73"/>
+          <layout:Attribute attribute="ent22#att33" label="Category"/>
+          <layout:Attribute attribute="ent22#att73" label="Subject"/>
+          <layout:Attribute attribute="ent22#att30" layout:attributeLayout="BootstrapStyle/Default" label="URL"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

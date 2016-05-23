@@ -1,5 +1,18 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="245" gr:y="230" id="mov1#opm1" name="Notifications">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="705" gr:y="400" id="mov1#opm1" name="add tag">
   <OperationUnits>
-    <InputCollectorUnit id="mov1#opm1#icu1" name="Input Collector" gr:x="30" gr:y="60"/>
+    <InputCollectorUnit gr:x="0" gr:y="150" id="mov1#opm1#icu1">
+      <InputCollectorParameter id="mov1#opm1#icu1#icp17" name="name"/>
+      <OKLink id="mov1#opm1#icu1#oln74" to="mov1#opm1#cru14" validate="true" name="Submit">
+        <LinkParameter id="mov1#opm1#icu1#oln74#par243" source="mov1#opm1#icu1#icp17" name="name_name" target="mov1#opm1#cru14.ent9#att32"/>
+        <LinkParameter id="mov1#opm1#icu1#oln74#par291" name="oid_PASSING_Offer.oid(TypeToOffer)" target="mov1#opm1#cru14.rel5#role10.ent8#att27" source="mov1#opm1#icu1#icp18"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp18" name="offerid"/>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="725" gr:y="10" id="mov1#opm1#okcu18" name="OK Port18"/>
+    <CreateUnit id="mov1#opm1#cru14" name="Add Tag" gr:x="405" gr:y="50" entity="ent9">
+      <OKLink id="mov1#opm1#cru14#oln98" to="mov1#opm1#okcu18" name="OKFlow25" automaticCoupling="true"/>
+      <KOLink id="mov1#opm1#cru14#kln12" name="KOFlow12" to="mov1#opm1#kocu16" automaticCoupling="true"/>
+    </CreateUnit>
+    <KOCollectorUnit gr:x="725" gr:y="200" id="mov1#opm1#kocu16" name="KO Port16"/>
   </OperationUnits>
 </OperationModule>

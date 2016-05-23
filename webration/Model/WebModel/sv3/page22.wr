@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page22" name="Offer" gr:x="1425" gr:y="355">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page22" name="Offer" gr:x="1425" gr:y="355" layout:style="BootstrapStyle">
   <ContentUnits>
-    <DataUnit id="sv3#page22#dau7" name="Offer detail" gr:x="0" gr:y="115" entity="ent8" displayAttributes="ent8#att58 ent8#att36 ent8#att39 ent8#att40" linkOrder="sv3#page22#dau7#ln8 sv3#page22#dau7#ln43 sv3#page22#dau7#ln105 sv3#page22#dau7#ln107">
+    <DataUnit id="sv3#page22#dau7" name="Offer detail" gr:x="0" gr:y="115" entity="ent8" displayAttributes="ent8#att58 ent8#att36 ent8#att39 ent8#att40" linkOrder="sv3#page22#dau7#ln8 sv3#page22#dau7#ln93 sv3#page22#dau7#ln105 sv3#page22#dau7#ln107">
       <Selector id="sv3#page22#dau7#su23" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#page22#dau7#su23#kcond17" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>
@@ -9,14 +9,14 @@
       </Link>
       <Link id="sv3#page22#dau7#ln47" name="Flow47" to="sv3#page22#mdu1" automaticCoupling="true" type="transport" validate="true"/>
       <Link id="sv3#page22#dau7#ln37" name="Flow37" to="sv3#page22#mdu2" automaticCoupling="true" type="transport" validate="true"/>
-      <Link id="sv3#page22#dau7#ln43" name="Add Tag" to="sv3#page27#enu12" type="normal" validate="true">
-        <LinkParameter id="sv3#page22#dau7#ln43#par239" name="oid_Offerid" source="data.ent8#att27" target="sv3#page27#enu12#fld37_slot"/>
-      </Link>
       <Link id="sv3#page22#dau7#ln104" name="Flow104" to="sv3#page22#dau13" type="transport" validate="true">
         <LinkParameter id="sv3#page22#dau7#ln104#par336" name="OfferToAngel.oid_KeyCondition26 [oid]" source="data.rel4#role8_userOID" target="sv3#page22#dau13#su47#kcond26.userOID"/>
       </Link>
       <Link id="sv3#page22#dau7#ln105" name="Update Offer" to="sv3#page43#enu15" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="79,112,-151,-373"/>
       <Link id="sv3#page22#dau7#ln107" name="Delete Offer" to="sv3#dlu3" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="230,-53,-75,112"/>
+      <Link id="sv3#page22#dau7#ln93" name="Add Tag" to="sv3#page27#enu12" type="normal" validate="true">
+        <LinkParameter id="sv3#page22#dau7#ln93#par239" name="oid_PASSING" source="data.ent8#att27" passing="true"/>
+      </Link>
     </DataUnit>
     <GetUnit gr:x="20" gr:y="385" id="sv3#page22#gtu1" name="User" contextParameters="UserCtxParam"/>
     <MultiDataUnit gr:x="140" gr:y="5" id="sv3#page22#mdu1" name="Pictures" entity="ent12" displayAttributes="ent12#att38">
@@ -44,7 +44,7 @@
           <layout:Attribute attribute="ent8#att39" label="Amount Available"/>
           <layout:Attribute attribute="ent8#att40" label="Expiry Date"/>
           <layout:Link link="sv3#page22#dau7#ln8" layout:linkVisibilityCondition="sv3#page22#cexpr6"/>
-          <layout:Link link="sv3#page22#dau7#ln43"/>
+          <layout:Link link="sv3#page22#dau7#ln93"/>
           <layout:Link link="sv3#page22#dau7#ln105"/>
           <layout:Link link="sv3#page22#dau7#ln107"/>
         </layout:Unit>
@@ -62,7 +62,12 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page22#dau13">
+          <layout:Attribute attribute="ent1#att14" label="Name"/>
+          <layout:Attribute attribute="User#att1" label="Location"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -126,12 +131,7 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv3#page22#dau13">
-          <layout:Attribute attribute="ent1#att14" label="Name"/>
-          <layout:Attribute attribute="User#att1" label="Location"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

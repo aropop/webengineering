@@ -1,4 +1,4 @@
-insert into `generalInformation` values
+insert into `generalinformation` values
 (1, 'Belgian Homeless Cup', 'http://www.belgianhomelesscup.be/home-en/', 'Fun'),
 (2, 'FEANTSA', 'http://www.feantsa.org', 'Organizations'),
 (3, 'European Observatory on Homelessness', 'http://www.feantsaresearch.org', 'Organizations'),

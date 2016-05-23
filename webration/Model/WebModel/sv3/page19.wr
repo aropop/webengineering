@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1820" gr:y="435" id="sv3#page19" name="Add Picture">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1820" gr:y="435" id="sv3#page19" name="Add Picture" layout:pageLayout="BootstrapStyle/Bootstrap">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv3#page19#enu8" name="Upload Image" entity="ent12" linkOrder="sv3#page19#enu8#ln27">
       <Field id="sv3#page19#enu8#fld36" name="picture" type="blob" modifiable="true" contentType="image" attribute="ent12#att38">

@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="430" gr:y="230" id="mov1#opm10" name="GetAngelUsedName">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="335" gr:y="225" id="mov1#opm10" name="GetAngelUsedName">
   <OperationUnits>
     <InputCollectorUnit id="mov1#opm10#icu11" gr:x="30" gr:y="60">
       <InputCollectorParameter id="mov1#opm10#icu11#icp21" name="angelid"/>

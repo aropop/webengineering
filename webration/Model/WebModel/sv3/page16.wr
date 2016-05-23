@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1050" gr:y="810" id="sv3#page16" name="Create Offer">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1050" gr:y="810" id="sv3#page16" name="Create Offer" layout:pageLayout="BootstrapStyle/Bootstrap">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv3#page16#enu4" name="Create Offer" entity="ent8" fieldOrder="sv3#page16#enu4#fld7 sv3#page16#enu4#fld8 sv3#page16#enu4#fld9 sv3#page16#enu4#fld10 sv3#page16#enu4#fld19 sv3#page16#enu4#fld20 sv3#page16#enu4#sfld3" gr:showAllParts="true" linkOrder="sv3#page16#enu4#ln4">
       <Field id="sv3#page16#enu4#fld7" name="Name" type="string" modifiable="true" attribute="ent8#att58">

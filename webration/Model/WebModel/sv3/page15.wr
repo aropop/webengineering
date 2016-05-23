@@ -1,11 +1,33 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page15" name="Offers" landmark="true" gr:x="1065" gr:y="595" linkOrder="sv3#page15#ln18">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page15" name="Offers" landmark="true" gr:x="1065" gr:y="595" layout:pageLayout="BootstrapStyle/Bootstrap">
   <ContentUnits>
     <PowerIndexUnit id="sv3#page15#pwu3" name="Offers" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent8" displayAttributes="ent8#att58 ent8#att39 ent8#att40 ent8#att55" linkOrder="sv3#page15#pwu3#ln46">
       <SortAttribute attribute="ent8#att58" order="ascending"/>
       <Link id="sv3#page15#pwu3#ln46" name="View Details" to="sv3#page22#dau7" automaticCoupling="true" type="normal" validate="true"/>
     </PowerIndexUnit>
+    <MultiMessageUnit gr:x="90" gr:y="60" id="sv3#page15#mssu7" name="Create new" linkOrder="sv3#page15#mssu7#ln62">
+      <Message xml:space="preserve">All Available offers</Message>
+      <Link id="sv3#page15#mssu7#ln62" name="Add New Offer" to="sv3#page16" type="normal" automaticCoupling="true" validate="true"/>
+    </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page15#mssu7">
+          <layout:Link link="sv3#page15#mssu7#ln62"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page15#pwu3">
@@ -29,6 +51,19 @@
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
   </layout:Grid>
-  <Link id="sv3#page15#ln18" name="Add New Offer" to="sv3#page16" automaticCoupling="true" type="normal" validate="true"/>
 </Page>

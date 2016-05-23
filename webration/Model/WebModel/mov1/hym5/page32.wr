@@ -8,7 +8,7 @@
         <AttributesCondition id="mov1#hym5#page32#pwu9#su50#acond12" name="location" predicate="contains" booleanOperator="or" implied="true" attributes="User#att1" ignoreCase="true"/>
       </Selector>
     </PowerIndexUnit>
-    <EntryUnit gr:x="15" gr:y="0" id="mov1#hym5#page32#enu7" name="search" entity="ent1" linkOrder="mov1#hym5#page32#enu7#ln57" fieldOrder="mov1#hym5#page32#enu7#fld12 mov1#hym5#page32#enu7#fld11 mov1#hym5#page32#enu7#fld13">
+    <EntryUnit gr:x="15" gr:y="0" id="mov1#hym5#page32#enu7" name="Search" entity="ent1" linkOrder="mov1#hym5#page32#enu7#ln57" fieldOrder="mov1#hym5#page32#enu7#fld12 mov1#hym5#page32#enu7#fld11 mov1#hym5#page32#enu7#fld13">
       <Field id="mov1#hym5#page32#enu7#fld11" name="profession" type="string" modifiable="true" attribute="ent1#att5"/>
       <Field id="mov1#hym5#page32#enu7#fld12" name="usedName" type="string" modifiable="true" attribute="ent1#att14"/>
       <Field id="mov1#hym5#page32#enu7#fld13" name="location" type="string" modifiable="true" attribute="User#att1"/>

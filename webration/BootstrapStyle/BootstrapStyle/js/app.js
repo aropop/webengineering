@@ -7,7 +7,11 @@ jQuery(document).ready(function ($) {
   function init(container) {
     var $container = $(container),
         active;
-
+	$('.smallcol').each(function(){
+  	if($(this).children().length == 0){
+    	  $(this).hide();
+ 	 }
+}	);
 
     $("input:text[alt], input:password[alt], textarea.nockeditor[alt]", $container).each(function (index) {
       var $this = $(this);

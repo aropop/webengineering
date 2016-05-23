@@ -25,7 +25,7 @@ To make a donation you have to fill out the form below.</Message>
       </Link>
     </TimeUnit>
     <PowerIndexUnit gr:x="5" gr:y="160" id="sv1#page29#pwu14" name="Donations" sortable="true" checkable="false" useCountQuery="false" entity="ent21" displayAttributes="ent21#att10 ent21#att70 ent21#att71">
-      <SortAttribute attribute="ent21#att10" order="descending"/>
+      <DefaultSortAttribute attribute="ent21#att10" order="ascending"/>
     </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -68,7 +68,6 @@ To make a donation you have to fill out the form below.</Message>
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#page29#pwu14">
-          <layout:Link link="sv1#page29#pwu14ent21#att10"/>
           <layout:Attribute attribute="ent21#att10" label="Date"/>
           <layout:Attribute attribute="ent21#att70" label="Amount"/>
           <layout:Attribute attribute="ent21#att71" label="Comment"/>

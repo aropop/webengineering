@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1475" gr:y="50" id="sv4#page12" name="Profile" landmark="true" linkOrder="sv4#page12#ln69">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1475" gr:y="50" id="sv4#page12" name="Profile" landmark="true">
   <ContentUnits>
-    <DataUnit gr:x="180" gr:y="0" id="sv4#page12#dau5" name="Profile" entity="ent3" displayAttributes="userName email User#att1 User#att2 ent3#att12 ent3#att16" linkOrder="sv4#page12#dau5#ln102">
+    <DataUnit gr:x="180" gr:y="0" id="sv4#page12#dau5" name="Profile" entity="ent3" displayAttributes="userName email User#att1 User#att2 ent3#att12 ent3#att16" linkOrder="sv4#page12#dau5#ln102 sv4#page12#dau5#ln64">
       <Selector id="sv4#page12#dau5#su6" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv4#page12#dau5#su6#kcond5" name="KeyCondition5" predicate="in" implied="false"/>
       </Selector>
@@ -8,6 +8,7 @@
         <LinkParameter id="sv4#page12#dau5#ln102#par332" name="oid_Key Condition [oid]" source="data.userOID" target="sv4#page42#enu14.userOID"/>
         <LinkParameter id="sv4#page12#dau5#ln102#par333" name="defaultGroup.oid_PASSING" source="data.User2DefaultGroup_groupOID" passing="true"/>
       </Link>
+      <Link id="sv4#page12#dau5#ln64" name="Delete Account" to="sv4#miu12" type="normal" automaticCoupling="true" validate="true"/>
     </DataUnit>
     <GetUnit gr:x="0" gr:y="65" id="sv4#page12#gtu3" name="Get3" contextParameters="UserCtxParam">
       <Link id="sv4#page12#gtu3#ln9" name="Flow9" to="sv4#page12#dau5" type="transport" validate="true">
@@ -30,6 +31,7 @@
           <layout:Attribute attribute="ent3#att12" label="Nickname"/>
           <layout:Attribute attribute="ent3#att16" label="Years on the streets"/>
           <layout:Link link="sv4#page12#dau5#ln102"/>
+          <layout:Link link="sv4#page12#dau5#ln64"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -59,5 +61,4 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
-  <Link id="sv4#page12#ln69" name="Delete Account" to="sv4#miu12" automaticCoupling="true" type="normal" validate="true"/>
 </Page>
