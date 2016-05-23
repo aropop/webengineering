@@ -23,8 +23,8 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page11#pwu5">
           <layout:Link link="sv3#page11#pwu5#ln20"/>
-          <layout:Attribute attribute="ent4#att4"/>
-          <layout:Attribute attribute="ent4#att20"/>
+          <layout:Attribute attribute="ent4#att4" label="Title"/>
+          <layout:Attribute attribute="ent4#att20" label="Date"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

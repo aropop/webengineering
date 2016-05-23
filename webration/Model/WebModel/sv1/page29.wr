@@ -6,7 +6,11 @@
 To make a donation you have to fill out the form below.</Message>
     </MultiMessageUnit>
     <EntryUnit gr:x="15" gr:y="65" id="sv1#page29#enu17" name="Donate" entity="ent21" linkOrder="sv1#page29#enu17#ln94">
-      <Field id="sv1#page29#enu17#fld61" name="amount" type="integer" modifiable="true" attribute="ent21#att70"/>
+      <Field id="sv1#page29#enu17#fld61" name="amount" type="integer" modifiable="true" attribute="ent21#att70">
+        <VRules>
+          <TypeValidationRule id="sv1#page29#enu17#fld61#tvr3" name="Type Validation3" type="integer"/>
+        </VRules>
+      </Field>
       <Field id="sv1#page29#enu17#fld62" name="comment" type="string" modifiable="true" attribute="ent21#att71"/>
       <Field id="sv1#page29#enu17#fld63" name="date" type="date" modifiable="false" attribute="ent21#att10" preloaded="true" hidden="true"/>
       <Link id="sv1#page29#enu17#ln94" name="Donate" to="sv1#cru8" type="normal" validate="true">

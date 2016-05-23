@@ -18,7 +18,7 @@
         <LinkParameter id="mov1#opm4#gtu5#ln17#par20" name="UserCtxParam.oid_Homeless.oid(RequestsToHomeless)" source="mov1#opm4#gtu5.UserCtxParam" target="mov1#opm4#cru3.rel11#role22.userOID"/>
       </Link>
     </GetUnit>
-    <CreateUnit gr:x="360" gr:y="170" id="mov1#opm4#cru4" name="Create Notification" entity="ent5">
+    <CreateUnit gr:x="330" gr:y="130" id="mov1#opm4#cru4" name="Create Notification" entity="ent5">
       <OKLink id="mov1#opm4#cru4#oln7" name="OKFlow7" to="mov1#opm4#cru3">
         <LinkParameter id="mov1#opm4#cru4#oln7#par22" name="oid_Notification.oid(RequestsToNotification)" source="ent18#att57Array" target="mov1#opm4#cru3.rel14#role28.ent18#att57"/>
         <LinkParameter id="mov1#opm4#cru4#oln7#par8" name="qsfd_status" sourceValue="pending" target="mov1#opm4#cru3.ent17#att11"/>

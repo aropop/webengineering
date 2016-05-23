@@ -1,16 +1,9 @@
 TODO:
-- DONE admin page
-- form validation
 - zoekfunctie
-- startpagina van homeless en angel (iets klein tonen, anders kan het zijn dat de pagina leeg is)
 - error messages
 - ook bij de angel de optie geven om de message te sturen bij een request
-- DONE calculated rating mogelijk via webratio zelf, maar heel moelijk en onduidelijk dus een module gemaakt met een eigen query die zelf de rating berekent
-- DONE rating placeholder with value 0
 - bugs:
   • datetime empty in send request of homeless
-  • forms without labels
-  • request notification does not disappear
 - report: agile method used, because we implemented, tested and changed requirements if necessary
 - username/nickname is not unique
 - in update profile van angel: wachtwoord moet ingevuld worden
@@ -20,7 +13,6 @@ TODO:
 - offers zoeken op tags
 - als een offer done & rated is --> view offer niet meer mogelijk maken
 - delete user --> moet alles verwijderen van die user (in alle tabellen)
-- homeless person needs a profile picture (it is optional though)
 
 EXTRA:
 - password bekijken (hashen)

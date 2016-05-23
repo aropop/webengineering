@@ -1,11 +1,28 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1050" gr:y="810" id="sv3#page16" name="Create Offer">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv3#page16#enu4" name="Create Offer" entity="ent8" fieldOrder="sv3#page16#enu4#fld7 sv3#page16#enu4#fld8 sv3#page16#enu4#fld9 sv3#page16#enu4#fld10 sv3#page16#enu4#fld19 sv3#page16#enu4#fld20 sv3#page16#enu4#sfld3" gr:showAllParts="true" linkOrder="sv3#page16#enu4#ln4">
-      <Field id="sv3#page16#enu4#fld7" name="Name" type="string" modifiable="true" attribute="ent8#att58"/>
+      <Field id="sv3#page16#enu4#fld7" name="Name" type="string" modifiable="true" attribute="ent8#att58">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page16#enu4#fld7#mnd4" name="Mandatory"/>
+          <ValueLengthValidationRule id="sv3#page16#enu4#fld7#vl3" name="Value Length3" predicate="min" value="4"/>
+        </VRules>
+      </Field>
       <Field id="sv3#page16#enu4#fld8" name="Description" type="text" modifiable="true" attribute="ent8#att36"/>
-      <Field id="sv3#page16#enu4#fld9" name="Amount" type="integer" modifiable="true" attribute="ent8#att39"/>
-      <Field id="sv3#page16#enu4#fld10" name="Expiry Date" type="date" modifiable="true" attribute="ent8#att40" preloaded="false"/>
-      <Field id="sv3#page16#enu4#fld19" name="Address" type="string" modifiable="true"/>
+      <Field id="sv3#page16#enu4#fld9" name="Amount" type="integer" modifiable="true" attribute="ent8#att39">
+        <VRules>
+          <CompareValidationRule id="sv3#page16#enu4#fld9#cmp4" name="Compare4" predicate="gt" value="0"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#page16#enu4#fld10" name="Expiry Date" type="date" modifiable="true" attribute="ent8#att40" preloaded="false">
+        <VRules>
+          <CompareValidationRule id="sv3#page16#enu4#fld10#cmp3" name="Compare3" predicate="gteq" value="today()"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#page16#enu4#fld19" name="Address" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page16#enu4#fld19#mnd5" name="Mandatory5"/>
+        </VRules>
+      </Field>
       <Field id="sv3#page16#enu4#fld20" name="Delivery Method Name" type="string" modifiable="true"/>
       <Link id="sv3#page16#enu4#ln4" name="Submit" to="sv3#miu2" type="normal" validate="true">
         <LinkParameter id="sv3#page16#enu4#ln4#par67" name="Address_Address" source="sv3#page16#enu4#fld19" target="sv3#miu2.mov1#opm5#icu5#icp8"/>

@@ -1,7 +1,11 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1820" gr:y="435" id="sv3#page19" name="Add Picture">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv3#page19#enu8" name="Upload Image" entity="ent12" linkOrder="sv3#page19#enu8#ln27">
-      <Field id="sv3#page19#enu8#fld36" name="picture" type="blob" modifiable="true" contentType="image" attribute="ent12#att38"/>
+      <Field id="sv3#page19#enu8#fld36" name="picture" type="blob" modifiable="true" contentType="image" attribute="ent12#att38">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page19#enu8#fld36#mnd7" name="Mandatory7"/>
+        </VRules>
+      </Field>
       <Link id="sv3#page19#enu8#ln27" name="Submit" to="sv3#sim1" type="normal" validate="true">
         <LinkParameter id="sv3#page19#enu8#ln27#par138" name="oid_PASSING" sourceLinkParameter="sv3#page22#dau7#ln8#par37" passing="true"/>
         <LinkParameter id="sv3#page19#enu8#ln27#par141" name="picture_Image" source="sv3#page19#enu8#fld36" target="sv3#sim1.image"/>
@@ -12,7 +16,7 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page19#enu8">
-          <layout:Field field="sv3#page19#enu8#fld36"/>
+          <layout:Field field="sv3#page19#enu8#fld36" label="Picture"/>
           <layout:Link link="sv3#page19#enu8#ln27"/>
         </layout:Unit>
       </layout:Cell>

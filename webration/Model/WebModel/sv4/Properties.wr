@@ -48,5 +48,18 @@
       </Selector>
       <OKLink id="sv4#mfu7#oln82" name="OKFlow82" to="sv4#page12" automaticCoupling="true"/>
     </ModifyUnit>
+    <ScaleImageUnit gr:x="2060" gr:y="150" id="sv4#sim6" name="Scale" width="70" height="70">
+      <OKLink id="sv4#sim6#oln97" name="OKFlow97" to="sv4#mfu7">
+        <LinkParameter id="sv4#sim6#oln97#par392" name="birthdate_PASSING_birthdate" sourceLinkParameter="sv4#page42#enu14#ln103#par383" target="sv4#mfu7.User#att2"/>
+        <LinkParameter id="sv4#sim6#oln97#par393" name="email_PASSING_email" sourceLinkParameter="sv4#page42#enu14#ln103#par385" target="sv4#mfu7.email"/>
+        <LinkParameter id="sv4#sim6#oln97#par394" name="defaultGroup.oid_PASSING_Group.oid(defaultGroup)" sourceLinkParameter="sv4#page42#enu14#ln103#par384" target="sv4#mfu7.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="sv4#sim6#oln97#par395" name="location_PASSING_location" sourceLinkParameter="sv4#page42#enu14#ln103#par387" target="sv4#mfu7.User#att1"/>
+        <LinkParameter id="sv4#sim6#oln97#par396" name="nickname_PASSING_nickname" sourceLinkParameter="sv4#page42#enu14#ln103#par388" target="sv4#mfu7.ent3#att12"/>
+        <LinkParameter id="sv4#sim6#oln97#par397" name="password_PASSING_password" sourceLinkParameter="sv4#page42#enu14#ln103#par389" target="sv4#mfu7.password"/>
+        <LinkParameter id="sv4#sim6#oln97#par398" name="Scaled Image_picture" source="scaledImage" target="sv4#mfu7.User#att8"/>
+        <LinkParameter id="sv4#sim6#oln97#par399" name="userName_PASSING_userName" sourceLinkParameter="sv4#page42#enu14#ln103#par390" target="sv4#mfu7.userName"/>
+        <LinkParameter id="sv4#sim6#oln97#par400" name="yearsOnStreet_PASSING_yearsOnStreet" sourceLinkParameter="sv4#page42#enu14#ln103#par391" target="sv4#mfu7.ent3#att16"/>
+      </OKLink>
+    </ScaleImageUnit>
   </OperationUnits>
 </SiteView>

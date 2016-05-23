@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym5#page33" name="Angel details" gr:x="730" gr:y="65">
   <ContentUnits>
-    <DataUnit id="mov1#hym5#page33#dau9" name="Profile" gr:x="5" gr:y="5" entity="ent1" displayAttributes="ent1#att14 email User#att1 User#att2 ent1#att5 ent1#att7 ent1#att21">
+    <DataUnit id="mov1#hym5#page33#dau9" name="Profile" gr:x="5" gr:y="5" entity="ent1" displayAttributes="ent1#att14 email User#att1 User#att2 ent1#att5 ent1#att21">
       <Selector id="mov1#hym5#page33#dau9#su39" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov1#hym5#page33#dau9#su39#kcond12" name="KeyCondition21" predicate="in" implied="false"/>
       </Selector>
@@ -39,7 +39,6 @@
           <layout:Attribute label="Location" attribute="User#att1"/>
           <layout:Attribute label="Birthday" attribute="User#att2"/>
           <layout:Attribute label="Profession" attribute="ent1#att5"/>
-          <layout:Attribute label="Avatar" attribute="ent1#att7"/>
           <layout:Attribute label="Completed Transactions" attribute="ent1#att21"/>
         </layout:Unit>
       </layout:Cell>

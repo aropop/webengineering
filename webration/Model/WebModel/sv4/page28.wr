@@ -38,8 +38,8 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv4#page28#pwu13">
-          <layout:Attribute attribute="ent17#att60"/>
-          <layout:Attribute attribute="ent17#att11"/>
+          <layout:Attribute attribute="ent17#att60" label="Name"/>
+          <layout:Attribute attribute="ent17#att11" label="Status"/>
           <layout:Link link="sv4#page28#pwu13#ln60"/>
           <layout:Link link="sv4#page28#pwu13#ln71" layout:linkVisibilityCondition="sv4#page28#cexpr2"/>
           <layout:Link link="sv4#page28#pwu13#ln82" layout:linkVisibilityCondition="sv4#page28#cexpr2"/>

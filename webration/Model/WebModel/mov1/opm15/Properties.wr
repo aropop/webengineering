@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm15" name="Update angel" gr:x="810" gr:y="425">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm15" name="Update angel" gr:x="665" gr:y="225">
   <OperationUnits>
     <InputCollectorUnit id="mov1#opm15#icu19" gr:x="30" gr:y="60">
       <InputCollectorParameter id="mov1#opm15#icu19#icp46" name="username"/>
@@ -47,7 +47,7 @@
         <LinkParameter id="mov1#opm15#sim4#oln79#par308" name="username_PASSING" sourceLinkParameter="mov1#opm15#icu19#oln75#par295" passing="true"/>
       </OKLink>
       <Link id="mov1#opm15#sim4#ln100" name="Flow89" to="mov1#opm15#mfu6" type="transport" validate="true">
-        <LinkParameter id="mov1#opm15#sim4#ln100#par309" name="Scaled Image_picture" source="scaledImage" target="mov1#opm15#mfu6.ent1#att7"/>
+        <LinkParameter id="mov1#opm15#sim4#ln100#par381" name="Scaled Image_picture" source="scaledImage" target="mov1#opm15#mfu6.User#att8"/>
       </Link>
     </ScaleImageUnit>
     <ModifyUnit id="mov1#opm15#mfu6" entity="ent1" name="Updateangel" gr:x="455" gr:y="95">

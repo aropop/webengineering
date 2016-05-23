@@ -1,10 +1,23 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1650" gr:y="960" id="sv3#page43" name="Update offer">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv3#page43#enu15" name="Update Offer" entity="ent8" linkOrder="sv3#page43#enu15#ln106" fieldOrder="sv3#page43#enu15#fld53 sv3#page43#enu15#fld54 sv3#page43#enu15#fld55 sv3#page43#enu15#fld56">
-      <Field id="sv3#page43#enu15#fld53" name="name" type="string" modifiable="true" attribute="ent8#att58"/>
+      <Field id="sv3#page43#enu15#fld53" name="name" type="string" modifiable="true" attribute="ent8#att58">
+        <VRules>
+          <ValueLengthValidationRule id="sv3#page43#enu15#fld53#vl4" name="Value Length4" predicate="min" value="4"/>
+        </VRules>
+      </Field>
       <Field id="sv3#page43#enu15#fld54" name="description" type="text" modifiable="true" attribute="ent8#att36"/>
-      <Field id="sv3#page43#enu15#fld55" name="amount" type="integer" modifiable="true" attribute="ent8#att39"/>
-      <Field id="sv3#page43#enu15#fld56" name="expiryDate" type="date" modifiable="true" attribute="ent8#att40"/>
+      <Field id="sv3#page43#enu15#fld55" name="amount" type="integer" modifiable="true" attribute="ent8#att39">
+        <VRules>
+          <TypeValidationRule id="sv3#page43#enu15#fld55#tvr4" name="Type Validation4" type="integer"/>
+          <CompareValidationRule id="sv3#page43#enu15#fld55#cmp5" name="Compare5" predicate="gt" value="0"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#page43#enu15#fld56" name="expiryDate" type="date" modifiable="true" attribute="ent8#att40">
+        <VRules>
+          <CompareValidationRule id="sv3#page43#enu15#fld56#cmp6" name="Compare6" predicate="gteq" value="today()"/>
+        </VRules>
+      </Field>
       <Link id="sv3#page43#enu15#ln106" name="Submit" to="sv3#mfu8" type="normal" validate="true">
         <LinkParameter id="sv3#page43#enu15#ln106#par337" name="amount_amount" source="sv3#page43#enu15#fld55" target="sv3#mfu8.ent8#att39"/>
         <LinkParameter id="sv3#page43#enu15#ln106#par338" name="description_description" source="sv3#page43#enu15#fld54" target="sv3#mfu8.ent8#att36"/>

@@ -27,14 +27,18 @@
       <Link id="sv3#page17#gtu9#ln61" name="Flow61" to="sv3#page17#pwu1" automaticCoupling="true" type="transport" validate="true"/>
       <Link id="sv3#page17#gtu9#ln65" name="Flow65" to="sv3#page17#pwu4" automaticCoupling="true" type="transport" validate="true"/>
     </GetUnit>
+    <MultiMessageUnit id="sv3#page17#mssu6" name="Welcome" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">Welcome to homeless angels!  Thank you for registering as angel. Press "Offers" above in the menu to see all offers available for you.
+When you click "Requests" you can see requests from homeless people for your offers.</Message>
+    </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page17#pwu1" layout:unitLayout="WRDefault/Normal">
           <layout:Link link="sv3#page17#pwu1#ln23"/>
-          <layout:Attribute attribute="ent6#att18"/>
-          <layout:Attribute attribute="ent6#att22"/>
+          <layout:Attribute attribute="ent6#att18" label="Title"/>
+          <layout:Attribute attribute="ent6#att22" label="From"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -54,8 +58,8 @@
         <layout:Unit unitId="sv3#page17#pwu4">
           <layout:Link link="sv3#page17#pwu4#ln1"/>
           <layout:Link link="sv3#page17#pwu4#ln25"/>
-          <layout:Attribute attribute="ent5#att15"/>
-          <layout:Attribute attribute="ent5#att23"/>
+          <layout:Attribute attribute="ent5#att15" label="Offer"/>
+          <layout:Attribute attribute="ent5#att23" label="Nickname of requesting user"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -71,7 +75,9 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page17#mssu6"/>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

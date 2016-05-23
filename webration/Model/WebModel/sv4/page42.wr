@@ -1,39 +1,67 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1930" gr:y="-35" id="sv4#page42" name="Update Profile">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv4#page42#enu14" name="Update Profile" entity="ent3" linkOrder="sv4#page42#enu14#ln103">
-      <Field id="sv4#page42#enu14#fld46" name="nickname" type="string" modifiable="true" attribute="ent3#att12"/>
-      <Field id="sv4#page42#enu14#fld47" name="yearsOnStreet" type="integer" modifiable="true" attribute="ent3#att16"/>
-      <Field id="sv4#page42#enu14#fld48" name="userName" type="string" modifiable="true" attribute="userName"/>
-      <Field id="sv4#page42#enu14#fld49" name="password" type="password" modifiable="true" attribute="password"/>
-      <Field id="sv4#page42#enu14#fld50" name="email" type="string" modifiable="true" attribute="email"/>
+      <Field id="sv4#page42#enu14#fld46" name="nickname" type="string" modifiable="true" attribute="ent3#att12">
+        <VRules>
+          <ValueLengthValidationRule id="sv4#page42#enu14#fld46#vl9" name="Value Length9" predicate="min" value="5"/>
+        </VRules>
+      </Field>
+      <Field id="sv4#page42#enu14#fld47" name="yearsOnStreet" type="integer" modifiable="true" attribute="ent3#att16">
+        <VRules>
+          <MandatoryValidationRule id="sv4#page42#enu14#fld47#mnd14" name="Mandatory14"/>
+        </VRules>
+      </Field>
+      <Field id="sv4#page42#enu14#fld48" name="userName" type="string" modifiable="true" attribute="userName">
+        <VRules>
+          <ValueLengthValidationRule id="sv4#page42#enu14#fld48#vl11" name="Value Length11" predicate="min" value="6"/>
+          <MandatoryValidationRule id="sv4#page42#enu14#fld48#mnd13" name="Mandatory13"/>
+        </VRules>
+      </Field>
+      <Field id="sv4#page42#enu14#fld49" name="password" type="password" modifiable="true" attribute="password">
+        <VRules>
+          <MandatoryValidationRule id="sv4#page42#enu14#fld49#mnd12" name="Mandatory12"/>
+          <ValueLengthValidationRule id="sv4#page42#enu14#fld49#vl10" name="Value Length10" predicate="min" value="6"/>
+        </VRules>
+      </Field>
+      <Field id="sv4#page42#enu14#fld50" name="email" type="string" modifiable="true" attribute="email">
+        <VRules>
+          <EMailValidationRule id="sv4#page42#enu14#fld50#email3" name="EMail3"/>
+        </VRules>
+      </Field>
       <Field id="sv4#page42#enu14#fld51" name="location" type="string" modifiable="true" attribute="User#att1"/>
-      <Field id="sv4#page42#enu14#fld52" name="birthdate" type="date" modifiable="true" attribute="User#att2"/>
-      <Link id="sv4#page42#enu14#ln103" name="Submit" to="sv4#mfu7" type="normal" validate="true">
-        <LinkParameter id="sv4#page42#enu14#ln103#par323" name="birthdate_birthdate" source="sv4#page42#enu14#fld52" target="sv4#mfu7.User#att2"/>
-        <LinkParameter id="sv4#page42#enu14#ln103#par324" name="email_email" source="sv4#page42#enu14#fld50" target="sv4#mfu7.email"/>
-        <LinkParameter id="sv4#page42#enu14#ln103#par325" name="Homeless Object_Homeless Object" source="entityBean" target="sv4#mfu7.entityBeans"/>
-        <LinkParameter id="sv4#page42#enu14#ln103#par326" name="Key [oid]_KeyCondition25 [oid]" source="key.userOID" target="sv4#mfu7#su46#kcond25.userOID"/>
-        <LinkParameter id="sv4#page42#enu14#ln103#par327" name="location_location" source="sv4#page42#enu14#fld51" target="sv4#mfu7.User#att1"/>
-        <LinkParameter id="sv4#page42#enu14#ln103#par328" name="nickname_nickname" source="sv4#page42#enu14#fld46" target="sv4#mfu7.ent3#att12"/>
-        <LinkParameter id="sv4#page42#enu14#ln103#par329" name="password_password" source="sv4#page42#enu14#fld49" target="sv4#mfu7.password"/>
-        <LinkParameter id="sv4#page42#enu14#ln103#par330" name="userName_userName" source="sv4#page42#enu14#fld48" target="sv4#mfu7.userName"/>
-        <LinkParameter id="sv4#page42#enu14#ln103#par331" name="yearsOnStreet_yearsOnStreet" source="sv4#page42#enu14#fld47" target="sv4#mfu7.ent3#att16"/>
-        <LinkParameter id="sv4#page42#enu14#ln103#par334" name="defaultGroup.oid_PASSING_Group.oid(defaultGroup)" sourceLinkParameter="sv4#page12#dau5#ln102#par333" target="sv4#mfu7.User2DefaultGroup.groupOID"/>
+      <Field id="sv4#page42#enu14#fld52" name="birthdate" type="date" modifiable="true" attribute="User#att2">
+        <VRules>
+          <CompareValidationRule id="sv4#page42#enu14#fld52#cmp8" name="Compare8" predicate="lteq" value="today()"/>
+        </VRules>
+      </Field>
+      <Link id="sv4#page42#enu14#ln103" name="Submit" to="sv4#sim6" type="normal" validate="true">
+        <LinkParameter id="sv4#page42#enu14#ln103#par382" name="Profile Picture_Image" source="sv4#page42#enu14#fld60" target="sv4#sim6.image"/>
+        <LinkParameter id="sv4#page42#enu14#ln103#par383" name="birthdate_PASSING" source="sv4#page42#enu14#fld52" passing="true"/>
+        <LinkParameter id="sv4#page42#enu14#ln103#par384" name="defaultGroup.oid_PASSING" sourceLinkParameter="sv4#page12#dau5#ln102#par333" passing="true"/>
+        <LinkParameter id="sv4#page42#enu14#ln103#par385" name="email_PASSING" source="sv4#page42#enu14#fld50" passing="true"/>
+        <LinkParameter id="sv4#page42#enu14#ln103#par386" name="Key [oid]_PASSING" source="key.userOID" passing="true"/>
+        <LinkParameter id="sv4#page42#enu14#ln103#par387" name="location_PASSING" source="sv4#page42#enu14#fld51" passing="true"/>
+        <LinkParameter id="sv4#page42#enu14#ln103#par388" name="nickname_PASSING" source="sv4#page42#enu14#fld46" passing="true"/>
+        <LinkParameter id="sv4#page42#enu14#ln103#par389" name="password_PASSING" source="sv4#page42#enu14#fld49" passing="true"/>
+        <LinkParameter id="sv4#page42#enu14#ln103#par390" name="userName_PASSING" source="sv4#page42#enu14#fld48" passing="true"/>
+        <LinkParameter id="sv4#page42#enu14#ln103#par391" name="yearsOnStreet_PASSING" source="sv4#page42#enu14#fld47" passing="true"/>
       </Link>
+      <Field id="sv4#page42#enu14#fld60" name="Profile Picture" type="blob" modifiable="true"/>
     </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv4#page42#enu14">
-          <layout:Field field="sv4#page42#enu14#fld46"/>
-          <layout:Field field="sv4#page42#enu14#fld47"/>
-          <layout:Field field="sv4#page42#enu14#fld48"/>
-          <layout:Field field="sv4#page42#enu14#fld49"/>
-          <layout:Field field="sv4#page42#enu14#fld50"/>
-          <layout:Field field="sv4#page42#enu14#fld51"/>
-          <layout:Field field="sv4#page42#enu14#fld52"/>
           <layout:Link link="sv4#page42#enu14#ln103"/>
+          <layout:Field field="sv4#page42#enu14#fld46" label="Nickname"/>
+          <layout:Field field="sv4#page42#enu14#fld47" label="Years on the streets"/>
+          <layout:Field field="sv4#page42#enu14#fld48" label="Username"/>
+          <layout:Field field="sv4#page42#enu14#fld49" label="Password"/>
+          <layout:Field field="sv4#page42#enu14#fld50" label="Email"/>
+          <layout:Field field="sv4#page42#enu14#fld51" label="Location"/>
+          <layout:Field field="sv4#page42#enu14#fld52" label="Birthdate"/>
+          <layout:Field field="sv4#page42#enu14#fld60"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

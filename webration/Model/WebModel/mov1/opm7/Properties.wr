@@ -1,24 +1,25 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="580" gr:y="440" id="mov1#opm7" name="NotificationSeen">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="635" gr:y="125" id="mov1#opm7" name="NotificationSeen">
   <OperationUnits>
     <InputCollectorUnit id="mov1#opm7#icu7" gr:x="30" gr:y="60">
       <InputCollectorParameter id="mov1#opm7#icu7#icp9" name="NotificationId"/>
-      <OKLink id="mov1#opm7#icu7#oln1" name="OKFlow1" to="mov1#opm7#mfu1">
-        <LinkParameter id="mov1#opm7#icu7#oln1#par12" name="NotificationId_KeyCondition7 [oid]" source="mov1#opm7#icu7#icp9" target="mov1#opm7#mfu1#su9#kcond7.ent18#att57"/>
+      <OKLink id="mov1#opm7#icu7#oln1" name="OKFlow1" to="mov1#opm7#tmu1">
+        <LinkParameter id="mov1#opm7#icu7#oln1#par4" name="NotificationId_PASSING" source="mov1#opm7#icu7#icp9" passing="true"/>
       </OKLink>
     </InputCollectorUnit>
     <OKCollectorUnit gr:x="640" gr:y="65" id="mov1#opm7#okcu4" name="OK Port4"/>
     <KOCollectorUnit gr:x="640" gr:y="190" id="mov1#opm7#kocu4" name="KO Port4"/>
-    <ModifyUnit gr:x="315" gr:y="125" id="mov1#opm7#mfu1" name="Notification seen" entity="ent5">
+    <ModifyUnit gr:x="315" gr:y="125" id="mov1#opm7#mfu1" name="Notification seen" entity="ent18">
       <Selector id="mov1#opm7#mfu1#su9" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov1#opm7#mfu1#su9#kcond7" name="KeyCondition7" predicate="in" implied="false"/>
       </Selector>
       <KOLink id="mov1#opm7#mfu1#kln4" name="KOFlow4" to="mov1#opm7#kocu4" automaticCoupling="true"/>
       <OKLink id="mov1#opm7#mfu1#oln3" name="OKFlow3" to="mov1#opm7#okcu4" automaticCoupling="true"/>
     </ModifyUnit>
-    <TimeUnit gr:x="250" gr:y="275" id="mov1#opm7#tmu1" name="Now" linkOrder="mov1#opm7#tmu1#ln22">
-      <Link id="mov1#opm7#tmu1#ln22" name="Flow22" to="mov1#opm7#mfu1" type="transport" validate="true">
-        <LinkParameter id="mov1#opm7#tmu1#ln22#par14" name="Current/Input Timestamp_dateSeen" source="currentDate" target="mov1#opm7#mfu1.ent18#att9"/>
-      </Link>
+    <TimeUnit gr:x="250" gr:y="275" id="mov1#opm7#tmu1" name="Now">
+      <OKLink id="mov1#opm7#tmu1#oln89" name="OKFlow89" to="mov1#opm7#mfu1" gr:bendpoints="54,-52,-41,83">
+        <LinkParameter id="mov1#opm7#tmu1#oln89#par5" name="Current/Input Date_dateSeen" source="currentDate" target="mov1#opm7#mfu1.ent18#att9"/>
+        <LinkParameter id="mov1#opm7#tmu1#oln89#par6" name="NotificationId_PASSING_KeyCondition7 [oid]" sourceLinkParameter="mov1#opm7#icu7#oln1#par4" target="mov1#opm7#mfu1#su9#kcond7.ent18#att57"/>
+      </OKLink>
     </TimeUnit>
   </OperationUnits>
 </OperationModule>

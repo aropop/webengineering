@@ -5,7 +5,7 @@
         <LinkParameter id="sv1#miu1#kln1#par231" name="ErrorMessage_message" source="mov1#opm3#kocu2#ocp6" target="sv1#page4#mssu3.sv1#page4#mssu3#ph2"/>
       </KOLink>
     </ModuleInstanceUnit>
-    <SwitchUnit gr:x="325" gr:y="100" id="sv1#switch4" name="Switch Angel Homeless">
+    <SwitchUnit gr:x="345" gr:y="95" id="sv1#switch4" name="Switch Angel Homeless">
       <Case value="1"/>
       <Case value="2"/>
       <OKLink id="sv1#switch4#oln23" name="OKFlow23" to="sv1#page9#enu2" code="2">
@@ -16,6 +16,7 @@
         <LinkParameter id="sv1#switch4#oln23#par90" name="Password_PASSING" sourceLinkParameter="sv1#page7#enu5#ln7#par84" passing="true"/>
         <LinkParameter id="sv1#switch4#oln23#par91" name="Switch_PASSING" source="switch" passing="true"/>
         <LinkParameter id="sv1#switch4#oln23#par92" name="Username_PASSING" sourceLinkParameter="sv1#page7#enu5#ln7#par85" passing="true"/>
+        <LinkParameter id="sv1#switch4#oln23#par194" name="Profile Picture_PASSING" sourceLinkParameter="sv1#page7#enu5#ln7#par191" passing="true"/>
       </OKLink>
       <OKLink id="sv1#switch4#oln24" name="OKFlow24" to="sv1#page10#enu6" code="1">
         <LinkParameter id="sv1#switch4#oln24#par102" name="Angel or Homeless_PASSING" sourceLinkParameter="sv1#page7#enu5#ln7#par77" passing="true"/>
@@ -24,18 +25,10 @@
         <LinkParameter id="sv1#switch4#oln24#par105" name="Location_PASSING" sourceLinkParameter="sv1#page7#enu5#ln7#par83" passing="true"/>
         <LinkParameter id="sv1#switch4#oln24#par106" name="Password_PASSING" sourceLinkParameter="sv1#page7#enu5#ln7#par84" passing="true"/>
         <LinkParameter id="sv1#switch4#oln24#par107" name="Username_PASSING" sourceLinkParameter="sv1#page7#enu5#ln7#par85" passing="true"/>
+        <LinkParameter id="sv1#switch4#oln24#par234" name="Profile Picture_PASSING" sourceLinkParameter="sv1#page7#enu5#ln7#par191" passing="true"/>
       </OKLink>
     </SwitchUnit>
-    <CreateUnit gr:x="870" gr:y="190" id="sv1#cru9" name="Create Homeless" entity="ent3">
-      <OKLink id="sv1#cru9#oln25" name="OKFlow25" to="sv1#miu1" gr:bendpoints="-64,97,436,-143;-390,130,110,-110">
-        <LinkParameter id="sv1#cru9#oln25#par116" name="password_Password" source="passwordArray" target="sv1#miu1.mov1#opm3#icu3#icp4"/>
-        <LinkParameter id="sv1#cru9#oln25#par117" name="userName_Username" source="userNameArray" target="sv1#miu1.mov1#opm3#icu3#icp2"/>
-      </OKLink>
-      <KOLink id="sv1#cru9#kln12" name="KOFlow12" to="sv1#page4#mssu3">
-        <LinkParameter id="sv1#cru9#kln12#par233" name="Creating your account failed_message" sourceValue="Creating your account failed" target="sv1#page4#mssu3.sv1#page4#mssu3#ph2"/>
-      </KOLink>
-    </CreateUnit>
-    <ModuleInstanceUnit gr:x="840" gr:y="60" id="sv1#miu19" action="true" moduleId="mov1#opm14">
+    <ModuleInstanceUnit gr:x="1000" gr:y="15" id="sv1#miu19" action="true" moduleId="mov1#opm14">
       <OKLink id="sv1#miu19#oln72" name="OKFlow72" to="sv1#miu1" gr:bendpoints="154,164,649,-336;123,306,618,-194">
         <LinkParameter id="sv1#miu19#oln72#par284" name="Password_PASSING_Password" sourceLinkParameter="sv1#page9#enu2#ln91#par282" target="sv1#miu1.mov1#opm3#icu3#icp4"/>
         <LinkParameter id="sv1#miu19#oln72#par285" name="Username_PASSING_Username" sourceLinkParameter="sv1#page9#enu2#ln91#par283" target="sv1#miu1.mov1#opm3#icu3#icp2"/>
@@ -54,5 +47,14 @@
         <KeyCondition id="sv1#dlu4#su52#kcond14" name="KeyCondition14" predicate="in" implied="false"/>
       </Selector>
     </DeleteUnit>
+    <ModuleInstanceUnit gr:x="960" gr:y="175" id="sv1#miu8" moduleId="mov1#opm17">
+      <OKLink id="sv1#miu8#oln93" to="sv1#miu1" name="OKFlow25">
+        <LinkParameter id="sv1#miu8#oln93#par362" source="mov1#opm17#okcu17#ocp8" name="userName_Username" target="sv1#miu1.mov1#opm3#icu3#icp2"/>
+        <LinkParameter id="sv1#miu8#oln93#par363" source="mov1#opm17#okcu17#ocp9" name="password_Password" target="sv1#miu1.mov1#opm3#icu3#icp4"/>
+      </OKLink>
+      <KOLink id="sv1#miu8#kln38" to="sv1#page4#mssu3" name="KOFlow12">
+        <LinkParameter id="sv1#miu8#kln38#par365" name="Creating your account failed_message" target="sv1#page4#mssu3.sv1#page4#mssu3#ph2" source="mov1#opm17#kocu15#ocp7"/>
+      </KOLink>
+    </ModuleInstanceUnit>
   </OperationUnits>
 </SiteView>

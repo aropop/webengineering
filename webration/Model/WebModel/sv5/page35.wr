@@ -11,7 +11,7 @@
       </Link>
     </PowerIndexUnit>
     <HierarchicalIndexUnit gr:x="100" gr:y="0" id="sv5#page35#hinu4" name="Offer" sortable="false" entity="ent8" displayAttributes="ent8#att58 ent8#att28" linkOrder="sv5#page35#hinu4#ln95 sv5#page35#hinu4#ln108">
-      <Link id="sv5#page35#hinu4#ln95" name="Flow95" to="sv5#page36#dau10" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv5#page35#hinu4#ln95" name="View Offer" to="sv5#page36#dau10" automaticCoupling="true" type="normal" validate="true"/>
       <HierarchicalIndexLevel id="sv5#page35#hinu4#hiulvl4" name="Level4" entity="ent19" role="rel10#role20">
         <HierarchicalIndexLevel id="sv5#page35#hinu4#hiulvl4#hiulvl5" name="Level5" entity="ent20" role="rel3#role6" displayAttributes="ent20#att67 ent20#att68 ent20#att29"/>
       </HierarchicalIndexLevel>
@@ -27,11 +27,11 @@
         <layout:Unit unitId="sv5#page35#pwu15">
           <layout:Link link="sv5#page35#pwu15#ln96"/>
           <layout:Link link="sv5#page35#pwu15#ln97"/>
-          <layout:Attribute attribute="userName"/>
-          <layout:Attribute attribute="email"/>
-          <layout:Attribute attribute="User#att1"/>
-          <layout:Attribute attribute="User#att2"/>
-          <layout:Attribute attribute="User#att25"/>
+          <layout:Attribute attribute="userName" label="Username"/>
+          <layout:Attribute attribute="email" label="Email"/>
+          <layout:Attribute attribute="User#att1" label="Location"/>
+          <layout:Attribute attribute="User#att2" label="Birthdate"/>
+          <layout:Attribute attribute="User#att25" label="Disabled"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -41,11 +41,11 @@
       <layout:Cell/>
       <layout:Cell colspan="6">
         <layout:Unit unitId="sv5#page35#hinu4">
-          <layout:Attribute attribute="ent8#att58"/>
-          <layout:Attribute attribute="ent8#att28"/>
-          <layout:Attribute attribute="ent20#att67"/>
-          <layout:Attribute attribute="ent20#att68"/>
-          <layout:Attribute attribute="ent20#att29"/>
+          <layout:Attribute attribute="ent8#att58" label="Name"/>
+          <layout:Attribute attribute="ent8#att28" label="Angel Username"/>
+          <layout:Attribute attribute="ent20#att67" label="Stars"/>
+          <layout:Attribute attribute="ent20#att68" label="Comment"/>
+          <layout:Attribute attribute="ent20#att29" label="Written By"/>
           <layout:Link link="sv5#page35#hinu4#ln95"/>
           <layout:Link link="sv5#page35#hinu4#ln108"/>
         </layout:Unit>

@@ -2,12 +2,30 @@
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv3#page41#enu13" name="Update profile" entity="ent1" linkOrder="sv3#page41#enu13#ln101" fieldOrder="sv3#page41#enu13#fld40 sv3#page41#enu13#fld41 sv3#page41#enu13#fld45 sv3#page41#enu13#fld38 sv3#page41#enu13#fld42 sv3#page41#enu13#fld43 sv3#page41#enu13#fld44 sv3#page41#enu13#fld39">
       <Field id="sv3#page41#enu13#fld38" name="profession" type="string" modifiable="true" attribute="ent1#att5"/>
-      <Field id="sv3#page41#enu13#fld39" name="picture" type="blob" modifiable="true" contentType="image" attribute="ent1#att7"/>
-      <Field id="sv3#page41#enu13#fld40" name="userName" type="string" modifiable="true" attribute="userName"/>
-      <Field id="sv3#page41#enu13#fld41" name="password" type="password" modifiable="true" attribute="password"/>
-      <Field id="sv3#page41#enu13#fld42" name="email" type="string" modifiable="true" attribute="email"/>
+      <Field id="sv3#page41#enu13#fld39" name="picture" type="blob" modifiable="true" contentType="image"/>
+      <Field id="sv3#page41#enu13#fld40" name="userName" type="string" modifiable="true" attribute="userName">
+        <VRules>
+          <ValueLengthValidationRule id="sv3#page41#enu13#fld40#vl5" name="Value Length5" predicate="min" value="6"/>
+          <MandatoryValidationRule id="sv3#page41#enu13#fld40#mnd8" name="Mandatory8"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#page41#enu13#fld41" name="password" type="password" modifiable="true" attribute="password">
+        <VRules>
+          <ValueLengthValidationRule id="sv3#page41#enu13#fld41#vl6" name="Value Length6" predicate="min" value="6"/>
+          <MandatoryValidationRule id="sv3#page41#enu13#fld41#mnd9" name="Mandatory9"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#page41#enu13#fld42" name="email" type="string" modifiable="true" attribute="email">
+        <VRules>
+          <EMailValidationRule id="sv3#page41#enu13#fld42#email2" name="EMail2" errorMessage="This Field should be a valid email"/>
+        </VRules>
+      </Field>
       <Field id="sv3#page41#enu13#fld43" name="location" type="string" modifiable="true" attribute="User#att1"/>
-      <Field id="sv3#page41#enu13#fld44" name="birthdate" type="date" modifiable="true" attribute="User#att2"/>
+      <Field id="sv3#page41#enu13#fld44" name="birthdate" type="date" modifiable="true" attribute="User#att2">
+        <VRules>
+          <CompareValidationRule id="sv3#page41#enu13#fld44#cmp7" name="Compare7" predicate="lteq" value="today()"/>
+        </VRules>
+      </Field>
       <Link id="sv3#page41#enu13#ln101" name="Update" to="sv3#miu24" type="normal" validate="true">
         <LinkParameter id="sv3#page41#enu13#ln101#par312" name="birthdate_birthdate" source="sv3#page41#enu13#fld44" target="sv3#miu24.mov1#opm15#icu19#icp49"/>
         <LinkParameter id="sv3#page41#enu13#ln101#par313" name="email_email" source="sv3#page41#enu13#fld42" target="sv3#miu24.mov1#opm15#icu19#icp51"/>

@@ -1,0 +1,55 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="660" gr:y="784" id="mov1#opm17" name="Create Homeless">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="0" gr:y="160" id="mov1#opm17#icu23" name="Input Port">
+      <InputCollectorParameter id="mov1#opm17#icu23#icp58" name="Password_PASSING"/>
+      <InputCollectorParameter id="mov1#opm17#icu23#icp59" name="Username_PASSING"/>
+      <InputCollectorParameter id="mov1#opm17#icu23#icp60" name="Location_PASSING"/>
+      <InputCollectorParameter id="mov1#opm17#icu23#icp61" name="nickname_PASSING"/>
+      <InputCollectorParameter id="mov1#opm17#icu23#icp62" name="Image"/>
+      <InputCollectorParameter id="mov1#opm17#icu23#icp63" name="Email_PASSING"/>
+      <InputCollectorParameter id="mov1#opm17#icu23#icp64" name="yearsOnStreet_PASSING"/>
+      <InputCollectorParameter id="mov1#opm17#icu23#icp65" name="Angel or Homeless_PASSING"/>
+      <InputCollectorParameter id="mov1#opm17#icu23#icp66" name="Birthdate_PASSING"/>
+      <OKLink id="mov1#opm17#icu23#oln92" to="mov1#opm17#sim5" validate="true" name="Submit">
+        <LinkParameter id="mov1#opm17#icu23#oln92#par355" name="Location_PASSING" passing="true" source="mov1#opm17#icu23#icp60"/>
+        <LinkParameter id="mov1#opm17#icu23#oln92#par351" name="Profile Picture_PASSING_Image" target="mov1#opm17#sim5.image" source="mov1#opm17#icu23#icp62"/>
+        <LinkParameter id="mov1#opm17#icu23#oln92#par352" name="Angel or Homeless_PASSING" passing="true" source="mov1#opm17#icu23#icp65"/>
+        <LinkParameter id="mov1#opm17#icu23#oln92#par356" source="mov1#opm17#icu23#icp61" name="nickname_PASSING" passing="true"/>
+        <LinkParameter id="mov1#opm17#icu23#oln92#par353" name="Birthdate_PASSING" passing="true" source="mov1#opm17#icu23#icp66"/>
+        <LinkParameter id="mov1#opm17#icu23#oln92#par359" source="mov1#opm17#icu23#icp64" name="yearsOnStreet_PASSING" passing="true"/>
+        <LinkParameter id="mov1#opm17#icu23#oln92#par357" name="Password_PASSING" passing="true" source="mov1#opm17#icu23#icp58"/>
+        <LinkParameter id="mov1#opm17#icu23#oln92#par354" name="Email_PASSING" passing="true" source="mov1#opm17#icu23#icp63"/>
+        <LinkParameter id="mov1#opm17#icu23#oln92#par358" name="Username_PASSING" passing="true" source="mov1#opm17#icu23#icp59"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <KOCollectorUnit gr:x="800" gr:y="300" id="mov1#opm17#kocu15" name="KO Port15">
+      <OutputCollectorParameter id="mov1#opm17#kocu15#ocp7" name="Creating your account failed_message"/>
+    </KOCollectorUnit>
+    <OKCollectorUnit gr:x="800" gr:y="0" id="mov1#opm17#okcu17" name="OK Port17">
+      <OutputCollectorParameter id="mov1#opm17#okcu17#ocp8" name="userName"/>
+      <OutputCollectorParameter id="mov1#opm17#okcu17#ocp9" name="password"/>
+    </OKCollectorUnit>
+    <ScaleImageUnit id="mov1#opm17#sim5" name="Scale" gr:x="410" gr:y="260" width="70" height="70">
+      <OKLink id="mov1#opm17#sim5#oln95" name="OKFlow91" to="mov1#opm17#cru16">
+        <LinkParameter id="mov1#opm17#sim5#oln95#par369" name="Birthdate_PASSING_birthdate" sourceLinkParameter="mov1#opm17#icu23#oln92#par353" target="mov1#opm17#cru16.User#att2"/>
+        <LinkParameter id="mov1#opm17#sim5#oln95#par370" name="Email_PASSING_email" sourceLinkParameter="mov1#opm17#icu23#oln92#par354" target="mov1#opm17#cru16.email"/>
+        <LinkParameter id="mov1#opm17#sim5#oln95#par371" name="0_isDisabled" target="mov1#opm17#cru16.User#att25" sourceValue="0"/>
+        <LinkParameter id="mov1#opm17#sim5#oln95#par372" name="Location_PASSING_location" sourceLinkParameter="mov1#opm17#icu23#oln92#par355" target="mov1#opm17#cru16.User#att1"/>
+        <LinkParameter id="mov1#opm17#sim5#oln95#par373" name="nickname_PASSING_nickname" sourceLinkParameter="mov1#opm17#icu23#oln92#par356" target="mov1#opm17#cru16.ent3#att12"/>
+        <LinkParameter id="mov1#opm17#sim5#oln95#par374" name="Password_PASSING_password" sourceLinkParameter="mov1#opm17#icu23#oln92#par357" target="mov1#opm17#cru16.password"/>
+        <LinkParameter id="mov1#opm17#sim5#oln95#par375" name="Scaled Image_picture" source="scaledImage" target="mov1#opm17#cru16.User#att8"/>
+        <LinkParameter id="mov1#opm17#sim5#oln95#par376" name="Username_PASSING_userName" sourceLinkParameter="mov1#opm17#icu23#oln92#par358" target="mov1#opm17#cru16.userName"/>
+        <LinkParameter id="mov1#opm17#sim5#oln95#par377" name="yearsOnStreet_PASSING_yearsOnStreet" sourceLinkParameter="mov1#opm17#icu23#oln92#par359" target="mov1#opm17#cru16.ent3#att16"/>
+      </OKLink>
+    </ScaleImageUnit>
+    <CreateUnit id="mov1#opm17#cru16" name="Create Homeless" gr:x="400" gr:y="20" entity="ent3">
+      <OKLink id="mov1#opm17#cru16#oln96" to="mov1#opm17#okcu17" name="OKFlow25">
+        <LinkParameter id="mov1#opm17#cru16#oln96#par378" source="userNameArray" name="userName_Username" target="mov1#opm17#okcu17#ocp8"/>
+        <LinkParameter id="mov1#opm17#cru16#oln96#par379" source="passwordArray" name="password_Password" target="mov1#opm17#okcu17#ocp9"/>
+      </OKLink>
+      <KOLink id="mov1#opm17#cru16#kln40" to="mov1#opm17#kocu15" name="KOFlow12">
+        <LinkParameter id="mov1#opm17#cru16#kln40#par380" sourceValue="Creating your account failed" name="Creating your account failed_message" target="mov1#opm17#kocu15#ocp7"/>
+      </KOLink>
+    </CreateUnit>
+  </OperationUnits>
+</OperationModule>

@@ -10,7 +10,7 @@ insert into `group` values
 insert into group_module values
 (1,4),
 (2,4);
-insert into user values
-(1, "admin", "admin", "admin@admin.be", "Brussels", "1990-01-01", 0, 3, NULL, NULL);
+insert into user (oid, username, password, email, location, birthdate, isDisabled, group_oid_2) values
+(1, "admin", "admin", "admin@admin.be", "Brussels", "1990-01-01", 0, 3);
 insert into administrator values
 (1);

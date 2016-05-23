@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="730" gr:y="-10" id="sv4#page8" name="Offer">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="745" gr:y="-10" id="sv4#page8" name="Offer">
   <ContentUnits>
-    <DataUnit gr:x="15" gr:y="85" id="sv4#page8#dau2" name="Offer detail" entity="ent8" linkOrder="sv4#page8#dau2#ln12 sv4#page8#dau2#ln81" displayAttributes="ent8#att58 ent8#att36 ent8#att39 ent8#att40 ent8#att55 ent8#att26">
+    <DataUnit gr:x="0" gr:y="85" id="sv4#page8#dau2" name="Offer detail" entity="ent8" linkOrder="sv4#page8#dau2#ln12 sv4#page8#dau2#ln81" displayAttributes="ent8#att58 ent8#att36 ent8#att39 ent8#att40 ent8#att55 ent8#att26">
       <Selector id="sv4#page8#dau2#su3" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv4#page8#dau2#su3#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>
@@ -15,13 +15,13 @@
         <LinkParameter id="sv4#page8#dau2#ln81#par197" name="OfferToAngel.oid_userid [oid]" source="data.rel4#role8_userOID" target="sv4#miu14.mov1#hym3#icu13#icp26"/>
       </Link>
     </DataUnit>
-    <SelectorUnit gr:x="130" gr:y="0" id="sv4#page8#seu8" name="userRequestCheck" entity="ent17">
+    <SelectorUnit gr:x="115" gr:y="0" id="sv4#page8#seu8" name="userRequestCheck" entity="ent17">
       <Selector id="sv4#page8#seu8#su34" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv4#page8#seu8#su34#rcond12" name="UserCondition" predicate="in" implied="false" role="rel11#role21"/>
         <RelationshipRoleCondition id="sv4#page8#seu8#su34#rcond13" name="OfferCondition" predicate="in" implied="false" role="rel12#role24"/>
       </Selector>
     </SelectorUnit>
-    <GetUnit gr:x="315" gr:y="20" id="sv4#page8#gtu14" name="Get14" contextParameters="UserCtxParam">
+    <GetUnit gr:x="300" gr:y="20" id="sv4#page8#gtu14" name="Get14" contextParameters="UserCtxParam">
       <Link id="sv4#page8#gtu14#ln72" name="Flow72" to="sv4#page8#seu8" type="transport" validate="true">
         <LinkParameter id="sv4#page8#gtu14#ln72#par177" name="UserCtxParam.oid_RoleCondition12 [oid]" source="sv4#page8#gtu14.UserCtxParam" target="sv4#page8#seu8#su34#rcond12.userOID"/>
       </Link>
@@ -37,7 +37,7 @@
           <layout:Attribute attribute="ent8#att36" label="Description"/>
           <layout:Attribute attribute="ent8#att39" label="Amount available"/>
           <layout:Attribute attribute="ent8#att40" label="Expiry Date"/>
-          <layout:Attribute attribute="ent8#att55"/>
+          <layout:Attribute attribute="ent8#att55" label="Delivery Method"/>
           <layout:Attribute attribute="ent8#att26" label="Offered by"/>
         </layout:Unit>
       </layout:Cell>

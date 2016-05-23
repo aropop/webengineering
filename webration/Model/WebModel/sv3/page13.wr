@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page13" name="Profile" landmark="true" gr:x="1995" gr:y="160">
   <ContentUnits>
-    <DataUnit id="sv3#page13#dau6" name="Profile" gr:x="160" gr:y="0" entity="ent1" displayAttributes="userName email User#att1 User#att2 ent1#att5 ent1#att7 ent1#att21" linkOrder="sv3#page13#dau6#ln98 sv3#page13#dau6#ln84">
+    <DataUnit id="sv3#page13#dau6" name="Profile" gr:x="160" gr:y="0" entity="ent1" displayAttributes="userName email User#att1 User#att2 ent1#att5 ent1#att21" linkOrder="sv3#page13#dau6#ln98 sv3#page13#dau6#ln84">
       <Selector id="sv3#page13#dau6#su7" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#page13#dau6#su7#kcond6" name="KeyCondition6" predicate="in" implied="false"/>
       </Selector>
@@ -41,15 +41,14 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page13#dau6">
+          <layout:Link link="sv3#page13#dau6#ln98"/>
+          <layout:Link link="sv3#page13#dau6#ln84"/>
           <layout:Attribute attribute="userName" label="Username"/>
           <layout:Attribute attribute="email" label="Email"/>
           <layout:Attribute attribute="User#att1" label="Location"/>
           <layout:Attribute attribute="User#att2" label="Birthday"/>
           <layout:Attribute attribute="ent1#att5" label="Profession"/>
-          <layout:Attribute attribute="ent1#att7" label="Picture"/>
           <layout:Attribute attribute="ent1#att21" label="Transactions completed"/>
-          <layout:Link link="sv3#page13#dau6#ln98"/>
-          <layout:Link link="sv3#page13#dau6#ln84"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

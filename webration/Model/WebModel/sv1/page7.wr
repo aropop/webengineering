@@ -1,9 +1,22 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="120" gr:y="60" id="sv1#page7" name="Register" landmark="true">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv1#page7#enu5" name="Registerform" entity="User" linkOrder="sv1#page7#enu5#ln7">
-      <Field id="sv1#page7#enu5#fld14" name="Username" type="string" modifiable="true" attribute="userName"/>
-      <Field id="sv1#page7#enu5#fld15" name="Password" type="password" modifiable="true" attribute="password"/>
-      <Field id="sv1#page7#enu5#fld16" name="Email" type="string" modifiable="true" attribute="email"/>
+      <Field id="sv1#page7#enu5#fld14" name="Username" type="string" modifiable="true" attribute="userName">
+        <VRules>
+          <ValueLengthValidationRule id="sv1#page7#enu5#fld14#vl1" name="Value Length1" predicate="min" value="6"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#page7#enu5#fld15" name="Password" type="password" modifiable="true" attribute="password">
+        <VRules>
+          <MandatoryValidationRule id="sv1#page7#enu5#fld15#mnd2" name="Mandatory"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#page7#enu5#fld16" name="Email" type="string" modifiable="true" attribute="email">
+        <VRules>
+          <isEmail id="sv1#page7#enu5#fld16#vr1" name="isEmail" errorMessage="This Field should be a valid email"/>
+          <EMailValidationRule id="sv1#page7#enu5#fld16#email1" name="EMail1" errorMessage="This Field should be a valid email"/>
+        </VRules>
+      </Field>
       <Link id="sv1#page7#enu5#ln7" name="Register" to="sv1#switch4" type="normal" validate="true">
         <LinkParameter id="sv1#page7#enu5#ln7#par77" name="Angel or Homeless_PASSING" source="sv1#page7#enu5#sfld2" passing="true"/>
         <LinkParameter id="sv1#page7#enu5#ln7#par79" name="Angel or Homeless_Switch" source="sv1#page7#enu5#sfld2" target="sv1#switch4.switch"/>
@@ -13,13 +26,28 @@
         <LinkParameter id="sv1#page7#enu5#ln7#par83" name="Location_PASSING" source="sv1#page7#enu5#fld5" passing="true"/>
         <LinkParameter id="sv1#page7#enu5#ln7#par84" name="Password_PASSING" source="sv1#page7#enu5#fld15" passing="true"/>
         <LinkParameter id="sv1#page7#enu5#ln7#par85" name="Username_PASSING" source="sv1#page7#enu5#fld14" passing="true"/>
+        <LinkParameter id="sv1#page7#enu5#ln7#par191" name="Profile Picture_PASSING" source="sv1#page7#enu5#fld57" passing="true"/>
       </Link>
-      <Field id="sv1#page7#enu5#fld4" name="Birthdate" type="date" modifiable="true"/>
-      <Field id="sv1#page7#enu5#fld5" name="Location" type="string" modifiable="true"/>
+      <Field id="sv1#page7#enu5#fld4" name="Birthdate" type="date" modifiable="true">
+        <VRules>
+          <TypeValidationRule id="sv1#page7#enu5#fld4#tvr1" name="Type Validation1" type="date"/>
+          <CompareValidationRule id="sv1#page7#enu5#fld4#cmp1" name="Compare1" predicate="lteq" value="today()"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#page7#enu5#fld5" name="Location" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv1#page7#enu5#fld5#mnd1" name="Mandatory"/>
+        </VRules>
+      </Field>
       <SelectionField id="sv1#page7#enu5#sfld2" name="Angel or Homeless" type="integer" splitOutput="false">
         <Slot id="sv1#page7#enu5#sfld2#slot2" name="labels" label="true" output="false" value="Homeless|Angel"/>
         <Slot id="sv1#page7#enu5#sfld2#slot3" name="Values" label="false" output="true" value="1|2"/>
+        <VRules/>
       </SelectionField>
+      <VRules>
+        <FormNotEmptyValidationRule id="sv1#page7#enu5#fnevr1" name="Form Not Empty"/>
+      </VRules>
+      <Field id="sv1#page7#enu5#fld57" name="Profile Picture" type="blob" modifiable="true" contentType="image/png"/>
     </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -32,6 +60,7 @@
           <layout:Field field="sv1#page7#enu5#fld16"/>
           <layout:Field field="sv1#page7#enu5#fld4"/>
           <layout:Field field="sv1#page7#enu5#fld5"/>
+          <layout:Field field="sv1#page7#enu5#fld57"/>
           <layout:Field field="sv1#page7#enu5#sfld2"/>
         </layout:Unit>
       </layout:Cell>

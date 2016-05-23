@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="635" gr:y="295" id="mov1#opm12" name="Add Rating">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="445" gr:y="280" id="mov1#opm12" name="Add Rating">
   <OperationUnits>
     <InputCollectorUnit id="mov1#opm12#icu15" gr:x="30" gr:y="60">
       <InputCollectorParameter id="mov1#opm12#icu15#icp30" name="transactionid"/>

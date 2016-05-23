@@ -1,5 +1,5 @@
 <DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
-  <Entity id="User" name="User" duration="persistent" gr:x="35" gr:y="300" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att1 User#att2 User#att25" db:database="db1" db:table="user">
+  <Entity id="User" name="User" duration="persistent" gr:x="35" gr:y="300" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att1 User#att2 User#att25 User#att8" db:database="db1" db:table="user">
     <Attribute name="oid" id="userOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="userName" id="userName" type="string" db:column="username"/>
     <Attribute name="password" id="password" type="password" db:column="password"/>
@@ -7,6 +7,7 @@
     <Attribute id="User#att1" name="location" type="string" db:column="location"/>
     <Attribute id="User#att2" name="birthdate" type="date" db:column="birthdate"/>
     <Attribute id="User#att25" name="isDisabled" type="boolean" db:column="isdisabled"/>
+    <Attribute id="User#att8" name="picture" type="blob" db:column="picture"/>
   </Entity>
   <Entity id="Group" name="Group" duration="persistent" gr:x="-235" gr:y="440" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db1" db:table="group">
     <Attribute name="oid" id="groupOID" type="integer" key="true" db:column="oid"/>
@@ -49,9 +50,8 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="595" gr:y="65" id="ent1" name="Angel" duration="persistent" attributeOrder="ent1#att5 ent1#att7 ent1#att14 ent1#att21" db:database="db1" db:table="angel">
+  <Entity gr:x="595" gr:y="65" id="ent1" name="Angel" duration="persistent" attributeOrder="ent1#att5 ent1#att14 ent1#att21" db:database="db1" db:table="angel">
     <Attribute id="ent1#att5" name="profession" type="string" db:column="profession"/>
-    <Attribute id="ent1#att7" name="picture" type="blob" contentType="image" db:column="picture"/>
     <Generalization superEntity="User">
       <db:JoinColumn attribute="userOID" name="user_oid"/>
     </Generalization>
@@ -81,11 +81,11 @@
     <Attribute id="ent9#att31" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent9#att32" name="name" type="string" db:column="name"/>
   </Entity>
-  <Relationship id="rel5" name="Offer_Type" sourceEntity="ent8" targetEntity="ent9" db:database="db1" db:table="offer_type">
+  <Relationship id="rel5" name="Offer_Type" sourceEntity="ent8" targetEntity="ent9" db:database="db1" db:table="tag">
     <RelationshipRole1 id="rel5#role9" name="OfferToType" maxCard="N">
       <db:JoinColumn attribute="ent8#att27" name="offer_oid"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel5#role10" name="TypeToOffer" maxCard="N">
+    <RelationshipRole2 id="rel5#role10" name="TypeToOffer" maxCard="1">
       <db:JoinColumn attribute="ent9#att31" name="tag_oid"/>
     </RelationshipRole2>
   </Relationship>
@@ -207,10 +207,11 @@
     <Attribute id="ent21#att71" name="comment" type="string" db:column="comment"/>
     <Attribute id="ent21#att10" name="date" type="date" db:column="date"/>
   </Entity>
-  <Entity gr:x="-20" gr:y="705" id="ent22" name="GeneralInformation" duration="persistent" attributeOrder="ent22#att72 ent22#att73 ent22#att74" db:database="db1" db:table="generalinformation">
+  <Entity gr:x="-20" gr:y="705" id="ent22" name="GeneralInformation" duration="persistent" attributeOrder="ent22#att72 ent22#att73 ent22#att30 ent22#att33" db:database="db1" db:table="generalinformation">
     <Attribute id="ent22#att72" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent22#att73" name="subject" type="string" db:column="subject"/>
-    <Attribute id="ent22#att74" name="info" type="text" db:column="info"/>
+    <Attribute id="ent22#att30" name="link" type="string" db:column="link"/>
+    <Attribute id="ent22#att33" name="category" type="string" db:column="category"/>
   </Entity>
   <Entity gr:x="65" gr:y="645" id="ent23" name="Administrator" duration="persistent" db:database="db1" db:table="administrator">
     <Generalization superEntity="User">

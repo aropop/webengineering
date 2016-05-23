@@ -1,8 +1,16 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1125" gr:y="-425" id="sv4#page24" name="Enter Rating">
   <ContentUnits>
     <EntryUnit gr:x="20" gr:y="180" id="sv4#page24#enu11" name="Rate Transaction" entity="ent20" linkOrder="sv4#page24#enu11#ln6">
-      <Field id="sv4#page24#enu11#fld33" name="stars" type="integer" modifiable="true" attribute="ent20#att67"/>
-      <Field id="sv4#page24#enu11#fld34" name="comment" type="text" modifiable="true" attribute="ent20#att68" contentType="text/plain"/>
+      <Field id="sv4#page24#enu11#fld33" name="stars" type="integer" modifiable="true" attribute="ent20#att67">
+        <VRules>
+          <MandatoryValidationRule id="sv4#page24#enu11#fld33#mnd15" name="Mandatory15"/>
+        </VRules>
+      </Field>
+      <Field id="sv4#page24#enu11#fld34" name="comment" type="text" modifiable="true" attribute="ent20#att68" contentType="text/plain">
+        <VRules>
+          <MandatoryValidationRule id="sv4#page24#enu11#fld34#mnd16" name="Mandatory16"/>
+        </VRules>
+      </Field>
       <Link id="sv4#page24#enu11#ln6" name="Submit" to="sv4#miu16" type="normal" validate="true">
         <LinkParameter id="sv4#page24#enu11#ln6#par21" name="comment_comment" source="sv4#page24#enu11#fld34" target="sv4#miu16.mov1#opm12#icu15#icp29"/>
         <LinkParameter id="sv4#page24#enu11#ln6#par23" name="stars_stars" source="sv4#page24#enu11#fld33" target="sv4#miu16.mov1#opm12#icu15#icp28"/>

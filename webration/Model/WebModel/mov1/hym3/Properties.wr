@@ -10,7 +10,6 @@
     <CreateUnit gr:x="595" gr:y="85" id="mov1#hym3#cru2" name="Create Message" entity="ent4">
       <OKLink id="mov1#hym3#cru2#oln47" name="OKFlow47" to="mov1#hym3#cru10">
         <LinkParameter id="mov1#hym3#cru2#oln47#par193" name="oid_Message.oid(MessageNotificationToMessage)" source="ent4#att3Array" target="mov1#hym3#cru10.rel20#role40.ent4#att3"/>
-        <LinkParameter id="mov1#hym3#cru2#oln47#par194" name="receiver_PASSING_User.oid(NotificationToUser)" sourceLinkParameter="mov1#hym3#page23#enu10#ln79#par192" target="mov1#hym3#cru10.rel2#role3.userOID"/>
       </OKLink>
       <KOLink id="mov1#hym3#cru2#kln23" name="KOFlow23" to="mov1#hym3#kocu7" automaticCoupling="true"/>
     </CreateUnit>
@@ -18,10 +17,14 @@
       <KOLink id="mov1#hym3#cru10#kln17" name="KOFlow17" to="mov1#hym3#kocu7" automaticCoupling="true"/>
       <OKLink id="mov1#hym3#cru10#oln48" name="OKFlow48" to="mov1#hym3#okcu7" automaticCoupling="true"/>
     </CreateUnit>
-    <TimeUnit gr:x="600" gr:y="280" id="mov1#hym3#tmu3" name="Time3" linkOrder="mov1#hym3#tmu3#ln80">
-      <Link id="mov1#hym3#tmu3#ln80" name="Flow80" to="mov1#hym3#cru2" type="transport" validate="true">
-        <LinkParameter id="mov1#hym3#tmu3#ln80#par191" name="Current/Input Timestamp_datetime" source="currentTimestamp" target="mov1#hym3#cru2.ent4#att20"/>
-      </Link>
+    <TimeUnit gr:x="600" gr:y="280" id="mov1#hym3#tmu3" name="Time3">
+      <OKLink id="mov1#hym3#tmu3#oln90" name="OKFlow90" to="mov1#hym3#cru2" gr:bendpoints="26,-86,1,99">
+        <LinkParameter id="mov1#hym3#tmu3#oln90#par131" name="body_PASSING_body" sourceLinkParameter="mov1#hym3#page23#enu10#ln79#par12" target="mov1#hym3#cru2.ent4#att6"/>
+        <LinkParameter id="mov1#hym3#tmu3#oln90#par187" name="Current/Input Timestamp_datetime" source="currentTimestamp" target="mov1#hym3#cru2.ent4#att20"/>
+        <LinkParameter id="mov1#hym3#tmu3#oln90#par188" name="title_PASSING_title" sourceLinkParameter="mov1#hym3#page23#enu10#ln79#par130" target="mov1#hym3#cru2.ent4#att4"/>
+        <LinkParameter id="mov1#hym3#tmu3#oln90#par189" name="receiver_PASSING_User.oid(ReceiversMessage)" sourceLinkParameter="mov1#hym3#page23#enu10#ln79#par192" target="mov1#hym3#cru2.rel19#role37.userOID"/>
+        <LinkParameter id="mov1#hym3#tmu3#oln90#par190" name="sender_PASSING_User.oid(SendsMessage_Inverse)" sourceLinkParameter="mov1#hym3#page23#enu10#ln79#par14" target="mov1#hym3#cru2.rel6#role12.userOID"/>
+      </OKLink>
     </TimeUnit>
     <KOCollectorUnit gr:x="1125" gr:y="255" id="mov1#hym3#kocu7" name="KO Port7"/>
   </OperationUnits>
