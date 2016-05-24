@@ -36,19 +36,19 @@
       <Case value="false"/>
       <OKLink id="mov1#opm15#switch8#oln76" name="OKFlow68" to="mov1#opm15#mfu6" code="true" gr:bendpoints="75,-39,-95,-44">
         <LinkParameter id="mov1#opm15#switch8#oln76#par59" name="Annonymous_usedName" sourceValue="Annonymous" target="mov1#opm15#mfu6.User#att35"/>
+        <LinkParameter id="mov1#opm15#switch8#oln76#par36" name="Scaled Image_PASSING_picture" sourceLinkParameter="mov1#opm15#sim4#oln79#par34" target="mov1#opm15#mfu6.User#att8"/>
       </OKLink>
       <OKLink id="mov1#opm15#switch8#oln77" name="OKFlow70" to="mov1#opm15#mfu6" code="false" gr:bendpoints="68,22,-87,27">
         <LinkParameter id="mov1#opm15#switch8#oln77#par58" name="username_PASSING_usedName" sourceLinkParameter="mov1#opm15#sim4#oln79#par308" target="mov1#opm15#mfu6.User#att35"/>
+        <LinkParameter id="mov1#opm15#switch8#oln77#par60" name="Scaled Image_PASSING_picture" sourceLinkParameter="mov1#opm15#sim4#oln79#par34" target="mov1#opm15#mfu6.User#att8"/>
       </OKLink>
     </SwitchUnit>
     <ScaleImageUnit id="mov1#opm15#sim4" name="Scale" gr:x="275" gr:y="255" width="70" height="70" format="png">
       <OKLink id="mov1#opm15#sim4#oln79" name="OKFlow69" to="mov1#opm15#switch8">
         <LinkParameter id="mov1#opm15#sim4#oln79#par307" name="annonymous_PASSING_Switch" sourceLinkParameter="mov1#opm15#icu19#oln75#par297" target="mov1#opm15#switch8.switch"/>
         <LinkParameter id="mov1#opm15#sim4#oln79#par308" name="username_PASSING" sourceLinkParameter="mov1#opm15#icu19#oln75#par295" passing="true"/>
+        <LinkParameter id="mov1#opm15#sim4#oln79#par34" name="Scaled Image_PASSING" source="scaledImage" passing="true"/>
       </OKLink>
-      <Link id="mov1#opm15#sim4#ln100" name="Flow89" to="mov1#opm15#mfu6" type="transport" validate="true">
-        <LinkParameter id="mov1#opm15#sim4#ln100#par381" name="Scaled Image_picture" source="scaledImage" target="mov1#opm15#mfu6.User#att8"/>
-      </Link>
     </ScaleImageUnit>
     <ModifyUnit id="mov1#opm15#mfu6" entity="ent1" name="Updateangel" gr:x="455" gr:y="95">
       <KOLink id="mov1#opm15#mfu6#kln36" name="KOFlow32" to="mov1#opm15#kocu13" automaticCoupling="true"/>

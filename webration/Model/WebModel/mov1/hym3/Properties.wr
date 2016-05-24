@@ -22,8 +22,8 @@
         <LinkParameter id="mov1#hym3#tmu3#oln90#par131" name="body_PASSING_body" sourceLinkParameter="mov1#hym3#page23#enu10#ln79#par12" target="mov1#hym3#cru2.ent4#att6"/>
         <LinkParameter id="mov1#hym3#tmu3#oln90#par187" name="Current/Input Timestamp_datetime" source="currentTimestamp" target="mov1#hym3#cru2.ent4#att20"/>
         <LinkParameter id="mov1#hym3#tmu3#oln90#par188" name="title_PASSING_title" sourceLinkParameter="mov1#hym3#page23#enu10#ln79#par130" target="mov1#hym3#cru2.ent4#att4"/>
-        <LinkParameter id="mov1#hym3#tmu3#oln90#par189" name="receiver_PASSING_User.oid(ReceiversMessage)" sourceLinkParameter="mov1#hym3#page23#enu10#ln79#par192" target="mov1#hym3#cru2.rel19#role37.userOID"/>
-        <LinkParameter id="mov1#hym3#tmu3#oln90#par190" name="sender_PASSING_User.oid(SendsMessage_Inverse)" sourceLinkParameter="mov1#hym3#page23#enu10#ln79#par14" target="mov1#hym3#cru2.rel6#role12.userOID"/>
+        <LinkParameter id="mov1#hym3#tmu3#oln90#par189" name="receiver_PASSING_User.oid(ReceiversMessage)" sourceLinkParameter="mov1#hym3#page23#enu10#ln79#par14" target="mov1#hym3#cru2.rel19#role37.userOID"/>
+        <LinkParameter id="mov1#hym3#tmu3#oln90#par24" name="receiver_PASSING_User.oid(MessageToUser_Receiver)" sourceLinkParameter="mov1#hym3#page23#enu10#ln79#par192" target="mov1#hym3#cru2.rel21#role41.userOID"/>
       </OKLink>
     </TimeUnit>
     <KOCollectorUnit gr:x="1125" gr:y="255" id="mov1#hym3#kocu7" name="KO Port7"/>

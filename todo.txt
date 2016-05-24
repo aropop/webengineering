@@ -7,6 +7,7 @@ TODO:
 - anonymous angel: als ge een message krijgt of wilt sturen, dan moogt ge zijn naam niet zien
 - offers zoeken op tags (PARTIAL)
 - delete user --> moet alles verwijderen van die user (in alle tabellen)
+- update profile homeless (en wss angels ook)
 
 EXTRA:
 - password bekijken (hashen)
@@ -19,3 +20,4 @@ Scritps
 Tag
 waarom we if null niet in de module voor average rating
 zagen over cloud is offline
+newlines in messages

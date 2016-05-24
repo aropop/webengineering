@@ -1,34 +1,15 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv4" name="Homeless Page" protected="true" homePage="sv4#page2" landmarks="sv4#page2 sv4#page5 sv4#page28 sv4#page26 sv4#page12 sv4#miu21 sv4#lou1 sv4#area3">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv4" name="Homeless Page" protected="true" homePage="sv4#page2" landmarks="sv4#page2 sv4#page5 sv4#page28 sv4#page12 sv4#miu21 sv4#lou1 sv4#area3 sv4#miu34">
   <OperationUnits>
-    <SwitchUnit gr:x="1220" gr:y="215" id="sv4#switch1" name="ConfirmCheck">
-      <Case value="true"/>
-      <Case value="false"/>
-      <OKLink id="sv4#switch1#oln5" name="OKFlow5" to="sv4#page8" automaticCoupling="true" code="false"/>
-      <OKLink id="sv4#switch1#oln9" name="OKFlow9" to="sv4#miu5" code="true">
-        <LinkParameter id="sv4#switch1#oln9#par24" name="id_PASSING_OfferId" sourceLinkParameter="sv4#page14#enu3#ln13#par17" target="sv4#miu5.mov1#opm4#icu4#icp1"/>
-        <LinkParameter id="sv4#switch1#oln9#par137" name="id_PASSING" sourceLinkParameter="sv4#page14#enu3#ln13#par17" passing="true"/>
-        <LinkParameter id="sv4#switch1#oln9#par175" name="OfferToAngel.oid_PASSING_angelid" sourceLinkParameter="sv4#page14#enu3#ln13#par174" target="sv4#miu5.mov1#opm4#icu4#icp25"/>
-        <LinkParameter id="sv4#switch1#oln9#par419" name="Address_PASSING_deliveryaddress" sourceLinkParameter="sv4#page14#enu3#ln13#par416" target="sv4#miu5.mov1#opm4#icu4#icp67"/>
-      </OKLink>
-    </SwitchUnit>
     <ModuleInstanceUnit gr:x="1200" gr:y="345" id="sv4#miu5" action="true" moduleId="mov1#opm4">
-      <OKLink id="sv4#miu5#oln10" name="OKFlow10" to="sv4#page8#dau2">
-        <LinkParameter id="sv4#miu5#oln10#par154" name="id_PASSING_KeyCondition2 [oid]" sourceLinkParameter="sv4#switch1#oln9#par137" target="sv4#page8#dau2#su3#kcond2.ent8#att27"/>
-      </OKLink>
+      <OKLink id="sv4#miu5#oln10" name="OKFlow10" to="sv4#page8#dau2"/>
       <KOLink id="sv4#miu5#kln6" name="KOFlow6" to="sv4#page28" automaticCoupling="true" gr:bendpoints="91,-50,776,460;93,-370,778,140"/>
     </ModuleInstanceUnit>
     <LogoutUnit gr:x="80" gr:y="270" id="sv4#lou1" name="Logout" siteView="sv1" landmark="true"/>
-    <ModuleInstanceUnit id="sv4#miu10" gr:x="680" gr:y="715" moduleId="mov1#hym1" action="false">
-      <OKLink id="sv4#miu10#oln36" name="OKFlow12" to="sv4#miu14" gr:bendpoints="197,-37,-73,133">
-        <LinkParameter id="sv4#miu10#oln36#par195" name="userid_userid [oid]" source="mov1#hym1#okcu6#ocp1" target="sv4#miu14.mov1#hym3#icu13#icp26"/>
-      </OKLink>
-      <KOLink id="sv4#miu10#kln18" name="KOFlow14" to="sv4#page26" automaticCoupling="true"/>
-    </ModuleInstanceUnit>
     <ModuleInstanceUnit id="sv4#miu12" gr:x="1535" gr:y="-60" action="false" moduleId="mov1#hym2">
       <KOLink id="sv4#miu12#kln22" name="KOFlow22" to="sv4#page12" automaticCoupling="true" gr:bendpoints="10,56,25,-119"/>
     </ModuleInstanceUnit>
-    <ModuleInstanceUnit gr:x="935" gr:y="545" id="sv4#miu14" action="false" moduleId="mov1#hym3">
-      <OKLink id="sv4#miu14#oln49" name="OKFlow49" to="sv4#page26" automaticCoupling="true" gr:bendpoints="130,236,865,146;-465,238,270,148"/>
+    <ModuleInstanceUnit gr:x="935" gr:y="600" id="sv4#miu14" action="false" moduleId="mov1#hym3">
+      <OKLink id="sv4#miu14#oln49" name="OKFlow49" to="sv4#miu34" gr:bendpoints="130,236,865,146;-465,238,270,148"/>
     </ModuleInstanceUnit>
     <ModuleInstanceUnit gr:x="845" gr:y="-215" id="sv4#miu15" action="true" moduleId="mov1#opm11">
       <KOLink id="sv4#miu15#kln26" name="KOFlow26" to="sv4#page28" automaticCoupling="true" gr:bendpoints="-122,29,243,24"/>
@@ -62,5 +43,13 @@
         <LinkParameter id="sv4#sim6#oln97#par400" name="yearsOnStreet_PASSING_yearsOnStreet" sourceLinkParameter="sv4#page42#enu14#ln103#par391" target="sv4#mfu7.ent3#att16"/>
       </OKLink>
     </ScaleImageUnit>
+    <ModuleInstanceUnit gr:x="410" gr:y="675" id="sv4#miu34" moduleId="mov1#hym7" landmark="true">
+      <OKLink id="sv4#miu34#oln19" to="sv4#miu14" name="OKFlow12" gr:bendpoints="240,-86,-290,-10">
+        <LinkParameter id="sv4#miu34#oln19#par161" source="mov1#hym7#okcu22#ocp12" name="userid_userid [oid]" target="sv4#miu14.mov1#hym3#icu13#icp26"/>
+      </OKLink>
+      <OKLink id="sv4#miu34#oln18" to="sv4#miu14" validate="true" name="Reply" gr:bendpoints="301,43,-229,119">
+        <LinkParameter id="sv4#miu34#oln18#par159" source="mov1#hym7#okcu21#ocp11" name="SendsMessage_Inverse.oid_userid [oid]" target="sv4#miu14.mov1#hym3#icu13#icp26"/>
+      </OKLink>
+    </ModuleInstanceUnit>
   </OperationUnits>
 </SiteView>

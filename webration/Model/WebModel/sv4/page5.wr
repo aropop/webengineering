@@ -10,7 +10,7 @@
         <AttributesCondition id="sv4#page5#pwu2#su17#acond10" name="DateValid" predicate="gt" booleanOperator="or" implied="false" attributes="ent8#att40"/>
         <RelationshipRoleCondition id="sv4#page5#pwu2#su17#rcond3" name="hasNotRequested" predicate="notIn" implied="false" role="rel11#role21.rel12#role23"/>
         <AttributesCondition id="sv4#page5#pwu2#su17#acond2" name="searchKeyword" predicate="contains" booleanOperator="or" implied="false" attributes="ent8#att58 ent8#att36" ignoreCase="true"/>
-        <RelationshipRoleCondition id="sv4#page5#pwu2#su17#rcond23" name="tags" predicate="in" implied="false" role="rel5#role10"/>
+        <RelationshipRoleCondition id="sv4#page5#pwu2#su17#rcond23" name="tags" predicate="in" implied="false" role="rel13#role25"/>
         <AttributesCondition id="sv4#page5#pwu2#su17#acond14" name="dateisnull" predicate="null" booleanOperator="or" implied="false" attributes="ent8#att40"/>
       </Selector>
     </PowerIndexUnit>
@@ -32,17 +32,54 @@
       <Field id="sv4#page5#enu19#fld65" name="Tag" type="string" modifiable="true"/>
       <Field id="sv4#page5#enu19#fld66" name="Keyword" type="string" modifiable="true"/>
     </EntryUnit>
-    <SelectorUnit gr:x="0" gr:y="300" id="sv4#page5#seu6" name="GetTagIds" entity="ent9" distinctAttributes="ent9#att31">
+    <SelectorUnit gr:x="0" gr:y="300" id="sv4#page5#seu6" name="GetTagIds" entity="ent2">
       <Selector id="sv4#page5#seu6#su42" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="sv4#page5#seu6#su42#acond18" name="nameIs" predicate="contains" booleanOperator="or" implied="false" ignoreCase="true" attributes="ent9#att32"/>
+        <AttributesCondition id="sv4#page5#seu6#su42#acond18" name="nameIs" predicate="contains" booleanOperator="or" implied="false" ignoreCase="true" attributes="ent2#att31"/>
       </Selector>
       <Link id="sv4#page5#seu6#ln58" name="Flow58" to="sv4#page5#pwu2" type="transport" validate="true" gr:bendpoints="-60,-133,-130,143">
         <LinkParameter id="sv4#page5#seu6#ln58#par404" name="Keyword_PASSING_searchKeyword" sourceLinkParameter="sv4#page5#enu19#ln38#par403" target="sv4#page5#pwu2#su17#acond2"/>
-        <LinkParameter id="sv4#page5#seu6#ln58#par405" name="oid_tags [oid]" source="ent9#att31Array" target="sv4#page5#pwu2#su17#rcond23.ent9#att31"/>
+        <LinkParameter id="sv4#page5#seu6#ln58#par25" name="oid_tags [oid]" source="ent2#att14Array" target="sv4#page5#pwu2#su17#rcond23.ent2#att14"/>
       </Link>
     </SelectorUnit>
+    <MultiMessageUnit gr:x="30" gr:y="410" id="sv4#page5#mssu14" name="No offers available for you">
+      <Message xml:space="preserve">There are currently no offers available for you.</Message>
+    </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page5#enu19" layout:unitVisibilityCondition="sv4#page5#cexpr14" layout:unitVisibilityConditionNegated="true">
+          <layout:Link link="sv4#page5#enu19#ln38"/>
+          <layout:Field field="sv4#page5#enu19#fld65"/>
+          <layout:Field field="sv4#page5#enu19#fld66"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv4#page5#pwu2">
@@ -68,11 +105,7 @@
     </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv4#page5#enu19">
-          <layout:Link link="sv4#page5#enu19#ln38"/>
-          <layout:Field field="sv4#page5#enu19#fld65"/>
-          <layout:Field field="sv4#page5#enu19#fld66"/>
-        </layout:Unit>
+        <layout:Unit unitId="sv4#page5#mssu14" layout:unitVisibilityCondition="sv4#page5#cexpr14"/>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
@@ -86,19 +119,9 @@
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12"/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
   </layout:Grid>
+  <Variable id="sv4#page5#var9" name="amountOfOffers" unitId="sv4#page5#pwu2" type="integer" parameter="dataSize"/>
+  <ConditionExpression id="sv4#page5#cexpr14" name="noOffersAvailable">
+    <TextValue xml:space="preserve">return amountOfOffers == 0</TextValue>
+  </ConditionExpression>
 </Page>

@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page22" name="Offer" gr:x="1425" gr:y="355" layout:style="BootstrapStyle">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page22" name="Offer" gr:x="1400" gr:y="355" layout:style="BootstrapStyle">
   <ContentUnits>
-    <DataUnit id="sv3#page22#dau7" name="Offer detail" gr:x="0" gr:y="115" entity="ent8" displayAttributes="ent8#att58 ent8#att36 ent8#att39 ent8#att40" linkOrder="sv3#page22#dau7#ln8 sv3#page22#dau7#ln93 sv3#page22#dau7#ln105 sv3#page22#dau7#ln107">
+    <DataUnit id="sv3#page22#dau7" name="Offer detail" gr:x="25" gr:y="115" entity="ent8" displayAttributes="ent8#att58 ent8#att36 ent8#att39 ent8#att40 ent8#att55 ent8#att42 ent8#att43" linkOrder="sv3#page22#dau7#ln8 sv3#page22#dau7#ln93 sv3#page22#dau7#ln105 sv3#page22#dau7#ln107">
       <Selector id="sv3#page22#dau7#su23" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#page22#dau7#su23#kcond17" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>
@@ -18,18 +18,18 @@
         <LinkParameter id="sv3#page22#dau7#ln93#par239" name="oid_PASSING" source="data.ent8#att27" passing="true"/>
       </Link>
     </DataUnit>
-    <GetUnit gr:x="20" gr:y="385" id="sv3#page22#gtu1" name="User" contextParameters="UserCtxParam"/>
-    <MultiDataUnit gr:x="140" gr:y="5" id="sv3#page22#mdu1" name="Pictures" entity="ent12" displayAttributes="ent12#att38">
+    <GetUnit gr:x="45" gr:y="385" id="sv3#page22#gtu1" name="User" contextParameters="UserCtxParam"/>
+    <MultiDataUnit gr:x="165" gr:y="5" id="sv3#page22#mdu1" name="Pictures" entity="ent12" displayAttributes="ent12#att38">
       <Selector id="sv3#page22#mdu1#su38" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv3#page22#mdu1#su38#rcond19" name="RoleCondition19" role="rel7#role13" predicate="in" implied="false"/>
       </Selector>
     </MultiDataUnit>
-    <MultiDataUnit gr:x="10" gr:y="0" id="sv3#page22#mdu2" name="Tags" entity="ent9" displayAttributes="ent9#att32">
+    <MultiDataUnit gr:x="0" gr:y="0" id="sv3#page22#mdu2" name="Tags" entity="ent2" displayAttributes="ent2#att31">
       <Selector id="sv3#page22#mdu2#su37" defaultPolicy="fill" booleanOperator="and">
-        <RelationshipRoleCondition id="sv3#page22#mdu2#su37#rcond18" name="FromOffer" role="rel5#role9" predicate="in" implied="false"/>
+        <RelationshipRoleCondition id="sv3#page22#mdu2#su37#rcond18" name="FromOffer" predicate="in" implied="false" role="rel13#role26"/>
       </Selector>
     </MultiDataUnit>
-    <DataUnit gr:x="15" gr:y="260" id="sv3#page22#dau13" name="Offered By" entity="ent1" displayAttributes="User#att35 User#att1">
+    <DataUnit gr:x="40" gr:y="260" id="sv3#page22#dau13" name="Offered By" entity="ent1" displayAttributes="User#att35 User#att1">
       <Selector id="sv3#page22#dau13#su47" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#page22#dau13#su47#kcond26" name="KeyCondition26" predicate="in" implied="false"/>
       </Selector>
@@ -39,14 +39,17 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page22#dau7">
-          <layout:Attribute attribute="ent8#att58" label="Name"/>
-          <layout:Attribute attribute="ent8#att36" label="Description"/>
-          <layout:Attribute attribute="ent8#att39" label="Amount Available"/>
-          <layout:Attribute attribute="ent8#att40" label="Expiry Date"/>
           <layout:Link link="sv3#page22#dau7#ln8" layout:linkVisibilityCondition="sv3#page22#cexpr6"/>
           <layout:Link link="sv3#page22#dau7#ln93"/>
           <layout:Link link="sv3#page22#dau7#ln105"/>
           <layout:Link link="sv3#page22#dau7#ln107"/>
+          <layout:Attribute attribute="ent8#att58" label="Name"/>
+          <layout:Attribute attribute="ent8#att36" label="Description"/>
+          <layout:Attribute attribute="ent8#att39" label="Amount Available"/>
+          <layout:Attribute attribute="ent8#att40" label="Expiry Date"/>
+          <layout:Attribute attribute="ent8#att55" label="Delivery Method"/>
+          <layout:Attribute attribute="ent8#att42" layout:attributeVisibilityCondition="sv3#page22#cexpr12" label="Pickup address"/>
+          <layout:Attribute attribute="ent8#att43" layout:attributeVisibilityCondition="sv3#page22#cexpr13" label="Delivery Service"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -114,8 +117,9 @@
     </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv3#page22#mdu2">
-          <layout:Attribute attribute="ent9#att32"/>
+        <layout:Unit unitId="sv3#page22#mdu2" layout:attributeLayout="BootstrapStyle/Default" layout:unitLayout="BootstrapStyle/NewLayout">
+          <layout:Attribute attribute="ent2#att31" label="Name"/>
+          <layout:LayoutParameter name="label-width" value="1" type="unit"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -150,4 +154,11 @@
   <ConditionExpression id="sv3#page22#cexpr6" name="IsOwner">
     <TextValue xml:space="preserve">return OfferOwnerId == User</TextValue>
   </ConditionExpression>
+  <ConditionExpression id="sv3#page22#cexpr12" name="isNotDelivery">
+    <TextValue xml:space="preserve">return (deliveryMethod == "Pick Up") || (deliveryMethod == "Choice")</TextValue>
+  </ConditionExpression>
+  <ConditionExpression id="sv3#page22#cexpr13" name="isDelivery">
+    <TextValue xml:space="preserve">return (deliveryMethod == "Delivery") || (deliveryMethod == "Choice")</TextValue>
+  </ConditionExpression>
+  <Variable id="sv3#page22#var8" name="deliveryMethod" type="string" unitId="sv3#page22#dau7" parameter="data.ent8#att55"/>
 </Page>

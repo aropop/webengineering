@@ -28,15 +28,15 @@
     <SwitchUnit gr:x="355" gr:y="-35" id="mov1#opm8#switch2" name="notifyswitch">
       <Case value="Accept"/>
       <Case value="Decline"/>
-      <OKLink id="mov1#opm8#switch2#oln29" name="OKFlow29" to="mov1#opm8#mfu4" automaticCoupling="true" code="Accept"/>
+      <OKLink id="mov1#opm8#switch2#oln29" name="OKFlow29" to="mov1#opm8#seu4" automaticCoupling="true" code="Accept"/>
       <OKLink id="mov1#opm8#switch2#oln30" name="OKFlow30" to="mov1#opm8#okcu5" automaticCoupling="true" code="Decline" gr:bendpoints="228,207,-572,57;611,212,-189,62"/>
     </SwitchUnit>
     <MathUnit id="mov1#opm8#mathu2" name="Amount-1" gr:x="870" gr:y="-60" resultType="integer" defaultExpression="amount - 1">
       <MathVariable id="mov1#opm8#mathu2#mathv2" name="amount"/>
-      <Link id="mov1#opm8#mathu2#ln48" name="Flow43" to="mov1#opm8#mfu4" type="transport" validate="true">
-        <LinkParameter id="mov1#opm8#mathu2#ln48#par158" name="Result_amount" source="result" target="mov1#opm8#mfu4.ent8#att39"/>
-        <LinkParameter id="mov1#opm8#mathu2#ln48#par159" name="oid_PASSING_KeyCondition11 [oid]" sourceLinkParameter="mov1#opm8#seu4#ln49#par161" target="mov1#opm8#mfu4#su24#kcond18.ent8#att27"/>
-      </Link>
+      <OKLink id="mov1#opm8#mathu2#oln15" name="OKFlow15" to="mov1#opm8#mfu4" gr:bendpoints="-47,63,73,-47">
+        <LinkParameter id="mov1#opm8#mathu2#oln15#par137" name="Result_amount" source="result" target="mov1#opm8#mfu4.ent8#att39"/>
+        <LinkParameter id="mov1#opm8#mathu2#oln15#par154" name="oid_PASSING_KeyCondition11 [oid]" sourceLinkParameter="mov1#opm8#seu4#oln14#par108" target="mov1#opm8#mfu4#su24#kcond18.ent8#att27"/>
+      </OKLink>
     </MathUnit>
     <ModifyUnit id="mov1#opm8#mfu4" name="UpdateAmount" gr:x="735" gr:y="45" entity="ent8">
       <Selector id="mov1#opm8#mfu4#su24" defaultPolicy="fill" booleanOperator="and">
@@ -48,10 +48,10 @@
       <Selector id="mov1#opm8#seu4#su32" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov1#opm8#seu4#su32#kcond19" name="KeyCondition12" predicate="in" implied="false"/>
       </Selector>
-      <Link id="mov1#opm8#seu4#ln49" name="Flow36" to="mov1#opm8#mathu2" type="transport" validate="true">
-        <LinkParameter id="mov1#opm8#seu4#ln49#par160" name="amount_amount" source="ent8#att39Array" target="mov1#opm8#mathu2#mathv2"/>
-        <LinkParameter id="mov1#opm8#seu4#ln49#par161" name="oid_PASSING" source="ent8#att27Array" passing="true"/>
-      </Link>
+      <OKLink id="mov1#opm8#seu4#oln14" name="OKFlow14" to="mov1#opm8#mathu2" gr:bendpoints="112,28,-98,3">
+        <LinkParameter id="mov1#opm8#seu4#oln14#par93" name="amount_amount" source="ent8#att39Array" target="mov1#opm8#mathu2#mathv2"/>
+        <LinkParameter id="mov1#opm8#seu4#oln14#par108" name="oid_PASSING" source="ent8#att27Array" passing="true"/>
+      </OKLink>
     </SelectorUnit>
   </OperationUnits>
 </OperationModule>

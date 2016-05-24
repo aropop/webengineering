@@ -1,0 +1,16 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="90" gr:y="750" id="mov1#hym7" name="Message View" landmarks="mov1#hym7#page38">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="0" gr:y="245" id="mov1#hym7#icu25" name="Input Port">
+      <OKLink id="mov1#hym7#icu25#oln16" to="mov1#hym7#page38" name="Start"/>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="1240" gr:y="0" id="mov1#hym7#okcu21" name="OK Port21">
+      <OutputCollectorParameter id="mov1#hym7#okcu21#ocp11" name="SendsMessage_Inverse.oid"/>
+    </OKCollectorUnit>
+    <ModuleInstanceUnit id="mov1#hym7#miu35" gr:x="840" gr:y="190" moduleId="mov1#hym1" action="false">
+      <KOLink id="mov1#hym7#miu35#kln8" name="KOFlow14" to="mov1#hym7#page38" automaticCoupling="true"/>
+      <OKLink id="mov1#hym7#miu35#oln36" to="mov1#hym7#okcu21" name="OKFlow12">
+        <LinkParameter id="mov1#hym7#miu35#oln36#par331" name="userid_SendsMessage_Inverse.oid" source="mov1#hym1#okcu6#ocp1" target="mov1#hym7#okcu21#ocp11"/>
+      </OKLink>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</HybridModule>

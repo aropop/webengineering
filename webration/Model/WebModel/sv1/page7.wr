@@ -9,6 +9,7 @@
       <Field id="sv1#page7#enu5#fld15" name="Password" type="password" modifiable="true" attribute="password">
         <VRules>
           <MandatoryValidationRule id="sv1#page7#enu5#fld15#mnd2" name="Mandatory"/>
+          <ValueLengthValidationRule id="sv1#page7#enu5#fld15#vl12" name="Value Length12" predicate="min" value="6"/>
         </VRules>
       </Field>
       <Field id="sv1#page7#enu5#fld16" name="Email" type="string" modifiable="true" attribute="email">

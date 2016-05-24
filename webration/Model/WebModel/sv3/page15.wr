@@ -38,6 +38,7 @@
           <layout:Attribute attribute="ent8#att40" label="Expiry Date"/>
           <layout:Attribute attribute="ent8#att26" label="By"/>
           <layout:Attribute attribute="ent8#att55" label="Delivery Method"/>
+          <layout:LayoutParameter name="use-empty-unit-message" value="true" type="unit"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

@@ -1,12 +1,13 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1215" gr:y="65" id="sv4#page14" name="Request Offer">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv4#page14#enu3" name="Confirm" linkOrder="sv4#page14#enu3#ln13">
-      <Field id="sv4#page14#enu3#fld3" name="sure" type="boolean" modifiable="true"/>
-      <Link id="sv4#page14#enu3#ln13" name="Confirm" to="sv4#switch1" type="normal" validate="true">
-        <LinkParameter id="sv4#page14#enu3#ln13#par15" name="sure_Switch" source="sv4#page14#enu3#fld3" target="sv4#switch1.switch"/>
+      <Link id="sv4#page14#enu3#ln13" name="Confirm" to="sv4#miu5" type="normal" validate="true">
         <LinkParameter id="sv4#page14#enu3#ln13#par17" name="id_PASSING" source="sv4#page14#enu3#fld6" passing="true"/>
         <LinkParameter id="sv4#page14#enu3#ln13#par174" name="OfferToAngel.oid_PASSING" sourceLinkParameter="sv4#page8#dau2#ln12#par173" passing="true"/>
         <LinkParameter id="sv4#page14#enu3#ln13#par416" name="Address_PASSING" source="sv4#page14#enu3#fld37" passing="true"/>
+        <LinkParameter id="sv4#page14#enu3#ln13#par64" name="OfferToAngel.oid_PASSING_angelid" sourceLinkParameter="sv4#page8#dau2#ln12#par173" target="sv4#miu5.mov1#opm4#icu4#icp25"/>
+        <LinkParameter id="sv4#page14#enu3#ln13#par65" name="Address_deliveryaddress" source="sv4#page14#enu3#fld37" target="sv4#miu5.mov1#opm4#icu4#icp67"/>
+        <LinkParameter id="sv4#page14#enu3#ln13#par66" name="id_OfferId" source="sv4#page14#enu3#fld6" target="sv4#miu5.mov1#opm4#icu4#icp1"/>
       </Link>
       <Field id="sv4#page14#enu3#fld6" name="id" type="integer" modifiable="false" preloaded="true" hidden="true"/>
       <Field id="sv4#page14#enu3#fld24" name="deliverymethod" type="string" modifiable="false" preloaded="true" hidden="true"/>
@@ -18,7 +19,6 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv4#page14#enu3">
           <layout:Link link="sv4#page14#enu3#ln13"/>
-          <layout:Field field="sv4#page14#enu3#fld3"/>
           <layout:Field field="sv4#page14#enu3#fld37" layout:fieldDisableCondition="sv4#page14#cexpr8" label="Address (Can be empty if you choose to pick up)"/>
         </layout:Unit>
       </layout:Cell>

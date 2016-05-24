@@ -1,0 +1,102 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym7#page38" name="Messages" landmark="true" gr:x="300" gr:y="10">
+  <ContentUnits>
+    <PowerIndexUnit id="mov1#hym7#page38#pwu16" name="Inbox" gr:x="175" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att4 ent4#att44 ent4#att6 ent4#att20" linkOrder="mov1#hym7#page38#pwu16#ln114">
+      <Selector id="mov1#hym7#page38#pwu16#su59" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov1#hym7#page38#pwu16#su59#rcond24" name="RoleCondition4" predicate="in" implied="false" role="rel21#role42"/>
+      </Selector>
+      <Link id="mov1#hym7#page38#pwu16#ln114" name="Reply" to="mov1#hym7#okcu21" type="normal" validate="true">
+        <LinkParameter id="mov1#hym7#page38#pwu16#ln114#par334" name="SendsMessage_Inverse.oid_SendsMessage_Inverse.oid" source="data[].rel19#role37_userOID" target="mov1#hym7#okcu21#ocp11"/>
+      </Link>
+    </PowerIndexUnit>
+    <GetUnit id="mov1#hym7#page38#gtu12" name="Get8" gr:x="0" gr:y="30" contextParameters="UserCtxParam">
+      <Link id="mov1#hym7#page38#gtu12#ln110" name="Flow41" to="mov1#hym7#page38#pwu16" type="transport" automaticCoupling="true" validate="true"/>
+      <Link id="mov1#hym7#page38#gtu12#ln111" name="Flow42" to="mov1#hym7#page38#pwu19" type="transport" automaticCoupling="true" validate="true"/>
+    </GetUnit>
+    <PowerIndexUnit id="mov1#hym7#page38#pwu19" name="Outbox" gr:x="165" gr:y="115" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att4 ent4#att45 ent4#att6 ent4#att20">
+      <Selector id="mov1#hym7#page38#pwu19#su60" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov1#hym7#page38#pwu19#su60#rcond25" name="RoleCondition5" predicate="in" implied="false" role="rel19#role38"/>
+      </Selector>
+    </PowerIndexUnit>
+    <MultiMessageUnit id="mov1#hym7#page38#mssu15" name="Messages" linkOrder="mov1#hym7#page38#mssu15#ln112" gr:x="30" gr:y="155">
+      <Message xml:space="preserve">All Messages</Message>
+      <Link id="mov1#hym7#page38#mssu15#ln112" name="New Message" to="mov1#hym7#miu35" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="110,56,-430,60;245,56,-295,60"/>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#hym7#page38#mssu15">
+          <layout:Link link="mov1#hym7#page38#mssu15#ln112"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#hym7#page38#pwu16">
+          <layout:Attribute label="Title" attribute="ent4#att4"/>
+          <layout:Attribute label="From" attribute="ent4#att44"/>
+          <layout:Attribute label="Body" attribute="ent4#att6"/>
+          <layout:Attribute label="On" attribute="ent4#att20"/>
+          <layout:Link link="mov1#hym7#page38#pwu16#ln114"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#hym7#page38#pwu19">
+          <layout:Attribute label="Title" attribute="ent4#att4"/>
+          <layout:Attribute label="To" attribute="ent4#att45"/>
+          <layout:Attribute label="Body" attribute="ent4#att6"/>
+          <layout:Attribute label="On" attribute="ent4#att20"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

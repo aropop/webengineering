@@ -64,7 +64,7 @@
           <layout:Field field="sv3#page16#enu4#fld10"/>
           <layout:Field field="sv3#page16#enu4#sfld3"/>
           <layout:Field field="sv3#page16#enu4#fld19"/>
-          <layout:Field field="sv3#page16#enu4#fld20"/>
+          <layout:Field field="sv3#page16#enu4#fld20" label="Delivery Serivce"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

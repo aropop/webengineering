@@ -46,7 +46,7 @@
         <LinkParameter id="sv4#page42#enu14#ln103#par390" name="userName_PASSING" source="sv4#page42#enu14#fld48" passing="true"/>
         <LinkParameter id="sv4#page42#enu14#ln103#par391" name="yearsOnStreet_PASSING" source="sv4#page42#enu14#fld47" passing="true"/>
       </Link>
-      <Field id="sv4#page42#enu14#fld60" name="Profile Picture" type="blob" modifiable="true"/>
+      <Field id="sv4#page42#enu14#fld60" name="Profile Picture" type="blob" modifiable="true" attribute="User#att8"/>
     </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">

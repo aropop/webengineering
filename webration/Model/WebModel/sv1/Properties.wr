@@ -42,11 +42,6 @@
       <OKLink id="sv1#cru8#oln62" name="OKFlow62" to="sv1#page29" automaticCoupling="true"/>
       <KOLink id="sv1#cru8#kln13" name="KOFlow13" to="sv1#page29" automaticCoupling="true" gr:bendpoints="-100,34,160,-16"/>
     </CreateUnit>
-    <DeleteUnit gr:x="605" gr:y="-285" id="sv1#dlu4" name="Delete4">
-      <Selector id="sv1#dlu4#su52" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv1#dlu4#su52#kcond14" name="KeyCondition14" predicate="in" implied="false"/>
-      </Selector>
-    </DeleteUnit>
     <ModuleInstanceUnit gr:x="960" gr:y="175" id="sv1#miu8" moduleId="mov1#opm17">
       <OKLink id="sv1#miu8#oln93" to="sv1#miu1" name="OKFlow25">
         <LinkParameter id="sv1#miu8#oln93#par362" source="mov1#opm17#okcu17#ocp8" name="userName_Username" target="sv1#miu1.mov1#opm3#icu3#icp2"/>
