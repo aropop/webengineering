@@ -20,6 +20,9 @@
       </Link>
       <Link id="sv4#page8#dau2#ln22" name="Flow22" to="sv4#page8#mdu4" automaticCoupling="true" type="transport" validate="true"/>
       <Link id="sv4#page8#dau2#ln26" name="Flow26" to="sv4#page8#mdu3" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv4#page8#dau2#ln21" name="Flow21" to="sv4#page8#miu6" type="transport" validate="true">
+        <LinkParameter id="sv4#page8#dau2#ln21#par160" name="OfferToAngel.oid_angelid" source="data.rel4#role8_userOID" target="mov1#ctm1#icu6#icp68"/>
+      </Link>
     </DataUnit>
     <SelectorUnit gr:x="115" gr:y="0" id="sv4#page8#seu8" name="userRequestCheck" entity="ent17">
       <Selector id="sv4#page8#seu8#su34" defaultPolicy="fill" booleanOperator="and">
@@ -47,6 +50,7 @@
         <RelationshipRoleCondition id="sv4#page8#mdu4#su57#rcond22" name="FromOffer" predicate="in" implied="false" role="rel13#role26"/>
       </Selector>
     </MultiDataUnit>
+    <ModuleInstanceUnit gr:x="175" gr:y="160" id="sv4#page8#miu6" moduleId="mov1#ctm1" action="false"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -109,7 +113,9 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page8#miu6"/>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

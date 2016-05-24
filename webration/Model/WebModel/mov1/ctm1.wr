@@ -12,7 +12,7 @@
       </Placeholder>
       <Message xml:space="preserve">Has average rating: $$rating$$.</Message>
     </MultiMessageUnit>
-    <QueryUnit id="mov1#ctm1#qu4" name="CalculateAverage" gr:x="260" gr:y="135" mode="select" language="SQL">
+    <QueryUnit id="mov1#ctm1#qu4" name="CalculateAverage" gr:x="260" gr:y="135" mode="select" language="SQL" db="db2">
       <QueryText xml:space="preserve">SELECT AVG(stars) AS average FROM rates WHERE angel_oid=:angelid;</QueryText>
       <QueryInput id="mov1#ctm1#qu4#qi3" name="angelid" required="true" type="integer"/>
       <QueryOutput id="mov1#ctm1#qu4#qo3" name="average" type="float"/>

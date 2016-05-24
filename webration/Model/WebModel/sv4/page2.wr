@@ -1,10 +1,13 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-55" gr:y="0" id="sv4#page2" name="Homeless Start" landmark="true">
   <ContentUnits>
-    <PowerIndexUnit id="sv4#page2#pwu7" name="New Messages" gr:x="125" gr:y="65" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att18 ent6#att22">
+    <PowerIndexUnit id="sv4#page2#pwu7" name="New Messages" gr:x="125" gr:y="65" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att18 ent6#att22" linkOrder="sv4#page2#pwu7#ln41">
       <Selector id="sv4#page2#pwu7#su33" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv4#page2#pwu7#su33#acond5" name="AttCondition3" predicate="null" booleanOperator="or" implied="false" attributes="ent18#att9"/>
         <RelationshipRoleCondition id="sv4#page2#pwu7#su33#rcond11" name="RoleCondition7" predicate="in" implied="false" role="rel2#role4"/>
       </Selector>
+      <Link id="sv4#page2#pwu7#ln41" name="View Message" to="sv4#miu10" type="normal" validate="true">
+        <LinkParameter id="sv4#page2#pwu7#ln41#par238" name="oid_NotificationId" source="data[].ent18#att57" target="sv4#miu10.mov1#opm7#icu7#icp9"/>
+      </Link>
     </PowerIndexUnit>
     <GetUnit id="sv4#page2#gtu10" name="Get9" gr:x="0" gr:y="95" contextParameters="UserCtxParam">
       <Link id="sv4#page2#gtu10#ln66" name="Flow65" to="sv4#page2#pwu7" type="transport" automaticCoupling="true" validate="true"/>
@@ -36,6 +39,7 @@ When you click "Requests" you can see your actual requests.</Message>
         <layout:Unit unitId="sv4#page2#pwu7">
           <layout:Attribute attribute="ent6#att18" label="Title"/>
           <layout:Attribute attribute="ent6#att22" label="From"/>
+          <layout:Link link="sv4#page2#pwu7#ln41"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

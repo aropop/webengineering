@@ -1,10 +1,10 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv4" name="Homeless Page" protected="true" homePage="sv4#page2" landmarks="sv4#page2 sv4#page5 sv4#page28 sv4#page12 sv4#miu21 sv4#lou1 sv4#area3 sv4#miu34">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv4" name="Homeless Page" protected="true" homePage="sv4#page2" landmarks="sv4#page2 sv4#page5 sv4#page28 sv4#page12 sv4#miu21 sv4#miu34 sv4#area3 sv4#lou1">
   <OperationUnits>
     <ModuleInstanceUnit gr:x="1200" gr:y="345" id="sv4#miu5" action="true" moduleId="mov1#opm4">
       <OKLink id="sv4#miu5#oln10" name="OKFlow10" to="sv4#page8#dau2"/>
       <KOLink id="sv4#miu5#kln6" name="KOFlow6" to="sv4#page28" automaticCoupling="true" gr:bendpoints="91,-50,776,460;93,-370,778,140"/>
     </ModuleInstanceUnit>
-    <LogoutUnit gr:x="80" gr:y="270" id="sv4#lou1" name="Logout" siteView="sv1" landmark="true"/>
+    <LogoutUnit gr:x="-10" gr:y="285" id="sv4#lou1" name="Logout" siteView="sv1" landmark="true"/>
     <ModuleInstanceUnit id="sv4#miu12" gr:x="1535" gr:y="-60" action="false" moduleId="mov1#hym2">
       <KOLink id="sv4#miu12#kln22" name="KOFlow22" to="sv4#page12" automaticCoupling="true" gr:bendpoints="10,56,25,-119"/>
     </ModuleInstanceUnit>
@@ -50,6 +50,9 @@
       <OKLink id="sv4#miu34#oln18" to="sv4#miu14" validate="true" name="Reply" gr:bendpoints="301,43,-229,119">
         <LinkParameter id="sv4#miu34#oln18#par159" source="mov1#hym7#okcu21#ocp11" name="SendsMessage_Inverse.oid_userid [oid]" target="sv4#miu14.mov1#hym3#icu13#icp26"/>
       </OKLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="80" gr:y="655" id="sv4#miu10" action="true" moduleId="mov1#opm7">
+      <OKLink id="sv4#miu10#oln20" name="OKFlow20" to="sv4#miu34" automaticCoupling="true"/>
     </ModuleInstanceUnit>
   </OperationUnits>
 </SiteView>

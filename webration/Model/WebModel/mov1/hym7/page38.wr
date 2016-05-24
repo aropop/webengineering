@@ -46,7 +46,7 @@
         <layout:Unit unitId="mov1#hym7#page38#pwu16">
           <layout:Attribute label="Title" attribute="ent4#att4"/>
           <layout:Attribute label="From" attribute="ent4#att44"/>
-          <layout:Attribute label="Body" attribute="ent4#att6"/>
+          <layout:Attribute label="Message" attribute="ent4#att6"/>
           <layout:Attribute label="On" attribute="ent4#att20"/>
           <layout:Link link="mov1#hym7#page38#pwu16#ln114"/>
         </layout:Unit>
@@ -68,7 +68,7 @@
         <layout:Unit unitId="mov1#hym7#page38#pwu19">
           <layout:Attribute label="Title" attribute="ent4#att4"/>
           <layout:Attribute label="To" attribute="ent4#att45"/>
-          <layout:Attribute label="Body" attribute="ent4#att6"/>
+          <layout:Attribute label="Message" attribute="ent4#att6"/>
           <layout:Attribute label="On" attribute="ent4#att20"/>
         </layout:Unit>
       </layout:Cell>

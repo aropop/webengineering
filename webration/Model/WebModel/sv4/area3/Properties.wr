@@ -1,4 +1,4 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv4#area3" name="Users" landmarks="sv4#area3#miu31 sv4#area3#miu32" landmark="true" gr:x="130" gr:y="-475">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv4#area3" name="Users" landmarks="sv4#area3#miu31 sv4#area3#miu32" landmark="true" gr:x="130" gr:y="-475" defaultPage="sv4#area3#miu31">
   <OperationUnits>
     <ModuleInstanceUnit id="sv4#area3#miu31" landmark="true" gr:x="0" gr:y="85" action="false" moduleId="mov1#hym6"/>
     <ModuleInstanceUnit id="sv4#area3#miu32" landmark="true" gr:x="5" gr:y="0" action="false" moduleId="mov1#hym5"/>

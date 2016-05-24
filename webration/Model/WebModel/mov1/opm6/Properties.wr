@@ -1,5 +1,51 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="245" gr:y="70" id="mov1#opm6" name="Register User">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="415" gr:y="75" id="mov1#opm6" name="Initialize">
   <OperationUnits>
-    <InputCollectorUnit id="mov1#opm6#icu6" name="Input Collector" gr:x="30" gr:y="60"/>
-  </OperationUnits>
-</OperationModule>
+    <InputCollectorUnit id="mov1#opm6#icu26" name="Input Collector" gr:x="30" gr:y="60">
+      <OKLink id="mov1#opm6#icu26#oln4" name="OKFlow4" to="mov1#opm6#seu7" automaticCoupling="true"/>
+    </InputCollectorUnit>
+    <SelectorUnit gr:x="295" gr:y="55" id="mov1#opm6#seu7" name="Group" entity="Group">
+      <OKLink id="mov1#opm6#seu7#oln5" name="OKFlow5" to="mov1#opm6#switch1">
+        <LinkParameter id="mov1#opm6#seu7#oln5#par175" name="Data Size_Switch" source="dataSize" target="mov1#opm6#switch1.switch"/>
+      </OKLink>
+      <KOLink id="mov1#opm6#seu7#kln10" name="KOFlow10" to="mov1#opm6#okcu22" automaticCoupling="true"/>
+    </SelectorUnit>
+    <SwitchUnit gr:x="425" gr:y="60" id="mov1#opm6#switch1" name="Switch1">
+      <Case value="0"/>
+      <OKLink id="mov1#opm6#switch1#oln9" name="OKFlow9" to="mov1#opm6#qu3" automaticCoupling="true" code="0"/>
+      <OKLink id="mov1#opm6#switch1#oln12" name="OKFlow12" to="mov1#opm6#okcu22" automaticCoupling="true"/>
+    </SwitchUnit>
+    <QueryUnit gr:x="565" gr:y="50" id="mov1#opm6#qu3" name="Query3" mode="update" language="SQL" db="db2">
+      <QueryText xml:space="preserve">insert into `module` values
+(1, 'sv4', 'Homeless Page'),
+(2, 'sv3', 'Angels Page'),
+(3, 'sv5', 'Administrator Page'),
+(4, 'area1', 'Registered User');
+insert into `group` values
+(1, 'homeless', 1),
+(2, 'angels', 2),
+(3, 'administrators', 3);
+insert into group_module values
+(1,4),
+(2,4);
+insert into user (oid, username, password, email, location, birthdate, isDisabled, group_oid_2) values
+(1, "admin", "admin", "admin@admin.be", "Brussels", "1990-01-01", 0, 3);
+insert into administrator values
+(1);
+insert into `generalinformation` values
+(1, 'Belgian Homeless Cup', 'http://www.belgianhomelesscup.be/home-en/', 'Fun'),
+(2, 'FEANTSA', 'http://www.feantsa.org', 'Organizations'),
+(3, 'European Observatory on Homelessness', 'http://www.feantsaresearch.org', 'Organizations'),
+(4, 'Map and shelters', 'https://www.brussels.be/artdet.cfm/5212', 'Shelter'),
+(5, 'List of shelters', 'http://aidevaluator.com/countries/belgium/topics/homeless.html', 'Shelter'),
+(6, 'The best homeless living and survival hacks', 'https://www.quora.com/What-are-the-best-homeless-living-and-survival-hacks', 'Tips &amp; tricks'),
+(7, 'Homeless Survival', 'http://www.thesurvivalistblog.net/how-to-survive-being-homeless-2/', 'Tips &amp; tricks'),
+(8, 'Survival Recipes', 'https://survivalrecipes.wordpress.com', 'Tips &amp; tricks'),
+(9, 'How to be stealth homeless', 'http://disinfo.com/2012/10/how-to-be-stealth-homeless/', 'Tips &amp; tricks'),
+(10, 'How survive being homeless', 'http://disinfo.com/2012/10/how-to-be-stealth-homeless/', 'Tips &amp; tricks'),
+(11, 'Tips for Winter Survival', 'http://www.grassrootsdc.org/2014/01/tips-winter-survival/', 'Tips &amp; tricks'),
+(12, 'How to Live on the Street', 'http://www.wikihow.com/Live-on-the-Street', 'Tips &amp; tricks'),
+(13, 'OCMW', 'http://www.belgium.be/nl/familie/sociale_steun/ocmw', 'Organizations (dutch)'),
+(14, 'Sociale huisvesting: dakloos', 'http://www.belgium.be/nl/huisvesting/sociale_huisvesting/dakloos', 'Organizations (dutch)'),
+(15, 'Anders wonen: dakloos', 'http://www.woonbeleidmiddenlimburg.be/anders-wonen/dakloos', 'Organizations (dutch)'),
+(16, 'Rechten als dakloze', 'http://www.rechtenverkenner.be/Pages/RechtDetail.aspx?rechtKey=588&amp;pc=2800', 'Organizations (dutch)');
+</QueryText>      <OKLink id="mov1#opm6#qu3#oln17" name="OKFlow17" to="mov1#opm6#okcu22" automaticCoupling="true"/>      <KOLink id="mov1#opm6#qu3#kln14" name="KOFlow14" to="mov1#opm6#okcu22" automaticCoupling="true" gr:bendpoints="79,44,-161,-41"/>    </QueryUnit>    <OKCollectorUnit gr:x="735" gr:y="120" id="mov1#opm6#okcu22" name="OK Port22"/>  </OperationUnits></OperationModule>

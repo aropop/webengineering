@@ -6,7 +6,7 @@
         <LinkParameter id="mov1#opm13#icu16#oln64#par246" name="angelid_angelid" source="mov1#opm13#icu16#icp36" target="mov1#opm13#qu1.mov1#opm13#qu1#qi1"/>
       </OKLink>
     </InputCollectorUnit>
-    <QueryUnit gr:x="395" gr:y="150" id="mov1#opm13#qu1" name="CalculateAverage" mode="select" language="SQL">
+    <QueryUnit gr:x="395" gr:y="150" id="mov1#opm13#qu1" name="CalculateAverage" mode="select" language="SQL" db="db2">
       <QueryText xml:space="preserve">SELECT AVG(stars) AS average FROM rates WHERE angel_oid=:angelid;</QueryText>
       <QueryInput id="mov1#opm13#qu1#qi1" name="angelid" required="true" type="integer"/>
       <QueryOutput id="mov1#opm13#qu1#qo1" name="average"/>
