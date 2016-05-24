@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page26" name="Messages" landmark="true" gr:x="140" gr:y="535">
   <ContentUnits>
-    <PowerIndexUnit id="sv4#page26#pwu11" name="Inbox" linkOrder="sv4#page26#pwu11#ln52" gr:x="175" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att4 ent4#att6 ent4#att20">
+    <PowerIndexUnit id="sv4#page26#pwu11" name="Inbox" linkOrder="sv4#page26#pwu11#ln52" gr:x="175" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att4 ent4#att44 ent4#att6 ent4#att20">
       <Link id="sv4#page26#pwu11#ln52" name="View Message" to="sv4#page25#dau8" type="normal" validate="true">
         <LinkParameter id="sv4#page26#pwu11#ln52#par140" name="oid_KeyCondition4 [oid]" source="data[].ent4#att3" target="sv4#page25#dau8#su25#kcond13.ent4#att3"/>
       </Link>
@@ -12,7 +12,7 @@
       <Link id="sv4#page26#gtu11#ln53" name="Flow41" to="sv4#page26#pwu11" type="transport" automaticCoupling="true" validate="true"/>
       <Link id="sv4#page26#gtu11#ln54" name="Flow42" to="sv4#page26#pwu12" type="transport" automaticCoupling="true" validate="true"/>
     </GetUnit>
-    <PowerIndexUnit id="sv4#page26#pwu12" name="Outbox" gr:x="165" gr:y="115" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att4 ent4#att6 ent4#att20">
+    <PowerIndexUnit id="sv4#page26#pwu12" name="Outbox" gr:x="165" gr:y="115" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att4 ent4#att45 ent4#att6 ent4#att20">
       <Selector id="sv4#page26#pwu12#su27" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv4#page26#pwu12#su27#rcond9" name="RoleCondition5" predicate="in" implied="false" role="rel6#role11"/>
       </Selector>
@@ -25,11 +25,30 @@
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page26#mssu12">
+          <layout:Link link="sv4#page26#mssu12#ln68"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
         <layout:Unit unitId="sv4#page26#pwu11">
-          <layout:Attribute attribute="ent4#att4"/>
-          <layout:Attribute attribute="ent4#att6"/>
-          <layout:Attribute attribute="ent4#att20"/>
           <layout:Link link="sv4#page26#pwu11#ln52"/>
+          <layout:Attribute attribute="ent4#att4" label="Title"/>
+          <layout:Attribute attribute="ent4#att44" label="From"/>
+          <layout:Attribute attribute="ent4#att6" label="Body"/>
+          <layout:Attribute attribute="ent4#att20" label="On"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -47,9 +66,10 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv4#page26#pwu12">
-          <layout:Attribute attribute="ent4#att4"/>
-          <layout:Attribute attribute="ent4#att6"/>
-          <layout:Attribute attribute="ent4#att20"/>
+          <layout:Attribute attribute="ent4#att4" label="Title"/>
+          <layout:Attribute attribute="ent4#att45" label="To"/>
+          <layout:Attribute attribute="ent4#att6" label="Body"/>
+          <layout:Attribute attribute="ent4#att20" label="On"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -65,11 +85,7 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv4#page26#mssu12">
-          <layout:Link link="sv4#page26#mssu12#ln68"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

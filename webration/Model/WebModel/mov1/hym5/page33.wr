@@ -1,45 +1,32 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym5#page33" name="Angel details" gr:x="730" gr:y="65">
   <ContentUnits>
-    <DataUnit id="mov1#hym5#page33#dau9" name="Profile" gr:x="5" gr:y="5" entity="ent1" displayAttributes="ent1#att14 email User#att1 User#att2 ent1#att5 ent1#att21">
+    <DataUnit id="mov1#hym5#page33#dau9" name="Profile" gr:x="5" gr:y="5" entity="ent1" displayAttributes="email User#att1 User#att2 ent1#att5 ent1#att21 User#att35">
       <Selector id="mov1#hym5#page33#dau9#su39" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov1#hym5#page33#dau9#su39#kcond12" name="KeyCondition21" predicate="in" implied="false"/>
       </Selector>
-      <Link id="mov1#hym5#page33#dau9#ln36" name="Flow95" to="mov1#hym5#page33#qu3" type="transport" validate="true">
-        <LinkParameter id="mov1#hym5#page33#dau9#ln36#par10" name="oid_angelid" source="data.userOID" target="mov1#hym5#page33#qu3.mov1#hym5#page33#qu3#qi4"/>
+      <Link id="mov1#hym5#page33#dau9#ln36" name="Flow95" to="mov1#hym5#page33#miu25" type="transport" validate="true">
+        <LinkParameter id="mov1#hym5#page33#dau9#ln36#par10" name="oid_angelid" source="data.userOID" target="mov1#ctm1#icu6#icp68"/>
       </Link>
       <Link id="mov1#hym5#page33#dau9#ln44" name="Flow97" to="mov1#hym5#page33#hinu3" type="transport" automaticCoupling="true" validate="true"/>
     </DataUnit>
-    <QueryUnit id="mov1#hym5#page33#qu3" name="CalculateAverage" gr:x="0" gr:y="140" mode="select" language="SQL" db="db1">
-      <QueryText xml:space="preserve">SELECT AVG(stars) AS average FROM rates WHERE angel_oid=:angelid;</QueryText>
-      <QueryInput id="mov1#hym5#page33#qu3#qi4" name="angelid" required="true" type="integer"/>
-      <QueryOutput id="mov1#hym5#page33#qu3#qo4" name="average" type="float"/>
-      <Link id="mov1#hym5#page33#qu3#ln45" name="Flow96" to="mov1#hym5#page33#mssu4" type="transport" validate="true">
-        <LinkParameter id="mov1#hym5#page33#qu3#ln45#par93" name="average (Array)_rating" source="mov1#hym5#page33#qu3#qo4" target="mov1#hym5#page33#mssu4.mov1#hym5#page33#mssu4#ph4"/>
-      </Link>
-    </QueryUnit>
     <HierarchicalIndexUnit id="mov1#hym5#page33#hinu3" name="Offers Rating" gr:x="155" gr:y="0" sortable="false" entity="ent8" displayAttributes="ent8#att58 ent8#att39 ent8#att40 ent8#att55">
       <Selector id="mov1#hym5#page33#hinu3#su40" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="mov1#hym5#page33#hinu3#su40#rcond21" name="fromAngel" predicate="in" implied="false" role="rel4#role7"/>
       </Selector>
       <HierarchicalIndexLevel id="mov1#hym5#page33#hinu3#hiulvl3" name="Ratings" entity="ent20" displayAttributes="ent20#att67 ent20#att68" role="rel10#role20.rel3#role6"/>
     </HierarchicalIndexUnit>
-    <MultiMessageUnit id="mov1#hym5#page33#mssu4" name="Has Rating" gr:x="220" gr:y="150">
-      <Placeholder id="mov1#hym5#page33#mssu4#ph4" name="rating">
-        <Value xml:space="preserve">No ratings yet</Value>
-      </Placeholder>
-      <Message xml:space="preserve">Has average rating: $$rating$$.</Message>
-    </MultiMessageUnit>
+    <ModuleInstanceUnit gr:x="110" gr:y="145" id="mov1#hym5#page33#miu25" moduleId="mov1#ctm1"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov1#hym5#page33#dau9">
-          <layout:Attribute label="Name" attribute="ent1#att14"/>
           <layout:Attribute label="Email" attribute="email"/>
           <layout:Attribute label="Location" attribute="User#att1"/>
           <layout:Attribute label="Birthday" attribute="User#att2"/>
           <layout:Attribute label="Profession" attribute="ent1#att5"/>
           <layout:Attribute label="Completed Transactions" attribute="ent1#att21"/>
+          <layout:Attribute attribute="User#att35" label="Name"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -93,7 +80,7 @@
     </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="mov1#hym5#page33#mssu4"/>
+        <layout:Unit unitId="mov1#hym5#page33#miu25"/>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>

@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="260" gr:y="165" id="sv5#page35" name="Offers">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv5#page35#pwu15" name="Users" sortable="true" checkable="false" useCountQuery="false" entity="User" linkOrder="sv5#page35#pwu15#ln96 sv5#page35#pwu15#ln97" displayAttributes="userName email User#att1 User#att2 User#att25">
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv5#page35#pwu15" name="Users" sortable="true" checkable="false" useCountQuery="false" entity="User" linkOrder="sv5#page35#pwu15#ln96 sv5#page35#pwu15#ln97" displayAttributes="userName email User#att1 User#att2 User#att25 User#att35">
       <Link id="sv5#page35#pwu15#ln96" name="Enable" to="sv5#miu33" type="normal" validate="true">
         <LinkParameter id="sv5#page35#pwu15#ln96#par250" name="1_disablestate" sourceValue="1" target="sv5#miu33.mov1#opm16#icu22#icp57"/>
         <LinkParameter id="sv5#page35#pwu15#ln96#par253" name="oid_userid" source="data[].userOID" target="sv5#miu33.mov1#opm16#icu22#icp56"/>
@@ -32,6 +32,7 @@
           <layout:Attribute attribute="User#att1" label="Location"/>
           <layout:Attribute attribute="User#att2" label="Birthdate"/>
           <layout:Attribute attribute="User#att25" label="Disabled"/>
+          <layout:Attribute attribute="User#att35" label="Used Name"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

@@ -81,6 +81,7 @@
         <LinkParameter id="mov1#opm17#miu23#oln109#par401" name="Scaled Image_PASSING_picture" sourceLinkParameter="mov1#opm17#miu22#oln108#par368" target="mov1#opm17#cru16.User#att8"/>
         <LinkParameter id="mov1#opm17#miu23#oln109#par406" name="Username_PASSING_userName" sourceLinkParameter="mov1#opm17#miu22#oln108#par369" target="mov1#opm17#cru16.userName"/>
         <LinkParameter id="mov1#opm17#miu23#oln109#par407" name="yearsOnStreet_PASSING_yearsOnStreet" sourceLinkParameter="mov1#opm17#miu22#oln108#par370" target="mov1#opm17#cru16.ent3#att16"/>
+        <LinkParameter id="mov1#opm17#miu23#oln109#par51" name="nickname_PASSING_usedName" sourceLinkParameter="mov1#opm17#miu22#oln108#par366" target="mov1#opm17#cru16.User#att35"/>
       </OKLink>
       <KOLink id="mov1#opm17#miu23#kln44" name="KOFlow44" to="mov1#opm17#kocu15" automaticCoupling="true"/>
     </ModuleInstanceUnit>

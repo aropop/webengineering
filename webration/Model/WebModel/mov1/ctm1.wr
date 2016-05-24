@@ -1,0 +1,98 @@
+<ContentModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="90" gr:y="700" id="mov1#ctm1" name="ShowAverageRating">
+  <ContentUnits>
+    <InputCollectorUnit gr:x="0" gr:y="155" id="mov1#ctm1#icu6" name="Input Port">
+      <InputCollectorParameter id="mov1#ctm1#icu6#icp68" name="angelid"/>
+      <Link id="mov1#ctm1#icu6#ln39" type="transport" to="mov1#ctm1#qu4">
+        <LinkParameter id="mov1#ctm1#icu6#ln39#par62" source="mov1#ctm1#icu6#icp68" name="oid_angelid" target="mov1#ctm1#qu4.mov1#ctm1#qu4#qi3"/>
+      </Link>
+    </InputCollectorUnit>
+    <MultiMessageUnit id="mov1#ctm1#mssu13" name="Has Rating" gr:x="515" gr:y="130">
+      <Placeholder id="mov1#ctm1#mssu13#ph3" name="rating">
+        <Value xml:space="preserve">No ratings yet</Value>
+      </Placeholder>
+      <Message xml:space="preserve">Has average rating: $$rating$$.</Message>
+    </MultiMessageUnit>
+    <QueryUnit id="mov1#ctm1#qu4" name="CalculateAverage" gr:x="260" gr:y="135" mode="select" language="SQL" db="db1">
+      <QueryText xml:space="preserve">SELECT AVG(stars) AS average FROM rates WHERE angel_oid=:angelid;</QueryText>
+      <QueryInput id="mov1#ctm1#qu4#qi3" name="angelid" required="true" type="integer"/>
+      <QueryOutput id="mov1#ctm1#qu4#qo3" name="average" type="float"/>
+      <Link id="mov1#ctm1#qu4#ln55" name="Flow96" to="mov1#ctm1#mssu13" type="transport" validate="true">
+        <LinkParameter id="mov1#ctm1#qu4#ln55#par61" name="average (Array)_rating" source="mov1#ctm1#qu4#qo3" target="mov1#ctm1#mssu13.mov1#ctm1#mssu13#ph3"/>
+      </Link>
+    </QueryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#ctm1#mssu13"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</ContentModule>

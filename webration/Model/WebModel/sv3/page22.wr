@@ -29,7 +29,7 @@
         <RelationshipRoleCondition id="sv3#page22#mdu2#su37#rcond18" name="FromOffer" role="rel5#role9" predicate="in" implied="false"/>
       </Selector>
     </MultiDataUnit>
-    <DataUnit gr:x="15" gr:y="260" id="sv3#page22#dau13" name="Offered By" entity="ent1" displayAttributes="ent1#att14 User#att1">
+    <DataUnit gr:x="15" gr:y="260" id="sv3#page22#dau13" name="Offered By" entity="ent1" displayAttributes="User#att35 User#att1">
       <Selector id="sv3#page22#dau13#su47" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#page22#dau13#su47#kcond26" name="KeyCondition26" predicate="in" implied="false"/>
       </Selector>
@@ -64,7 +64,7 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page22#dau13">
-          <layout:Attribute attribute="ent1#att14" label="Name"/>
+          <layout:Attribute attribute="User#att35" label="Name"/>
           <layout:Attribute attribute="User#att1" label="Location"/>
         </layout:Unit>
       </layout:Cell>

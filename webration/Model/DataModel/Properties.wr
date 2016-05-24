@@ -1,5 +1,5 @@
 <DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
-  <Entity id="User" name="User" duration="persistent" gr:x="35" gr:y="300" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att1 User#att2 User#att25 User#att8" db:database="db1" db:table="user">
+  <Entity id="User" name="User" duration="persistent" gr:x="35" gr:y="300" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att1 User#att2 User#att25 User#att8 User#att35" db:database="db1" db:table="user">
     <Attribute name="oid" id="userOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="userName" id="userName" type="string" db:column="username"/>
     <Attribute name="password" id="password" type="password" db:column="password"/>
@@ -8,6 +8,7 @@
     <Attribute id="User#att2" name="birthdate" type="date" db:column="birthdate"/>
     <Attribute id="User#att25" name="isDisabled" type="boolean" db:column="isdisabled"/>
     <Attribute id="User#att8" name="picture" type="blob" db:column="picture"/>
+    <Attribute id="User#att35" name="usedName" type="string" db:column="usedname"/>
   </Entity>
   <Entity id="Group" name="Group" duration="persistent" gr:x="-235" gr:y="440" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db1" db:table="group">
     <Attribute name="oid" id="groupOID" type="integer" key="true" db:column="oid"/>
@@ -50,12 +51,11 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="595" gr:y="65" id="ent1" name="Angel" duration="persistent" attributeOrder="ent1#att5 ent1#att14 ent1#att21" db:database="db1" db:table="angel">
+  <Entity gr:x="595" gr:y="65" id="ent1" name="Angel" duration="persistent" attributeOrder="ent1#att5 ent1#att21" db:database="db1" db:table="angel">
     <Attribute id="ent1#att5" name="profession" type="string" db:column="profession"/>
     <Generalization superEntity="User">
       <db:JoinColumn attribute="userOID" name="user_oid"/>
     </Generalization>
-    <Attribute id="ent1#att14" name="usedName" type="string" db:column="usedname"/>
     <Attribute id="ent1#att21" name="givenAway" type="integer" derivationQuery="calculated::count(Self.rel15#role30(as Var1))" db:table="angel_givenaway_view" db:column="der_attr" storageType="file">
       <db:JoinColumn attribute="userOID" name="user_oid"/>
     </Attribute>
@@ -74,7 +74,7 @@
     <Attribute id="ent8#att40" name="expiryDate" type="date" db:column="expirydate"/>
     <Attribute id="ent8#att55" name="deliveryMethod" type="string" derivationQuery="simpleImported::Self.rel9#role17.ent13#att34"/>
     <Attribute id="ent8#att58" name="name" type="string" db:column="name"/>
-    <Attribute id="ent8#att26" name="angelname" type="string" derivationQuery="simpleImported::Self.rel4#role8.ent1#att14"/>
+    <Attribute id="ent8#att26" name="angelname" type="string" derivationQuery="simpleImported::Self.rel4#role8.User#att35"/>
     <Attribute id="ent8#att28" name="angelusername" type="string" derivationQuery="simpleImported::Self.rel4#role8.userName"/>
     <Attribute id="ent8#att42" name="pickupaddress" type="string" derivationQuery="simpleImported::Self.rel9#role17.ent13#att50"/>
     <Attribute id="ent8#att43" name="deliveryMethodName" type="string" derivationQuery="simpleImported::Self.rel9#role17.ent13#att54"/>
@@ -246,11 +246,13 @@
       <db:JoinColumn attribute="ent8#att27" name="offer_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="290" gr:y="370" id="ent4" name="Message" duration="persistent" attributeOrder="ent4#att3 ent4#att4 ent4#att6 ent4#att20" db:database="db1" db:table="message">
+  <Entity gr:x="290" gr:y="370" id="ent4" name="Message" duration="persistent" attributeOrder="ent4#att3 ent4#att4 ent4#att6 ent4#att20 ent4#att44 ent4#att45" db:database="db1" db:table="message">
     <Attribute id="ent4#att3" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent4#att4" name="title" type="string" db:column="title"/>
     <Attribute id="ent4#att6" name="body" type="text" db:column="body"/>
     <Attribute id="ent4#att20" name="datetime" type="timestamp" db:column="datetime"/>
+    <Attribute id="ent4#att44" name="from" type="string" derivationQuery="simpleImported::Self.rel6#role12.User#att35"/>
+    <Attribute id="ent4#att45" name="to" type="string" derivationQuery="simpleImported::Self.rel19#role37.User#att35"/>
   </Entity>
   <Relationship id="rel6" name="Sends" sourceEntity="User" targetEntity="ent4" gr:bendpoints="156,113,-119,38" db:database="db1" db:table="message">
     <RelationshipRole1 id="rel6#role11" name="SendsMessage" maxCard="1">

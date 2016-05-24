@@ -12,3 +12,10 @@ EXTRA:
 - password bekijken (hashen)
 - toon de rating bij een angel als sterren ipv waarde
 - verander de deliveryMethod bij update offer
+
+
+VRAGENASSISTENT
+Scritps
+Tag
+waarom we if null niet in de module voor average rating
+zagen over cloud is offline

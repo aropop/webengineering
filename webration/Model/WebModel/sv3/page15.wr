@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page15" name="Offers" landmark="true" gr:x="1065" gr:y="595" layout:pageLayout="BootstrapStyle/Bootstrap">
   <ContentUnits>
-    <PowerIndexUnit id="sv3#page15#pwu3" name="Offers" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent8" displayAttributes="ent8#att58 ent8#att39 ent8#att40 ent8#att55" linkOrder="sv3#page15#pwu3#ln46">
+    <PowerIndexUnit id="sv3#page15#pwu3" name="Offers" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent8" displayAttributes="ent8#att58 ent8#att39 ent8#att40 ent8#att26 ent8#att55" linkOrder="sv3#page15#pwu3#ln46">
       <SortAttribute attribute="ent8#att58" order="ascending"/>
       <Link id="sv3#page15#pwu3#ln46" name="View Details" to="sv3#page22#dau7" automaticCoupling="true" type="normal" validate="true"/>
     </PowerIndexUnit>
@@ -31,12 +31,13 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page15#pwu3">
+          <layout:Link link="sv3#page15#pwu3#ln46"/>
+          <layout:Link link="sv3#page15#pwu3ent8#att58"/>
           <layout:Attribute attribute="ent8#att58" label="Name"/>
           <layout:Attribute attribute="ent8#att39" label="Amount available"/>
           <layout:Attribute attribute="ent8#att40" label="Expiry Date"/>
+          <layout:Attribute attribute="ent8#att26" label="By"/>
           <layout:Attribute attribute="ent8#att55" label="Delivery Method"/>
-          <layout:Link link="sv3#page15#pwu3#ln46"/>
-          <layout:Link link="sv3#page15#pwu3ent8#att58"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

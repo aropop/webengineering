@@ -36,7 +36,7 @@
         <KeyCondition id="mov1#hym3#page23#seu9#su35#kcond22" name="id" predicate="in" implied="false"/>
       </Selector>
       <Link id="mov1#hym3#page23#seu9#ln76" name="Flow34" to="mov1#hym3#page23#mssu10" type="transport" validate="true">
-        <LinkParameter id="mov1#hym3#page23#seu9#ln76#par182" name="userName_username" source="userNameArray" target="mov1#hym3#page23#mssu10.mov1#hym3#page23#mssu10#ph6"/>
+        <LinkParameter id="mov1#hym3#page23#seu9#ln76#par182" name="userName_username" source="User#att35Array" target="mov1#hym3#page23#mssu10.mov1#hym3#page23#mssu10#ph6"/>
       </Link>
       <Link id="mov1#hym3#page23#seu9#ln77" name="Flow35" to="mov1#hym3#page23#enu10" type="transport" validate="true">
         <LinkParameter id="mov1#hym3#page23#seu9#ln77#par183" name="oid_receiver" source="userOIDArray" target="mov1#hym3#page23#enu10#fld31_slot"/>

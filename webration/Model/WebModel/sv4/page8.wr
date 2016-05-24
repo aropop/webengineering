@@ -37,16 +37,20 @@
         <RelationshipRoleCondition id="sv4#page8#mdu3#su44#rcond20" name="RoleCondition19" role="rel7#role13" predicate="in" implied="false"/>
       </Selector>
     </MultiDataUnit>
-    <DataUnit id="sv4#page8#dau11" name="Offered By" gr:x="30" gr:y="255" entity="ent1" displayAttributes="ent1#att14 User#att1">
+    <DataUnit id="sv4#page8#dau11" name="Offered By" gr:x="20" gr:y="255" entity="ent1" displayAttributes="User#att35 User#att1">
       <Selector id="sv4#page8#dau11#su56" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv4#page8#dau11#su56#kcond20" name="KeyCondition26" predicate="in" implied="false"/>
       </Selector>
+      <Link id="sv4#page8#dau11#ln56" name="Flow56" to="sv4#page8#miu26" type="transport" validate="true">
+        <LinkParameter id="sv4#page8#dau11#ln56#par63" name="oid_angelid" source="data.userOID" target="mov1#ctm1#icu6#icp68"/>
+      </Link>
     </DataUnit>
     <MultiDataUnit id="sv4#page8#mdu4" name="Tags" gr:x="160" gr:y="260" entity="ent9" displayAttributes="ent9#att32">
       <Selector id="sv4#page8#mdu4#su57" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv4#page8#mdu4#su57#rcond22" name="FromOffer" role="rel5#role9" predicate="in" implied="false"/>
       </Selector>
     </MultiDataUnit>
+    <ModuleInstanceUnit gr:x="165" gr:y="160" id="sv4#page8#miu26" moduleId="mov1#ctm1" action="false"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -85,7 +89,7 @@
                 <layout:Attribute attribute="ent12#att38"/>
               </layout:Unit>
               <layout:Unit unitId="sv4#page8#dau11">
-                <layout:Attribute label="Name" attribute="ent1#att14"/>
+                <layout:Attribute attribute="User#att35" label="Name"/>
                 <layout:Attribute label="Location" attribute="User#att1"/>
               </layout:Unit>
               <layout:Unit unitId="sv4#page8#mdu4">
@@ -108,7 +112,9 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page8#miu26"/>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

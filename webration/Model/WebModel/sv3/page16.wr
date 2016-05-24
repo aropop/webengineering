@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1050" gr:y="810" id="sv3#page16" name="Create Offer" layout:pageLayout="BootstrapStyle/Bootstrap">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="0" id="sv3#page16#enu4" name="Create Offer" entity="ent8" fieldOrder="sv3#page16#enu4#fld7 sv3#page16#enu4#fld8 sv3#page16#enu4#fld9 sv3#page16#enu4#fld10 sv3#page16#enu4#fld19 sv3#page16#enu4#fld20 sv3#page16#enu4#sfld3" gr:showAllParts="true" linkOrder="sv3#page16#enu4#ln4">
+    <EntryUnit gr:x="0" gr:y="0" id="sv3#page16#enu4" name="Create Offer" entity="ent8" fieldOrder="sv3#page16#enu4#fld7 sv3#page16#enu4#fld8 sv3#page16#enu4#fld9 sv3#page16#enu4#fld10 sv3#page16#enu4#sfld3 sv3#page16#enu4#fld19 sv3#page16#enu4#fld20" gr:showAllParts="true" linkOrder="sv3#page16#enu4#ln4">
       <Field id="sv3#page16#enu4#fld7" name="Name" type="string" modifiable="true" attribute="ent8#att58">
         <VRules>
           <MandatoryValidationRule id="sv3#page16#enu4#fld7#mnd4" name="Mandatory"/>
@@ -11,6 +11,7 @@
       <Field id="sv3#page16#enu4#fld9" name="Amount" type="integer" modifiable="true" attribute="ent8#att39">
         <VRules>
           <CompareValidationRule id="sv3#page16#enu4#fld9#cmp4" name="Compare4" predicate="gt" value="0"/>
+          <MandatoryValidationRule id="sv3#page16#enu4#fld9#mnd21" name="Mandatory21"/>
         </VRules>
       </Field>
       <Field id="sv3#page16#enu4#fld10" name="Expiry Date" type="date" modifiable="true" attribute="ent8#att40" preloaded="false">
@@ -26,7 +27,7 @@
       </Field>
       <Field id="sv3#page16#enu4#fld20" name="Delivery Method Name" type="string" modifiable="true">
         <VRules>
-          <MandatoryValidationRule id="sv3#page16#enu4#fld20#mnd19" name="Mandatory19" companionField="sv3#page16#enu4#sfld3" value="Delivery" predicate="eq"/>
+          <MandatoryValidationRule id="sv3#page16#enu4#fld20#mnd19" name="Mandatory19" companionField="sv3#page16#enu4#sfld3" value="Delivery" predicate="eq" errorMessage="Thid field is mandatory when choosing the &quot;Delivery&quot; delivery method"/>
           <MandatoryValidationRule id="sv3#page16#enu4#fld20#mnd20" name="Mandatory20" companionField="sv3#page16#enu4#sfld3" predicate="eq" value="Choice"/>
         </VRules>
       </Field>
@@ -41,6 +42,9 @@
       </Link>
       <SelectionField id="sv3#page16#enu4#sfld3" name="Delivery Method" type="string">
         <Slot id="sv3#page16#enu4#sfld3#slot5" name="Slot5" label="true" output="true" value="Delivery|Pick Up|Choice"/>
+        <VRules>
+          <MandatoryValidationRule id="sv3#page16#enu4#sfld3#mnd22" name="Mandatory22"/>
+        </VRules>
       </SelectionField>
     </EntryUnit>
     <GetUnit gr:x="20" gr:y="220" id="sv3#page16#gtu7" name="getUser" contextParameters="UserCtxParam">
@@ -58,9 +62,9 @@
           <layout:Field field="sv3#page16#enu4#fld8"/>
           <layout:Field field="sv3#page16#enu4#fld9"/>
           <layout:Field field="sv3#page16#enu4#fld10"/>
+          <layout:Field field="sv3#page16#enu4#sfld3"/>
           <layout:Field field="sv3#page16#enu4#fld19"/>
           <layout:Field field="sv3#page16#enu4#fld20"/>
-          <layout:Field field="sv3#page16#enu4#sfld3"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
