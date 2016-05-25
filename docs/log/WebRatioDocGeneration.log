@@ -1,0 +1,145 @@
+# WebRatioDoc MULTI_HTML mode
+# 2016-05-26 01:09:32
+# Project  : project
+
+WebMLGenerationSettings
+Output ....................... = MULTI_HTML
+TargetPath ................... = /home/arno/Downloads/webratio/docs
+DeleteXMLFolder .............. = true
+OpenCreatedFile .............. = false
+SummaryFilter ................ = SHOW_ALL
+DetailsFilter ................ = SHOW_ALL
+MaxDiagramWidth .............. = 1200
+XPathsToSkip ................. = []
+Custom Boolean Prefs 
+CustomBooleanValue GENERATE_AJAX 'Include Ajax properties' = false
+CustomBooleanValue GENERATE_APPENDIX 'Include appendix' = false
+CustomBooleanValue GENERATE_DIAGRAMS 'Include diagrams' = true
+CustomBooleanValue GENERATE_LAYOUT 'Include layout properties' = false
+CustomBooleanValue GENERATE_MAPPING 'Include mapping properties' = false
+ImageFormat .................. = PNG
+
+# Timing Generations
+Creating 90 WebRatioDocModels ..............            3851 [ms]             0 [min]
+Creating 68 diagrams .......................            5178 [ms]             0 [min]                                        Avg =              76 [ms]             0 [min]
+
+# Exception placing anchor elementId='rel1_role2'  sectionType='SummarySection'  pageId='User'  sheetKind='DocSheetKind[Id='STDSK'  Prefix.Pg=''  Prefix.An='_STD_' ]'
+org.eclipse.core.runtime.AssertionFailedException: assertion failed: Cannot register element having elementId='rel1_role2'  with 'User#SummarySection_STD_rel1_role2' because already registered with 'ent23#SummarySection_STD_rel1_role2'
+	at org.eclipse.core.runtime.Assert.isTrue(Assert.java:110)
+	at com.webratio.commons.mf.ui.modeldoc.AbstractModelDocContext.doPlaceAnchor(AbstractModelDocContext.java:623)
+	at com.webratio.commons.mf.ui.modeldoc.AbstractModelDocContext.placeAnchor(AbstractModelDocContext.java:595)
+	at com.webratio.ide.core.modeldoc.sections.EntitySummarySection.fillSummaryCard(EntitySummarySection.java:83)
+	at com.webratio.commons.mf.modeldoc.sections.SummarySection.addSummaryCard(SummarySection.java:119)
+	at com.webratio.commons.mf.modeldoc.sections.SummarySection.<init>(SummarySection.java:87)
+	at com.webratio.ide.core.modeldoc.sections.WebMLSummarySection.<init>(WebMLSummarySection.java:26)
+	at com.webratio.ide.core.modeldoc.sections.EntitySummarySection.<init>(EntitySummarySection.java:43)
+	at com.webratio.ide.core.modeldoc.sheets.EntityDocSheet.createSummarySection(EntityDocSheet.java:82)
+	at com.webratio.commons.mf.modeldoc.ModelDocSheet.<init>(ModelDocSheet.java:182)
+	at com.webratio.ide.core.modeldoc.sheets.AbstractWebMLDocSheet.<init>(AbstractWebMLDocSheet.java:59)
+	at com.webratio.ide.core.modeldoc.sheets.StandardDocSheet.<init>(StandardDocSheet.java:10)
+	at com.webratio.ide.core.modeldoc.sheets.EntityDocSheet.<init>(EntityDocSheet.java:33)
+	at com.webratio.ide.core.operations.EntityClipboardHandler.createModelDocSheet(EntityClipboardHandler.java:168)
+	at com.webratio.commons.mf.ui.modeldoc.AbstractModelDocContext.doCreateModelDoc(AbstractModelDocContext.java:330)
+	at com.webratio.commons.mf.ui.modeldoc.AbstractModelDocContext.createModelDoc(AbstractModelDocContext.java:324)
+	at com.webratio.commons.mf.ui.jobs.AbstractGenerateModelDocJob.generateModelDoc(AbstractGenerateModelDocJob.java:490)
+	at com.webratio.commons.mf.ui.jobs.AbstractGenerateModelDocJob.generateModelDoc(AbstractGenerateModelDocJob.java:307)
+	at com.webratio.commons.mf.ui.jobs.AbstractGenerateModelDocJob.runExternal(AbstractGenerateModelDocJob.java:219)
+	at com.webratio.commons.mf.jobs.ExternalJob.run(ExternalJob.java:53)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+Creating 90 WebRatioDoc temp XML files .....            1849 [ms]             0 [min]           3739 [KB]                    Avg =              20 [ms]             0 [min]             41 [KB]
+Created /home/arno/Downloads/webratio/docs/index.html
+Created /home/arno/Downloads/webratio/docs/DataModel.html
+Created /home/arno/Downloads/webratio/docs/ent23.html
+Created /home/arno/Downloads/webratio/docs/ent1.html
+Created /home/arno/Downloads/webratio/docs/ent13.html
+Created /home/arno/Downloads/webratio/docs/ent21.html
+Created /home/arno/Downloads/webratio/docs/ent22.html
+Created /home/arno/Downloads/webratio/docs/Group.html
+Created /home/arno/Downloads/webratio/docs/ent3.html
+Created /home/arno/Downloads/webratio/docs/ent4.html
+Created /home/arno/Downloads/webratio/docs/ent6.html
+Created /home/arno/Downloads/webratio/docs/Module.html
+Created /home/arno/Downloads/webratio/docs/ent18.html
+Created /home/arno/Downloads/webratio/docs/ent8.html
+Created /home/arno/Downloads/webratio/docs/ent12.html
+Created /home/arno/Downloads/webratio/docs/ent20.html
+Created /home/arno/Downloads/webratio/docs/ent5.html
+Created /home/arno/Downloads/webratio/docs/ent17.html
+Created /home/arno/Downloads/webratio/docs/ent2.html
+Created /home/arno/Downloads/webratio/docs/ent19.html
+Created /home/arno/Downloads/webratio/docs/User.html
+Created /home/arno/Downloads/webratio/docs/sv5.html
+Created /home/arno/Downloads/webratio/docs/sv5_page36.html
+Created /home/arno/Downloads/webratio/docs/sv5_page35.html
+Created /home/arno/Downloads/webratio/docs/sv3.html
+Created /home/arno/Downloads/webratio/docs/sv3_area1.html
+Created /home/arno/Downloads/webratio/docs/sv3_page19.html
+Created /home/arno/Downloads/webratio/docs/sv3_page27.html
+Created /home/arno/Downloads/webratio/docs/sv3_page17.html
+Created /home/arno/Downloads/webratio/docs/sv3_page16.html
+Created /home/arno/Downloads/webratio/docs/sv3_page3.html
+Created /home/arno/Downloads/webratio/docs/sv3_page22.html
+Created /home/arno/Downloads/webratio/docs/sv3_page15.html
+Created /home/arno/Downloads/webratio/docs/sv3_page13.html
+Created /home/arno/Downloads/webratio/docs/sv3_page20.html
+Created /home/arno/Downloads/webratio/docs/sv3_page43.html
+Created /home/arno/Downloads/webratio/docs/sv3_page41.html
+Created /home/arno/Downloads/webratio/docs/sv4.html
+Created /home/arno/Downloads/webratio/docs/sv4_area3.html
+Created /home/arno/Downloads/webratio/docs/sv4_page24.html
+Created /home/arno/Downloads/webratio/docs/sv4_page2.html
+Created /home/arno/Downloads/webratio/docs/sv4_page8.html
+Created /home/arno/Downloads/webratio/docs/sv4_page5.html
+Created /home/arno/Downloads/webratio/docs/sv4_page12.html
+Created /home/arno/Downloads/webratio/docs/sv4_page14.html
+Created /home/arno/Downloads/webratio/docs/sv4_page42.html
+Created /home/arno/Downloads/webratio/docs/sv4_page6.html
+Created /home/arno/Downloads/webratio/docs/sv4_page28.html
+Created /home/arno/Downloads/webratio/docs/sv1.html
+Created /home/arno/Downloads/webratio/docs/sv1_area2.html
+Created /home/arno/Downloads/webratio/docs/sv1_page9.html
+Created /home/arno/Downloads/webratio/docs/sv1_page29.html
+Created /home/arno/Downloads/webratio/docs/sv1_page4.html
+Created /home/arno/Downloads/webratio/docs/sv1_page1.html
+Created /home/arno/Downloads/webratio/docs/sv1_page10.html
+Created /home/arno/Downloads/webratio/docs/sv1_page44.html
+Created /home/arno/Downloads/webratio/docs/sv1_page7.html
+Created /home/arno/Downloads/webratio/docs/mov1.html
+Created /home/arno/Downloads/webratio/docs/mov1_opm2.html
+Created /home/arno/Downloads/webratio/docs/mov1_opm12.html
+Created /home/arno/Downloads/webratio/docs/mov1_opm1.html
+Created /home/arno/Downloads/webratio/docs/mov1_hym5.html
+Created /home/arno/Downloads/webratio/docs/mov1_hym5_page33.html
+Created /home/arno/Downloads/webratio/docs/mov1_hym5_page32.html
+Created /home/arno/Downloads/webratio/docs/mov1_opm8.html
+Created /home/arno/Downloads/webratio/docs/mov1_opm14.html
+Created /home/arno/Downloads/webratio/docs/mov1_opm17.html
+Created /home/arno/Downloads/webratio/docs/mov1_hym3.html
+Created /home/arno/Downloads/webratio/docs/mov1_hym3_page23.html
+Created /home/arno/Downloads/webratio/docs/mov1_opm5.html
+Created /home/arno/Downloads/webratio/docs/mov1_opm4.html
+Created /home/arno/Downloads/webratio/docs/mov1_hym2.html
+Created /home/arno/Downloads/webratio/docs/mov1_hym2_page31.html
+Created /home/arno/Downloads/webratio/docs/mov1_opm16.html
+Created /home/arno/Downloads/webratio/docs/mov1_opm18.html
+Created /home/arno/Downloads/webratio/docs/mov1_opm9.html
+Created /home/arno/Downloads/webratio/docs/mov1_hym4.html
+Created /home/arno/Downloads/webratio/docs/mov1_hym4_page37.html
+Created /home/arno/Downloads/webratio/docs/mov1_hym6.html
+Created /home/arno/Downloads/webratio/docs/mov1_hym6_page34.html
+Created /home/arno/Downloads/webratio/docs/mov1_opm3.html
+Created /home/arno/Downloads/webratio/docs/mov1_hym7.html
+Created /home/arno/Downloads/webratio/docs/mov1_hym7_page38.html
+Created /home/arno/Downloads/webratio/docs/mov1_opm7.html
+Created /home/arno/Downloads/webratio/docs/mov1_hym1.html
+Created /home/arno/Downloads/webratio/docs/mov1_hym1_page21.html
+Created /home/arno/Downloads/webratio/docs/mov1_opm11.html
+Created /home/arno/Downloads/webratio/docs/mov1_ctm1.html
+Created /home/arno/Downloads/webratio/docs/mov1_opm15.html
+Created /home/arno/Downloads/webratio/docs/ServiceDataProviders.html
+Creating 90 WebRatioDoc files ..............            2842 [ms]             0 [min]           3739 [KB]                    Avg =              31 [ms]             0 [min]             41 [KB]
+Writing 90 icons ...........................              43 [ms]
+
+
+Tot ........................................           14266 [ms]             0 [min]
