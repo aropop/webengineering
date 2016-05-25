@@ -18,7 +18,7 @@ Default value is default.
 		[% if ("default".equals(params["theme"])) { %]<c:set var="bootstrap-theme" value="${'default'}"/>[% } %]
 		[% if ("compact".equals(params["theme"])) { %]<c:set var="bootstrap-theme" value="${'compact'}"/>[% } %]
 		<wr:Resources types="css"/>
-		<wr:Resources types="javascript"/>	
+		<wr:Resources types="javascript"/>
 	</head>
 <body class="bootstrap-[%= params["theme"] %] signin">
 <wr:PageForm>

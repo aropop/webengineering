@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.10)  15 MAY 2016 10:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.10)  24 MAY 2016 20:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -896,35 +896,39 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [12 <./CTT/CTTpng/CTTGoods.png> <./CTT/CTTpng/CTTModifyOffer.png>] [13 <./CTT/CTTpng/CTTRating.png> <./CTT/CTTpng/CTTRegister.png> <./CTT/CTTpng/CTTRequestGoods.png> <./CTT/CTTpng/CTTSearchGoods.png>] [14 <./CTT/CTTpng/CTTViewAngels.png>]
 Chapter 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 392.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 392.
 [15
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 405.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 405.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 409.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 409.
  (/Users/bennetstankidis/Documents/web_engineering/Report/.texpadtmp/main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 405.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 405.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 409.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 409.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 405.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 409.
  ) 
 Here is how much of TeX's memory you used:
- 17861 strings out of 493089
- 330499 string characters out of 6134842
+ 17874 strings out of 493089
+ 330631 string characters out of 6134842
  712508 words of memory out of 5000000
- 20950 multiletter control sequences out of 15000+600000
- 7782 words of font info for 28 fonts, out of 8000000 for 9000
+ 20957 multiletter control sequences out of 15000+600000
+ 9306 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,16n,72p,432b,457s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on /Users/bennetstankidis/Documents/web_engineering/Report/.texpadtmp/main.pdf (16 pages, 204435 bytes).
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on /Users/bennetstankidis/Documents/web_engineering/Report/.texpadtmp/main.pdf (16 pages, 227410 bytes).
 PDF statistics:
- 378 PDF objects out of 1000 (max. 8388607)
- 316 compressed objects within 4 object streams
- 68 named destinations out of 1000 (max. 500000)
+ 392 PDF objects out of 1000 (max. 8388607)
+ 327 compressed objects within 4 object streams
+ 69 named destinations out of 1000 (max. 500000)
  386 words of extra memory for PDF output out of 10000 (max. 10000000)
 
