@@ -3,16 +3,17 @@
     <InputCollectorUnit id="mov1#opm6#icu26" name="Input Collector" gr:x="30" gr:y="60">
       <OKLink id="mov1#opm6#icu26#oln4" name="OKFlow4" to="mov1#opm6#seu7" automaticCoupling="true"/>
     </InputCollectorUnit>
-    <SelectorUnit gr:x="295" gr:y="55" id="mov1#opm6#seu7" name="Group" entity="Group">
+    <SelectorUnit gr:x="295" gr:y="55" id="mov1#opm6#seu7" name="Group" entity="Group" distinctAttributes="groupName" maxResults="1">
       <OKLink id="mov1#opm6#seu7#oln5" name="OKFlow5" to="mov1#opm6#switch1">
         <LinkParameter id="mov1#opm6#seu7#oln5#par175" name="Data Size_Switch" source="dataSize" target="mov1#opm6#switch1.switch"/>
       </OKLink>
       <KOLink id="mov1#opm6#seu7#kln10" name="KOFlow10" to="mov1#opm6#okcu22" automaticCoupling="true"/>
     </SelectorUnit>
     <SwitchUnit gr:x="425" gr:y="60" id="mov1#opm6#switch1" name="Switch1">
-      <Case value="0"/>
       <OKLink id="mov1#opm6#switch1#oln9" name="OKFlow9" to="mov1#opm6#qu3" automaticCoupling="true" code="0"/>
-      <OKLink id="mov1#opm6#switch1#oln12" name="OKFlow12" to="mov1#opm6#okcu22" automaticCoupling="true"/>
+      <OKLink id="mov1#opm6#switch1#oln12" name="OKFlow12" to="mov1#opm6#okcu22" automaticCoupling="true" code="1"/>
+      <Case value="0"/>
+      <Case value="1"/>
     </SwitchUnit>
     <QueryUnit gr:x="565" gr:y="50" id="mov1#opm6#qu3" name="Query3" mode="update" language="SQL" db="db2">
       <QueryText xml:space="preserve">insert into `module` values

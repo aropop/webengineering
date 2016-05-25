@@ -10,7 +10,7 @@
     <PowerIndexUnit gr:x="5" gr:y="135" id="mov1#hym1#page21#pwu6" name="Users" sortable="true" checkable="false" useCountQuery="false" entity="User" linkOrder="mov1#hym1#page21#pwu6#ln29" ajaxEnableExpandedLinks="true" displayAttributes="User#att35">
       <Selector id="mov1#hym1#page21#pwu6#su10" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov1#hym1#page21#pwu6#su10#acond4" name="AttCondit" predicate="contains" booleanOperator="or" implied="false" attributes="User#att35"/>
-        <AttributesCondition id="mov1#hym1#page21#pwu6#su10#acond20" name="notannon" predicate="neq" booleanOperator="or" implied="false" ignoreCase="true" value="Annonymous"/>
+        <AttributesCondition id="mov1#hym1#page21#pwu6#su10#acond20" name="notannon" predicate="neq" booleanOperator="or" implied="false" ignoreCase="true" value="Annonymous" attributes="User#att35"/>
       </Selector>
       <Link id="mov1#hym1#page21#pwu6#ln29" name="Select" to="mov1#hym1#okcu6" type="normal" validate="true">
         <LinkParameter id="mov1#hym1#page21#pwu6#ln29#par29" name="oid_userid" source="data[].userOID" target="mov1#hym1#okcu6#ocp1"/>

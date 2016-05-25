@@ -1,10 +1,10 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="745" gr:y="-20" id="sv4#page8" name="Offer">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="730" gr:y="0" id="sv4#page8" name="Offer">
   <ContentUnits>
-    <DataUnit gr:x="0" gr:y="85" id="sv4#page8#dau2" name="Offer detail" entity="ent8" linkOrder="sv4#page8#dau2#ln12 sv4#page8#dau2#ln81" displayAttributes="ent8#att58 ent8#att36 ent8#att39 ent8#att40 ent8#att55 ent8#att26 ent8#att42 ent8#att43">
+    <DataUnit gr:x="10" gr:y="140" id="sv4#page8#dau2" name="Offer detail" entity="ent8" linkOrder="sv4#page8#dau2#ln12 sv4#page8#dau2#ln81" displayAttributes="ent8#att58 ent8#att36 ent8#att39 ent8#att40 ent8#att55 ent8#att26 ent8#att42 ent8#att43">
       <Selector id="sv4#page8#dau2#su3" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv4#page8#dau2#su3#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>
-      <Link id="sv4#page8#dau2#ln12" name="Request" to="sv4#page14#enu3" type="normal" validate="true">
+      <Link id="sv4#page8#dau2#ln12" name="Request" to="sv4#page14#enu3" type="normal" validate="true" gr:bendpoints="360,-9,-106,81">
         <LinkParameter id="sv4#page8#dau2#ln12#par16" name="oid_id" source="data.ent8#att27" target="sv4#page14#enu3#fld6_slot"/>
         <LinkParameter id="sv4#page8#dau2#ln12#par173" name="OfferToAngel.oid_PASSING" source="data.rel4#role8_userOID" passing="true"/>
         <LinkParameter id="sv4#page8#dau2#ln12#par411" name="deliveryMethod_deliverymethod" source="data.ent8#att55" target="sv4#page14#enu3#fld24_slot"/>
@@ -23,36 +23,63 @@
       <Link id="sv4#page8#dau2#ln21" name="Flow21" to="sv4#page8#miu6" type="transport" validate="true">
         <LinkParameter id="sv4#page8#dau2#ln21#par160" name="OfferToAngel.oid_angelid" source="data.rel4#role8_userOID" target="mov1#ctm1#icu6#icp68"/>
       </Link>
+      <Link id="sv4#page8#dau2#ln45" name="Flow45" to="sv4#page8#seu16" type="transport" validate="true" gr:bendpoints="-14,-57,-14,49">
+        <LinkParameter id="sv4#page8#dau2#ln45#par328" name="OfferToAngel.oid_KeyCondition31 [oid]" source="data.rel4#role8_userOID" target="sv4#page8#seu16#su26#kcond31.userOID"/>
+      </Link>
     </DataUnit>
-    <SelectorUnit gr:x="115" gr:y="0" id="sv4#page8#seu8" name="userRequestCheck" entity="ent17">
+    <SelectorUnit gr:x="125" gr:y="55" id="sv4#page8#seu8" name="userRequestCheck" entity="ent17">
       <Selector id="sv4#page8#seu8#su34" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv4#page8#seu8#su34#rcond12" name="UserCondition" predicate="in" implied="false" role="rel11#role21"/>
         <RelationshipRoleCondition id="sv4#page8#seu8#su34#rcond13" name="OfferCondition" predicate="in" implied="false" role="rel12#role24"/>
       </Selector>
     </SelectorUnit>
-    <GetUnit gr:x="300" gr:y="20" id="sv4#page8#gtu14" name="Get14" contextParameters="UserCtxParam">
+    <GetUnit gr:x="310" gr:y="75" id="sv4#page8#gtu14" name="Get14" contextParameters="UserCtxParam">
       <Link id="sv4#page8#gtu14#ln72" name="Flow72" to="sv4#page8#seu8" type="transport" validate="true">
         <LinkParameter id="sv4#page8#gtu14#ln72#par177" name="UserCtxParam.oid_RoleCondition12 [oid]" source="sv4#page8#gtu14.UserCtxParam" target="sv4#page8#seu8#su34#rcond12.userOID"/>
       </Link>
     </GetUnit>
-    <MultiDataUnit id="sv4#page8#mdu3" name="Pictures" gr:x="290" gr:y="265" entity="ent12" displayAttributes="ent12#att38">
+    <MultiDataUnit id="sv4#page8#mdu3" name="Pictures" gr:x="300" gr:y="320" entity="ent12" displayAttributes="ent12#att38">
       <Selector id="sv4#page8#mdu3#su44" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv4#page8#mdu3#su44#rcond20" name="RoleCondition19" role="rel7#role13" predicate="in" implied="false"/>
       </Selector>
     </MultiDataUnit>
-    <DataUnit id="sv4#page8#dau11" name="Offered By" gr:x="20" gr:y="255" entity="ent1" displayAttributes="User#att35 User#att1 ent1#att21">
+    <DataUnit id="sv4#page8#dau11" name="Offered By" gr:x="30" gr:y="310" entity="ent1" displayAttributes="User#att35 User#att1 ent1#att21">
       <Selector id="sv4#page8#dau11#su56" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv4#page8#dau11#su56#kcond20" name="KeyCondition26" predicate="in" implied="false"/>
       </Selector>
     </DataUnit>
-    <MultiDataUnit id="sv4#page8#mdu4" name="Tags" gr:x="160" gr:y="260" entity="ent2" displayAttributes="ent2#att31">
+    <MultiDataUnit id="sv4#page8#mdu4" name="Tags" gr:x="170" gr:y="315" entity="ent2" displayAttributes="ent2#att31">
       <Selector id="sv4#page8#mdu4#su57" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv4#page8#mdu4#su57#rcond22" name="FromOffer" predicate="in" implied="false" role="rel13#role26"/>
       </Selector>
     </MultiDataUnit>
-    <ModuleInstanceUnit gr:x="175" gr:y="160" id="sv4#page8#miu6" moduleId="mov1#ctm1" action="false"/>
+    <ModuleInstanceUnit gr:x="200" gr:y="195" id="sv4#page8#miu6" moduleId="mov1#ctm1" action="false"/>
+    <SelectorUnit gr:x="0" gr:y="0" id="sv4#page8#seu16" name="selectAngel" entity="User">
+      <Selector id="sv4#page8#seu16#su26" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#page8#seu16#su26#kcond31" name="KeyCondition31" predicate="in" implied="false"/>
+      </Selector>
+    </SelectorUnit>
+    <MultiMessageUnit gr:x="290" gr:y="0" id="sv4#page8#mssu11" name="Deleted Message">
+      <Message xml:space="preserve">User has deleted his/hers account, this offer can't be requested.</Message>
+    </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page8#mssu11" layout:unitVisibilityCondition="sv4#page8#cexpr15" layout:unitVisibilityConditionNegated="true"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv4#page8#dau2">
@@ -128,13 +155,41 @@
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
   </layout:Grid>
   <Variable id="sv4#page8#var3" name="hasRequestedThis" type="integer" unitId="sv4#page8#seu8" parameter="dataSize"/>
   <ConditionExpression id="sv4#page8#cexpr3" name="hasRequestedThisCheck">
-    <TextValue xml:space="preserve">return hasRequestedThis == 0</TextValue>
+    <TextValue xml:space="preserve">return (hasRequestedThis == 0) &amp;&amp; (User == 1)</TextValue>
   </ConditionExpression>
   <ConditionExpression id="sv4#page8#cexpr4" name="hasNotRequestedThisCheck">
-    <TextValue xml:space="preserve">return hasRequestedThis == 1</TextValue>
+    <TextValue xml:space="preserve">return (hasRequestedThis == 1) &amp;&amp; (User ==1)</TextValue>
   </ConditionExpression>
   <Variable id="sv4#page8#var6" name="deliveryMethod" unitId="sv4#page8#dau2" parameter="data.ent8#att55" type="string"/>
   <ConditionExpression id="sv4#page8#cexpr9" name="isNotDelivery">
@@ -142,5 +197,9 @@
   </ConditionExpression>
   <ConditionExpression id="sv4#page8#cexpr10" name="isDelivery">
     <TextValue xml:space="preserve">return (deliveryMethod == "Delivery") || (deliveryMethod == "Choice")</TextValue>
+  </ConditionExpression>
+  <Variable id="sv4#page8#var10" name="User" unitId="sv4#page8#seu16" parameter="dataSize" type="integer"/>
+  <ConditionExpression id="sv4#page8#cexpr15" name="UserNotDeleted">
+    <TextValue xml:space="preserve">return User == 1;</TextValue>
   </ConditionExpression>
 </Page>
