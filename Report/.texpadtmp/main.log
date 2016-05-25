@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.10)  24 MAY 2016 20:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.10)  25 MAY 2016 17:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -706,7 +706,7 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) ABD: EveryShipout initializing macros
 \c@lstlisting=\count140
- <VUB_logo.pdf, id=151, 758.835pt x 153.57375pt>
+ <VUB_logo.pdf, id=159, 758.835pt x 153.57375pt>
 File: VUB_logo.pdf Graphic file (type pdf)
  <use VUB_logo.pdf>
 Package pdftex.def Info: VUB_logo.pdf used on input line 43.
@@ -720,7 +720,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--43
 []\OT1/cmr/m/n/10 Faculteit Weten-schap-pen en Bio-
  []
 
-<VUB_schild.pdf, id=152, 260.975pt x 259.97125pt>
+<VUB_schild.pdf, id=160, 260.975pt x 259.97125pt>
 File: VUB_schild.pdf Graphic file (type pdf)
  <use VUB_schild.pdf>
 Package pdftex.def Info: VUB_schild.pdf used on input line 43.
@@ -755,7 +755,7 @@ Chapter 1.
 
 ]
 Chapter 2.
-<classhierarchy.png, id=224, 295.1025pt x 433.62pt>
+<classhierarchy.png, id=234, 295.1025pt x 433.62pt>
 File: classhierarchy.png Graphic file (type png)
  <use classhierarchy.png>
 Package pdftex.def Info: classhierarchy.png used on input line 111.
@@ -771,12 +771,12 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 121.
  [6] [7]
 Chapter 3.
-<CTT/CTTpng/CTTAddGood.png, id=243, 364.36125pt x 177.66376pt>
+<CTT/CTTpng/CTTAddGood.png, id=253, 364.36125pt x 177.66376pt>
 File: CTT/CTTpng/CTTAddGood.png Graphic file (type png)
  <use CTT/CTTpng/CTTAddGood.png>
 Package pdftex.def Info: CTT/CTTpng/CTTAddGood.png used on input line 228.
 (pdftex.def)             Requested size: 339.67029pt x 165.6295pt.
- <CTT/CTTpng/CTTCancle.png, id=245, 513.92pt x 209.78375pt>
+ <CTT/CTTpng/CTTCancle.png, id=255, 513.92pt x 209.78375pt>
 File: CTT/CTTpng/CTTCancle.png Graphic file (type png)
  <use CTT/CTTpng/CTTCancle.png>
 Package pdftex.def Info: CTT/CTTpng/CTTCancle.png used on input line 237.
@@ -785,14 +785,14 @@ Package pdftex.def Info: CTT/CTTpng/CTTCancle.png used on input line 237.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<CTT/CTTpng/CTTContactAngel.png, id=247, 686.565pt x 266.9975pt>
+<CTT/CTTpng/CTTContactAngel.png, id=257, 686.565pt x 266.9975pt>
 File: CTT/CTTpng/CTTContactAngel.png Graphic file (type png)
  <use CTT/CTTpng/CTTContactAngel.png>
 Package pdftex.def Info: CTT/CTTpng/CTTContactAngel.png used on input line 250.
 (pdftex.def)             Requested size: 339.67029pt x 132.09286pt.
  [8
 
- <./CTT/CTTpng/CTTAddGood.png>] <CTT/CTTpng/CTTContactHomeless.png, id=257, 617.30624pt x 256.96pt>
+ <./CTT/CTTpng/CTTAddGood.png>] <CTT/CTTpng/CTTContactHomeless.png, id=267, 617.30624pt x 256.96pt>
 File: CTT/CTTpng/CTTContactHomeless.png Graphic file (type png)
  <use CTT/CTTpng/CTTContactHomeless.png>
 Package pdftex.def Info: CTT/CTTpng/CTTContactHomeless.png used on input line 259.
@@ -801,7 +801,7 @@ Package pdftex.def Info: CTT/CTTpng/CTTContactHomeless.png used on input line 25
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<CTT/CTTpng/CTTDeleteOffer.png, id=259, 294.09875pt x 181.67876pt>
+<CTT/CTTpng/CTTDeleteOffer.png, id=269, 294.09875pt x 181.67876pt>
 File: CTT/CTTpng/CTTDeleteOffer.png Graphic file (type png)
  <use CTT/CTTpng/CTTDeleteOffer.png>
 Package pdftex.def Info: CTT/CTTpng/CTTDeleteOffer.png used on input line 268.
@@ -810,7 +810,7 @@ Package pdftex.def Info: CTT/CTTpng/CTTDeleteOffer.png used on input line 268.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<CTT/CTTpng/CTTDisable.png, id=261, 335.2525pt x 175.65625pt>
+<CTT/CTTpng/CTTDisable.png, id=271, 335.2525pt x 175.65625pt>
 File: CTT/CTTpng/CTTDisable.png Graphic file (type png)
  <use CTT/CTTpng/CTTDisable.png>
 Package pdftex.def Info: CTT/CTTpng/CTTDisable.png used on input line 277.
@@ -819,7 +819,7 @@ Package pdftex.def Info: CTT/CTTpng/CTTDisable.png used on input line 277.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<CTT/CTTpng/CTTDonation.png, id=264, 858.20625pt x 264.99pt>
+<CTT/CTTpng/CTTDonation.png, id=274, 858.20625pt x 264.99pt>
 File: CTT/CTTpng/CTTDonation.png Graphic file (type png)
  <use CTT/CTTpng/CTTDonation.png>
 Package pdftex.def Info: CTT/CTTpng/CTTDonation.png used on input line 286.
@@ -828,7 +828,7 @@ Package pdftex.def Info: CTT/CTTpng/CTTDonation.png used on input line 286.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<CTT/CTTpng/CTTGoods.png, id=276, 543.02875pt x 218.8175pt>
+<CTT/CTTpng/CTTGoods.png, id=286, 543.02875pt x 218.8175pt>
 File: CTT/CTTpng/CTTGoods.png Graphic file (type png)
  <use CTT/CTTpng/CTTGoods.png>
 Package pdftex.def Info: CTT/CTTpng/CTTGoods.png used on input line 298.
@@ -837,7 +837,7 @@ Package pdftex.def Info: CTT/CTTpng/CTTGoods.png used on input line 298.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<CTT/CTTpng/CTTModifyOffer.png, id=278, 787.94376pt x 285.065pt>
+<CTT/CTTpng/CTTModifyOffer.png, id=288, 787.94376pt x 285.065pt>
 File: CTT/CTTpng/CTTModifyOffer.png Graphic file (type png)
  <use CTT/CTTpng/CTTModifyOffer.png>
 Package pdftex.def Info: CTT/CTTpng/CTTModifyOffer.png used on input line 313.
@@ -846,7 +846,7 @@ Package pdftex.def Info: CTT/CTTpng/CTTModifyOffer.png used on input line 313.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<CTT/CTTpng/CTTRating.png, id=280, 680.5425pt x 183.68625pt>
+<CTT/CTTpng/CTTRating.png, id=290, 680.5425pt x 183.68625pt>
 File: CTT/CTTpng/CTTRating.png Graphic file (type png)
  <use CTT/CTTpng/CTTRating.png>
 Package pdftex.def Info: CTT/CTTpng/CTTRating.png used on input line 322.
@@ -855,7 +855,7 @@ Package pdftex.def Info: CTT/CTTpng/CTTRating.png used on input line 322.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<CTT/CTTpng/CTTRegister.png, id=291, 500.87125pt x 190.7125pt>
+<CTT/CTTpng/CTTRegister.png, id=301, 500.87125pt x 190.7125pt>
 File: CTT/CTTpng/CTTRegister.png Graphic file (type png)
  <use CTT/CTTpng/CTTRegister.png>
 Package pdftex.def Info: CTT/CTTpng/CTTRegister.png used on input line 334.
@@ -864,7 +864,7 @@ Package pdftex.def Info: CTT/CTTpng/CTTRegister.png used on input line 334.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<CTT/CTTpng/CTTRequestGoods.png, id=293, 420.57124pt x 196.735pt>
+<CTT/CTTpng/CTTRequestGoods.png, id=303, 420.57124pt x 196.735pt>
 File: CTT/CTTpng/CTTRequestGoods.png Graphic file (type png)
  <use CTT/CTTpng/CTTRequestGoods.png>
 Package pdftex.def Info: CTT/CTTpng/CTTRequestGoods.png used on input line 343.
@@ -873,7 +873,7 @@ Package pdftex.def Info: CTT/CTTpng/CTTRequestGoods.png used on input line 343.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<CTT/CTTpng/CTTSearchGoods.png, id=295, 464.73625pt x 181.67876pt>
+<CTT/CTTpng/CTTSearchGoods.png, id=305, 464.73625pt x 181.67876pt>
 File: CTT/CTTpng/CTTSearchGoods.png Graphic file (type png)
  <use CTT/CTTpng/CTTSearchGoods.png>
 Package pdftex.def Info: CTT/CTTpng/CTTSearchGoods.png used on input line 352.
@@ -885,7 +885,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: Reference `fig:awesome_image' on page 11 undefined on input line 358.
 
-<CTT/CTTpng/CTTViewAngels.png, id=296, 1279.78125pt x 331.2375pt>
+<CTT/CTTpng/CTTViewAngels.png, id=306, 1279.78125pt x 331.2375pt>
 File: CTT/CTTpng/CTTViewAngels.png Graphic file (type png)
  <use CTT/CTTpng/CTTViewAngels.png>
 Package pdftex.def Info: CTT/CTTpng/CTTViewAngels.png used on input line 361.
@@ -900,35 +900,119 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 392.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 392.
+<screenshots/designProtectedOld.png, id=342, 779.91376pt x 542.025pt>
+File: screenshots/designProtectedOld.png Graphic file (type png)
+ <use screenshots/designProtectedOld.png>
+Package pdftex.def Info: screenshots/designProtectedOld.png used on input line 400.
+(pdftex.def)             Requested size: 297.20906pt x 206.55058pt.
+ <screenshots/designProtectedNew.png, id=344, 779.91376pt x 542.025pt>
+File: screenshots/designProtectedNew.png Graphic file (type png)
+ <use screenshots/designProtectedNew.png>
+Package pdftex.def Info: screenshots/designProtectedNew.png used on input line 407.
+(pdftex.def)             Requested size: 297.20906pt x 206.55058pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 395--411
+
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [15
 
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 409.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 409.
+] [16 <./screenshots/designProtectedOld.png> <./screenshots/designProtectedNew.png>] <favicon.png, id=363, 32.12pt x 32.12pt>
+File: favicon.png Graphic file (type png)
+ <use favicon.png>
+Package pdftex.def Info: favicon.png used on input line 421.
+(pdftex.def)             Requested size: 42.46121pt x 42.46466pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 416--425
+
+ []
+
+<screenshots/designInputWidthOld.png, id=366, 689.57625pt x 475.7775pt>
+File: screenshots/designInputWidthOld.png Graphic file (type png)
+ <use screenshots/designInputWidthOld.png>
+Package pdftex.def Info: screenshots/designInputWidthOld.png used on input line 429.
+(pdftex.def)             Requested size: 297.20906pt x 205.05946pt.
+ <screenshots/designInputWidthNew.png, id=367, 694.595pt x 478.78876pt>
+File: screenshots/designInputWidthNew.png Graphic file (type png)
+ <use screenshots/designInputWidthNew.png>
+Package pdftex.def Info: screenshots/designInputWidthNew.png used on input line 435.
+(pdftex.def)             Requested size: 297.20906pt x 204.87427pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<screenshots/designTag.png, id=370, 331.2375pt x 80.3pt>
+File: screenshots/designTag.png Graphic file (type png)
+ <use screenshots/designTag.png>
+Package pdftex.def Info: screenshots/designTag.png used on input line 443.
+(pdftex.def)             Requested size: 212.29312pt x 51.46533pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 448--451
+
+ []
+
+[17
+
+ <./favicon.png> <./screenshots/designInputWidthOld.png>] <templateDesign/templateDesignNormal.png, id=385, 386.44376pt x 361.35pt>
+File: templateDesign/templateDesignNormal.png Graphic file (type png)
+ <use templateDesign/templateDesignNormal.png>
+Package pdftex.def Info: templateDesign/templateDesignNormal.png used on input line 456.
+(pdftex.def)             Requested size: 254.75433pt x 238.21054pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<templateDesign/templateDesignSmall.png, id=387, 286.06876pt x 361.35pt>
+File: templateDesign/templateDesignSmall.png Graphic file (type png)
+ <use templateDesign/templateDesignSmall.png>
+Package pdftex.def Info: templateDesign/templateDesignSmall.png used on input line 464.
+(pdftex.def)             Requested size: 254.75433pt x 321.79898pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[18 <./screenshots/designInputWidthNew.png> <./screenshots/designTag.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 475.
+ [19 <./templateDesign/templateDesignNormal.png> <./templateDesign/templateDesignSmall.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 475.
  (/Users/bennetstankidis/Documents/web_engineering/Report/.texpadtmp/main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 409.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 409.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 475.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 475.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 409.
- ) 
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 475.
+ )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 418 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
- 17874 strings out of 493089
- 330631 string characters out of 6134842
+ 17942 strings out of 493089
+ 332350 string characters out of 6134842
  712508 words of memory out of 5000000
- 20957 multiletter control sequences out of 15000+600000
+ 20999 multiletter control sequences out of 15000+600000
  9306 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,16n,72p,432b,457s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,16n,72p,534b,457s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on /Users/bennetstankidis/Documents/web_engineering/Report/.texpadtmp/main.pdf (16 pages, 227410 bytes).
+Output written on /Users/bennetstankidis/Documents/web_engineering/Report/.texpadtmp/main.pdf (20 pages, 369821 bytes).
 PDF statistics:
- 392 PDF objects out of 1000 (max. 8388607)
- 327 compressed objects within 4 object streams
- 69 named destinations out of 1000 (max. 500000)
- 386 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 459 PDF objects out of 1000 (max. 8388607)
+ 376 compressed objects within 4 object streams
+ 85 named destinations out of 1000 (max. 500000)
+ 442 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -388,20 +388,83 @@ IFML
 \section{Site Structure Design}
 
 \section{Presentation Design}
-Since the domain model and IFML diagrams are all developed in WebRatio, this tool was used to visualise the webpage.
+Since the domain model and IFML diagrams are all developed in WebRatio, this tool was used to visualise the website.
 This means that the presentation design is mostly done by WebRatio itself. Additionally, we choose to use a style project found in the WebRatio Store named Bootstrap Style. This style creates a clean and minimalistic design corresponding to the look and feel that Bootstrap\footnote{http://getbootstrap.com} uses.
- 
-\subsection{Style and Template Design}
-toon welke dingen we veranderd hebben aan de style
 
-en toon hoe de template eruit ziet
-(veranderd voor login want zie slides)
+\subsection{Site Identification}
+A visitor of the website is able to identify the site on each page that is browsed to. We opted to show a navigation bar at the top of the screen with the logo at the left. The logo is a simple textual presentation: ``HomelessAngel''. 
+\\\\
+The used style, Bootstrap Style, came up short with our view on site identification. The webpage that is shown when a user visits a webpage that is protected\footnote{This means that the website is only accessible to certain users (Angel, Homeless or Admin).}, does not display a navigation bar together with the logo on the top of the webpage (see figure \ref{fig:designProtectedOld}).
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.7\textwidth]{screenshots/designProtectedOld}
+    \caption{Prohibited webpage design of the Bootstrap Style.}
+    \label{fig:designProtectedOld}
+\end{figure}
+The page mentioned in previous paragraph is redesigned to make sure that site identification is present on that page. There were also small tweaks made to the login part itself. The result is shown in figure \ref{fig:designProtectedNew}.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.7\textwidth]{screenshots/designProtectedNew}
+    \caption{Redesign of the prohibited webpage style.}
+    \label{fig:designProtectedNew}
+\end{figure}
 
+% possibly needs to be deleted
+\clearpage
 
+\subsection{Style Design}
+As mentioned before is the Bootstrap Style used in this project. The used style design is of course the same style design of the Bootstrap Style. Although that style has a pleasing look, we had to make some minor changes to make it more in harmony with our website.
+\\\\
+First of all was the title changed to the name of the website: ``HomelessAngel''. Together with this was the favicon changed to a custom favicon created for this project (see figure {\ref{fig:favicon}).
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.1\textwidth]{favicon}
+    \caption{The favicon of the website.}
+    \label{fig:favicon}
+\end{figure}
 
+Next, the width of all the input fields and buttons was reset to the standard width of input fields and button (see figure \ref{fig:designInputWidthNew}). The Bootstrap Style uses a width that fills the complete width of the main container of the website (see figure \ref{fig:designInputWidthOld}). This  change was necessary since the webpages can get very wide which results in wide input fields and buttons. Those wide input fields and buttons are not that appealing and were therefore changed.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.7\textwidth]{screenshots/designInputWidthOld}
+    \caption{Input and button design of the Bootstrap Style.}
+    \label{fig:designInputWidthOld}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.7\textwidth]{screenshots/designInputWidthNew}
+    \caption{Redesign of the input and button style.}
+    \label{fig:designInputWidthNew}
+\end{figure}
 
+Later did we add a custom styling to represent tags, which are linked to an offer. Naturally, the Bootstrap Style did not contain any styling for a tag. A custom style was added that shows tags in a similar way as Linkedin\footnote{https://www.linkedin.com} does it. The custom tag styling is illustrated in figure \ref{fig:designTag}.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\textwidth]{screenshots/designTag}
+    \caption{Custom style of a tag (blue means hovered).}
+    \label{fig:designTag}
+\end{figure}
 
+As explained in previous subsection, the styling of a protected page was adjusted. The initial design is shown in figure \ref{fig:designProtectedOld} and the redesign in figure \ref{fig:designProtectedNew}.
+\\ \\
+At last were the breadcrumbs removed from every webpage. We are aware of the fact that breadcrumbs could be very useful. A user can keep track of where he/she is located at the moment and a user can easily navigate back to the previous webpage. To our regret, we were not able to use WebRatio to show the breadcrumbs in a correct manner. We opted to make it possible for a user to return to the previous page by adding a back button where necessary.
 
+\subsection{Template Design}
+The template design for screens with a normal size is shown in figure \ref{fig:templateDesignNormal}.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.6\textwidth]{templateDesign/templateDesignNormal}
+    \caption{Template design of normal screens.}
+    \label{fig:templateDesignNormal}
+\end{figure}
+
+The template design will automatically change when the screen of the user is small. The template for small screens is illustrated in figure \ref{fig:templateDesignSmall}.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.6\textwidth]{templateDesign/templateDesignSmall}
+    \caption{Template design of small screens.}
+    \label{fig:templateDesignSmall}
+\end{figure}
 
 
 
