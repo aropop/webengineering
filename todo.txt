@@ -1,18 +1,9 @@
 TODO:
 - error messages
 - ook bij de angel de optie geven om de message te sturen bij een request
-- bugs:
-  • datetime empty in send request of homeless
 - report: agile method used, because we implemented, tested and changed requirements if necessary
-- anonymous angel: als ge een message krijgt of wilt sturen, dan moogt ge zijn naam niet zien
-- offers zoeken op tags (PARTIAL)
 - delete user --> moet alles verwijderen van die user (in alle tabellen)
-- update profile homeless (en wss angels ook)
-
-EXTRA:
-- password bekijken (hashen)
-- toon de rating bij een angel als sterren ipv waarde
-- verander de deliveryMethod bij update offer
+- update profile homeless (en wss angels ook) TEST
 
 
 VRAGENASSISTENT

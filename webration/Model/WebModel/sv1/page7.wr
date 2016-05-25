@@ -54,7 +54,7 @@
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#page7#enu5">
+        <layout:Unit unitId="sv1#page7#enu5" label="Registration Form">
           <layout:Link link="sv1#page7#enu5#ln7"/>
           <layout:Field field="sv1#page7#enu5#fld14"/>
           <layout:Field field="sv1#page7#enu5#fld15"/>

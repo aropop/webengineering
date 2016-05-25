@@ -11,7 +11,7 @@
       <KOLink id="sv4#miu12#kln22" name="KOFlow22" to="sv4#page12" automaticCoupling="true" gr:bendpoints="10,56,25,-119"/>
     </ModuleInstanceUnit>
     <ModuleInstanceUnit gr:x="935" gr:y="600" id="sv4#miu14" action="false" moduleId="mov1#hym3">
-      <OKLink id="sv4#miu14#oln49" name="OKFlow49" to="sv4#miu34" gr:bendpoints="130,236,865,146;-465,238,270,148"/>
+      <OKLink id="sv4#miu14#oln49" name="OKFlow49" to="sv4#miu34" gr:bendpoints="-37,87,493,11;-465,238,270,148"/>
     </ModuleInstanceUnit>
     <ModuleInstanceUnit gr:x="845" gr:y="-215" id="sv4#miu15" action="true" moduleId="mov1#opm11">
       <KOLink id="sv4#miu15#kln26" name="KOFlow26" to="sv4#page28" automaticCoupling="true" gr:bendpoints="-122,29,243,24"/>

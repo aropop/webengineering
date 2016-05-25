@@ -65,6 +65,7 @@
           <layout:Attribute attribute="ent8#att55"/>
           <layout:Attribute attribute="ent20#att67"/>
           <layout:Attribute attribute="ent20#att68"/>
+          <layout:LayoutParameter name="use-empty-unit-message" value="true" type="unit"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

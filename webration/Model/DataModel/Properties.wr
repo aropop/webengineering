@@ -283,8 +283,7 @@
       <db:JoinColumn attribute="ent8#att27" name="offer_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="Database2" type="MySQL (InnoDB)" url="jdbc:mysql://127.0.0.1:3306/webratio_project" username="root" password="cm9vdA==" cryptedPassword="true">
-  </db:Database>
+  <db:Database id="db2" name="Database2" type="MySQL (InnoDB)" url="jdbc:mysql://127.0.0.1:3306/webratio_project" username="root" password="cm9vdA==" cryptedPassword="true"/>
   <Relationship id="rel19" name="Sends" sourceEntity="ent4" targetEntity="User" db:database="db2" db:table="message">
     <RelationshipRole1 id="rel19#role37" name="MessageToUser_sender" maxCard="1">
       <db:JoinColumn attribute="ent4#att3" name="oid"/>

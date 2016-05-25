@@ -49,6 +49,7 @@
           <layout:Attribute label="Location" attribute="User#att1"/>
           <layout:Attribute label="Transactions completed" attribute="ent1#att21"/>
           <layout:Attribute attribute="User#att35" label="Name"/>
+          <layout:LayoutParameter name="use-empty-unit-message" value="true" type="unit"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

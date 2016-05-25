@@ -42,6 +42,7 @@
         <layout:Unit unitId="mov1#hym6#page34#pwu10">
           <layout:Attribute attribute="ent3#att12" label="Nickname"/>
           <layout:Attribute label="Location" attribute="User#att1"/>
+          <layout:LayoutParameter name="use-empty-unit-message" value="true" type="unit"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
