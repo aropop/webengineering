@@ -33,4 +33,6 @@
 \BOOKMARK [0][-]{chapter.4}{Implementation Design}{}% 33
 \BOOKMARK [1][-]{section.4.1}{Site Structure Design}{chapter.4}% 34
 \BOOKMARK [1][-]{section.4.2}{Presentation Design}{chapter.4}% 35
-\BOOKMARK [2][-]{subsection.4.2.1}{Style and Template Design}{section.4.2}% 36
+\BOOKMARK [2][-]{subsection.4.2.1}{Site Identification}{section.4.2}% 36
+\BOOKMARK [2][-]{subsection.4.2.2}{Style Design}{section.4.2}% 37
+\BOOKMARK [2][-]{subsection.4.2.3}{Template Design}{section.4.2}% 38

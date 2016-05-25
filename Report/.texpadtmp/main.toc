@@ -34,4 +34,6 @@
 \contentsline {chapter}{\numberline {4}Implementation Design}{15}{chapter.4}
 \contentsline {section}{\numberline {4.1}Site Structure Design}{15}{section.4.1}
 \contentsline {section}{\numberline {4.2}Presentation Design}{15}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Style and Template Design}{15}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.1}Site Identification}{15}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Style Design}{17}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Template Design}{18}{subsection.4.2.3}
